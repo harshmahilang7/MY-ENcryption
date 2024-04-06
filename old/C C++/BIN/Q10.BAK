@@ -1,0 +1,46 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   27-03-2022  03:48:47 PM  15:03:64
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 30-03-2022  06:55:30 PM  18:03:11
+ */
+#include<iostream.h>
+#include<conio.h>
+
+int main()
+{
+    int i, j, k;
+    clrscr();
+    for(i=1;i<=5;i++)
+    {
+	for(j=i;j<5;j++)
+	{
+	    cout<<" ";
+	}
+	for(k=1;k<(i*2);k++)
+	{
+		if(k%2==0)
+		cout<<0;
+		else
+		cout<<1;
+	}
+	cout<<endl;
+    }
+    for(i=4;i>=1;i--)
+    {
+	for(j=5;j>i;j--)
+	{
+		cout<<" ";
+	}
+	for(k=1;k<(i*2);k++)
+	{
+	 if(k%2==0)
+		cout<<0;
+		else
+		cout<<1;
+	}
+	cout<<"\n";
+    }
+    getch();
+}
+			 harstasdfask

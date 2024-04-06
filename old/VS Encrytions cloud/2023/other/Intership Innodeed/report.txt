@@ -1,0 +1,31 @@
+File: C:\Users\harsh\OneDrive\Desktop\Python\2.py
+Imported Modules:
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\areaof_circle.py
+Imported Modules:
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\armstrong.py
+Imported Modules:
+- math
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\count_object.py
+Imported Modules:
+- math
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\even_old.py
+Imported Modules:
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\getest3no.py
+Imported Modules:
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\leap_year.py
+Imported Modules:
+
+File: C:\Users\harsh\OneDrive\Desktop\Python\prime_no.py
+Imported Modules:
+
+Summary Statistics:
+Total Files Processed: 8
+Total Imported Modules: 2
+Imported Module Frequencies:
+- math: 2

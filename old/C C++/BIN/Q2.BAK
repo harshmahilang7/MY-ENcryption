@@ -1,0 +1,21 @@
+// the sum of given number ?
+#include<iostream.h>
+#include<constream.h>
+#include<stdio.h>
+void main()
+{
+int q,w,e,r=0;                                     //55=5+5=10
+clrscr();
+cout<<"enter the number;";
+cin>>q;
+while (q>0)
+{
+   w=q%10;
+   r=r+w;
+   q=q/10;
+
+}
+cout<<r;
+getch();
+
+}

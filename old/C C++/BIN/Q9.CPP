@@ -1,0 +1,38 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   27-03-2022  03:48:47 PM  15:03:64
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 30-03-2022  06:55:30 PM  18:03:11
+ */
+//WAP trangle......
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int q,w,e,n;
+ clrscr();
+
+ for(q=1;q<=5;q++)
+ {for(w=q;w<5;w++)
+   {
+   cout<<" ";
+   }
+ for(e=1;e<2*q;e++)
+   {
+   cout<<"1";
+   }
+ cout<<endl;
+ }
+ for(q=4;q>=1;q--)
+ {for(w=5;w>q;w--)
+   {
+   cout<<" ";
+   }
+ for(e=1;e<2*q;e++)
+   {
+   cout<<"1";
+   }
+ cout<<endl;
+   }
+ getch();
+}
