@@ -1,0 +1,107 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 05:27:04 PM   17:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-07 05:17:42 PM   17:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS validatION</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form id="frm1" action="registration.html" method="post">
+      <label for="fn">Full Name</label> <br />
+      <input type="text" name="" id="fn" /> <br />
+      <span id="errfna"></span>
+      <br />
+      <label for="mail">Email</label> <br />
+      <input type="email" name="" id="mail" required />
+      <br />
+      <label for="pwd">Password</label> <br />
+      <input type="password" name="" id="pwd" />
+      <span id="errpwd"></span>
+      <br />
+      <label for="phone">Contect Number</label> <br />
+      <input type="phone" name="" id="phone" />
+      <br />
+      <span id="errph"></span>
+      <label for="pin">City pin</label> <br />
+      <input type="number" name="" id="pin" />
+      <br />
+      <span id="errpin"></span>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      // const f=document.forms[0];
+      // or
+      const f = document.querySelector("#frm1");
+      // using callaback(af/ef),dom, event ,reg exp ,if /else  after that we can vaildate data
+
+      f.addEventListener("submit", validateData);
+
+      function validateData(frm) {
+
+        //fullname checking
+        const fnaexp = new RegExp(/^[a-zA-z ]*$/);
+        const fna = document.querySelector("#fn").value;
+        if (fnaexp.test(fna) === false || fna === "")
+        {
+          document.querySelector("#errfna").innerHTML = "enter the valid name";
+          frm.preventDefault(); // dont' submiat
+        } 
+        else 
+        {
+          document.querySelector("#errfna").innerHTML = "";
+        }
+
+        const phoexp= new RegExp(/^[6-9]\d{9}$/);
+        const ph = document.querySelector("#phone").value;
+        if (phoexp.test(ph) === false || ph === "")
+        {
+          document.querySelector("#errph").innerHTML = "enter the valid phone";
+          frm.preventDefault(); // dont' submiat
+        } 
+        else 
+        {
+          document.querySelector("#errph").innerHTML = "";
+        }
+        const pcexp= new RegExp(/^\d{6}$/);
+        const pc = document.querySelector("#pin").value;
+        if (pcexp.test(pc) === false || pc === "")
+        {
+          document.querySelector("#errpin").innerHTML = "enter the valid pin";
+          frm.preventDefault(); // dont' submiat
+        } 
+        else 
+        {
+          document.querySelector("#errpin").innerHTML = "";
+        }
+        // (?=.*[0-9]) or /d  both valid 
+        // const pwexp= new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&*])(.{8,20})$/);
+        const pwexp= new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&*])(.{8,20})$/);
+
+        const pw = document.querySelector("#pwd").value;
+        if (pwexp.test(pw) === false)
+        {
+          document.querySelector("#errpwd").innerHTML = "enter the valid password with cobination of lower upper  digit & symbols";
+          frm.preventDefault(); // dont' submiat
+        } 
+        else 
+        {
+          document.querySelector("#errpin").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

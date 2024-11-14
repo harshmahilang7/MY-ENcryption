@@ -1,0 +1,95 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-09-25 04:42:52 PM   16:09
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-09-26 05:10:20 PM   17:09
+ */
+
+ 
+ body{
+    background-color: black;
+    color: white;
+    margin-top: 0%;
+ }
+#yellow{
+    height: 5px;
+    width: 100%;
+    margin-top: 0%;
+    background-color: yellow;
+    padding-top: 0%;
+}
+article{
+    text-align: center;
+    height: 423px;
+    width: 100%;
+}
+ article p:first-child{
+    color: #fff;
+    font-size: 230%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+ }
+
+ article p:last-child{
+    color: lightgray;
+    /* padding: 0px; */
+    margin: 0%;
+    font-size: 110%;
+    
+ }
+ .grid-box{
+     display: grid;  /* 16 X 1c*/
+     /* grid-template-columns: 300px  300px 300px 300px ; it is just opninal */
+     /* grid-template-columns: 30% 30% 30%; */
+     grid-template-columns: auto auto auto auto;
+     grid-template-rows:  auto auto auto auto;
+     /* column-gap: 10px;
+     row-gap: 10px; */
+     grid-gap: 30px 10px;
+     /* margin: 10px; */
+     margin: auto;
+     width: 90%;
+ }
+ /* .grid-box section{
+    background: cyan;
+ } */
+ .grid-box img{
+    width: 95%;
+    height: 360px;
+    border-radius: 10px;
+ }
+ .grid-box a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 125%;
+    
+ }
+ .grid-box a:hover{
+    color: yellow;
+    text-decoration: underline;
+ }
+ .grid-box section div:last-child{
+    color: #ccffff;
+    font-weight: bold;
+ }
+ .grid-box section:not(){
+    filter: blur(0);
+ }
+ /* .grid-box section:not(:hover){
+  
+ } */
+
+.grid-box section:hover > section:not(:hover)
+{
+   filter: blur(10px);
+}
+
+footer{
+   background: #151515;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 50px;
+   margin: 50PX 0;
+   color: white;
+}
+

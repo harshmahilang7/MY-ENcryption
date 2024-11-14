@@ -1,0 +1,50 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-04 11:29:34 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-04 11:54:24 AM   11:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q 1) 
+	write a JavaScript code to read the values of 5 input fields (ex. username, pass, conf. pass, email, mobile) and store it into objects and print them. -->
+
+    <label for="username">username</label><br>
+    <input type="text" name="username" id="username"><br>
+    <label for="pass">Password</label><br>
+    <input type="password" name="pass" id="pass"><br>
+    <label for="conpass">conform Password</label><br>
+    <input type="password" name="pass" id="conpass"><br>
+    <label for="email">email</label><br>
+    <input type="email" name="email" id="email"><br>
+    <label for="Phone">Phone </label><br>
+    <input type="text" name="Phone" id="Phone"><br>
+    <button onclick="getData()" type="submit"> get data</button>
+    <br>
+    <output id="op"></output>
+    
+    <script>
+        function getData() 
+        {
+        const data=
+        {
+            username:username.value,
+            password:pass.value,
+            conpass:conpass.value,
+            email:email.value,
+            Phone:Phone.value
+        };
+
+        for (const key in data) {
+            op.innerHTML+=key+" : "+data[key]+"<br>";   
+            }
+        }
+    </script>
+</body>
+</html>

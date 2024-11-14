@@ -1,0 +1,70 @@
+Que 1 : 
+=======
+
+Write a C program to find the second largest element in an array.
+
+Sample input : 
+Enter the number of elements in the array: 10
+Enter 10 elements:  3 4 1 9 8 88 9 88 88 1
+
+Sample output :
+Second largest element = 9
+
+============================
+
+Que 2 : 
+=======
+
+Write a C program to insert an element at a given position in an array.
+
+Sample input : 
+Enter the number of elements in the array: 5
+Enter 5 elements: 10 20 30 40 50
+Enter the element to be inserted: 25
+Enter the position: 3
+
+Sample output:
+Array after insertion: 10 20 25 30 40 50
+
+============================
+
+Que 3 : 
+=======
+
+Write a C program to delete a given element from an array.
+
+Sample input :
+Enter the number of elements in the array: 8
+Enter 8 elements : 10 20 30 30 30 40 50 30
+Enter the element to be deleted: 30
+
+Sample output :
+Array after deletion: 10 20 40 50
+
+============================
+
+Que 4 :
+========
+
+Write a C program to print all the prime numbers from an array.
+
+Sample input :
+Enter the number of elements in the array: 7
+Enter 7 elements: 12 5 9 7 11 2 8
+ 
+Sample output :
+Prime numbers in the array: 5 7 11 2
+
+============================
+
+Que 5 : 
+=======
+
+Write a C program to print all the unique elements from an array.
+
+Sample input :
+Enter the number of elements in the array: 6
+Enter 6 elements: 10 20 20 30 40 10
+
+Sample output :
+Unique elements in the array: 30 40

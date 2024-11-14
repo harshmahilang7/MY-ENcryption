@@ -1,0 +1,52 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-17 04:26:43 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-17 04:48:41 PM   16:10
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data by javascript</title>
+</head>
+<body>
+    <h3>demo on do while loop</h3>
+    <script>
+        document.write("<select id='date'>")
+            let d=1;
+            do
+            {
+                document.write("<option>"+d+"</option>");
+                d++;
+                
+            }while(d<=31);
+
+            document.write("</select>")
+        document.write("<select id='month'>");
+            let i=0;
+            let m=["jan",'feb','march','apr','may','june','july','august','september','oct','nov','dec'];
+            do
+            {
+                document.write("<option>"+m[i]+"</option>");
+                i++;
+                
+            }while(i<12);
+            
+            document.write("</select>")
+            
+        document.write("<select id='year'>");
+            let y=2024;
+            do
+            {
+                document.write("<option>"+y+"</option>");
+                y--;
+                
+            }while(y>=1900);
+            document.write("</select>")
+        
+    </script>
+</body>
+</html>

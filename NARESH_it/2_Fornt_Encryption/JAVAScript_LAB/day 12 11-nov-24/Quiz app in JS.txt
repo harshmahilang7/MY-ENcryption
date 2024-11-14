@@ -1,0 +1,60 @@
+Task: Create a JavaScript Quiz App
+Objective: Your task is to build a JavaScript Quiz Application that displays multiple-choice questions, checks answers, highlights the correct and incorrect answers, and provides feedback to the user.
+
+You will need to implement the following features:
+
+Question Set:
+
+Create 10 JavaScript-related questions with 4 answer options each. Ensure that only one answer is correct per question.
+HTML Structure:
+	- Display each question one at a time.
+	- Provide answer options using radio buttons.
+	- Include a "Submit" button to submit the answer.
+	- Show a feedback message after each submission to indicate if the answer was correct or incorrect.
+	- Include a "Next" button to move to the next question.
+
+Answer Validation:
+When the user submits an answer:
+	- Highlight the correct answer in green.
+	- Highlight the incorrect answers in red.
+	- Show a message that says either "Correct!" (in green) or "Incorrect! Try again." (in red) based on the user's selection.
+
+Final Score:
+	- Track the number of correct answers the user selects.
+	- Display the final score after the user completes all 10 questions.
+	- The score should display in the format "Your Score: X/10".
+
+Styling:
+	- Apply CSS to ensure the quiz is visually appealing, with distinct styles for correct and incorrect answers.
+	- Style the "Submit" and "Next" buttons for better user interaction.
+
+
+
+
+Steps to Complete the Task:
+
+HTML:
+	- Create the structure for the quiz app. This should include:
+	- A container for the question text.
+	- A form for the radio button answer options.
+	- A "Submit" button to check the selected answer.
+	- A "Next" button to go to the next question.
+
+JavaScript:
+	- Create a questions array that contains 20 JavaScript-related questions with 4 options each and the correct answer.
+Implement the logic for:
+	- Displaying each question and its options.
+	- Checking if the selected answer is correct or incorrect.
+	- Highlighting the correct and incorrect answers.
+	- Displaying feedback after the answer is submitted.
+	- Moving to the next question after submitting an answer.
+	- Showing the user's final score after all questions are answered.
+
+CSS:
+Add styles to:
+	- Highlight the correct answer in green and incorrect answers in red.
+	- Style buttons (Submit, Next) to be user-friendly.
+	- Ensure the quiz layout is centered and looks neat.
+
+
+==================================================================================================================================

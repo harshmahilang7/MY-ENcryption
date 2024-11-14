@@ -1,0 +1,73 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-09-30 11:56:51 AM   11:09
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-10-01 11:31:39 AM   11:10
+ */
+ nav{
+    display: flex;
+    /* padding: 2px; */
+    font-size: large;
+    
+ }
+ .right_n{
+     font-weight: 700;
+     padding: 1%;
+     padding-left: 5%;
+    
+ }
+ .left_nav{
+    display: flex;
+    padding-left: 45%;
+ }
+ .left_n{
+    padding: 10px;
+    color: grey;
+    align-items: center;
+    
+ }
+ .imgage > img{
+    height: 500px;
+    width: 460px;
+    border-radius: 50%;
+    /* transform: scale(1.1); */
+    border: 2px solid;
+ }
+ .page1{
+    display: flex;
+
+    /* border: 10px solid #000; */
+ }
+ .page1 > div{
+   padding: 200px;
+   padding-top: 150px;
+   padding-left: 100px;
+ }
+.socal{
+   padding: 20PX;
+   padding-left: 50PX;
+}
+ .socal > img{
+    height: 40px;
+    width: 40px;
+    /* border-radius: 50%; */
+    /* transform: scale(1.1); */
+    /* border: 2px solid; */
+ }
+ .text{
+   font-size: 60PX;
+ }
+
+ .text > SPAN {
+   color: gray;
+   font-size:30PX ;
+ }
+ .btn_1 > input {
+   border: 3px solid lightblue;
+   background-color: transparent;
+   padding: 10px;
+   border-radius: 15PX;
+   color: blueviolet;
+
+   
+ }

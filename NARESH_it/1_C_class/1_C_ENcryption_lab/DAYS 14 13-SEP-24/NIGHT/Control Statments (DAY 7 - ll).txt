@@ -1,0 +1,79 @@
+Que 1 :
+=======
+
+Write a C program to calculate the power of a base number raised to an exponent using a while loop. 
+The program should take two inputs: the base and the exponent. If either the base or the exponent is zero or negative, 
+the program should display the message "Invalid input...Please enter positive values" and terminate. Otherwise, 
+the program should calculate and display the result as base^exponent = result.
+
+Sample input  : Enter base: 2
+                Enter exponent: -5
+Sample output : Invalid input...Please enter positive values
+
+----------------------------
+Sample input  : Enter base: 2
+                Enter exponent: 5
+Sample output : 2^5 = 32
+
+----------------------------
+
+Sample input  : Enter base: 3
+                Enter exponent: 4
+Sample output : 3^4 = 81
+
+====================================================
+
+Que 2 :
+======
+
+Write a C program to calculate the factorial of a given positive integer. 
+The program should prompt the user to enter a number, compute its factorial, and display the result. 
+-> If the user enters a negative number, the program should display an error message: "Invalid input...Please enter a positive integer."
+-> If the input is 0, the program should print Factorial of 0 = 1 because by definition, 0!=1
+-> FORMULA => n!=1×2×3×...×n.
+
+Sample input  : Enter a positive integer: -5
+Sample output : Factorial of 5 = Invalid input...Please enter a positive integer.
+
+Sample input  : Enter a positive integer: 5
+Sample output : Factorial of 5 = 120
+
+====================================================
+
+Que 3 :
+=======
+
+Write a C program to check whether a given integer is a palindrome. A number is considered a palindrome if the reverse of the number is equal to the original number. 
+The program should prompt the user to enter an integer, reverse the number, and then compare it to the original number to determine if it is a palindrome.
+
+Sample input  : Enter an integer: 121
+Sample output : 121 is palindrome number.
+
+Sample input  : Enter an integer: 1121 
+Sample output : 1121 is not palindrome number.
+
+
+====================================================
+
+Que 4 :
+=======
+
+Write a C program to read one integer number from user and check it is Prime number or not
+
+Sample input  : Enter an integer: 5
+Sample output : 5 is prime number.
+
+Sample input  : Enter an integer: 6
+Sample output : 6 is not prime number.
+
+====================================================
+
+Que 5 :
+=======
+
+Write a C program that converts a given integer into its corresponding word representation for each digit. 
+The program should take an integer as input and output each digit of the number in words, separated by spaces.
+
+Sample input  : 1256
+Sample output : one two five six
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" placeholder="Cost Price" id="CP" />
+    <br />
+    <input type="number" placeholder="Selling Price" id="SP" />
+    <br />
+    <button onclick="myFunction()">Calculate</button>
+
+    <script>
+      function myFunction() {
+        let costPrice = Number(CP.value);
+        let sellingPrice = Number(SP.value);
+        let profitorLoss = 0;
+        if (costPrice > sellingPrice) {
+          profitorLoss = costPrice - sellingPrice;
+        } else {
+          profitorLoss = sellingPrice - costPrice;
+        }
+        document.write("<p> total profit or loss " + profitorLoss);
+        profitorLoss = profitorLoss * 100;
+        document.write(
+          "<p> total profit or loss made on 100 units " + profitorLoss
+        );
+      }
+    </script>
+  </body>
+</html>

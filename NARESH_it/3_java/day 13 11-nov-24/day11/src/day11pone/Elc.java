@@ -1,0 +1,10 @@
+public class Elc {
+
+	public static void main(String[] args) {
+		Blc obj1=new Blc("harsh","mahilang",7,30000,-11);
+		obj1.calculateSalary();
+		obj1.display();
+
+	}
+
+}

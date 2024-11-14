@@ -1,0 +1,56 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-21 11:33:34 AM   11:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-21 11:59:52 AM   11:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Gradients</title>
+    <style>
+        #evenly{
+            height: 100px;
+            width: auto;
+            background-image: linear-gradient(red,yellow,green);
+        }
+        #evenly7{
+            height: 100px;
+            width: auto;
+            background-image: linear-gradient(red,yellow,green,blue,pink);
+        }
+        #NOTEVENLY{
+            height: 100px;
+            width: auto;
+            background-image: linear-gradient(red 60%,green ,blue );
+        }
+        #rainbow{
+            height: 100px;
+            width: auto;
+            text-align: center;
+            font-size: 70px;
+            background-image: linear-gradient(to right,red,yellow,green,blue,pink) ;
+        }
+        #radial{
+            height: 100px;
+            width: 100px;
+            background-image: radial-gradient(red,yellow,green);
+        }
+    </style>
+</head>
+<body>
+    <h1>Linear Gradients - Multiple Color Stops</h1>
+    <h3><strong>Note:</strong> Color stops are spaced evenly when no percents are specified.</h3>
+    <h1>3 Color Stops (evenly spaced):</h1>
+    <div id="evenly"></div><br>
+    <H1>7 Color Stops (evenly spaced):</H1>
+    <div id="evenly7"></div>
+    <H1>3 Color Stops (not evenly spaced):</H1>
+    <div id="NOTEVENLY"></div> <br>
+    <div id="rainbow">Rainbow background</div>
+    <h1>Radial Gradient - Evenly Spaced Color Stops</h1>
+    <div id="radial"></div>
+</body>
+</html>

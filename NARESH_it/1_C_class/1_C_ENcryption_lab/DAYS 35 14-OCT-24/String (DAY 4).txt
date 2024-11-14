@@ -1,0 +1,51 @@
+Que 1 :
+=======
+
+Write a program to find and count all palindromic substrings in a given string.
+
+Sample input : Enter a String : madam
+
+Sample output   :  Palindromic substring : madam
+		   Palindromic substring : ada
+		   Total palindromic substrings are : 2
+
+=========================
+
+Que 2 :
+=======
+
+Write a C Program to Display All Characters Present in the Prime Position of a String.
+
+Sample input  : today is wednesday
+Sample output  : da sdey
+
+=========================
+
+Que 3 :
+======
+
+Write a C program to reverse Words of the Given String?
+
+Sample input : Today is Monday
+Sample Output: yadoT si yadnoM
+
+=========================
+
+Que 4 :
+======
+
+Write a C program to check given String is balanced paraenthesis or not.
+
+Example 1 :
+-----------
+Sample input : {[()]}
+			   {[()]}
+				[]{}
+				{}[]
+				][
+Sample output : balanced paraenthesis 
+
+Example 2 :
+-----------
+Sample input : (([({})])
+Sample output : not a balanced paraenthesis

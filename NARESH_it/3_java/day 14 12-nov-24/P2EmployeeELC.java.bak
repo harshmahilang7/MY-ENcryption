@@ -1,0 +1,12 @@
+class P2EmployeeELC 
+{
+	public static void main(String[] args) 
+	{
+		P2Employee obj1=new P2Employee("harsh","it",30000,8);
+		System.out.println(obj1.getEmployeeName());
+		System.out.println(obj1.getDepartment());
+		System.out.println(obj1.getBaseSalary());
+		System.out.println(obj1.getPerformanceScore());
+		obj1.calculateBonus();
+	}
+}

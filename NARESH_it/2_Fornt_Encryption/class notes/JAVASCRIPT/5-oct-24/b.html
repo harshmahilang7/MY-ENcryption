@@ -1,0 +1,48 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-05 05:07:43 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-05 05:50:54 PM   17:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            let x=23,y=9;
+            // arithmatic ope   +  -  *  /   %  **
+            document.write(x+y,"<br>");
+            document.write(y*3,"<br>");
+            document.write(y**3,"<br>");
+            document.write(x/3,"<br>");  // 15 digit will perint
+            document.write((x/3).toFixed(2),"<br>");  
+            
+            
+
+            // relational operators  >   <  >=   <=  ==  != ===   !==
+            
+            document.write(y>=0,"<br>");
+            let z='9'
+            
+            document.write(y==z,"<br>"); // val only 
+            document.write(y===z,"<br>"); //=== equal data type and also val
+            document.write(y!=z,"<br>");
+            document.write(y!==z,"<br>"); 
+            
+            // logoical opeartor &&  || !
+            document.write(y>=0  && y<=10,"<br>"); 
+            document.write(y>=0  & y<=10,"<br>");   //36 and 35 is same line but have perfomace program
+            document.write(!(x>0)  ,"<br>"); 
+
+            //assignment operator  =
+            //       shorthand operator += -= /= *= %= **= 
+
+            x=x+30;
+            x+=30
+            y+=40
+            document.write(x  ,"<br>",y ,"<br>"); 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-23 11:33:31 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-23 11:36:24 AM   11:10
+-->
+<!-- Q 2) 
+Write a JavaScript program to find and print the maximum number among three given numbers without using any control statements 	(like if, else, or ternary operators). Your program should only use arithmetic operations and logical comparisons.
+
+1) The program must take three integer inputs.
+2) The output must display the maximum number among the three inputs.
+3) Use arithmetic operations to achieve the solution without any control statements.
+
+Sample Input :
+    int a = 500, b = 300, c = 400;
+Sample Output :
+    MAX = 500
+
+================================================================================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=+prompt("enter the first number");
+        let b=+prompt("enter the 2nd number");
+        let c=+prompt("enter the 3rd number");
+        document.write(`a is ${a}<br>`)
+        document.write(`b is ${b}<br>`)
+        document.write(`c is ${c}<br>`)
+        a>b&&a>c&&document.write(`max is ${a}<br>`)
+        b>a&&b>c&&document.write(`max is ${b}<br>`)
+        c>a&&c>b&&document.write(`max is ${c}<br>`)
+        
+        
+    </script>
+    
+</body>
+</html>

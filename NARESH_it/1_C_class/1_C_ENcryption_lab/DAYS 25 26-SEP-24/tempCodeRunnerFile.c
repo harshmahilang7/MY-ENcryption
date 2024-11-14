@@ -1,0 +1,1 @@
+else {printf("%d %d times\n",a[i],c); break;}

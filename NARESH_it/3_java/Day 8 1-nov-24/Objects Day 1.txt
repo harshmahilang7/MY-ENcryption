@@ -1,0 +1,10 @@
+Q 1)
+	 Create an object called student with properties name, age, and grade. Display the name property in a paragraph with the ID 	   	studentName in HTML.
+
+Q 2)
+	Display All Object Properties in a List
+	Task: Use a for...in loop to display all properties of an object course (with title, duration, level) in an unordered list with the 	ID courseDetails.
+
+Q 3)
+	Add a New Property and Display It
+	Add a completed property with a value of false to the course object. Display the updated object properties in a paragraph with 	the 	ID courseInfo.

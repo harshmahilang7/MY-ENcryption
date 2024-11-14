@@ -1,0 +1,48 @@
+package ProgramThree;
+
+//Program 03 :
+//----------------
+//
+//Write a Program on OOPs to define a Customer class with the following properties and behavior.
+//
+//Properties:
+//
+//customerId : int
+//customerName : String
+//customerBalance : double
+//
+//Behavior:
+//
+//Define a method setCustomerData(int Id, String Name, double Balance) : public void to initialize these properties directly using the this keyword.
+//
+//Define a method addFunds(double amount) : public void to add funds to customerBalance.
+//
+//Define a method getCustomerInfo() : public void to display the properties.
+//
+//Use the Scanner class in CustomerApp class to input values for customerId, customerName, and customerBalance, initialize the properties using setCustomerData, add funds, make a purchase, and display customer details.
+public class Blc
+{
+	int customerId;
+	String customerName;
+	double customerBalance;
+	double amount;
+	public void setcustomerData(int customerId,String customerName,double customerBalance) 
+	{
+		this.customerId=customerId;
+		this.customerName=customerName;
+		this.customerBalance=customerBalance;
+	}
+	public void deposit(double amount)
+	{
+		this.amount=customerBalance+amount;
+	}
+	public void getcustomerInfo()
+	{
+		System.out.println("customerId : "+customerId);
+		System.out.println("customerName : "+customerName);
+		System.out.println("customerBalance : "+customerBalance);
+		System.out.println("customerBalance amount : "+amount);
+	}
+	
+
+}

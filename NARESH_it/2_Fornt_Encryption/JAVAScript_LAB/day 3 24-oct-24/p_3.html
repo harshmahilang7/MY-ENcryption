@@ -1,0 +1,81 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-24 12:20:51 PM   12:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-24 12:39:41 PM   12:10
+-->
+<!-- Que 3 :
+=======
+
+Write a JavaScript program for a service center by following given Rules and Guide lines.
+
+
+-> This service center only accepts 2 wheeler ,3 wheeler & 4 wheeler . If any other vehicle 
+
+came to you , you have to alert the user "this service center is not accepting
+
+other than 2 wheeler, 3 wheeler and 4 wheeler".
+
+
+-> If the age your vehicle is above 8 months then only accept the service center 
+
+otherwise you have to alert the user "your vehicle service will done after a while".
+
+
+Additional Information:
+--------
+
+Take the required input fields and accept only numbers for vehicle type, age and strings for owner name and problem get the values of the fields and check the input values entered by the user and calculate the total bill based on the following pricings. 
+
+Inputs : 
+	Name of the owner, Name of the vehicle, age of the vehicle, Issue, number of tyres facing problem(if applicable).
+
+
+
+-> For tyre problem cost is Rs.400 per tyre
+
+-> For fuels problem cost is Rs.1500
+
+-> For engine issue cost is Rs.5000
+
+-> For general servicing cost is Rs.1000
+
+
+-> For example tyre cost Rs. 400 , if the user providing 2 tyre then the bill should be
+
+generated as Rs. 800 in below format.
+
+	Name of the owner : Ravindra
+
+	Name of the vehicle : bike
+
+	Issue : tyre
+	
+	how many tyres : 2
+	
+	Total bill : 800
+	
+And generate the bill in the above format.
+
+
+NOTE : take the button to calculate the bill, to calculate the bill onclick of the button "calculateBill()" funtion will be executed.
+======================================================================================================================================================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculate Bill</title>
+  </head>
+  <body>
+    <input type="text" id="wheeler" placeholder="enter the wheeler" />
+    <button
+      onclick="if (Number(wheeler.value)!==2&&Number(wheeler.value)!=3&&Number(wheeler.value)!=4) {alert('this service center is not accepting other than 2 wheeler, 3 wheeler and 4 wheeler') 
+    }
+else{document.write('ok')}"
+    >
+      check
+    </button>
+  </body>
+</html>

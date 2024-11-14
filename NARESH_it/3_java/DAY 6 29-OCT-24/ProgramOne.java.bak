@@ -1,0 +1,21 @@
+/*Que 1:
+======
+Write a Java program to calculate the curved surface area of a cube.
+
+Formula : 6*side Square.
+
+Sample Input  : Enter the side length of the cube: 4
+Sample Output : The curved surface area of the cube is: 96.0
+
+===========================*/
+import java.util.Scanner;
+class ProgramOne
+{
+	public static void main(String[] args) 
+	{
+		System.out.print("enter the side of cube");
+		Scanner sc= new Scanner(System.in);
+		double x=sc.nextDouble();
+		System.out.printf("the curved surface area of the cube is : %.2f \n",(6*(x*x)));
+	}
+}

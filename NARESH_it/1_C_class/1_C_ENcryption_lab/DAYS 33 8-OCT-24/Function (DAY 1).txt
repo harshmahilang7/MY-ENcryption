@@ -1,0 +1,110 @@
+Que 1 : 
+========
+
+Write a program in C to find the square of any number using the function.
+
+
+-> create int main() function.
+-> create int square(int n) function.
+-> in main function read one number and call square(int n) function. here square(int n) function will perform the operation and will return the square of given number as result to the main function.
+-> in main function catch the square of number which is calculate and return by square(int n) fuction and print it.
+ 
+Sample input : Input any number for square : 20
+
+Sample output : The square of 20 is : 400
+
+=================================
+
+Que 2 :
+=======
+
+Write a program in C to check whether a number is a prime number or not by using the function.
+
+-> create int main() function.
+-> create int isPrime(int n) function.
+-> in main function read one number and call isPrime(int n) function. here isPrime(int n) function will perform the operation and will return 1 or 0 to the main function.
+-> in main function catch the int result and according that print the proper Output.
+
+Example 1:
+Sample input : Input a positive number : 5
+Sample output : The number 5 is a prime number.
+
+Example 2:
+Sample input : Input a positive number : 6
+Sample output : The number 6 is not a prime number.
+
+=================================
+
+Que 3 :
+=======
+
+Write a C program to print all twisted prime number from array.
+
+Twisted Prime number means a number itself is prime number and the reverse of that number also prime number.
+Examle : 2,5,7,11,23 -----> here 2,5,7,11 are twisted prime numbers but 23 is not twisted prime number.
+
+
+-> create int main() function
+-> create int isPrime(int n) functions (Will return 0 as false otherwise 1 as true)
+-> create int reverse(int n) function (will return )
+
+Sample input : int arr[]={1,2,3,4,5,7,11,15,23};
+
+Sample output : twisted prime numbers are : 2,3,5,7,11
+
+=================================
+
+Que 4 :
+=======
+
+Write a function to find the length of a given string (excluding the null character).
+
+-> create int main() function
+-> create int getLength(char str[]) function. this function will return length of string
+-> in main function read String and call the getLength fuction and print the output.
+
+Sample input : Hello
+Sample output: Length of the string: 5
+
+
+Sample input : ThisIsALongString
+Sample output: Length of the string: 17
+
+=================================
+
+Que 5 :
+=======
+
+Write a C program to check given String is palindrom or not using function.
+
+-> create int main() function.
+-> create int isPalindromString(char str[]) function. this function will check given string is palindrom or not and return (true if the string is a palindrome, false otherwise).
+-> in main function read one string input and call isPalindromString function. and print the result.
+
+Sample input : radar
+Sample output : The string is a palindrome.
+
+Sample input : hello
+Sample output : The string is not a palindrome.
+
+=================================
+
+Que 6 :
+=======
+
+Write a C program to calculate the sum of all elements in an integer array using function.
+
+-> create int main() function.
+-> create int arraySum(int arr[]) function. this function will take integer array as input in parameter and will return the total sum as result.
+-> in main function read size of array , then based on size create new array and store the values.
+-> call the arraySum function and print the sum which is return by arraySum function.
+
+
+Sample input:
+              Size of the array: 5
+              Array elements: 10 20 30 40 50
+
+
+Sample output: Sum of all elements in the array: 150
+
+=================================

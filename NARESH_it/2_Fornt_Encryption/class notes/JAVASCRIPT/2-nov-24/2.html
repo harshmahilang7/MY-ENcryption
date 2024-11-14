@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-02 04:57:31 PM   16:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-02 05:13:02 PM   17:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>demo on element object properties (data )</h3>
+
+    <h1 id="head1">Hello</h1>
+    <input type="text" id="tb" value="1000">
+<hr>
+    <script>
+        // innerText ,innerHTML  
+        const h1=document.getElementById("head1")
+        document.write(`<br>${h1.innerText}<br>`)
+        
+        
+        // h1.innerText=""
+        h1.innerText="new text ";
+        document.write(`<br>${h1.innerText}<br>`)
+        h1.innerText+="concate data";
+        document.write(`<br>${h1.innerText}<br>`)
+
+
+        const t=document.getElementById("tb");
+        document.write(`<br>${t.value}<br>`);
+
+        // t.value="" delete the value of the text box
+        
+        t.value+="apple"; // concatination
+    </script>
+</body>
+</html>

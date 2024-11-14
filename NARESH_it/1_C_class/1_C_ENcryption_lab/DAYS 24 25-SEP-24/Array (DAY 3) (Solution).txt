@@ -1,0 +1,242 @@
+Que 1 : 
+=======
+
+Write a C program to find the second largest element in an array.
+
+Sample input : 
+Enter the number of elements in the array: 10
+Enter 10 elements:  3 4 1 9 8 88 9 88 88 1
+
+Sample output :
+Second largest element = 9
+
+============================
+
+Que 2 : 
+=======
+
+Write a C program to insert an element at a given position in an array.
+
+Sample input : 
+Enter the number of elements in the array: 5
+Enter 5 elements: 10 20 30 40 50
+Enter the element to be inserted: 25
+Enter the position: 3
+
+Sample output:
+Array after insertion: 10 20 25 30 40 50
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int a[100], n,i,ele,pos;
+    printf("Enter array size : ");
+    scanf("%d",&n);//6
+    printf("Enter %d elements : ",n);
+    for(i = 0;i<n;i++) { // 0 1 2 3 4 5 6
+        scanf("%d",&a[i]);//1 7 5 3 2 6 
+    }
+    printf("Enter the element to be elements : ");
+    scanf("%d",&ele);//9
+    printf("Enter the postion: ");
+    scanf("%d",&pos); // 3
+    if((pos-1)==n) {
+        a[n] = ele;
+    }else {
+        //Right shift
+        for(i = n;i>=pos;i--){ // i = 4
+            a[i] = a[i-1];
+        }
+        a[pos-1] = ele;
+    }
+    printf("Elements are : ");
+    for(i = 0;i<=n;i++) {
+        printf("%d ",a[i]);
+    }
+
+    return 0;
+}
+
+============================
+
+Que 3 : 
+=======
+
+Write a C program to delete a given element from an array.
+
+Sample input :
+Enter the number of elements in the array: 8
+Enter 8 elements : 10 20 30 30 30 40 50 30
+Enter the element to be deleted: 30
+
+Sample output :
+Array after deletion: 10 20 40 50
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int a[100], j,n,i,ele,pos,f=0;
+    printf("Enter array size : ");
+    scanf("%d",&n);//4
+    printf("Enter %d elements : ",n);
+    for(i = 0;i<n;i++) { // 0 1 2 3 
+        scanf("%d",&a[i]);//1 5 7 2  
+    }
+    printf("Enter the element to be deleted : ");
+    scanf("%d",&ele);//3
+    
+    for(i = 0;i<n;i++) { // i = 4
+        if(a[i]==ele) {
+            //Left shift
+            f= 1;
+            for(j = i;j<n-1;j++) { // j = 3
+                a[j] = a[j+1];
+            }
+            n--;
+            i--;
+        }
+    }
+    if(f==0) {
+        printf("Element not found...");
+    }
+   
+    printf("Elements are : ");
+    for(i = 0;i<n;i++) {
+        printf("%d ",a[i]);
+    }
+
+    return 0;
+}
+
+============================
+
+Que 4 :
+========
+
+Write a C program to print all the prime numbers from an array.
+
+Sample input :
+Enter the number of elements in the array: 7
+Enter 7 elements: 12 5 9 7 11 2 8
+ 
+Sample output :
+Prime numbers in the array: 5 7 11 2
+
+============================
+
+Que 5 : 
+=======
+
+Write a C program to print all the unique elements from an array.
+
+Sample input :
+Enter the number of elements in the array: 6
+Enter 6 elements: 10 20 20 30 40 10
+
+Sample output :
+Unique elements in the array: 30 40
+
+============================================
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int a[100], j,n,i,c;
+    printf("Enter array size : ");
+    scanf("%d",&n);//4
+    printf("Enter %d elements : ",n);
+    for(i = 0;i<n;i++) { // 0 1 2 3 
+        scanf("%d",&a[i]);//1 5 7 2  
+    }
+    
+    printf("Elements are : ");
+    for(i = 0;i<n;i++) {
+        printf("%d ",a[i]);
+    }
+     printf("\n unique: ");
+    for(i = 0;i<n;i++) {
+        c = 0;
+        for(j = 0;j<n;j++) {
+            if(a[i]==a[j]) {
+                c++;
+            }
+        }
+        if(c==1) {
+            printf("%d ",a[i]);
+        }
+    }
+    
+
+    return 0;
+}
+
+========================================
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int a[100], j,n,i,c;
+    printf("Enter array size : ");
+    scanf("%d",&n);//4
+    printf("Enter %d elements : ",n);
+    for(i = 0;i<n;i++) { // 0 1 2 3 
+        scanf("%d",&a[i]);//1 5 7 2  
+    }
+    
+    printf("Elements are : ");
+    for(i = 0;i<n;i++) {
+        printf("%d ",a[i]);
+    }
+     printf("\n dup: ");
+    for(i = 0;i<n;i++) {
+        c = 1;
+        for(j = i+1;j<n;j++) {
+            if(a[i]==a[j]) {
+                c++;
+            }
+        }
+        if(c==2) {
+            printf("%d ",a[i]);
+        }
+    }
+    return 0;
+}
+
+
+
+
+

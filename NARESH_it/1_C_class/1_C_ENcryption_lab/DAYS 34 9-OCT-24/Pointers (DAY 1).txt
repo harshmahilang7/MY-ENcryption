@@ -1,0 +1,132 @@
+Que 1 : Swap two numbers using Call by Value
+=======
+
+Write a C program that demonstrates swapping two numbers using call by value.
+
+Requirements:
+
+Create a main() function where two integers are input by the user.
+Create a void swap(int a, int b) function that swaps the two integers using call by value.
+In the main() function, print the values of the two integers before and after calling the swap function.
+
+Sample input :
+Enter two numbers: 10 20
+
+Sample output :
+Before swap: x = 10, y = 20
+After swap (call by value): x = 10, y = 20
+
+Observe the output and note that the values are not swapped in the main() function.
+
+Note: The actual values in main() will not change since call by value only passes copies of the variables to the function.
+       
+-> now follow Que2 and see the power of pointer.
+
+
+============================
+
+Que 2 : Swap two numbers using Call by Reference
+=======
+
+Write a C program that demonstrates swapping two numbers using call by reference.
+
+Requirements:
+
+Create a main() function where two integers are input by the user.
+Create a void swap(int *a, int *b) function that swaps the two integers using pointers (call by reference).
+In the main() function, print the values of the two integers before and after calling the swap function.
+
+Sample input :
+Enter two numbers: 10 20
+
+Sample output :
+Before swap: x = 10, y = 20
+After swap (call by reference): x = 20, y = 10
+
+Observe the output and note that the values are swapped in the main() function.
+
+Note: The values in main() will be successfully swapped because call by reference passes the actual memory addresses of the variables to the function, allowing direct modification.
+
+============================
+
+Que 3 :
+=======
+
+Write a C program to find the median of a merged sorted Array by using pointer and function.
+
+-> create int main() function.
+-> create int type array1, array2 and array3 in main fuction(array3 = array1_size + array2_size).
+-> store values in array1, array2.
+-> create void mergeAndSort(int *array1, int size1, int *array2, int size2, int *mergedArray) function.
+-> from main function call mergeAndSort funtion and merge array1 and array2 into array3.
+-> after merging sort array3.
+-> create double findMedian(int *mergedArray, int totalSize) function.
+-> from main fuction call findMedian function which will return median. 
+
+Sample input : 
+Enter the size of 1st array : 2
+Enter 2 element : 1 3
+
+Enter the size of 2nd array : 1
+Enter 1 element : 2
+
+Sample output : 
+
+After sorting Array is :1 2 3
+Median is : 2.0
+
+
+Sample input :  
+Enter the size of 1st array : 2
+Enter 2 element :1 4
+
+Enter the size of 2nd array : 2
+Enter 2 element : 2 3
+
+Sample output : 
+
+After sorting Array is :1 2 3 4
+Median is : 2.5
+
+============================
+
+Que 4 :
+=======
+
+Write a C program to rotate an array of integers to the right by a specified number of positions. 
+For example, if you have an array [1, 2, 3, 4, 5] and you want to rotate it to the right by 2 positions, 
+the result should be [4, 5, 1, 2, 3].(Develop it by using pointers & function).
+
+-> create int main() function.
+-> create void rotateRight(int *arr, int size, int positions) function.
+-> in main function print the output of array before and after rotation.
+
+Sample input : 
+Enter the size of the array: 5
+Enter 5 elements: 1 2 3 4 5
+Enter the number of positions to rotate to the right: 2
+
+Sample output : 
+Before rotation : 1 2 3 4 5
+After rotation : 4 5 1 2 3
+
+============================
+
+Que 5 :
+=======
+
+Using pointer and function Write a C program to check a phrase is a palindrome if, 
+after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, 
+it reads the same forward and backward. Alphanumeric characters include letters and numbers. Given a string s, 
+return true if it is a palindrome, or false otherwise.
+
+Example 1 :
+Sample input : "A man, a plan, a canal: Panama"
+Sample output: true
+Explanation : "amanaplanacanalpanama" is a palindrome.
+
+
+Example 2 :
+Sample input: "race a car"
+Sample output: false
+Explanation: "raceacar" is not a palindrome.

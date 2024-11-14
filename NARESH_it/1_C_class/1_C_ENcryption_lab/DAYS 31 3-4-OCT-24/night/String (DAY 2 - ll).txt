@@ -1,0 +1,31 @@
+Que 1 :
+=======
+
+Write a C program to find out the sum of the numbers which is present in a given string.
+
+Sample input  : Enter a String : TS12ab345
+
+Sample output  : Sum Of the numbers is : 15
+==================
+
+Que 2 :
+=======
+
+Write a C program to combine two string in a single String.
+---------
+Sample input :
+Enter first String : Naresh
+Enter Second String : it
+
+Sample output :Resulting String is : Nareshit
+
+==================
+
+Que 3:
+======
+
+Write a C program to multiply two positive numbers as strings. Return a string representation of the product.
+
+Sample input: "100" and "15"
+
+Sample output : multiplication of 100 and 15 is :  1500

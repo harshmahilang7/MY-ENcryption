@@ -1,0 +1,86 @@
+
+Que 1 : 
+=======
+
+Using While loop Write a C program that reads two integers, N1 and N2, from the user. The program should print all the numbers from N1 to N2 (inclusive) in a single line, 
+separated by commas. 
+
+Example:
+
+Sample input : N1 = 1 , N2 = 20
+
+Sample output : 1,2,3,4,5,6,7,8......20
+
+================================================================
+
+Que 2 : 
+=======
+
+Using While loop Write a C program that reads two integers, N1 and N2, from the user. The program should print all the numbers from N1 to N2 (inclusive) in a single line, 
+separated by commas, in reverse order.
+
+Example:  
+
+Sample input : N1 = 10 , N2 = 1
+
+Sample output : 10,9,8,7,6,5,4,3,2,1
+
+
+================================================================
+
+Que 3 : 
+=======
+
+Write a C program that reads a choice from the user and performs one of the following operations based on the choice:
+
+Case 1: Print all small letters from a to z.
+Case 2: Print all small letters from z to a in reverse order.
+Case 3: Print all capital letters from A to Z.
+Case 4: Print all capital letters from Z to A in reverse order.
+
+The program should use a switch statement to execute the proper case based on the user's choice, and use while loop to print the alphabets.
+If the user enters an invalid choice, the program should display an error message.
+
+Example:  
+
+Sample input : 
+
+Menu:
+1. Print small letters from a to z
+2. Print small letters from z to a
+3. Print capital letters from A to Z
+4. Print capital letters from Z to A
+
+Enter your choice (1-4): 2
+
+Sample output :  z y x w v u t s r q p o n m l k j i h g f e d c b a 
+
+================================================================
+
+Que 4 :
+=======
+
+Write a C program to prints all characters from capital A to small z along with their ASCII values using a while loop.
+
+Sample Output : 
+
+Character and its ASCII value:
+A: 65
+B: 66
+C: 67
+...
+Y: 89
+Z: 90
+[ : 91
+\ : 92
+] : 93
+^ : 94
+_ : 95
+` : 96
+a: 97
+b: 98
+c: 99
+...
+x: 120
+y: 121
+z: 122

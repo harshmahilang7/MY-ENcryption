@@ -1,0 +1,30 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-09-25 12:11:29 PM   12:09
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-09-25 12:20:10 PM   12:09
+ */
+ div{
+    color: white;
+ }
+#box1{
+    height: 200px;
+    width: 300px;
+    background-color: #008080;
+    text-align: center;
+}
+#box2{
+    height: 65px;
+    width: 800px;
+    background-color: #ff7f50;
+    text-align: center;
+    margin-left: 340px;
+    padding-top: 40px;
+}
+#box3{
+    height: 200px;
+    width: 1500px;
+    background-color: #483d8b;
+    text-align: center;
+    padding-top: 40px;
+}

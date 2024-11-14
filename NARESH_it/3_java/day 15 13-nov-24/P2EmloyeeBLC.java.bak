@@ -1,0 +1,78 @@
+
+
+
+class P2EmployeeBLC
+{
+	String name;                       
+    int age;                           
+    String department;                
+    double salary;                      
+    String performance;		
+	
+	P2EmployeeBLC(String name,int age,String department,double salary ,String performance)
+	{
+		this.name=name;                       
+        this.age=age;                           
+        this.department=department;                
+        this.salary=salary;                      
+        this.performance=performance;	
+	}
+	
+	void setName(String name)
+	{
+		this.name=name; 
+	}
+	void setAge(int age)
+	{
+		this.age=age; 
+	}
+	void setDepartment(String department)
+	{
+		this.department=department; 
+	}
+	void setSalary(double salary)
+	{
+		this.salary=salary; 
+	}
+	void setPerformance(String performance)
+	{
+		this.performance=performance; 
+	}
+	
+	String getName()
+	{
+		return name;
+	}
+	int getAge()
+	{
+		return age;
+	}
+	String getDepartment()
+	{
+		return department;
+	}
+	double getSalary()
+	{
+		return salary;
+	}
+	String getPerformance()
+	{
+		return performance;
+	}
+	
+	public double updateSalary()
+	{
+		if(performance=="good")
+		{
+			salary+=10000;
+		}
+		else if(performance=="average")
+		{
+			salary+=5000;
+		}
+		else
+		{
+			salary=salary;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+#include <iostream.h>
+#include <conio.h>
+//using namespace std;
+int main()
+{
+  clrscr();
+  char ch;
+  cout << "\nthe alam.exe is succusfull install\npress any key to continue....";
+  getche() ;
+  /*
+  while (1)
+  {
+  if (kbhit())          //Stores the pressed key in ch
+      { ch = getch();   // Terminates the loop // when escape is pressed
+       if (int(ch) == 27)
+	  {break;}
+
+       }
+  } */
+}

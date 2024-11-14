@@ -1,0 +1,172 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-18 04:35:34 PM   16:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-20 05:13:47 PM   17:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS SELECTOR</title>
+    <style>
+      /* css selector 
+      selector are case sensitive  
+      
+    universal selector
+    => selector all element
+    syn :-
+        
+        * {
+        prop:val;
+        prop:val;
+        prop:val;
+        ....
+        ...
+    
+        }
+    tag selector
+    =>common styles for all element/instance of specific tag 
+    syn :-
+        
+        * /tag{
+        prop:val;
+        prop:val;
+        prop:val;
+        ....
+        ...
+    
+        }
+    
+    id selector
+    => styles for 1 element/instance of specific tag inline style
+      => mapping is important
+      <tag id="id-name"
+      cant repeat same id in two tag 
+      and one one tag cnt have 2 id     <div id="q1 "q2"></div>
+    syn :-
+        
+        #id-name{
+        prop:val;
+        prop:val;
+        prop:val;
+        ....
+        ...
+    
+        }
+         mapping 
+     class selector
+      . 
+      => styles for group element/instance or common style for group of tag 
+      => mapping is important
+      <tag class="class-name"
+      can repeat same class in two tag 
+      and one one tag have 2 class     <div class="q1 "q2"></div>
+    syn :-
+        
+        .class-name{
+        prop:val;
+        prop:val;
+        prop:val;
+        ....
+        ...
+    
+        }
+         mapping
+
+         child selector
+        gp_tag p_tag c_tag{
+                prop:val;
+                prop:val;
+                prop:val;
+                ....
+                ...
+    
+        }
+         direct child  selector
+         ==> comm style ONLY DIRECT CONNETION 
+        gp_tag > p_tag > c_tag{
+                prop:val;
+                prop:val;
+                prop:val;
+                ....
+                ...
+
+                
+    
+        }
+        
+        attribute selector 
+        ==> common style for element based on attribute
+        syn:-
+            [attribute name]
+            {
+                prop:val;
+                prop:val;
+                prop:val;
+                prop:val;
+                .....
+                ...
+                .
+            }
+        pseudo selector 
+        ==>  
+        syn:-
+            :pseudo-ele
+            {
+                prop:val;
+                prop:val;
+                prop:val;
+                prop:val;
+                .....
+                ...
+                .
+            }
+            
+         
+    */
+      /* *{
+            border: 2px solid red;
+            color: blue;
+        }
+        *{
+            text-align:center;
+        } */
+
+      div {
+        width: 100px;
+        height: 100px;
+        background: #22ff66;
+        display: inline-block;
+      }
+      /* body{
+        
+      } */
+      #q1 {
+        width: 100px;
+        height: 10px;
+        background: black;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h2>demo on universal selector</h2>
+    <h1>html</h1>
+    <h3>css</h3>
+    <div>javascript</div>
+    <p>bootstrap</p>
+    <ul>
+        <li>java</li>
+        <li>dot.net</li>
+        <li>python</li>
+    </ul> -->
+    <div><div id="q1"></div></div>
+    <br />
+    <div></div>
+    <br />
+    <div></div>
+    <br />
+  </body>
+</html>

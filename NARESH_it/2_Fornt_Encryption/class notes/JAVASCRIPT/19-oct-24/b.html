@@ -1,0 +1,38 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-19 04:35:29 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-19 04:50:59 PM   16:10
+-->
+<h3>finding min & max element</h3>
+
+<script>
+  const eles = [];
+  // eles[0]=+prompt("enter value");
+  // eles[1]=+prompt("enter value");
+  // eles[2]=+prompt("enter value");
+  // ........
+  // eles[n]=+prompt("enter value");
+
+  // that why we use loop
+  let n = +prompt("enter no of value");
+  for (let i = 0; i < n; i++) {
+    eles[i] = +prompt(`enter value a[${i}]`);
+  }
+
+
+  let min = eles[0];
+  let max = eles[0];
+
+  for (let i = 0; i < eles.length; i++) {
+    if (eles[i] < min) {
+      min = eles[i];
+    }
+
+    if (eles[i] > max) {
+      max = eles[i];
+    }
+  }
+  document.writeln(`eles ${eles}<br>`);
+  document.writeln(`max ${max}<br>min ${min}`);
+</script>

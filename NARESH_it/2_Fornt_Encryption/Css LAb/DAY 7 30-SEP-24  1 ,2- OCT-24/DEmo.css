@@ -1,0 +1,92 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-10-01 11:36:30 AM   11:10
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-10-02 11:28:14 AM   11:10
+ */
+ *{
+    font-family: cursive;
+ }
+header{
+    display: flex;
+    justify-content: space-around;
+}
+.name-container{
+    margin-top: 1%;
+}
+header nav{
+    margin-top: 2%;
+}
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.profile-img img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.intro{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+    /* height: 1400PX; */
+    /* border: 1px solid; */
+}
+
+.profile-img{
+    /* border: 1px solid ; */
+    width: 20%;
+}
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+
+.res-link a{
+    margin: 3px;
+    border: 3px solid lightblue;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.text-About_Me , .box_flex_About_Me .box_About_Me
+{
+    text-align: center;
+}
+.box_flex_About_Me{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.two_class{
+    height: 100px;
+    width: 300px;
+}
+.two_class > img{
+    height: 50px;
+    width: 50px;
+}
+.box_About_Me{
+    border: 2px solid;
+    border-radius: 20px;
+}
+.PARA_ABOUT_ME{
+    text-align: justify;
+    padding: 10%;
+}
+@media  screen and (max-width:800px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .box_flex_About_Me{
+        display: flex;
+        flex-direction: column;
+    }
+}

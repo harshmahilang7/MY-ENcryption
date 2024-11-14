@@ -1,0 +1,37 @@
+#include<iostream.h>
+#include<conio.h>
+class stu
+{
+int a,b;
+public:
+void get ()
+	{
+	 a=100;
+	 b=21;
+	}
+stu show()
+{cout<<"rollno="<<a<<endl<<"age="<<b;}
+};
+void main()
+{ stu s1;
+clrscr();
+s1.get();
+s1.show();
+getch();
+
+}
+
+
+
+
+// C++ program to demonstrate use of kbhit()
+#include <iostream.h>
+#include <conio.h>
+
+int main()
+{
+	while (!kbhit())
+		printf("Press a key\n");
+
+	return 0;
+}

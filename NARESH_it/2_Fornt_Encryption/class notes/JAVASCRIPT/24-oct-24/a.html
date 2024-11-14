@@ -1,0 +1,54 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-24 04:27:41 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-24 05:48:56 PM   17:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="1.js"></script>
+  </head>
+  <body>
+    <h2>demo on expr function</h2>
+    <script>
+        document.write(`${add}<br>`);
+        document.write(`${add(10,20)}<br>`);                  //calling
+        document.write(`${product(10,20)}<br>`);              //calling
+
+        const eles=[56,100,9,70,20];
+
+        // forEach()  => Array/coll  is is not loop it is just a function
+        
+        // forEach( function(){} ); 
+        
+        // eles.forEach(document.write());
+        eles.forEach( 
+            function(a)
+            {
+                console.log('hii');
+                document.write(`${a} &nbsp; `);
+            }
+        ); 
+        document.write('<br>');
+        eles.sort();
+        document.write(`${eles}<br>`);
+        //100,20,56,70,9  sort like string 1 then 2 then 3  so 100 then 20 then 56  and so on.
+        eles.sort(
+          function(i,j)
+          {
+            return i-j;
+          }
+        );
+        document.write(`${eles}<br>`);
+        
+        </script>
+    
+    <script>
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-17 05:33:00 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-17 05:55:01 PM   17:10
+-->
+<h3>demo on interpolation</h3>
+<!-- what is interpolation
+<!-- Interpolation is nothing but substituting the values or expressions dynamically in between the strings this process. is called as interponation.  -->
+<!-- 
+    subt value/expr dyn in betwwen string 
+     ==>  `  `
+
+     syn ${var/expr/fun}
+            `text${var} text ${expr}  text ${funcall}....`
+
+    ==> js6 [es]
+
+    use
+      => printing data,assigning value
+    ==> during the printing 
+-->
+
+<script>
+    let n=`ram`;
+    document.write(n+"<br>");
+    document.write(`${n}<br>`);
+    
+    document.write("sun is "+ (10+20)+"<br>");
+    document.write(`sun is  ${10+20}<br>`);
+    
+
+    let tn=10;
+    for (let i = 0; i <= 10; i++) {
+
+        document.write(`${tn}x${i}=${tn*i}<br>`)
+        
+    }
+</script>

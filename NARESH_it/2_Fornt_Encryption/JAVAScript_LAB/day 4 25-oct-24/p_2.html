@@ -1,0 +1,57 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-25 11:52:03 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-25 12:00:21 PM   12:10
+-->
+<!-- Que 2 :
+=======
+
+Write a JavaScript program that reads a positive integer N from the user and calculates the sum of even and odd numbers between 1 and N using a for loop. 
+The program should then print the sum of even numbers and the sum of odd numbers.
+
+NOTE : If user entered negative input then print "Invalid Input" message.
+
+
+Example_1 :
+
+Sample input  : N = -10;
+
+Sample output : Invalid Input
+
+---------------------
+
+Example_2 :
+
+Sample input  : N = 10;
+
+Sample output : even sum =>  30 
+                odd sum  =>  25
+
+===================================================================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = prompt("enter the number");
+      let sumEven=0,sumOdd=0;
+      if (num > 0) 
+      {
+        for (let i = 1; i <= num; i++) 
+        {
+          if (i % 2 === 0) sumEven = sumEven + i; 
+          else sumOdd = sumOdd + i;
+        }
+        document.write(`the even sum is ${sumEven}<br>`);
+        document.write(`the odd sum is ${sumOdd}<br>`);
+      }
+      else  document.write(`invalid number<br>`);
+    </script>
+  </body>
+</html>

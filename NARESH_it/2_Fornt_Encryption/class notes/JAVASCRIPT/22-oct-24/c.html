@@ -1,0 +1,40 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-22 05:17:28 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-22 05:32:33 PM   17:10
+-->
+<h3>demo on slice method</h3>
+<script>
+    const eles=[10,20,30,40,50,60,70,80,90];
+    document.write(`eles is=> ${eles}<br>`);
+    
+    // let a1=slice(st-index,end-index)
+                                // if 4 then 4-1 in end-index
+    let a1=eles.slice(0,5);
+    document.write(`after slice the a1 is=> ${a1}<br>`);
+    let a2=eles.slice(5);// it (start-index) so it will to go last it not last index
+    document.write(`after slice the a2 is=> ${a2}<br>`);
+    
+    document.write(`last ele=> ${eles.slice(-1)}<br>`);
+    document.write(`last 2nd ele=> ${eles.slice(-2)}<br>`);
+    document.write(`last 4nd ele=> ${eles.slice(-4)}<br>`);
+
+
+    for (let i = 1; i <=9; i++) {
+        document.write(`${eles.slice(-i)}<br>`);
+        
+    }
+    for (let i = 8; i >=1; i--) {
+        document.write(`${eles.slice(-i)}<br>`);
+        
+    }
+    for (let i = 1; i <=9; i++) {
+        document.write(`${eles.slice(i)}<br>`);
+        
+    }
+    for (let i = 8; i >=1; i--) {
+        document.write(`${eles.slice(i)}<br>`);
+        
+    }
+</script>

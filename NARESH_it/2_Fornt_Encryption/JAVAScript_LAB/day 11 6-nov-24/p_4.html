@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 11:47:17 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-06 11:57:11 AM   11:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q 4)
+	Create a Color Changer
+	Add a dropdown with color options (e.g., Red, Blue, Green) and a "Change Color" button.
+	Implement a function changeColor() that:
+		- Reads the selected color from the dropdown.
+		- Changes the background color of a target element on the page to the selected color. -->
+    <h1>Color Changer</h1>
+    <select name="color" id="cc">
+        <option value="red">red</option>
+        <option value="blue">BLUE</option>
+        <option value="green">green</option>
+    </select>
+    <button onclick="addcolour()">add colour</button>
+    <br>
+    <div id="div" style="height: 200px;"></div>
+
+    <script>
+        function addcolour()
+        {
+            let c=document.getElementById("cc").value;
+            document.querySelector("#div").style.backgroundColor=c;
+        }
+        
+    </script>
+    
+</body>
+</html>

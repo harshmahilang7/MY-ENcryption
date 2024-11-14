@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-08 04:28:03 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-08 04:43:44 PM   16:10
+-->
+<h2>demo on JAVA SCRIPT alert conform and promth</h2>
+<script>
+    
+// box 1
+  window.alert("hello world!");
+  alert("product " + 15 * 9);
+
+  // all the three box is not suport html tag
+  alert("product <br>" + 15 * 9);
+
+
+
+//   box 2
+  window.confirm("sure, you want to close it?");
+  let x = window.confirm("sure, you want to close it?");
+  //   if yes then x=true if cancel then false
+  document.write(x + "<br>");
+  // if(x==ture)
+  //     run closeing code
+  // else nothing to do
+
+//   box 3
+    let n=window.prompt("enter the NAME");
+    document.write(n);
+    // noting then ok then blank
+    // cancel ===> null
+
+    
+    let a=prompt("enter age ","0")
+    //       value  if not then 0 is the defult value;
+    //           if canncel then null
+    
+    document.write(n+ " "+a+"year(s) older");
+    
+</script>

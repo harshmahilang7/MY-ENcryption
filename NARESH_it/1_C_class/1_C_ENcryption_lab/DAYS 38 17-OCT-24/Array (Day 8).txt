@@ -1,0 +1,56 @@
+Que 1 :
+========
+
+-> Write a C program to store first Nth prime numbers into array and print the ressult array.
+
+-> Example:
+
+   Input1 : 3
+   Output1 :[2,3,5]
+
+   Input2 : 5
+   Output2 :[2,3,5,7,11]
+
+============================================
+
+Que 2 :
+=======
+
+-> Write a C program to print common elements of two arrays.
+
+-> Example : 
+
+   Input : arr1 {1,2,3,4,5}
+           arr2 {5,7,8,1,1,2,10}
+
+   Output : Common elements are : 1 2 5
+
+============================================
+
+Que 3 :
+=======
+
+Write a C program to print all the LEADERS in the array.
+NOTE : An element is leader if it is greater than all the elements to its right side.
+
+-> Example : 
+
+   Input : {10,9,14,23,15,0,9}
+          
+   Output :  Leader elements are : 23, 15, 9 
+
+============================================
+
+Que 4 :
+=======
+
+-> Write a C program that takes an array of integers as input and prints pairs of numbers 
+   such that the first number in the pair starts from the beginning of the array and the second number starts from the end of the array. 
+
+-> Example:
+
+   Input : arr[]={1,2,3,4,5,6};
+   Output :   
+            (1,6)
+            (2,6)
+            (3,4)

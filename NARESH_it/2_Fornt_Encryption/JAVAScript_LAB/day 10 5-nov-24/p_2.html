@@ -1,0 +1,72 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-05 11:50:06 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-05 12:24:55 PM   12:11
+-->
+<!-- Q 2)
+Create a JavaScript program to capture book details using a constructor function. Store each book as an object in an array, and display all books stored in the array.
+
+Create a constructor function named Book that takes in the properties title, author, year, and genre.
+Implement a function addBook() that:
+- Reads the book details from input fields.
+- Creates a new Book object.
+- Adds this object to a books array.
+Create a function displayBooks() that:
+- Iterates over the books array.
+- Displays each book’s details on the webpage. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <h1>Enter Book Details</h1>
+    
+    <input type="text" id="title" placeholder="title"><br><br>
+    <input type="text" id="author" placeholder="author"><br><br>
+    <input type="text" id="year" placeholder="year"><br><br>
+    <input type="text" id="genre" placeholder="genre"><br><br>
+    <button onclick="addBook()" type="submit">addBook</button>
+    <br><br><br>
+    <output id="op"></output>
+    <script>
+        
+        
+        function book(title,author,year,genre)
+        {
+            this.title=title;
+            this.author=author;
+            this.year=year;
+            this.genre=genre;
+        }
+
+        let books=[];
+        function addBook()
+        {
+            const title=document.getElementById("title").value;
+            const author=document.getElementById("author").value;
+            const year=document.getElementById("year").value;
+            const genre=document.getElementById("genre").value;
+            
+            const obj1 = new book(title,author,year,genre);
+            books.push(obj1);
+            
+            document.getElementById("title").value="";
+            document.getElementById("author").value="";
+            document.getElementById("year").value="";
+            document.getElementById("genre").value="";
+
+            displayBooks();
+        }
+        function displayBooks()
+        {
+            books.forEach((element)=> {
+                op.innerHTML=`title= ${element.title}<br>author= ${element.author}<br>year= ${element.year}<br>genre= ${element.genre}<br>`;
+            });
+        }
+    </script>
+</body>
+</html>

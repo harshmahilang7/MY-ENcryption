@@ -1,0 +1,132 @@
+Que 1 :
+=======
+
+Write a C program that performs the following tasks:
+
+Read an integer value from the user to determine the size of an array.
+Dynamically allocate memory for the array based on the given size.
+Prompt the user to input elements and store them in the array.
+Use a for loop to print all the elements of the array, displaying each element along with its position.
+
+Sample input :
+Enter the size of the array: 5
+Enter 5 elements:
+Element at index 0: 10
+Element at index 1: 20
+Element at index 2: 30
+Element at index 3: 40
+Element at index 4: 50
+
+
+Sample output :
+The elements in the array are:
+Element at index 0: 10
+Element at index 1: 20
+Element at index 2: 30
+Element at index 3: 40
+Element at index 4: 50
+
+=======================================
+
+Que 2 :
+=======
+
+Write a C program that performs the following tasks:
+
+Dynamically allocate memory for an array to store 10 integer values.
+Prompt the user to input 10 integer values to store in the array.
+separately Print all the elements that are located at even indices and odd indices of the array.
+
+For Example : 
+
+Sample input :
+Enter 10 integer elements:
+Element at index 0: 12
+Element at index 1: 23
+Element at index 2: 34
+Element at index 3: 45
+Element at index 4: 56
+Element at index 5: 67
+Element at index 6: 78
+Element at index 7: 89
+Element at index 8: 90
+Element at index 9: 11
+
+Sample output : 
+Elements at even indices are:
+Element at index 0: 12
+Element at index 2: 34
+Element at index 4: 56
+Element at index 6: 78
+Element at index 8: 90
+------------------------------
+Elements at odd indices are:
+Element at index 1: 23
+Element at index 3: 45
+Element at index 5: 67
+Element at index 7: 89
+Element at index 9: 11
+
+=======================================
+
+Que 3 :
+=======
+
+Write a C program that reads an integer N from the user to define the size of a dynamically allocated array. 
+The program should allow the user to input N integer values into the array, then calculate and print the sum of all even numbers in the array.
+
+For Example :
+
+Sample input : 
+Enter size of array : 6
+Enter 6 elements into the array :
+Element at index 0: 8
+Element at index 1: 2
+Element at index 2: 3
+Element at index 3: 4
+Element at index 4: 5
+Element at index 5: 6
+
+
+Sample output : 
+sum of all even numbers in the array is = 20
+
+=======================================
+
+Que 4 :
+=======
+
+Write a program in C to store N number of values in an array and display them in reverse order.
+
+Sample input :
+element - 0 : 2
+element - 1 : 5
+element - 2 : 7
+
+Sample output :
+The values store into the array are :2 5 7
+The values store into the array in reverse are :7 5 2
+
+=======================================
+
+Que 5 :
+=======
+
+Write a program in C to copy the elements of one array into another array.
+
+Sample input :
+element - 0 : 15
+element - 1 : 10
+element - 2 : 12
+
+Sample output :
+The elements stored in the first array are :15 10 12
+The elements copied into the second array are :15 10 12
+
+
+// range 
+
+// 2 patten
+
+// 2 arry q
+

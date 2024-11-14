@@ -1,0 +1,84 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-13 11:32:45 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-13 12:09:13 PM   12:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="question-container"></div>
+    <button id="submit">submit</button>
+    <button id="next" onclick="">next</button>
+    <script>
+      const question = [
+        {
+          question: "what is javaScript",
+          option: ["","","",""],
+          corectAnswer: "scripting language",
+        },
+      ];
+      let mark=0;
+      let currentQuestion = 0;
+      let currentIndex = 0;
+      let corectAnswer = "";
+      function laodQuestion() {
+        const constainer = document.getElementById("question-container");
+        const question = question[currentIndex];
+        corectAnswer = question.corectAnswer;
+        constainer.innerHTML = `
+                <h3>${question.question}</h3>
+                <label>
+                    
+                </label>
+            `;
+      }
+
+      function vaildateAnswer() {
+        const selectAnswer = document.querySelector(
+          'input[name="option"]:checked'
+        );
+        const feedBack = document.getElementById("feedback");
+
+        if (selectAnswer) {
+          const selectOption = selectAnswer.value;
+          if (selectAnswer == selectOption) {
+            if(mark!=0)
+            {mark++;}
+            feedBack.style.color = "green";
+            feedBack.style.border;
+            feedBack.innerHTML = "corect asnwer";
+          } else {
+            if(mark!=0)
+            {mark--;}
+            feedBack.style.color = "red";
+            feedBack.style.border;
+            feedBack.innerHTML = "incorect asnwer";
+          }
+        } else {
+          feedBack.innerHTML = "chose one option";
+        }
+      }
+
+      function nextQuestion() {
+        if (currentIndex < question.length-1) {
+          currentIndex++;
+          laodQuestion();
+        } else {
+          alert("end of ques");
+        }
+      }
+
+      function showScore() {
+        
+        const constainer = document.getElementById("question-container");
+        constainer.innerHTML=``
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-21 04:25:40 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-21 04:45:48 PM   16:10
+-->
+<h3>demo on spreed operator ...[variable_name]  (js6)</h3>
+<script>
+    const a=[10,20,30,40,50]
+    const b=a;
+    // it copy the address of the a to b
+    // it is not coping but is have showing output
+    document.write(`a =    ${a}<br>`);
+    document.write(`b =    ${b}<br>`);
+
+    const c=[...a]   // useing ...a array copyed
+    document.write(`c = ${c}<br>`);
+
+    //merging array
+
+    const x=[10,20,30]
+    const y=[11,22,33,44]
+    
+    const z=[...x, ...y]
+    // x Element is first the y
+    // z=10,20,30,11,22,33,44
+    const l=[...y,...x]
+    // y Element is first the x
+    
+    
+    document.write(`z = ${z}<br>`);
+    document.write(`l =${l}<br>`);
+
+    const g=[...x,...x]
+    document.write(`g =${g}<br>`);
+    // g =10,20,30,10,20,30
+
+    
+</script>

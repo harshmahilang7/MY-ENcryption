@@ -1,0 +1,67 @@
+/*
+Question - 4
+---------------
+Design a Book printing System
+
+Create a class  Book (BLC Class)
+
+Attributes :
+
+Name			data type 
+-------			-----------
+title                       : String
+author       	      :author
+price 		      :double
+
+Acess modifier :public(for all varriables)
+
+take a constructor to initialize all the varriables
+
+Methods :
+
+Method Name		:printDetails
+Return type		:void
+Acess modifier	:public
+
+
+Method Name		:applyDiscount(double discountPercentage)
+Return type		:void
+Acess modifier	:public
+
+
+Take Main class (ELC Class) which having in main method  and execute the main method*/
+
+class Program4Book
+{
+	String title;
+	String author;
+	double price;
+	double discountPercentage;
+	double discountAmount;
+	Program4Book(String title,String author,double price)
+	{
+		this.title=title;
+		this.author=author;
+		this.price=price;
+	}
+	public void printDetails(){
+		System.out.println("title : "+title);
+		System.out.println("author : "+author);
+		System.out.println("price : "+price);
+		System.out.println("discountPercentage : "+discountPercentage);
+		System.out.println("discountAmount : "+discountAmount);
+		
+	}
+	public void applyDiscount(double discountPercentage)
+	{
+		if(discountPercentage<0)
+		{
+			System.err.println("tara maa ka negative value mat dal");
+		}
+		else{
+		this.discountPercentage=discountPercentage;
+		discountAmount=price-(price/100*discountPercentage);
+		}
+	}
+	
+}

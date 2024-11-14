@@ -1,0 +1,161 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-23 11:31:15 AM   11:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-23 12:42:41 PM   12:09
+-->
+
+<!-- Q 1) Create Following webpage to demonstrate the various types of selectors in CSS using internal css:  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Demo</title>
+    <style>
+      h2 {
+        color: red;
+        /* font-size: x-large; */
+        /* font-weight: bolder; */
+      }
+      p::first-letter {
+        font-size: 40px;
+        color: red;
+        font-weight: bold;
+      }
+      p {
+        border: 2px solid black;
+        font-style: italic;
+        color: gray;
+      }
+      div {
+        margin-top: 10px;
+        text-align: justify;
+        border: 2px solid black;
+        background-color: lightgreen;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      span {
+        border: 2px solid black;
+        margin: 2px;
+        font-size: 20px;
+        padding: 10px;
+        color: blue;
+        font-weight: bolder;
+        /* margin-bottom: 10px; */
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        font-size: large;
+      }
+      .classp {
+        border: 2px solid black;
+        font-style: italic;
+        color: gray;
+        padding: 10px;
+        margin: 0px;
+      }
+      .spanc {
+        border: 2px solid black;
+        margin: 0px;
+        font-size: 20px;
+        padding: 5px;
+        color: blue;
+        font-weight: bolder;
+        /* margin-bottom: 10px; */
+      }
+      .h2c {
+        border: 2px solid black;
+        margin: 0px;
+        padding: 10px;
+        color: green;
+      }
+      #dividr {
+        margin-top: 10px;
+        text-align: justify;
+        border: 2px solid black;
+        background-color: #f08080;
+        padding: 10px;
+        margin-bottom: 10px;
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        font-size: large;
+      }
+      #dividb {
+        margin-top: 10px;
+        text-align: justify;
+        border: 2px solid black;
+        background-color: lightblue;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      #h2id2 {
+        color: blue;
+      }
+      span::before {
+        content: "span:";
+        color: orange;
+      }
+      div::before {
+        content: "Start of Div : ";
+        color: red;
+      }
+      div::after {
+        content: "-End of Div";
+        color: red;
+      }
+      #sid {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Selectors Demo</h1>
+    <p>This is a paragraph styled using an element selector</p>
+    <h2>This is a heading styled using an element selector.</h2>
+    <p>Another paragraph styled using the same selector</p>
+    <div>This is a div styled using an element selector</div>
+    <span>This is a span styled using an element selector.</span>
+    <div class="box">This is a box styled using a class selector.</div>
+    <div class="box">This is a box styled using a class selector.</div>
+    <p class="classp">This is a paragraph styled using a class selector</p>
+    <span class="spanc"> This is a span styled using a class selector.</span>
+    <h2 class="h2c">This is a heading styled using a class selector.</h2>
+
+    <div id="dividr">This is a unique box styled using an ID selector</div>
+
+    <div id="dividb">
+      This is another box styled with a different ID selector.
+    </div>
+
+    <h2 id="h2id2">THIS IS A HEADING STYLED USING AN ID SELECTOR.</h2>
+    <p>This paragraph is styled using an ID selector.</p>
+
+    <span id="sid">This span is styled using an ID selector.</span>
+
+    <div>
+      <p>
+        This paragraph is inside a container styled using a descendant selector.
+      </p>
+      <span
+        >This paragraph is inside a container styled using a descendant
+        selector.</span
+      >
+      <div>
+        This div is inside a container styled using a descendant selector
+      </div>
+      <ul>
+        <li>
+          This list item is inside a container styled using a descendant
+          selector.
+        </li>
+        <li>Another list item inside a container</li>
+      </ul>
+    </div>
+    <br /><br />
+  </body>
+</html>

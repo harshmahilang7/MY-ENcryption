@@ -1,0 +1,27 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 05:15:47 PM   17:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-06 05:24:17 PM   17:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="una">
+    <button onclick="checkName()" >check</button>
+
+    <script>
+        function checkName()
+        {
+            const exp=new RegExp(/siva/i);
+            alert(exp.test(una.value));
+            
+        }
+    </script>
+</body>
+</html>

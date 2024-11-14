@@ -1,0 +1,174 @@
+Date: 08-11-2024
+===================
+/*
+Program : 1
+===============
+class Person 
+{
+	private String name;
+	private int age;
+	
+
+	
+	public void setName(String name) {
+		 this.name = name;
+	}
+	public String getName() {
+		 return name;
+	}
+	public void setAge(int age) {//age = 30
+		if(age<0) {
+			System.out.println("Invalid age");
+		}else {
+		  this.age = age;
+		}
+	}
+	public int getAge() {
+		return age;
+	}
+	public void displayPerson() {
+		System.out.println("Name : "+name);
+		System.out.println("Age : "+age);
+	}
+	
+}
+class CheckVotingEligibility {
+      public static boolean isEligible(int age) {
+		  if(age<18) {
+			   return false;
+		  }
+		  else {
+			  return true;
+		  }
+	  }
+		  
+}
+
+class Test02 
+{
+	public static void main(String[] args) 
+	{
+		Person p1 = new Person();
+		p1.setName("Raam");
+		p1.setAge(30);
+		p1.displayPerson();
+		int age = p1.getAge();
+		boolean res = CheckVotingEligibility.isEligible(age);
+		if(res) {
+			System.out.println(p1.getName()+" is eligible for voting");
+		}else {
+			System.out.println(p1.getName()+" is eligible for voting");
+		}
+			
+		
+	}
+}
+
+Program - 2
+--------------------
+Create a BankAccount class with bellow attributes:
+ 1. accHolderName: String:private
+ 2. accNumber: long: private
+ 3. balance: double : private
+ 4. active: boolean : private
+ create setter and getter methods for each attributes
+ to initializing/retrieving the instance variables.
+
+ create below methods for banking operation:
+ method1:
+ deposit(double amount) : void : public
+ Logic: If the amount is 0 or -ve then print "Invalid amount"
+ else add to the balance.
+ 
+ method2:
+ withdraw(double amount) : void : public 
+ Logic: If the amount is 0 or -ve then print "Invalid amount"
+ if the amount is greater than balance then print "Insufficient funds")
+ else substract it from balance
+ 
+ method3: 
+ checkBalance() : It  returns the balance.
+ 
+ displayDetails() : prints all the information abount the account.
+ */
+ class BankAccount {
+	 private String accHolderName;
+	 private long accNumber;
+	 private double balance;
+	 private boolean active;
+	 public void setAccHolderName(String accHolderName) {
+		  this.accHolderName = accHolderName;
+	 }
+	  public void setAccNumber(long accNumber) {
+		  this.accNumber = accNumber;
+	 }
+	  public void setBalance(double balance) {
+		  this.balance = balance;
+	 }
+	  public void setActive(boolean active) {
+		  this.active = active;
+	 }
+	 public String getAccHolderName() {
+		 return accHolderName;
+	 }
+	 
+	 public long getAccNumber() {
+		  return accNumber;
+	 }
+	 public double getBalance() {
+		 return balance;
+	 }
+	 /*
+	        is_____()  ->
+		can_______() -> 
+		has_________()  -> 
+	 */
+	 
+	 public boolean isActive() {   
+		 return active;
+	 }
+	 public void deposit(double amount) {
+		  if(amount<=0) {
+			  System.out.println("Invalid amount");
+		  }else {
+			  balance+=amount;
+		  }
+	 }
+	 public void withdraw(double amount) {
+		 if(amount<=0) {
+			  System.out.println("Invalid amount");
+		 }else if(amount>balance) {
+			  System.out.println("Invsufficient amount");
+		 }else {
+			 balance-=amount;
+		 }
+	 }
+	 public void displayBalance() {
+		  System.out.println("Current balance is : "+balance);
+	 }
+	 public void displayBankDetails() {
+		  System.out.println("Account Holder Name: "+accHolderName);
+		   System.out.println("Account Number : " +accNumber);
+		    System.out.println("Balance is : "+balance);
+			 System.out.println("Acive : "+active);
+	 }
+			 
+ }
+class  User
+{
+	public static void main(String[] args) 
+	{
+		BankAccount acc1 = new BankAccount();
+		acc1.setAccHolderName("Virat Kohli");
+		acc1.setAccNumber(181818181818L);
+		acc1.setBalance(100000);
+		acc1.setActive(true);
+		acc1.displayBankDetails();
+		
+		acc1.deposit(5000);
+		acc1.displayBalance();
+		System.out.println("Account number : "+acc1.getAccNumber());
+		System.out.println("Is active ? : "+acc1.isActive());
+		
+	}
+}

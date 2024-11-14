@@ -1,0 +1,49 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 11:34:34 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-06 11:52:40 AM   11:11
+-->
+<!-- Q 2)
+	Create a Contact List
+	Create input fields for name, phone, and email, with an "Add Contact" button.
+	Implement a function addContact() that:
+		- Reads the input values.
+		- Creates a contact card displaying the details.
+		- Appends the card to a contacts section on the webpage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Contact</h1>
+    <input type="text" name="name" id="name" placeholder="enter the name">
+    <input type="phone" id="phone" placeholder="enter the phone number">
+    <input type="email" id="email" placeholder="enter the email id">
+    
+    <button onclick="addContact()" type="submit">Add Contact</button>
+
+    <h1>Contact List</h1>
+    <h3>ContactName       |     Phonenumber     |      Email</h3><br>
+    <output id="op"></output>
+    <script>
+        let ContactName=[];
+        let contentPhonenumber=[];
+        let contentEmail=[];
+        function addContact()
+        {
+            let x=document.getElementById("name").value;
+            let n=document.getElementById("phone").value;
+            let e=document.getElementById("email").value;
+            ContactName.push(x);
+            contentPhonenumber.push(n);
+            op.innerHTML+=`${x} : ${n} : ${e}<br>`;
+        }
+    </script>
+
+</body>
+</html>

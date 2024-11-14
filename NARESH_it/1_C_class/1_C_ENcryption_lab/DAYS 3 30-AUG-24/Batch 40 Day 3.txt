@@ -1,0 +1,24 @@
+Que 1 : Write a 'C' program to take the marks of a student in 5 subjects as input and determine how many subjects have marks greater than or equal to 35 and how many have marks less than 35. 
+------- The program should not use any control statements (if, else, switch, etc.) or the ternary operator. 
+
+Sample input  : int sub1 = 38, sub2 = 34, sub3 = 35, sub4 = 78, sub5 = 20
+
+Sample Output : Pass in 3 subject and fail in 2 subject.  
+       
+========================================================================================================       
+
+Que 2 : Write a 'C' program to take the number of days and convert into (days:months:years)
+-------
+
+Sample input  : int days = 500
+
+Sample Output :  1 year 4 month and 15 days. 
+       
+========================================================================================================       
+
+Que 3 : Write a 'C' program to take the number of seconds and convert into (H:M:S)
+-------
+
+Sample input  : int seconds = 3665
+
+Sample Output : 1 hour 1 minute and 5 second

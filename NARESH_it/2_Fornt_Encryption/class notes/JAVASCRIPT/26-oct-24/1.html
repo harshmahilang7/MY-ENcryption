@@ -1,0 +1,25 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-25 05:33:53 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-26 04:38:02 PM   16:10
+-->
+<head>
+    <script>
+        //only take 3 parameter 
+        const sum=function(x=0,y=0,z=0)
+        {
+            return x+y+z;
+        }
+        // x=0 in paramater is default value of the x
+        // it is vaild of only one varable have default value   => function(x,y,z=0)
+        // right side para is suggest default
+    </script>
+  </head>
+<h3>demo on params default value</h3>
+<script>
+    document.write(`${sum(1,2,3,4,"ram",5,6)}<br>`);
+    document.write(`${sum()}<br>`);
+    document.write(`${sum(12,33,55)}<br>`);
+    document.write(`${sum(3,8)}<br>`);
+</script>

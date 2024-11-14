@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "stdint.h": "c",
+        "stdlib.h": "c",
+        "P_1.C": "cpp",
+        "P_2.C": "cpp",
+        "Q_1.C": "cpp",
+        "P_9.C": "cpp"
+    }
+}

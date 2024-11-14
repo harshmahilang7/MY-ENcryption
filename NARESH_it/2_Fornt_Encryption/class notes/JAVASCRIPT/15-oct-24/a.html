@@ -1,0 +1,98 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-14 04:26:25 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-15 04:30:13 PM   16:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <style>
+        h1 {
+            display: inline;
+        }
+
+        input {
+            text-align: center;
+            color: hotpink;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Temperature Converter</h2>
+        <input type="text" id="celcius" placeholder="Degree celcius" oninput="Farenheit.value=celcius.value*9/5+32">
+        <h1>=</h1>
+        <input type="text" id="Farenheit" placeholder="Farenheit" oninput="celcius.value=(Farenheit.value-32)*5/9">
+        <hr>
+        <div align="center">
+        <h2>Speed Converter</h2><br>
+        <input type="text" id="km" placeholder="kilometers" oninput="mi.value=km.value/1.6">
+        <h1>=</h1>
+             <input type="text" id="mi" placeholder="miles" oninput="km.value=mi.value*1.6">
+        </div> 
+        <hr>
+        
+        <div align="center">
+            <h2>Length converter</h2>
+            <input type="text" id="meter" placeholder="meter" oninput="centimeter.value=meter.value*100">
+            <h1>=</h1>
+            <input type="text" id="centimeter" placeholder="centimeter" oninput="meter.value=centimeter.value/100">
+
+        </div>
+        <hr>
+        <div align="center">
+            <h2>km to m</h2>
+            <input type="text" id="km1" placeholder="kilometer" oninput="m.value=km1.value*1000">
+            <h1>=</h1>
+            <input type="text" id="m" placeholder="meters" oninput="km1.value=m.value/1000">
+        </div>
+        <hr>
+        <div align="center">
+            <h2>gram to kg</h2>
+            <input type="text" id="km2" placeholder="gram" oninput="kg.value=km2.value/1000">
+            <h1>=</h1>
+            <input type="text" id="kg" placeholder="kilogram" oninput="km2.value=kg.value*1000">
+        </div> 
+        <hr>
+        <div align="center">
+             <h2>Feet Converter</h2>
+             
+             <input type="text" id="ft" placeholder="foot" oninput="mt.value=ft.value/3.28">
+             <h1>=</h1>
+            <input type="text" id="mt" placeholder="meter" oninput="ft.value=mt.value*3.28">
+        </div>
+        <hr>
+        <div align="center">
+            <h2>Acre Converter</h2>
+            <input type="text" id="Acre" placeholder="Acre" oninput="sf.value=Acre.value*43560">
+            <h1>=</h1>
+            <input type="text" id="sf" placeholder="Square foot" oninput="Acre.value=sf.value/43560">
+
+        </div>
+        <hr>
+        <div align="center">
+        <h2>Ton to kg converter</h2>
+        <input type="text" id="ton" placeholder="ton" oninput="kg1.value=ton.value*907.185">
+        <h1>=</h1>
+        <input type="text" id="kg1" placeholder="kilogram" oninput="ton.value=kg1.value/907.185">
+
+        </div>
+        <hr>
+        <div align="center">
+            <h2>Foot to CM Converter</h2>
+            <input type="text" id="foot" placeholder="foot" oninput="CM.value=foot.value*30.48">
+            <h1>=</h1>
+            <input type="text" id="CM" placeholder="centimeter" oninput="foot.value=CM.value/30.48">
+
+        </div>
+        <hr>
+</body>
+
+</html>

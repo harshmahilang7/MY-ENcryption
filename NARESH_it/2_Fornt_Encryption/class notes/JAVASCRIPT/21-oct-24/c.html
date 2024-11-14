@@ -1,0 +1,59 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-21 05:16:51 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-22 04:37:59 PM   16:10
+-->
+  <h2>demo on includes indexOf lastIndexof reverse,sort ,join , tostrong,methods</h2>
+
+  <script>
+    // "wlcome"
+    const eles=[10,20,30,40,50,30,60,70,80,30,90,30]
+    let str="notepad plus plus"
+
+    document.write(`eles ${eles}<br>`)
+    document.write(`str ${str}<br>`)
+
+    //*includes ()=> seaching -> true,false;
+    
+    document.write(`20 found? in eles ${eles.includes(20)}<br>`)
+    document.write(`44 found? in eles ${eles.includes(44)}<br>`)
+    
+    document.write(`plus found? in str ${str.includes('plus')}<br>`)
+    // --> true
+    document.write(`Plus found? in str ${str.includes('Plus')}<br>`)
+    // --> false  it is case sentivitive
+
+    //*indexOf()
+    // seacrhing ele not found in array  -1 output
+    // seacrhing ele is found in array give index of element 
+    // it return first occure only 
+
+    document.write(`30@ ${eles.indexOf(30)} <br>`)
+    document.write(`55@ ${eles.indexOf(55)} <br>`)
+
+    document.write(`30@ ${eles.indexOf(30,6)} <br>`)
+//    indexOf(Element_which_search,search_index)
+document.write(`pad in str ${str.indexOf('pad')} <br>`)
+
+
+
+//*lastIndexOf
+
+document.write(`last 30@ ${eles.lastIndexOf(30)} <br>`)
+document.write(`last p ${str.lastIndexOf('p')} <br>`)
+
+
+// eles.indexOf(30)=>2
+// eles.indexOf(30,2+1)
+
+document.write(`${eles.indexOf(30,eles.indexOf(30)+1)}<br>`)
+
+//reverse();
+eles.reverse()
+document.write(`rev eles  ${eles}<br>`)
+
+//sort
+eles.sort();
+document.write(`sort eles  ${eles}<br>`)
+    </script>

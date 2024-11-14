@@ -1,0 +1,45 @@
+
+
+class ptwoBlc
+{
+	private String studentName;
+	private int marks;
+	private char grade;
+	
+	public void setStudentName(String studentName)
+	{
+		this.studentName=studentName;
+	}
+	public void setMarks(int marks)
+	{
+		this.marks=marks;
+	}
+	
+	public void calculateGrade()
+	{
+		if (marks>=90&&marks<=100)
+		{
+			grade='A';
+		}
+		else if(marks>75&&marks<90)
+		{
+			grade='B';
+		}
+		else if(marks>=60&&marks<=75)
+		{
+			grade='C';
+		}
+		else if(marks<60)
+		{
+			grade='D';
+		}
+	}
+	public void displayStudentDetails()
+	{
+		System.out.println("studentName : "+studentName);
+		System.out.println("marks : "+marks);
+		System.out.println("grade : "+grade);
+	}
+
+}
+

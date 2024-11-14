@@ -1,0 +1,36 @@
+Que 1 :
+=======
+
+Write a C program to find the first repeated character in a string.
+
+Sample input : Welcome to Nareshit
+
+Sample  output:  The first repetitive character is: e
+
+=======================
+
+Que 2 :
+=======
+
+Write a C program to find the last repeated character in a string.
+
+Sample input : Welcome to naresh it
+
+Sample  output:  The last repetitive character is: t
+
+=======================
+
+Que 3 :
+=======
+
+Write a C Program to Remove Characters in Second String which are present in First String.
+
+Sample input : apple
+Sample input : aeroplane
+
+Sample output as : ron
+
+=======================
+
+
+

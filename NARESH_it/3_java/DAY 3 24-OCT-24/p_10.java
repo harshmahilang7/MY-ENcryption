@@ -1,0 +1,14 @@
+/*Program 05 :
+-------------
+Write a program in java to Fahrenheit to Celsius Program
+Formula is :-  celsius=((fahrenheit-32)*5)/9;*/
+
+class p_10
+{
+	public static void main(String[] args) 
+	{
+		float fahrenheit=99.9f;
+		float celsius=((fahrenheit-32)*5)/9;
+		System.out.println("celsius ="+celsius); 
+	}
+}

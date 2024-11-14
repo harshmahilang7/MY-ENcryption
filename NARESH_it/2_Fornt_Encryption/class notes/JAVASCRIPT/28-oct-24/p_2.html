@@ -1,0 +1,40 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-28 04:48:58 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-28 05:03:47 PM   17:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <h3>demo on object literal</h3>
+    
+        <script>
+            const ob={
+                //named
+                add(x,y)
+                {
+                    return x+y;
+                },
+            // expr method
+            product:function(x,y)
+            {
+                return x*y;
+            },
+            //arrow method
+            mod:(x,y)=>{return x%y;}
+        }
+        
+        
+
+        document.write(`${ob.add(10,20)}<br>`);
+        document.write(`${ob.product(10,20)}<br>`);
+        document.write(`${ob.mod(10,20)}<br>`);
+        
+        </script>
+    </body>
+</html>

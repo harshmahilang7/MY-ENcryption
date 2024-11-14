@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 11:05:02 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-06 11:32:58 AM   11:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="task" placeholder="enter the task">
+    <button onclick="addTask()" type="submit">Add Task</button>
+
+    <h1>tasklist</h1>
+    <output id="op"></output>
+    <!-- Q 1)
+	Create a Task Management Application
+	Create input fields for a task name and description, along with an "Add Task" button.
+	Implement a function addTask() that:
+		- Reads the input values.
+		- Creates a new list item with the task details.
+		- Adds the new item to a task list on the webpage. -->
+
+    <script>
+        let tasklist=[];
+        function addTask()
+        {
+            let x=document.getElementById("task").value
+            tasklist.push(x);
+            op.innerHTML+=`${x}<br>`;
+            // document.getElementById("op").innerHTML=tasklist;
+        }
+    </script>
+
+</body>
+</html>

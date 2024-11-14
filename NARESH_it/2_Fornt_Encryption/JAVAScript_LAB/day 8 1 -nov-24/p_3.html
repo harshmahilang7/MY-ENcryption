@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-01 12:26:03 PM   12:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-01 12:45:43 PM   12:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q 3)
+Q 3)
+	Add a New Property and Display It
+	Add a completed property with a value of false to the course object. Display the updated object properties in a paragraph with 	the 	ID courseInfo.
+-->
+    <p id="courseInfo"></p>
+    
+    <button onclick="course.new = 'false'; courseInfo.innerHTML=''; up();">new property</button>
+    <script>
+        let updates="";
+        const course={
+        title:"java nit",
+        duration:5,
+        level:3
+    };
+    function up() {
+        for (const key in course) 
+    {
+        updates+=`${key} = ${course[key]}`
+    }
+    courseInfo.innerHTML=updates;
+    updates='';
+    }
+    up();
+    </script>
+</body>
+</html>

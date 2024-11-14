@@ -1,0 +1,104 @@
+/*Question-3
+--------------
+Create a class Employee (Business Logic Class)
+
+ Instance Variables:
+
+    Names		          Return Type
+    ---------		----------------
+ employeeNumber 	: int
+
+ employeeName 	: String
+
+ employeeSalary	: double
+
+ Access Modifier  :public (for all varriables)
+
+ Create a parameterized constructor to initialilize all the fields.
+ 
+ Create another class Tester (ELC class)
+
+ which contains main method  which will receive all the instance variable value from BLC class.
+
+
+ In this ELC class print the following details
+
+ a) If salary is >=60000, Print Employee is a Developer
+
+ b) If salary is >=40000 and <60000 , Print Employee is a Designer
+
+ c) If Salary is <40000 , Print Employee is a Tester
+
+
+Input:
+
+232, "Naresh Kumar", 43000
+
+
+Output:
+
+Employee is a Designer
+
+
+Instruction:
+
+Test Cases :
+========
+
+Parameterized Constructor: Checks each input parameter (name, id, fee) for validity.
+
+--> If id is negative, it sets it to 0 and prints an error message like (id must be always positive integer)
+--> If fee is negative, it sets it to 0.0 and prints an error message like (Fee cannot be negative)
+--> If name is null, it sets it to an empty string and prints an error message.(name must initialize with any default name)
+
+*/
+public class Program3Employee
+{
+	 int employeeNumber;
+	 String employeeName;
+	 double employeeSalary;
+	 
+	 Program3Employee(int employeeNumber,String employeeName, double employeeSalary)
+	{
+		if(employeeNumber<0)
+		{
+			employeeNumber=0;
+			System.out.println("id must be always positive integer");
+		}
+		else{
+			this.employeeNumber=employeeNumber;
+		}
+		
+		if(employeeName==null)
+		{
+			employeeName=null;
+			System.out.println("employeeName must be enter");
+		}
+		else{
+			this.employeeName=employeeName;
+		}
+		
+		if(employeeSalary<0.0)
+		{
+			employeeName=0.0;
+			System.out.println("employeeSalary cannot be negative");
+		}
+		else
+			{
+			this.employeeSalary=employeeSalary;
+		}
+	}
+	
+	int getEmployeeNumber()
+	{
+		return employeeNumber;
+	}
+	String getEmployeeName()
+	{
+		return employeeName;
+	}
+	double getEmployeeSalary()
+	{
+		return employeeSalary;
+	}
+}

@@ -1,0 +1,82 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-08 04:44:42 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-09 11:24:56 PM   23:10
+-->
+<h2>PARSING</h2>
+<!-- changing the data from string format to actual(numeric) format
+    "100"   100
+
+    c/c++                       java                            java
+    
+    int x;                      int x;              
+    prinf("enter the x");       s.o.p("enter the x")
+    scan("%d",&x);              x=scan.nextInt();
+    
+    1. auto/impicit
+        while working with  -,*,/,%,**,++,-- operators auto parsing
+    2. manual/explicit
+    
+        expect the above operator remaining all operator required explicit.
+        
+        explicit we can perform in two ways those are 
+        
+        i. using function
+            1.parseInt()  => changing Mode of the data from string to integer
+            
+                syn: window.parseInt(data)
+                       "10" => 10
+                    "20.56" => 20
+                      "ram" => NaN 
+            2. parseFloat()  => changing Mode of the data from string to Float
+            
+                syn: window.parseFloat(data)
+                       "10" => 10
+                    "20.56" => 20.56
+                      "ram" => NaN 
+        ii. Using parse Operator
+        
+            => + is parser operator, Used to change data from string mode to number to number mode
+            => unary operator
+                syn:    +var        +data
+                        var+        data+
+                        
+                        +"10"  ==> 10
+                     +"20.56"  ==> 20.56
+                       +"ram"  ==> NaN
+                    
+-->
+    <script>
+        
+        let x="14",y="5"
+
+        //auto parsing
+        document.write(x-y ,'<br>');
+        document.write(x*y ,'<br>');
+        document.write(x/y ,'<br>');
+        document.write(++x ,'<br>');
+        document.write(--y ,'<br>');
+
+
+        
+        let i="11",j="7"
+        //manual parsing
+
+        
+        document.write(i+j,'<br>');    //invalid
+        // let i="91",j="7"  if then true
+        //  complare  9 of i's first and 7  true
+        document.write(i>j ,'<br>');   // invalid
+        
+        // res=parseInt(i)+parseInt(j);   //work 
+        // document.write(i>j,'<br>');
+        
+        
+        document.write( +i > +j,'<br>');  //work
+        document.write( +i <= +j,'<br>');  //work
+        
+        
+       // document.write(+i++j,'<br>');    //invalid
+        document.write(+i + +j,'<br>');    //working
+    </script>

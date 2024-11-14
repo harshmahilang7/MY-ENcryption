@@ -1,0 +1,42 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 11:41:05 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-06 11:47:01 AM   11:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q 3) 
+	Create a Counter Application
+	Add buttons for "Increment", "Decrement", and a display area for the counter value.
+	Implement functions incrementCounter() and decrementCounter() that:
+		- Increase or decrease the counter value by 1.
+		- Update the counter display on the webpage. -->
+
+    <h1>Counter Application</h1>
+    <h2 id="count">0</h2>
+    <button onclick="incrementCounter()" type="submit">Increment</button>
+    <button onclick="decrementCounter()" type="submit">Decrement</button>
+
+    <script>
+        function incrementCounter()
+        {
+            let c=+count.innerHTML;
+            c=c+1;
+            count.innerHTML=c;
+        }
+        function decrementCounter()
+        {
+            let c=+count.innerHTML;
+            c=c-1;
+            count.innerHTML=c;
+        }
+    </script>
+</body>
+</html>

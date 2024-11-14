@@ -1,0 +1,32 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-05 05:35:00 PM   17:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-05 05:52:42 PM   17:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 align="center">IMG Sliding</h1>
+    <div style="width: 80%; height: 600px; margin: auto">
+      <img src="./1.jpg" width="100%" height="100%" alt="" srcset="" />
+    </div>
+    <script>
+      const imgs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
+      let index = 0;
+      setInterval(function () {
+        document.images[0].src = `${imgs[index]}`;
+        index++;
+
+        if (index === imgs.length) {
+          index = 0;
+        }
+      }, "2000");
+    </script>
+  </body>
+</html>

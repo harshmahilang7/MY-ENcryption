@@ -1,0 +1,61 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-17 04:52:47 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-17 05:29:44 PM   17:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Printing the multiplication table</title>
+  </head>
+  <body>
+    <h3>Printing the multiplication table</h3>
+
+    <input type="text" id="tn" />
+    <button onclick="printTable()">print Table</button>
+    <br />
+    <output id="op"></output>
+
+    <!-- <script>
+        function printTable() {
+            let n,res           // local vars
+            n=+tn.value;
+            if (!(Number.isNaN(n))) {
+            for (let i = 1; i <=20; i++) {
+
+                res=n*i;
+                document.write(n+" * "+i+" = "+res+"<br>");
+                
+            }
+        }
+        else document.write("not a number <br>");
+
+        }
+    </script> -->
+    <script>
+      function printTable() {
+        let n, res; // local vars
+        n = +tn.value;
+        op.innerHTML = "";
+        if (!Number.isNaN(n)) {
+          // if (isNaN(n)===false)
+          for (let i = 1; i <= 20; i++) {
+            //  i is the block level varable
+            res = n * i;
+            // document.write(n+" * "+i+" = "+res+"<br>");
+            op.innerHTML += n + " * " + i + " = " + res + "<br>";
+          }
+          //   op.innerHTML += n + " * " + i + " = " + res + "<br>";
+        } 
+        else 
+        {
+            //op.innerHTML = "not a number <br>";
+            alert("enter a number only");
+        }
+      }
+    </script>
+  </body>
+</html>

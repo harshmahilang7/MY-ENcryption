@@ -1,0 +1,104 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-04 11:55:59 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-05 12:39:52 PM   12:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Q 2) 
+	write a JavaScript program to read the values of input fields (registration form : Name, lastname, address, course(selection box), gender (radio button), hobbies (checkbox), mobile number and email) and store them into the objects an print them. -->
+
+    <label for="name">name</label><br />
+    <input type="text" name="name" id="name" /><br />
+    <label for="lastname">lastname</label><br />
+    <input type="text" name="lastname" id="lastname" /><br />
+    <label for="address">address</label><br />
+    <input type="text" name="address" id="address" /><br />
+    <select name="course" id="course">
+      course
+      <option value="maths">maths</option>
+      <option value="hindi">hindi</option>
+      <option value="marathi">marathi</option>
+    </select>
+    <br />
+    <br />
+    <label for="gender">Gender</label><br />
+    <input type="radio" name="gender" id="m" /><label for="m">M</label
+    ><br />
+    <input type="radio" name="gender" id="f" /><label for="f">F</label
+    ><br />
+    <input type="radio" name="gender" id="g" /><label for="g">G</label
+    ><br />
+
+    <label for="hobbies">hobbies</label><br />
+    <input type="checkbox" name="hobbies" class="hobbies" id="chess" /><label for="chess">chess</label
+    ><br />
+    <input type="checkbox" name="hobbies" class="hobbies"id="websurfing"/><label for="web surfing">web surfing</label><br />
+    <input type="checkbox" name="hobbies" class="hobbies"id="dancesing"/><label for="dancesing">dancesing</label><br />
+    <label for="email">email</label><br />
+    <input type="email" name="email" id="email" /><br />
+    <label for="Phone">Phone </label><br />
+    <input type="text" name="Phone" id="Phone" /><br />
+    <button onclick="getData()" type="submit">get data</button>
+    <br />
+    <output id="op"></output>
+
+    <script>
+      function getData() {
+        const ho=[];
+        let chess=document.getElementById("chess");
+        let websurfing=document.getElementById("websurfing");
+        let dancesing=document.getElementById("dancesing");
+        if (chess.checked == true)
+        {
+          ho.push("chess");
+        }
+        if (websurfing.checked == true)
+        {
+          ho.push("websurfing");
+        }
+        if (dancesing.checked == true)
+        {
+          ho.push("dancesing");
+        }
+        
+
+        
+        const data = {
+          name: name.value,
+          lastname: lastname.value,
+          address: address.value,
+          course:course.value,
+          gender:null,
+          hobbies:ho,
+          email: email.value,
+          Phone: Phone.value,
+
+        };
+        if(document.getElementById("m").checked == true)
+        {
+          data.gender="Male";
+        }
+        if(document.getElementById("f").checked == true)
+        {
+          data.gender="Female";
+        }
+        if(document.getElementById("g").checked == true)
+        {
+          data.gender="Gay";
+        }
+
+        for (const key in data) {
+          op.innerHTML += key + " : " + data[key] + "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>

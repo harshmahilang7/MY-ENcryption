@@ -1,0 +1,47 @@
+
+class P2InventoryItem
+{
+	private String itemName;
+	private double pricePerUnit;
+	private int quantityInStock;
+	P2InventoryItem(String itemName,double pricePerUnit,int quantityInStock)
+	{
+		this.itemName=itemName;
+		this.pricePerUnit=pricePerUnit;
+		this.quantityInStock=quantityInStock;
+		
+	}
+	
+	void setItemName(String itemName)
+	{
+		this.itemName=itemName;
+	}
+	void setPricePerUnit(double pricePerUnit)
+	{
+		this.pricePerUnit=pricePerUnit;
+	}
+	void setPricePerUnit(int quantityInStock)
+	{
+		this.quantityInStock=quantityInStock;
+	}
+	
+	String getItemName()
+	{
+	return itemName;
+	}
+	double getPricePerUnit()
+	{
+	return pricePerUnit;
+	}
+	int getPuantityInStock()
+	{
+		return quantityInStock;
+	}
+	
+	
+	public double calculateTotalValue()
+	{
+		double totalprice=quantityInStock*pricePerUnit;
+		return totalprice;
+	}
+}

@@ -1,0 +1,47 @@
+package ProgramTwo;
+
+import java.util.Scanner;
+
+//Program 02: 
+//
+//Write a Program on OOPs to define a Book class with the following properties and behavior.
+//
+//Properties:
+//
+//bookId : int
+//bookTitle : String
+//bookPrice : double
+//Behavior:
+//
+//Define a method setBookData(int bookId, String bookTitle, double bookPrice) : public void to initialize these properties directly using the this keyword.
+//Define a method applyDiscount(double discountPercentage) : public void that applies a discount to bookPrice based on the percentage provided.
+//Define a method getBookInfo() : public void to display the properties.
+//Use the Scanner class in LibraryApp class to input values for bookId, bookTitle, and bookPrice, and initialize the properties using the setBookData method. Then, apply a discount and display the book details.
+//
+//
+//
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+import java.util.Scanner;
+public class Elc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the book id");
+		int bookId=sc.nextInt();
+		System.out.print("enter the book Title");
+		String bookTitle=sc.next();
+		System.out.print("enter the bookPrice");
+		double bookPrice=sc.nextDouble();
+		System.out.print("enter the Discount %");
+		double discountbookPrice=sc.nextDouble();
+		
+		Blc obj1 = new Blc();
+		obj1.setBookData(bookId,bookTitle,bookPrice);
+		obj1.applyDiscount(discountbookPrice);
+		obj1.getBookInfo();
+		
+	}
+
+}

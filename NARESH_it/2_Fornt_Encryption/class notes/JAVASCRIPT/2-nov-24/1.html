@@ -1,0 +1,63 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-02 04:26:16 PM   16:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-02 05:15:20 PM   17:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #i {color:red;}
+        .c {color:blue;}
+    </style>
+</head>
+<body>
+    <h3>demo on document object methods</h3>
+    <h1 id="head1">hello world</h1>
+    <input type="radio" name="c"><label>Red</label>
+    <input type="radio" name="c"><label>Green</label>
+    <input type="radio" name="c"><label>Blue</label>
+    <hr>
+    <script>
+        const h=document.getElementById("head1");
+        document.write(`<br>${h}<br>`)
+        const rb=document.getElementsByName("c");
+        document.write(`<br>${rb}<br>`)
+        // const ob=document.getElementsByName("c")[0];//  is for first 
+        // document.write(`<br>${ob}<br>`)
+        
+        
+        const l=document.getElementsByTagName("label")
+        document.write(`<br>${l}<br>`)
+    </script>
+
+    <hr>
+    <h2 id="i">HTML</h2>
+    <span class="c">CSS</span>
+    <p class="c">JAVASCRIPT</p>
+    <div class="c">BOOTStrap</div>
+    <hr>
+    <script>
+    // document.querySelector("CSS_selector_name")
+    // document.querySelector("#i")   //it is for is id 
+    // document.querySelector(".c")   //it is for is class
+    // document.querySelector(":hover")   //it is for sudo selector
+    // const obj1=document.querySelector("i")  it check if an i tag is present 
+    const obj1=document.querySelector("#i")   
+    document.write(`<br>${obj1}<br>`)
+    const obj2=document.querySelectorAll(".c")   
+    document.write(`<br>${obj2}<br>`)
+
+
+
+    // dom=> data maninp ,attr manip , structure ,styles events 
+    // if want to use dom you have to make object 
+    // object is requied 
+
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+package question;
+
+public class VehicleInsuranceTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		p1blc obj1=new p1blc();
+		obj1.setVehicleType("car");
+		obj1.setVehicleAge(8);
+		obj1.displayDetails();
+		
+		InsurancePremium obj2= InsurancePremium.calculatePremium(obj1);
+		System.out.println(obj2.getPremiumAmount());
+		
+	}
+
+}

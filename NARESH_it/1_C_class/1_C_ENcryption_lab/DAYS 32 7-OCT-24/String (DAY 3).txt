@@ -1,0 +1,49 @@
+Que 1 :
+=======
+
+Write a C program to remove all the Spaces from a given String.
+
+Sample input : Enter a String : Black cat on a mat
+Sample output : Blackcatonamat
+
+=========================
+
+Que 2 :
+========
+
+Write a C program to convert all the character to upper case from a given index to end index. If the given index is not available then print Index is not available.
+
+Sample input  :
+Enter a String : I am a student
+Enter the starting index number : 4
+Enter the ending index number : 13
+
+Sample  output : I am A STUDENT
+
+=========================
+
+Que 3 :
+=======
+
+Write a C program to convert each word first alphabet to Upper case.
+
+Sample input  : 
+Enter a String : i am a student of Nareshit
+
+Sample output  :  I Am A Student Of Nareshit
+
+=========================
+
+Que 4 :
+=======
+
+Write a C program to remove given character from a String.
+
+Sample input : 
+Enter a String : Bookstore
+Enter the character you want to remove : o
+
+Sample output : Resulting String is : Bkstre
+
+
+

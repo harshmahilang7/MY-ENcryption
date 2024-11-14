@@ -1,0 +1,19 @@
+
+Q 1) 
+	write a JavaScript program to create an array of 10 elements(string) and print them using for-each loop.
+
+Q 2) 
+	write a JavaScript program to find the second max element in an array.
+
+Q 3) 
+	Write a JavaScript program to insert an element on given index of array.
+
+Q 4) 
+	Write a JavaScript program to remove the element from given index from array.
+
+Q 5) 
+	write a JavaScript program to create mixed array of 20 elements and separate the integers and strings in separate arrays.
+
+Q 6) 
+	write a JavaScript program to create array of 10 image names and display those images on webpage.
+	

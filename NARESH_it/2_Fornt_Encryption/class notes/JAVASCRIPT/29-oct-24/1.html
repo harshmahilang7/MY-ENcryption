@@ -1,0 +1,67 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-29 04:29:01 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-29 05:17:20 PM   17:10
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head> 
+    <body>
+        <script>
+            // constructur function
+            //    => constructor is function
+            //    => construcor are used for object init 
+            //    => new created object (dyn mem)
+            //    => const are execute while object,new invoked the constructor
+            //    => usning "function" we can create constructors
+            //    => first letter is capital
+            //    => funct and method return val but constrctor not return value hence dont  /write return stament  if you use then the  constructur depromoted to function
+            //   => syn : 
+                        // function constrctor(params)
+                        // {
+                            // prop init 
+                            // methods
+                        // }
+
+                // Object syn :
+                            // const refval= new Constructor();
+
+
+            
+        </script>
+
+        <script>
+             function Sample()
+             {
+                document.write(`sample constructor invoked<br>`);
+             }
+        </script>
+        <h3>demo on constructors</h3>
+        <script>
+            Sample();    // it is function => invalid
+            const ob=Sample();  /// invalid
+            
+            document.write(`${ob}<br>`)
+
+            
+            const ob2 = new Sample();  
+            document.write(`${ob}<br>`)
+            new Sample();  // Anonymous
+
+            // anonymouse => use for only 1 time reduce the memory  wastage(memory efficency)
+            document.write(`${ob}<br>`)
+
+
+            // type:  
+            // => static init 
+            // => init every obj with same Data usning non-param constructor
+            
+            // => dynaimic init
+            //  => init every obj with differnet Data usning param constructor
+        </script>
+    </body>
+</html>

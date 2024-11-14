@@ -1,0 +1,102 @@
+
+
+Que 1 :  Write a 'C' program to find previous multiple of 10 of given 2 digit number only.
+-------
+
+Sample input : int a = 26;
+
+Sample Output : 20
+                               
+========================================================================================================  
+
+Que 2 :  Write a 'C' program to find next multiple of 10 of given 2 digit number only.
+--------
+
+Sample input : int a = 34;
+
+Sample Output : 40
+                               
+========================================================================================================    
+
+Que 3 :   Without using control statments Write a C program to determine the next or previous multiple of 10 for a given two-digit number. 
+--------  
+          The program should follow these rules:
+          If the last digit of the given number is greater than or equal to 5, the program should print the next multiple of 10.
+          If the last digit of the given number is less than 5, the program should print the previous multiple of 10..
+
+
+Sample Input1  : int a = 34;
+Sample Output1 : 30 
+
+Sample Input2  : int  a = 25;
+Output2 : 30
+
+Sample Input3  : int a = 86;
+Sample Output3 : 90
+                               
+========================================================================================================  
+
+Que 4 :  Write a 'C' program to check and print that given number is even or odd without using ternary operator and control statments.
+--------
+
+Sample input : int a = 10
+Sample Output : EVEN
+
+Sample input : int a = 125
+Sample Output : ODD
+                               
+======================================================================================================== 
+
+Que 5 :  Write a 'C' program to check and print the Maximum number among two numbers without using ternary operator and control statments.
+--------
+
+Sample input : int a = 10 , b = 20
+Sample Output : MAX = 20
+
+
+======================================================================================================== 
+
+
+Que 6 :  Write a 'C' program to check and print the Maximum number among two numbers without using ternary operator and control statments.
+--------
+
+Sample input : int a = 10 , b = 20
+Sample Output : MAX = 20
+
+                               
+========================================================================================================  
+
+Que 7 :  Write a 'C' program to check and print the Maximum number among three numbers without using ternary operator and control statments.
+--------
+
+Sample input : int a = 10 , b = 200, c = 134;
+Sample Output : MAX = 200
+
+                               
+======================================================================================================== 
+
+Que 8 :  Write a 'C' program to check and print the Maximum number among three numbers using ternary operator.
+--------
+
+Sample input : int a = 10 , b = 200, c = 134;
+Sample Output : MAX = 200
+
+                               
+========================================================================================================  
+
+Que 9 :  Write a 'C' program to check and print that given number is even or odd using ternary operator.
+--------
+
+Sample input : int a = 10
+Sample Output : EVEN
+
+Sample input : int a = 125
+Sample Output : ODD
+                               
+========================================================================================================  
+
+Que 10 :  Write a 'C' program to reverse the given 3 digit number without using control statments.
+--------
+
+Sample input : int a = 123;
+Sample Output : reverse =  321

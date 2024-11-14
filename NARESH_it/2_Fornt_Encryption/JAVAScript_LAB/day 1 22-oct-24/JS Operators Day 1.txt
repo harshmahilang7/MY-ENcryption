@@ -1,0 +1,124 @@
+Q 1) 
+    Write a JavaScript program to print student details using the console.log() function only.
+    
+    Sample Output :
+
+    Name = Raj Malhotra
+    Roll No = 101
+    Branch = CSE
+    Address = Hyderabad
+    College Name = Naresh It
+=========================================================================================================
+
+Q 2) 
+    Write a JavaScript program to print student details using the document.write() function only.
+    
+    Sample Output :
+    
+    Name = Raj Malhotra
+    Roll No = 101
+    Branch = CSE
+    Address = Hyderabad
+    College Name = Naresh It
+
+=============================================================================================================
+
+Q 3) Write a JavaScript program to print the following pattern/diagram using the console.log() function only.
+
+    Sample output :
+
+    # # # # #
+    #       #
+    #       #
+    #       #
+    # # # # #
+
+==============================================================================================================
+
+Q 3) Write a JavaScript program to print the following pattern/diagram using the document.write() function only.
+
+    Sample output :
+
+    # # # # #
+    #       #
+    #       #
+    #       #
+    # # # # #
+
+==============================================================================================================
+
+Q 4) Write a JavaScript program to declare and initialize two variables like let a = 20, b = 10 and print the addition, subtraction, multiplication, division, and modulus operations.
+
+    Sample Output :
+
+    Addition is : 30
+    Subtraction is : 10
+    Multiplication is : 200
+    Division is : 2
+    Modulus is : 0
+==============================================================================================================
+
+Q 5) Write a JavaScript program to print the addition of any two positive numbers without using the + operator.
+
+    Sample Input :
+    let a = 10, b = 20;
+
+    Sample Output :
+    Addition is 30
+==============================================================================================================
+
+Q 6) Write a JavaScript program to print the sum of the first and last digit of any given 2-digit number.
+    
+    Sample Input :
+    let number = 23;
+
+    Sample Output :
+    Addition of two digit number is : 5
+
+===============================================================================================================
+
+Q 7) Write a JavaScript program to calculate and print the area of a square and a rectangle.
+
+    Sample Input : 
+    Side of square is: 5
+    Length and breadth of rectangle are: 4, 5
+
+    Sample Output :
+
+    The area of the square with side 5 is: 25
+    The area of the rectangle with length 4 and breadth 5 is: 20
+
+================================================================================================================
+Q 8) 
+	Write a JavaScript program to find the previous multiple of 10 of a given 2-digit number. Take the input by prompting the user.
+	
+	Sample Input :
+		Enter a 2-digit number: 26
+	Sample output :
+		Previous multiple of 10 is: 20
+==================================================================================================================================
+
+Q 9) 
+	Write a JavaScript program to find the next multiple of 10 of a given 2-digit number. Take the input by prompting the user.
+
+	Sample Input :
+		Enter a 2-digit number: 34
+	Sample output :
+		Next multiple of 10 is: 40
+
+==================================================================================================================================
+
+Q 10) 
+	Write a JavaScript program to determine the next or previous multiple of 10 for a given two-digit number. The program should 	follow 	these rules:
+
+	1) If the last digit of the number is greater than or equal to 5, print the next multiple of 10.
+	2) If the last digit of the number is less than 5, print the previous multiple of 10.
+
+	Sample Inputs and Outputs:
+		Input1: 34 → Output1: 30
+		Input2: 25 → Output2: 30
+		Input3: 86 → Output3: 90
+==================================================================================================================================
+
+
+

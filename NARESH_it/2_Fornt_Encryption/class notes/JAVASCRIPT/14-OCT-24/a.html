@@ -1,0 +1,56 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-14 04:27:06 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-14 04:55:29 PM   16:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Addtion() {
+            // alert("new"); checking 
+            let x,y,res;
+            // x=document.getElementById("Firstnum")
+            // y=document.getElementById("SecNum")
+            x=+Firstnum.value;
+            y=+SecNum.value;
+            res=x+y;
+            
+            // document.write("Sum is"+res);
+            // alert("Sum is"+res);
+            // or
+            // console.log("Sum is"+res);
+            op.value="Sum is"+res
+            
+        }
+        function Sub() {
+
+            let x,y,res;
+            x=+Firstnum.value;
+            y=+SecNum.value;
+            res=x+y;
+            op.value="Subtraction is"+res
+            
+        }
+    </script>
+</head>
+<body>
+    <div aling="centre"></div>
+    <h3>finding sum for 2 number</h3>
+    <label for="Firstnum">Enter the Firstnum</label><br>
+    <input type="number" name="" id="Firstnum">
+    
+    <label for="SecNum">Enter the Secound Number</label><br>
+    <input type="number" name="" id="SecNum"> <br>
+    
+    
+        <button onclick="Addtion()">Addtion</button>
+    <br>
+    <output id="op"></output>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-19 04:37:26 PM   16:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-19 04:44:52 PM   16:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overriding</title>
+    <style>
+        .text{
+            color: red;
+        }
+        .demo{
+            color: green;
+        }
+        .sample{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text demo sample"> multi class with same property</h1> <!-- blue color-->
+    <!-- here first mapping class first come then 2nd one then last one show 
+    
+    it follow top to bottom-->
+    <h1 class="text sample demo"> multi class with same property</h1> <!-- blue color-->
+    <h1 class="sample demo text"> multi class with same property</h1> <!-- blue color-->
+
+    <!-- just last one only you can see as top to bottom -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-01 11:57:17 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-01 12:25:30 PM   12:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     
+Q 2)
+Display All Object Properties in a List
+Task: Use a for...in loop to display all properties of an object course (with title, duration, level) in an unordered list with the 	ID courseDetails. -->
+<ul id="courseinfo">
+</ul>
+<script>
+    const course={
+        title:"java nit",
+        duration:5,
+        level:3
+    };
+    for (const key in course) 
+    {
+        document.write(`<li> ${key} = ${course[key]}</li>`)
+        // document.getElementById("courseinfo").innerHTML += "<li>"+course.key+"</li>";
+        // document.getElementById("courseinfo").innerHTML += "<li>"+key+"="+course[key]+"</li>";
+    
+        
+        
+    }       
+</script>
+</body>
+</html>

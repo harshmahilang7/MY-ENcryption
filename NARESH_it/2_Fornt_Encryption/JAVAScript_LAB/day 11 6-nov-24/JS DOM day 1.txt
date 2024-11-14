@@ -1,0 +1,38 @@
+Q 1)
+	Create a Task Management Application
+	Create input fields for a task name and description, along with an "Add Task" button.
+	Implement a function addTask() that:
+		- Reads the input values.
+		- Creates a new list item with the task details.
+		- Adds the new item to a task list on the webpage.
+
+Q 2)
+	Create a Contact List
+	Create input fields for name, phone, and email, with an "Add Contact" button.
+	Implement a function addContact() that:
+		- Reads the input values.
+		- Creates a contact card displaying the details.
+		- Appends the card to a contacts section on the webpage.
+
+Q 3) 
+	Create a Counter Application
+	Add buttons for "Increment", "Decrement", and a display area for the counter value.
+	Implement functions incrementCounter() and decrementCounter() that:
+		- Increase or decrease the counter value by 1.
+		- Update the counter display on the webpage.
+
+Q 4)
+	Create a Color Changer
+	Add a dropdown with color options (e.g., Red, Blue, Green) and a "Change Color" button.
+	Implement a function changeColor() that:
+		- Reads the selected color from the dropdown.
+		- Changes the background color of a target element on the page to the selected color.
+
+Q 5)
+	Create a Simple To-Do List with Deletion Option
+	Create an input field for a to-do item and an "Add Item" button.
+	Implement a function addItem() that:
+		- Reads the input value.
+		- Creates a list item with a "Delete" button.
+		- Adds the item to a to-do list on the webpage.
+		- When the "Delete" button is clicked, remove the item from the list.

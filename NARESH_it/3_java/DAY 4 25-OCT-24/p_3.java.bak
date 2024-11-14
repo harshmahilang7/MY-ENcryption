@@ -1,0 +1,39 @@
+/*Program-3
+----------
+Write a program to enter Principal, Rate and Time. Calculate and display Simple Interest and Amount.
+
+Explanation:
+Simple Interest formula: SI = P*R*T/100
+Total Amount formula: A = P + SI
+
+Sample Input :
+Principal (P): 5000
+Rate of Interest (R): 5
+Time (T in years): 3
+
+Sample Output :
+Simple Interest (SI): 750.0
+Total Amount (A): 5750.0
+
+=========================================*/
+import java.util.Scanner;
+
+class p_3 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Principal (P):");
+		double principal=sc.nextDouble();
+		System.out.print("Rate of Interest (R):");
+		double rateOfInterest=sc.nextDouble();
+		System.out.print("Time (T in years):");
+		int time=sc.nextInt();
+		double si = principal*rateOfInterest*time/100
+		System.out.println("Simple Interest (SI):"+si);
+		double totalAmout=principal+si;
+		System.out.println("Total Amount (A):"+totalAmout);
+		
+		
+	}
+}

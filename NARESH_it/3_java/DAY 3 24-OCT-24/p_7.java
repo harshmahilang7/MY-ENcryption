@@ -1,0 +1,24 @@
+/*Program 02:
+//-----------
+//Write a Java program to check if a given number is a palindrome.
+//A number is a palindrome if it remains the same when its digits are reversed.*/
+class p_7
+{
+	public static void main(String[] args) 
+	{
+		int num=234;
+		int copyNum=num;
+		int sum=0,l;
+		while(num!=0)
+		{
+			l=num%10;
+			sum=sum*10+l;
+			num/=10;
+		}
+		if(sum==copyNum)
+		{
+			System.out.println("palindrome num :"+sum);
+		}
+		else System.out.println("not palindrome num :"+sum);
+	}
+}

@@ -1,0 +1,78 @@
+Que 1 :
+=======
+
+Write a C program to print given pattern.
+
+*  *  *  *  *
+   *  *  *  *
+      *  *  *
+         *  *
+            *
+
+========================================
+
+Que 2 :
+=======
+
+Write a C program to print given pattern.
+
+
+1  2  3  4  5
+   4  6  8 10
+      9 12 15
+        16 20
+           25
+
+========================================
+
+Que 3 :
+=======
+
+Write a C program to print given pattern.
+
+ 5  4  3  2  1
+    4  3  2  1
+       3  2  1
+          2  1
+             1
+
+========================================
+
+Que 4 :
+=======
+
+Write a C program to print given pattern.
+
+ A  B  C  D  E
+    A  B  C  D
+       A  B  C
+          A  B
+             A
+
+========================================
+
+Que 5 :
+=======
+
+Write a C program to print given pattern.(Fibonacci sequence)
+
+0  1   1    2    3
+   5   8    13   21
+       34   55   89
+            144  233
+                 377
+
+========================================
+
+Que 6 :
+=======
+
+Write a C program to print given pattern.
+
+1  2  3  4  5
+2  2  3  4  5
+3  3  3  4  5
+4  4  4  4  5
+5  5  5  5  5
+
+========================================

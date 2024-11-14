@@ -1,0 +1,12 @@
+#include<iostream.h>
+#include<constream.h>
+#include<stdio.h>
+void main()
+{
+int u,e;
+clrscr();
+u=8%2;              // % show reminder
+e=8/2;             //  / divied the calcuate answer;
+cout<<u<<endl<<e;
+getch();
+}

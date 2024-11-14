@@ -1,0 +1,55 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-28 11:16:53 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-28 11:36:57 AM   11:10
+-->
+<!-- 
+Q 1) 
+	Write a JavaScript program to print all Nth digit prime numbers :
+	
+	Description :
+		if user enter 2 as a input the program should print all 2 digit prime numbers.
+
+	Sample Input : 
+		Enter a Number : 1 
+	Sample Output : All 1 digits prime numbers are : 2 3 5 7
+
+	Sample Input :
+		Enter a Number : 2
+	Sample Output : All 2 digits prime numbers are : 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
+=========================================================================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print all Nth digit prime numbers</title>
+</head>
+<body>
+    <h1>print all Nth digit prime numbers</h1>
+    <script>
+        let x=+prompt("enter the number");
+        let last=(10**x)-1;
+        let first=(10**(x-1))
+        
+        for (let i = first; i <= last; i++) {
+            let c=0;
+            for (let j = 1; j <= i/2; j++) {
+                if(i%j==0)
+                {
+                    c++;
+                }
+                
+            }
+            if(c==1)
+            {
+                document.write(`${i} <br>`);
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+//4) Write a program to accept 
+//a two digit number from command line argument 
+//and find the sum of digit. (Example : 54   5 + 4 =9)
+class p_4 
+{
+	public static void main(String[] args) 
+	{
+		int num=Integer.parseInt(args[0]);
+		int num1=num/10;
+		int num2=num%10;
+		System.out.println("the number is "+num+" so "+num1+" + "+num2+" "+" = "+(num1+num2));
+	}
+}

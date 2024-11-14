@@ -1,0 +1,29 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-22 04:59:48 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-22 05:15:52 PM   17:10
+-->
+<h3>demo on splice [spl ice] method</h3>
+<script>
+    const eles=[10,20,30,40,50,60,70,80,90]
+    
+    // deletion     splice(start-index,count)
+ //                                    count => (no_of_element)
+ 
+ document.write(`eles is=> ${eles}<br>`);
+ eles.splice(1,6);
+ document.write(`after deletion the eles is=> ${eles}<br>`);
+
+//  eles=[10,80,90]
+
+ // updation     splice(start-index,count,new eles)
+ eles.splice(1,2,33,44,55,66);
+ document.write(`after updatetion the eles is=> ${eles}<br>`);
+ //  eles=[10,33,44,55,66]
+
+ //insertion   splice(start-index,0,new eles)
+ eles.splice(1,0,22,11)
+ document.write(`after insertion the eles is=> ${eles}<br>`);
+ eles=[10,22,11,33,44,55,66]
+</script>

@@ -1,0 +1,14 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-10-24 06:29:41 PM   18:10
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-10-24 06:30:27 PM   18:10
+ */
+
+// 1) Write a program to find out the cube of a number where number must be    taken from command line argument.
+public class p_1 {
+    public static void main(String[] args) {
+		int x=Integer.parseInt(args[0])*Integer.parseInt(args[0])*Integer.parseInt(args[0]);
+        System.out.println("the cube is "+x);
+    }
+}

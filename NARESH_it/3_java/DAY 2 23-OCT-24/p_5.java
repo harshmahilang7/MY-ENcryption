@@ -1,0 +1,21 @@
+//Q5) Write a Java program to calculate the 
+//factorial of a number where number must be taken from command line argument.
+//
+class p_5 
+{
+	public static void main(String[] args) 
+	{
+		int a=Integer.parseInt(args[0]);
+		//int a=5;
+		int n=a;
+		int sum=1;
+		while(n!=0)
+		{
+			sum=sum*n;
+			n--;
+			//System.out.println("factorial ="+sum);
+		}
+		
+		System.out.println("factorial ="+sum);
+	}
+}

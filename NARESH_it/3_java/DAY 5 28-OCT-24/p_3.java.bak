@@ -1,0 +1,31 @@
+/*Que 3 :
+=======
+
+Write a java program to find the profit and loss by following the formula
+//Profit and loss Formulas 
+//Profit = SP - CP
+//Loss = CP - SP
+Profit percentage = (Profit /Cost Price) x 100
+Loss percentage = (Loss / Cost price) x 100 
+
+*/
+import java.util.Scanner;
+class p_3
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the selling price : ");
+		int sp=sc.nextInt();
+		System.out.print("enter the cost price");
+		int cp=sc.nextInt();
+		int profit=sp-cp;
+		int loss=cp-sp;
+		double profitPercentage=(profit/cp)*100;
+		double lossPercentage=(loss/cp)*100;
+		System.out.println("profit : "+profit);
+		System.out.println("loss : "+loss);
+		System.out.println("profit Percentage : "+profitPercentage);
+		System.out.println("loss Percentage : "+lossPercentage);
+	}
+}

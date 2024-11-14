@@ -1,0 +1,27 @@
+package ProgramThree;
+
+import java.util.Scanner;
+
+
+public class Elc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the customer id");
+		int customerId=sc.nextInt();
+		System.out.print("enter the customer Title");
+		String customerTitle=sc.next();
+		System.out.print("enter the customerPrice");
+		double customerPrice=sc.nextDouble();
+		System.out.print("enter the Discount %");
+		double discountcustomerPrice=sc.nextDouble();
+		
+		Blc obj1 = new Blc();
+		obj1.setcustomerData(customerId,customerTitle,customerPrice);
+		obj1.applyDiscount(discountcustomerPrice);
+		obj1.getcustomerInfo();
+		sc.close();
+		
+	}
+}

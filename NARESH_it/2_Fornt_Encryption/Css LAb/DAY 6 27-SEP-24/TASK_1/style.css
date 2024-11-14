@@ -1,0 +1,44 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-09-27 11:42:08 AM   11:09
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-09-27 12:34:45 PM   12:09
+ */
+h1{
+    color: red;
+    background-color: lightgrey;
+}
+h3{
+    text-align: center;
+}
+input,label{
+    padding: 10px;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+} 
+button{
+    padding: 10px;
+    margin: 2px;
+    background-color: lightgray;
+}
+fieldset{    
+    padding: 20px;
+    justify-items: center;
+    height:300px;
+    width: 350px;margin: auto;
+  
+}
+form{
+    justify-items: center;
+       
+}
+legend{
+    padding-left: 0px;
+}
+.fromproperties
+{
+    /* align-items: center;
+    text-align: center;  */
+    padding-left: 55px;
+}

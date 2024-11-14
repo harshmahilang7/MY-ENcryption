@@ -1,0 +1,37 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-25 12:01:01 PM   12:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-25 12:04:49 PM   12:10
+-->
+<!-- Que 4 :
+=======
+
+(USING FOR LOOP) Write a JavaScript program to check whether a given integer is a perfect number. 
+A number is considered perfect if it is equal to the sum of all its divisors excluding itself. 
+For example, 6 is a perfect number because the divisors of 6 are 1, 2, and 3, and their sum is 6. 
+Similarly, 28 is a perfect number because the sum of its divisors (1, 2, 4, 7, 14) is also 28.
+
+Sample input  : 6
+Sample output : 6 is perfect number
+
+Sample input  : 12
+Sample output : 12 is not perfect number
+
+======================================================================================================================================
+===================================================================================================================================== -->
+<script>
+    let n=prompt("enter the number");
+    let sum=0;
+    for (let i = 1; i <n; i++) {
+        if(n%i==0)
+    {
+        sum=sum+i;
+    }
+        
+    }
+    if(n==sum)
+    {
+        document.write(`it is perfect number ${n}<br>`);
+    }
+</script>

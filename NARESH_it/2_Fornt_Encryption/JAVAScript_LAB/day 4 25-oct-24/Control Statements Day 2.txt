@@ -1,0 +1,151 @@
+
+Que 1 :
+=======
+
+Write a simple JavaScript program that reads an integer from the user and prints the multiplication table of the given number using a while loop.
+
+Example :
+
+Sample input : N = 5
+
+Sample output :
+
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+.....
+.....
+5 x 10 = 50
+
+=====================================================================================================================================
+
+
+Que 2 :
+=======
+
+Write a JavaScript program that reads a positive integer N from the user and calculates the sum of even and odd numbers between 1 and N using a for loop. 
+The program should then print the sum of even numbers and the sum of odd numbers.
+
+NOTE : If user entered negative input then print "Invalid Input" message.
+
+
+Example_1 :
+
+Sample input  : N = -10;
+
+Sample output : Invalid Input
+
+---------------------
+
+Example_2 :
+
+Sample input  : N = 10;
+
+Sample output : even sum =>  30 
+                odd sum  =>  25
+
+=====================================================================================================================================
+Que 4 :
+=======
+
+(USING FOR LOOP) Write a JavaScript program to check whether a given integer is a perfect number. 
+A number is considered perfect if it is equal to the sum of all its divisors excluding itself. 
+For example, 6 is a perfect number because the divisors of 6 are 1, 2, and 3, and their sum is 6. 
+Similarly, 28 is a perfect number because the sum of its divisors (1, 2, 4, 7, 14) is also 28.
+
+Sample input  : 6
+Sample output : 6 is perfect number
+
+Sample input  : 12
+Sample output : 12 is not perfect number
+
+======================================================================================================================================
+=====================================================================================================================================
+Que 5 :
+=======
+
+Write a JavaScript program to sort the string in ascending order using bubble sort.
+
+sample input : 
+	Input: "javascript"
+Sample output : 
+	Sorted String: "aacijprstv"
+
+Sample input :
+	Input: "apple"
+Sample output :
+	Sorted String: "aelpp"
+
+
+======================================================================================================================================
+=====================================================================================================================================
+
+Que 6 :
+=======
+
+Write a JavaScript program to check whether the number is a palindrome or not in a given range and print all the palindrome numbers is given range. A number is considered a palindrome if the reverse of the number is equal to the original number. 
+The program should prompt the user to enter an integer, reverse the number, and then compare it to the original number to determine if it is a palindrome.
+
+Sample input  : Enter an integer: 1 500
+Sample Output : The palindrome Numbers in range 1 - 500 are :
+1
+2
+3
+4
+5
+6
+7
+8
+9
+11
+22
+33
+44
+55
+66
+77
+88
+99
+101
+111
+121
+131
+141
+151
+161
+171
+181
+191
+202
+212
+222
+232
+242
+252
+262
+272
+282
+292
+303
+313
+323
+333
+343
+353
+363
+373
+383
+393
+404
+414
+424
+434
+444
+454
+464
+474
+484
+494
+
+

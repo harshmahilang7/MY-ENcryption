@@ -1,0 +1,18 @@
+class pThreeElc 
+{
+	public static void main(String[] args) 
+	{
+		pThreeBlc obj1=new pThreeBlc();
+		obj1.setBowlerName("dastan alam");
+		obj1.setWickets(10);
+		obj1.setMatches(1);
+		obj1.setBallsBowled(100);
+		obj1.setRunsConceded(59);
+		
+		//method
+		obj1.showBowlerStatistics();
+		obj1.computeBowlingAverage();
+		obj1.computeStrikeRate();
+		
+	}
+}

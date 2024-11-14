@@ -1,0 +1,52 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-30 05:00:03 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-31 10:18:08 AM   10:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h3>demo on document object`s properties</h3>
+        <script>
+            document.write(`${document.title}<br>`);
+            document.title="aaaaaaaaaaaaaa";
+            
+            document.write(`${document.URL}<br>`)
+            // window.location.href="1.html";  => dirlty go to 1.html
+            const h=document.head;  // return ref of html H
+           // const h=new HTMLHeadElement() background it is working 
+            document.write(`${h}<br>`);
+            const b=document.body
+            document.write(`${b}<br>`);
+            
+            
+        </script>
+        <img src="1.jpg" alt="" srcset="" height="200px" width="200px">
+        <img src="1.jpg" alt="" srcset="" height="200px" width="200px">
+        <br>
+        <script>
+            const i=document.images;
+            document.write(`${i}<br>`);
+            // i.forEach(ob => {
+            //     document.write(`${ob}<br>`);
+            // });  not working
+
+            for (const ob of i) {
+                document.write(`${ob}<br>`);
+            }
+            
+            const h1=document.links;
+            document.write(`${h1}<br>`);
+            const f=document.forms;
+            document.write(`${f}<br>`);
+
+            // head ,body , img ,a forms 
+            // other then this 5 tags you have to use method
+             
+        </script>
+    </body>
+</html>

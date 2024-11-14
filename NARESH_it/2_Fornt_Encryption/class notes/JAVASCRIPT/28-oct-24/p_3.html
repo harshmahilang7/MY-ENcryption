@@ -1,0 +1,56 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-28 05:03:53 PM   17:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-28 05:49:19 PM   17:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //object init
+        const stud ={//peroperties
+            rno:30,
+            sna:'siva',
+            total:350,
+
+            //method
+
+            getResult:function()
+            {
+                if (stud.total>=400) {//if (this.total>=400) valid || if (total>=400)=> not vaid
+                    return 'pass';
+                }
+                else return 'fail'
+            }
+            
+        }
+        
+        document.write(`Roll No : ${stud.rno}<br>`)
+        document.write(`name : ${stud.sna}<br>`)
+        document.write(`total marks : ${stud.total}<br>`)
+        document.write(`${stud.getResult()}<br>`)
+
+        stud.total=450;
+
+        document.write(`Roll No : ${stud.rno}<br>`)
+        document.write(`name : ${stud.sna}<br>`)
+        document.write(`total marks : ${stud.total}<br>`)
+        document.write(`${stud.getResult()}<br>`)
+
+
+        // stud ==> stack area  1001
+        // Object => roll sna total  => heap  1001
+        // evry thing persent in stud varable  class area/method area ca/ma 
+
+// stud careted by us external useing , use for the outside object  
+// this created by browser for internal useing ,use inside the object 
+
+
+
+        </script>
+    </body>
+</html>

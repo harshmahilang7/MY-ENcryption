@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Username" id="uName" />
+    <br />
+    <input type="password" placeholder="password" id="pWord" />
+    <br />
+    <button onclick="loginValidate()">Login</button>
+
+    <script>
+      function loginValidate() {
+        let Username = uName.value;
+        let password = pWord.value;
+        if (Username === "Ravindra" && password === "Ravindra@123") {
+          alert("Welcome Ravindra! you logged in successfully.");
+        } else if (Username === "Ravindra" && password != "Ravindra@123") {
+          alert("Sorry! incorrect Password.");
+        } else if (Username != "Ravindra" && password === "Ravindra@123") {
+          alert("Sorry! incorrect Username.");
+        } else if (Username != "Ravindra" && password != "Ravindra@123") {
+          alert("Incorrect Username and Password.");
+        } else {
+          alert("Undefined values.");
+        }
+      }
+    </script>
+  </body>
+</html>

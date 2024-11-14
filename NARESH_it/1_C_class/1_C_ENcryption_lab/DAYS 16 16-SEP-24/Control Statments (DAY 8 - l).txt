@@ -1,0 +1,89 @@
+Que 1 :
+=======
+
+(USING WHILE LOOP) Write C program to check given number is automorphic number or not 
+
+Automorphic number :
+An automorphic number is a number whose square ends in the
+same digits as the number itself.
+
+For example:
+5,6,25 are automorphic numbers.
+5*5=25 // last digit is 5
+6*6=36 // last digit is 6
+25*25=625 // last digit is 25
+
+Sample input  : 5
+Sample output : 5 is automorphic number.
+
+Sample input  : 7
+Sample output : 7 is not automorphic number.
+
+
+==========================================
+
+Que 2 :
+=======
+
+(USING WHILE LOOP) Write a C program to calculate the product of the digits of a given integer. 
+If the number is negative, convert it into positive number before calculating the product.
+
+Sample input  : Enter a number: 1234
+Sample output : The product of the digits is: 24
+
+Sample input  : Enter a number: -567
+Sample output : The product of the digits is: 210
+
+==========================================
+
+Que 3 :
+=======
+
+(USING FOR LOOP) Write a C program to check a given number is Prime number or not.
+
+Sample input  : Enter an integer: 5
+Sample output : 5 is prime number.
+
+Sample input  : Enter an integer: 6
+Sample output : 6 is not prime number
+
+==========================================
+
+Que 4 :
+=======
+
+(USING FOR LOOP) Write a C program to check whether a given integer is a perfect number. 
+A number is considered perfect if it is equal to the sum of all its divisors excluding itself. 
+For example, 6 is a perfect number because the divisors of 6 are 1, 2, and 3, and their sum is 6. 
+Similarly, 28 is a perfect number because the sum of its divisors (1, 2, 4, 7, 14) is also 28.
+
+Sample input  : 6
+Sample output : 6 is perfect number
+
+Sample input  : 12
+Sample output : 12 is not perfect number
+
+==========================================
+
+Que 5 :
+=======
+
+(USING FOR LOOP) Write C program to check given number is Disarium Number or not.
+
+Disarium Number :
+A number is a Disarium number if the sum of the digits powered with their respective positions is equal to the number itself.
+For example:
+
+Sample input  : 89
+Sample output : 89 is a Disarium number.
+Explanation   : 89:> 8^1 + 9^2 = 89
+
+Sample input  : 175
+Sample output : 
+Explanation   : 175:> 1^1 + 7^2 + 5^3 = 175
+
+Sample input  : 45
+Sample output : 45 is NOT a Disarium number
+Explanation   : 45:> 4^1 + 5^2 = 29
+
+==========================================

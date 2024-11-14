@@ -1,0 +1,47 @@
+package ProgramTwo;
+//Program 02: 
+//
+//Write a Program on OOPs to define a Book class with the following properties and behavior.
+//
+//Properties:
+//
+//bookId : int
+//bookTitle : String
+//bookPrice : double
+//Behavior:
+//
+//Define a method setBookData(int bookId, String bookTitle, double bookPrice) : public void to initialize these properties directly using the this keyword.
+
+//Define a method applyDiscount(double discountPercentage) : public void that applies a discount to bookPrice based on the percentage provided.
+
+//Define a method getBookInfo() : public void to display the properties.
+
+//Use the Scanner class in LibraryApp class to input values for bookId, bookTitle, and bookPrice, and initialize the properties using the setBookData method. Then, apply a discount and display the book details.
+
+
+public class Blc
+{
+	int bookId;
+	String bookTitle;
+	double bookPrice;
+	double discountBookPrice;
+	public void setBookData(int bookId,String bookTitle,double bookPrice) 
+	{
+		this.bookId=bookId;
+		this.bookTitle=bookTitle;
+		this.bookPrice=bookPrice;
+	}
+	public void applyDiscount(double discountPercentage)
+	{
+		this.discountBookPrice=(this.bookPrice-(this.bookPrice/100*10));
+	}
+	public void gtetBookInfo()
+	{
+		System.out.println("bookId : "+bookId);
+		System.out.println("bookTitle : "+bookTitle);
+		System.out.println("bookPrice : "+bookPrice);
+		System.out.println("discountBookPrice : "+discountBookPrice);
+	}
+	
+
+}

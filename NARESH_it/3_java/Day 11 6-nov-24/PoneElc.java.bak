@@ -1,0 +1,12 @@
+
+
+class PoneElc 
+{
+	public static void main(String[] args) 
+	{
+		PoneBlc obj1=new PoneBlc();
+		obj1.setDimensions(2,2);
+		System.out.println(obj1.calculateArea());
+		System.out.println(obj1.calculatePerimeter());
+	}
+}

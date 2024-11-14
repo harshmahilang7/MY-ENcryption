@@ -1,0 +1,52 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-11 04:45:53 PM   16:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-16 04:46:19 PM   16:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <!-- main container -->
+         <div>
+            <h2>Registation Form</h2>
+         </div>
+         <div>
+            <label for="Fullname">Fullname</label><span>*</span>
+            <br>
+            <input type="text" name="Fullname" id="Fullname" required>
+         </div>
+         <div>
+            <label for="em">Email ID</label><span>*</span>
+            <br>
+            <input type="email" name="em" id="em" required>
+         </div>
+         <div>
+            <label for="phone">contect number</label><span>*</span>
+            <br>
+            <input type="tel" name="phone" id="phone" required maxlength="10">
+         </div>
+         <div>
+            <label for="dob">Date of Birth</label>
+            <br>
+            <input type="date" name="dob" id="dob" min="1990-01-01" max="2010-12-31">
+         </div>
+         <div>
+            <label for="gen">Gender:</label>
+            <br>
+            <input type="radio" name="g1" id="gen" value="m" checked><label>Male</label>&nbsp;
+            <input type="radio" name="g2" id="gen" value="f" ><label>Female</label>&nbsp;
+            <input type="radio" name="g3" id="gen" value="o" ><label>Other</label>&nbsp;
+         </div>
+         <div>
+            <label for="course">Which Couse</label><br>
+            <select name="course" id="course">
+                <OPTion>C programing</OPTion>
+            </select>
+         </div>
+    </body>
+</html>

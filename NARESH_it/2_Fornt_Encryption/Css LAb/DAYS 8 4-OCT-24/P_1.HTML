@@ -1,0 +1,51 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-04 11:26:04 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-04 12:28:05 PM   12:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-shadows in CSS</title>
+    <STYle>
+        h1{
+            text-align: center;
+        }
+        #simple{
+            text-shadow:2px 2px 2px black;
+        }
+        #blur{
+            text-shadow:2px 3px 4px black;
+        }
+        #Multiple{
+            text-shadow:-2px -3px 4px red,2px 3px 4px blue;
+        }
+        #glow{
+            /* text-shadow: 0px 0px 10px rgb(218, 93, 197),0px 0px 10px rgb(218, 93, 197),0px 0px 10px rgb(218, 93, 197),0px 0px 10px rgb(218, 93, 197),0px 0px 10px rgb(218, 93, 197),0px 0px 10px rgb(218, 93, 197);*/
+            color: rgb(255, 255, 255); 
+            text-shadow: 0px 0px 5px #f0f,0px 0px 10px #f0f,0px 0px 15px #f0f;
+
+        }
+        #inset{
+            background-color: gray;
+            color: white;
+            text-shadow: -2px -2px 5px black;
+        }
+        div{
+            border-bottom: 1px dotted red;
+        }
+    </STYle>
+</head>
+<body>
+    <!-- Q 1) Write an CSS to demonstrate different types of text-shadows in CSS: -->
+   <H1 id="simple">Simple Text Shadow</H1>
+    <H1 id="blur">Blurred Text Shadow</H1>
+    <H1 id="Multiple">Multiple Shadows</H1>
+    <H1 id="glow">Glowing Effect</H1>
+    <H1 id="inset">Inset Shadow</H1>
+    <div></div>
+</body>
+</html>

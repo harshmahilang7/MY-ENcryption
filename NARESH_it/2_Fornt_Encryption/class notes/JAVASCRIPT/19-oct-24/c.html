@@ -1,0 +1,50 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-19 04:56:29 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-19 05:21:29 PM   17:10
+-->
+<h3>demo on neasted array</h3>
+<script>
+    // const a=[[1,2,3],[4,5,6,7]]
+    const a=[
+        [1,2,3,4],
+        [true,false],
+        ["rama","sam","kam","lan","kam"]
+    ]
+
+    document.writeln(`a= ${a}<br>`);
+    document.writeln(`a length= ${a.length}<br>`);
+
+    
+    document.writeln(`a [0]= ${a[0]}<br>`);
+    document.writeln(`a [0] length= ${a[0].length}<br>`);
+    document.writeln(`a [1]= ${a[1]}<br>`);
+    document.writeln(`a [1] length= ${a[1].length}<br>`);
+
+    // we have to as per our need that why we have to use loop
+    
+    // for (let i = 0; i < a.length; i++) {    
+    //     for (let j = 0; j < a[i].length; j++) {
+    //         document.write(`${a[i][j]}  `);
+            
+    //     }
+        
+    // }
+    // for (let i = 0; i < a.length; i++) {    
+    //     for (let j = 0; j < a[i].length; j++) {
+    //         document.write(`${a[i][j]}<br>`);
+            
+    //     }
+        
+    // }
+    for (let i = 0; i < a.length; i++) {    
+        for (let j = 0; j < a[i].length; j++) {
+            document.write(`${a[i][j]} &nbsp;`);
+            
+        }
+        document.write(`<br>`);
+    }
+//  print table in console 
+    console.table(a);
+</script>

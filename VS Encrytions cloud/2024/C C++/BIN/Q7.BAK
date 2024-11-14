@@ -1,0 +1,15 @@
+// wap 3 of the number by math fucton?
+// editer gor the test........
+#include<iostream.h>
+#include<constream.h>
+#include<math.h>
+void main()
+{long int d,e=0;
+clrscr();
+cout<<"enter the number:";
+cin>>d;
+e=e+pow(d,3);
+cout<<endl;
+cout<<"the amstong number is "<<e;
+getch();
+}

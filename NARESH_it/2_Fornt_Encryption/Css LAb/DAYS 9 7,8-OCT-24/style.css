@@ -1,0 +1,55 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   2024-10-07 11:42:12 AM   11:10
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-10-08 11:58:23 AM   11:10
+ */
+
+ main{
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+    /* height: 400px; */
+ }
+ .box-flex{
+    border: 2px solid;
+    /* height: 500px; */
+    display: flex;
+    border-radius: 10px;
+ }
+
+ .imga > img{
+    height: 400px;
+    width: 400px;
+ }
+ .info-box{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    /* height: 150px;
+    width: 200px; */
+    border-radius: 10px;
+ }
+
+ .info{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 30px;
+    /* margin: 20px; */
+ }
+ .info >h1{
+    text-align: center;
+ }
+ .info-box > label,button,input {
+    margin: 6px;
+ }
+ .info-box-inside{
+    display: flex;
+    /* justify-content: center; */
+ }
+ .info-box-inside-img >img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+ }

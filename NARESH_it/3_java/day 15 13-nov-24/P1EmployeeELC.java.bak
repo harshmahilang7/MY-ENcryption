@@ -1,0 +1,9 @@
+class P1EmployeeELC 
+{
+	public static void main(String[] args) 
+	{
+		P1EmployeeBLC obj1=new P1EmployeeBLC("shaktiman",30,"Sales");
+		
+		System.out.println("Hello World!");
+	}
+}

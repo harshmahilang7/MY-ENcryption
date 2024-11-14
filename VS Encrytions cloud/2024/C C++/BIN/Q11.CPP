@@ -1,0 +1,23 @@
+/**
+ * @Author: Dastan Alam
+ * @Date:   03-04-2022  02:07:07 PM  14:04:72
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 04-04-2022  06:04:28 PM  18:04:91
+ */
+ // moden style
+#include <iostream>
+#include <conio>
+
+using namespace std;
+int main(int argc, char const *argv[])
+{     // clrscr();
+       cout<<"dastan_alam";
+       //getch();
+       return 0;
+}
+/* A traditional-style C++ program
+#include < iostream.h >
+int main( ) {
+  program code
+return 0;
+}              */

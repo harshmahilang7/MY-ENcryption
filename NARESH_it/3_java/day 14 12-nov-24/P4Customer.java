@@ -1,0 +1,35 @@
+
+class P4Customer 
+{
+	private String customerName;
+	private double monthlySpending;
+	P4Customer(String customerName,double monthlySpending)
+	{
+		this.customerName=customerName;	
+		this.monthlySpending=monthlySpending;	
+	}
+	
+	public void setCustomerName(String customerName)
+	{
+	this.customerName=customerName;	
+	}
+	
+	public void setMonthlySpending(double monthlySpending)
+	{
+	this.monthlySpending=monthlySpending;	
+	}
+	
+    String getCustomerName()
+	{
+		return customerName;
+	}
+    double getMonthlySpending()
+	{
+		return monthlySpending;
+	}
+    public void displayDetails()
+	{
+		System.out.println("customerName : "+customerName);
+		System.out.println("monthlySpending : "+monthlySpending);
+	}
+}

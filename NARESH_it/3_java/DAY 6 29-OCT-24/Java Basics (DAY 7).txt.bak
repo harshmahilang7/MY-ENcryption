@@ -1,0 +1,203 @@
+Que 1:
+======
+Write a Java program to calculate the curved surface area of a cube.
+
+Formula : 6*side Square.
+
+Sample Input  : Enter the side length of the cube: 4
+Sample Output : The curved surface area of the cube is: 96.0
+
+===========================
+
+Que 2 :
+=======
+Write a Java program to calculate the total surface area of a cylinder.
+Formula : 2 * pi * r square + 2 * pi * r * h 
+
+where:
+
+r is the radius of the cylinder's base,
+h is the height of the cylinder,
+pi is approximately 3.14.
+
+Sample Input : 
+Enter the radius of the cylinder: 5
+Enter the height of the cylinder: 10
+
+Sample Output :
+The total surface area of the cylinder is: 471.0
+
+===========================
+
+Que 3 :
+=======
+Write a Java program to calculate compound interest for 3 years? 
+Formula: amount=principle*((1+rate/100)*(1+rate/100)*(1+rate/100));
+
+Sample Input :
+Enter the principal amount: 1000
+Enter the rate of interest: 5
+
+Sample Output :
+The amount after 3 years with compound interest is: 1157.625
+
+===========================
+
+Que 4 :
+=======
+Write Java Program Convert Fahrenheit To Celsius | Vice Versa
+Formula :
+Celsius=(Fahrenheit-32)*5/9;
+Fahrenheit=((9*Celsius)/5)+32;
+Note [ Write two seprate program for converting celsius into Fahrenheit and Fahrenheit into celsius ]
+
+Example 1 :
+Sample Input  : Enter temperature in Fahrenheit: 98.6
+Sample Output : Temperature in Celsius: 37.0
+
+Example 2 :
+Sample Input  : Enter temperature in Celsius: 37
+Sample Output : Temperature in Fahrenheit: 98.6
+
+===========================
+
+Que 5 :  
+=======
+What will be the output of the below program ?
+
+public class Literals_Integers 
+ {
+ public static void main (String args[])
+ {
+ int decimal_int=1234;
+ int octal_int=077;
+ int hexadec_int=0x1ff2;
+ int binary_int=0b1010101;
+ System.out.println("This is a Decimal Literal: "+decimal_int);
+ System.out.println("This is an Octal Literal: "+octal_int);
+ System.out.println("This is a Hexa Decimal Literal: "+hexadec_int);
+ System.out.println("This is a Binary Literal: "+binary_int);
+ }
+ }
+
+
+===========================
+This is a Decimal Literal: 1234
+This is an Octal Literal: 63
+This is a Hexa Decimal Literal: 8178
+This is a Binary Literal: 85
+
+
+Que 6 :
+=======
+What will be the output of the below program ?
+
+public class Literals_Float
+{
+ public static void main (String args[])
+ {
+ float val_float=1.7732f;
+ double val_double=1.7732d;
+ float val_exponent=123E4f;
+ System.out.println("This is a Floating Point Literal"+val_float);
+ System.out.println("This is a Decimal Literal"+val_double);
+ System.out.println("This is an Exponential 
+Literal"+val_exponent);
+ }
+} 
+
+This is a Floating Point Literal1.7732
+This is a Decimal Literal1.7732
+This is an Exponential Literal1230000.0
+===========================
+
+Que 7 :
+=======
+What will be the output of the below program ?
+
+public class AutomaticTypeConversion
+{
+ public static void main (String args[])
+ {
+ int intVariable = 100;
+ long longVariable = intVariable;
+ float floatVariable = longVariable;
+ System.out.println ("Integer Value is : " + intVariable);
+ System.out.println ("Float Value is : " + floatVariable);
+ System.out.println ("Long Value is : " + longVariable);
+ }
+}
+
+100
+100.0
+100
+===========================
+
+Que 8 :
+=======
+What will be the output of the below program ?
+
+public class ExplicitTypeCasting
+{
+ public static void main (String[]args)
+ {
+ double doubleVariable = 100.04;
+ long longVariable = (long) doubleVariable;
+ int intVariable = (int) longVariable;
+ System.out.println ("Double Value is : " + doubleVariable);
+ System.out.println ("Long Value is : " + longVariable);
+ System.out.println ("Integer Value is : " + intVariable);
+ }
+}
+
+100.04
+100
+100
+===========================
+
+Que 9 :
+=======
+What will be the output of the below program ?
+
+class Sample
+{
+ public static void main(String[] args) 
+ {
+ int a=10;
+ float b=4.5f;
+ double c=5.2;
+ long d=(long)-8.98;
+System.out.println(a);
+System.out.println(b); 
+System.out.println(c); 
+System.out.println(d);
+}
+}
+
+10
+4.5
+5.2
+-8
+===========================
+
+Que 10 :
+=========
+What will be the output of the below program ?
+
+public class Sample {
+public static void main(String[] args) {
+int a=10;
+float b=4.5f;
+double c=5.2;
+long d=378293L;
+ long e=(long)-8.98;
+System.out.println(a);
+System.out.println(b); 
+System.out.println(c); 
+System.out.println(d);
+ System.out.println(e);
+Sample.main("java");
+}
+}
+
+===========================

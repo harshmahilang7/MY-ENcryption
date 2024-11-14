@@ -1,0 +1,54 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-20 05:23:13 PM   17:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-20 05:45:26 PM   17:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::before{
+            content: 'key';
+        }
+        ::after{
+            content: 'dastan';
+        }
+        /* it is for all */
+        h3::after{
+            content: '\f61d';
+        }
+        /* it is for h3 */
+
+        p::first-letter{
+           background:black ;
+           color: white;
+           font-size: 40px; 
+        }
+
+        ::selection{
+            text-decoration:overline;
+            color: red;
+            background-color: yellow;
+        }
+        input::placeholder{
+            color: red;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>demo in pseudo element</h1>
+    <h1>microsoft</h1>
+    <h2>amazon</h2>
+    <h3>infosys</h3>
+    <h3>capgamini</h3>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt molestiae repudiandae laudantium optio esse odit atque suscipit veritatis corporis velit! Porro, aliquid impedit incidunt aut reiciendis sit explicabo aliquam ipsam.</p>
+
+    <input type="text" name="" id="" placeholder="hee">
+</body>
+</html>

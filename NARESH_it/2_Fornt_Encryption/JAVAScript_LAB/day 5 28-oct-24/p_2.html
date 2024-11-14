@@ -1,0 +1,62 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-28 11:37:20 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-28 12:30:21 PM   12:10
+-->
+<!-- 
+Q 2 ) 
+	Write a JavaScript program to print all Nth digit Armstrong numbers :
+	
+	Definition :
+		Armstrong numbers are special numbers that are equal to the sum of their digits raised to the power of the 		number of digits. 
+	
+	Description :
+		if user enter 3 as a input the program should print all 3 digit Armstrong numbers.
+
+	Sample Input : 
+		Enter a Number : 1
+	Sample Output : All 1 digits Armstrong numbers are : 1 2 3 4 5 6 7 8 9
+
+	Sample Input :
+		Enter a Number : 3
+	Sample Output : All 3 digits Armstrong numbers are : 153 370 371 407
+
+========================================================================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>print all Nth digit Armstrong numbers</title>
+  </head>
+  <body>
+   
+    <script>
+      let x = +prompt("enter the number");
+      document.write(`<h1>print all ${x}th digit Armstrong numbers</h1><br>`)
+      let first = 10 ** (x - 1);
+      let last = 10 ** x - 1;
+      let l=0;
+      for (let i = first; i <= last; i++) {
+        let cp = i;
+        let sum=0;
+        let c=0;
+        while (cp > 0) {
+          c++;
+          cp = Math.floor(cp / 10);
+        }
+        let power=c;
+        cp=i
+        while (cp > 0) {
+            sum=sum+((cp%10)**power);
+            cp=Math.floor(cp/10);
+        }
+        if(sum==i){document.write(i + "<br>");l++;}
+    }
+    if(l==0){document.write(`not a armstorng number`)}
+      
+    </script>
+  </body>
+</html>

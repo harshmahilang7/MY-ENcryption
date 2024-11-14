@@ -1,0 +1,46 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-23 11:37:22 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-23 12:20:51 PM   12:10
+-->
+<!-- Q 3)
+Days to Years, Months, and Days Conversion
+
+Problem Statement:
+
+Write a JavaScript program that takes a number of days as input from the user and converts it into years, months, and remaining days. Assume:
+    1 year = 365 days
+    1 month = 30 days
+
+Sample Input 1 : 
+    Enter the total number of days: 500
+Sample Output 2 :
+    1 year 4 month and 15 days.
+
+Sample Input 2 :
+    Enter the number of days: 730
+Sample Output 2 :
+    2 year(s) 0 month(s) and 0 day(s).
+
+
+============================================================================================================================================================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            let days=+prompt("Enter the total number of days:")
+            document.write(`the days is ${days}<br>`);
+            //math.floor(3.5)
+            // 3
+            // 10/3|0 it also remove . values
+            let year=parseInt(days/365);
+            let month=parseInt((days%365)/30);
+            let day=parseInt((days%365)%30);
+            document.write(`${year} year(s) ${month} month(s) and ${day} day(s).<br>`);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-14 06:28:57 PM   18:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-14 06:47:08 PM   18:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div>
+      <h1>Student Registation Form</h1>
+    </div>
+    <form action="">
+      <div>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fn">Full Name:</label>
+          <br />
+          <input type="text" name="fn" id="fn" />
+          <br /><br />
+          <label for="Em">Email:</label><br />
+          <input type="email" name="Em" id="Em" />
+          <br /><br />
+          <label for="pn">Phone Number:</label><br />
+          <input type="tel" name="pn" id="pn" />
+          <br /><br />
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend>Gender</legend>
+          <input type="radio" name="gen" id="gen" />Male
+          <br />
+          <input type="radio" name="gen" id="gen" />Female
+          <br />
+          <input type="radio" name="gen" id="gen" />other
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend>Course Selection</legend>
+          <label for="drop">Select the Course</label>
+          <br />
+          <select>
+            <option value="Science">Science</option>
+            <option value="Maths">Maths</option>
+            <option value="hindi">hindi</option>
+          </select>
+          <br />
+        </fieldset>
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend>Additional Comments</legend>
+          <label for="tx">Comments:</label><br />
+          <textarea name="tx" id="tx" rows="5" cols="45"> </textarea>
+        </fieldset>
+      </div>
+      <br>
+      <div>
+        <input type="submit" value="Submit Registation" />
+      </div>
+    </form>
+  </body>
+</html>

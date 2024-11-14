@@ -1,0 +1,65 @@
+company:
+  employee:
+    name: emma
+    payble:
+      amount:
+        salary: 7000
+      bonus: 800
+dastan: dastan
+first: secound
+fourth: sweetu
+harsh: dastan
+pakiza: pakiza
+secound: dastan
+third: pakiza
+users:
+- address:
+    city: New York
+    state: NY
+    street: 123 Main St
+    zip: '10001'
+  age: 30
+  email: john.doe@example.com
+  id: 1
+  name: John Doe
+  orders:
+  - date: '2022-01-15'
+    id: 101
+    items:
+    - id: 1
+      name: Product 1
+      price: 19.99
+    - id: 2
+      name: Product 2
+      price: 29.99
+    total: 49.99
+  - date: '2022-02-20'
+    id: 102
+    items:
+    - id: 3
+      name: Product 3
+      price: 49.99
+    - id: 4
+      name: Product 4
+      price: 50.0
+    total: 99.99
+- address:
+    city: San Francisco
+    state: CA
+    street: 456 Elm St
+    zip: '94101'
+  age: 25
+  email: jane.smith@example.com
+  id: 2
+  name: Jane Smith
+  orders:
+  - date: '2022-03-10'
+    id: 103
+    items:
+    - id: 5
+      name: Product 5
+      price: 99.99
+    - id: 6
+      name: Product 6
+      price: 50.0
+    total: 149.99

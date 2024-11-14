@@ -1,0 +1,21 @@
+Q 1) 
+Create a JavaScript Program to Manage a Movie Collection
+Create a constructor function named Movie that takes in the properties title, director, year, and genre.
+Implement a function addMovie() that:
+	Reads movie details (title, director, year, genre) from input fields.
+	Creates a new Movie object.
+	Adds this object to a movies array.
+Create a function displayMovies() that:
+	Iterates over the movies array.
+	Displays each movie’s details on the webpage
+
+Q 2) 
+	Create a JavaScript Program to Record Student Information
+Create a constructor function named Student that takes in the properties name, rollNumber, class, and age.
+Implement a function addStudent() that:
+	Reads student details (name, roll number, class, age) from input fields.
+	Creates a new Student object.
+	Adds this object to a students array.
+Create a function displayStudents() that:
+	Iterates over the students array.
+	Displays each student’s details on the webpage.

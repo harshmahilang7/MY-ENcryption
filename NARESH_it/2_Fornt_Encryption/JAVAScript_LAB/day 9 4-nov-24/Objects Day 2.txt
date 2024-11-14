@@ -1,0 +1,5 @@
+Q 1) 
+	write a JavaScript code to read the values of 5 input fields (ex. username, pass, conf. pass, email, mobile) and store it into objects and print them.
+
+Q 2) 
+	write a JavaScript program to read the values of input fields (registration form : Name, lastname, address, course(selection box), gender (radio button), hobbies (checkbox), mobile number and email) and store them into the objects an print them.

@@ -1,0 +1,32 @@
+
+class P5Rectangle 
+{
+	private double width;
+    private double height;
+	P5Rectangle(double width,double height)
+	{
+		this.width=width;
+		this.height=height;
+	}
+	double getWidth()
+	{
+		return width;
+	}
+	double getHeight()
+	{
+		return height;
+	}
+	void setHeight(double height)
+	{
+		this.height=height;
+	}
+	void setWidth(double width)
+	{
+		this.width=width;
+	}
+		
+	double getArea(){return width*height;}
+		
+	double getPerimeter(){return 2*width+height;}
+	
+}

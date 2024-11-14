@@ -1,0 +1,69 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-26 05:15:46 PM   17:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-26 05:55:31 PM   17:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEY FREME</title>
+    <style>
+        @keyframes colorchange{
+        from{
+            background-color: red;
+        }
+        to{
+            background-color: blue;
+        }}
+
+        @keyframes colors 
+        { 0%{color: black;}
+         25%{color: red;}
+         50%{color: blue;}
+         75%{color: green;}
+         100%{color: cyan;}
+            
+        }
+
+        
+        h2{
+            animation-name: colors;
+            animation-duration: 3s;
+        }
+        body{
+            animation-name: colorchange;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes zoomin {
+            100% {transform:scale(1.5); rotate: (360deg);}
+        }
+        @keyframes zoomout {
+            100% {transform:scale(0.2); rotate: (360deg)}
+        }
+        .img1{
+            animation: zoomin 2s;
+        }
+        .img2{
+            animation: zoomout 2s;
+        }
+        img{
+            width: 200px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>demo on two points animation</h1>
+    <h2>demo on multi poinit animantion</h2>
+    <img class="img1" src="./pixelcut-export.png" alt="">
+    <img class="img1" src="./pixelcut-export.png" alt="">
+    <img class="img2" src="./pixelcut-export.png" alt="">
+    <img class="img2" src="./pixelcut-export.png" alt="">
+</body>
+</html>

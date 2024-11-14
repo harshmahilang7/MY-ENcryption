@@ -1,0 +1,35 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-26 05:15:46 PM   17:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-27 05:27:54 PM   17:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEY FRAME</title>
+    <style>
+        @keyframes spin {
+            0%{
+                top: 1px;
+                left: 1000px;
+            }
+            100%{ transform: rotate(360deg)
+                translate(1000px,1px);}         
+        }
+        .loader{
+        width: 150px;
+        height: 150px;
+        border: 30px solid #2390ED;
+        border-top: 30px solid #21c6f6;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+    }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>

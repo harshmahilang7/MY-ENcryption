@@ -1,0 +1,122 @@
+Q 1)
+	Write a JavaScript program to create a constructor function to initialize Person details (First Name, Last Name, age) create an object using person constructor and display the details of the person.
+
+Ans :
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Object Constructors</h1>
+
+<p id="demo"></p>
+
+<script>
+// Constructor Function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+}
+
+// Create a Person object
+const myDetails = new Person("John", "Doe", 50);
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My first name is " + myDetails.firstname + "."; 
+</script>
+
+</body>
+</html>
+
+
+
+Q 2)
+	Create a JavaScript program to capture book details using a constructor function. Store each book as an object in an array, and display all books stored in the array.
+
+Create a constructor function named Book that takes in the properties title, author, year, and genre.
+Implement a function addBook() that:
+	- Reads the book details from input fields.
+	- Creates a new Book object.
+	- Adds this object to a books array.
+Create a function displayBooks() that:
+	- Iterates over the books array.
+	- Displays each book’s details on the webpage.
+
+
+Ans : 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Collection</title>
+  </head>
+  <body>
+    <h2>Enter Book Details</h2>
+
+    <label>Title:</label><br />
+    <input type="text" id="title" /><br /><br />
+
+    <label>Author:</label><br />
+    <input type="text" id="author" /><br /><br />
+
+    <label>Year:</label><br />
+    <input type="number" id="year" /><br /><br />
+
+    <label>Genre:</label><br />
+    <input type="text" id="genre" /><br /><br />
+
+    <button onclick="addBook()">Add Book</button>
+
+    <h3>Book Collection:</h3>
+    <ul id="bookList"></ul>
+
+    <script>
+      // Book constructor
+      function Book(title, author, year, genre) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.genre = genre;
+      }
+
+      // Array to store books
+      const books = [];
+
+      // Function to add a new book
+      function addBook() 
+      {
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const year = document.getElementById("year").value;
+        const genre = document.getElementById("genre").value;
+
+        // Create a new book object and add to array
+        const newBook = new Book(title, author, year, genre);
+        books.push(newBook);
+
+        // Clear input fields
+        document.getElementById("title").value = "";
+        document.getElementById("author").value = "";
+        document.getElementById("year").value = "";
+        document.getElementById("genre").value = "";
+
+        // Display updated book list
+        displayBooks();
+      }
+
+      // Function to display all books
+      function displayBooks() {
+        const bookList = document.getElementById("bookList");
+        bookList.innerHTML = ""; // Clear previous list
+
+        books.forEach((book, index) => {
+          const listItem = document.createElement("li");
+listItem.textContent = `Book ${index + 1}: ${book.title} by ${book.author} (${book.year}) - Genre: ${book.genre}`;
+          bookList.appendChild(listItem);
+        });
+      }
+    </script>
+  </body>
+</html>

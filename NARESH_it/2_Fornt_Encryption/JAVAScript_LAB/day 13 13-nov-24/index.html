@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <div id="question-container"></div>
+    <p id="feedback"></p>
+    <button id="submit" onclick="validateAnswer()">Submit</button>
+    <button id="next" onclick="nextQuestion()">Next</button>
+    <script>
+      const questions = [
+        {
+          question: "what is javascript?",
+          option: [
+            "programming language",
+            "scripting language",
+            "english language",
+            "spanish language",
+          ],
+          correctAnswer: "scripting language",
+        },
+        {
+          question: "which operator is used for hard comaprison?",
+          option: ["==", "===", "=", "!="],
+          correctAnswer: "===",
+        },
+      ];
+      let currentQuestion = 0;
+      let correctAnswer = "";
+      let currentIndex = 0;
+      let correctAnswers = 0;
+      function loadQuestion() {
+        const container = document.getElementById("question-container");
+        const question = questions[currentIndex];
+        correctAnswer = question.correctAnswer;
+        console.log(correctAnswer);
+
+        container.innerHTML = `
+            <h3>${question.question}</h3>
+            <label><input type="radio" name="option" value="${question.option[0]}">${question.option[0]}</label>
+            <label><input type="radio" name="option" value="${question.option[1]}">${question.option[1]}</label>
+            <label><input type="radio" name="option" value="${question.option[2]}">${question.option[2]}</label>
+            <label><input type="radio" name="option" value="${question.option[3]}">${question.option[3]}</label>
+            `;
+        document.getElementById("next").style.display = "none";
+      }
+      function validateAnswer() {
+        const selectedAnswer = document.querySelector(
+          'input[name="option"]:checked'
+        );
+        const feedback = document.getElementById("feedback");
+        if (selectedAnswer) {
+          document.getElementById("next").style.display = "inline-block";
+          const selectedOption = selectedAnswer.value;
+          if (selectedOption === correctAnswer) {
+            correctAnswers++;
+            feedback.style.color = "green";
+            feedback.style.fontWeight = "bolder";
+            feedback.innerText = "Correct answer";
+          } else {
+            feedback.style.color = "red";
+            feedback.style.fontWeight = "bolder";
+            feedback.innerText = "incorrect answer";
+          }
+        } else {
+          feedback.innerText = "choose one option";
+          document.getElementById("next").style.display = "none";
+        }
+      }
+      function nextQuestion() {
+        if (currentIndex < questions.length - 1) {
+          currentIndex++;
+          loadQuestion();
+        } else {
+          showScore();
+        }
+      }
+      function showScore() {
+        const container = document.getElementById("question-container");
+        container.innerHTML = `
+        <h2>Results</h2>
+        <p>${correctAnswers} / ${questions.length}
+        `;
+        document.getElementById("submit").style.display = "none";
+        document.getElementById("next").style.display = "none";
+      }
+      loadQuestion();
+    </script>
+  </body>
+</html>

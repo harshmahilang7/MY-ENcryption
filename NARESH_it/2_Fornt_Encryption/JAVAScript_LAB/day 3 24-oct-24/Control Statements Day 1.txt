@@ -1,0 +1,121 @@
+Que 1 : 
+========
+Write a JavaScript program for the following scenario : 
+Imagine you are running a small shop selling various items like groceries, stationery, and household products. 
+One day, you decided to sell 100 units of a particular item that you bought in bulk. 
+
+Here is the information you have:
+	Cost Price (CP) per unit: ₹50
+	Selling Price (SP) per unit: ₹60
+Using the JavaScript, calculate the total profit or loss you made from selling all 100 units of the item. 
+Additionally, what would be the outcome if you had to reduce the selling price to ₹45 per unit due to a sudden market drop?
+
+Note : 	1) Take three input fields and one Button to calculate profit or loss, two input fields are for accepting the cost price and selling price accordingly and the third input field must be read only and it displays the output of the program on click of the button.
+	2) The function "calculateProfitorLoss()" will be executed and calculates the profit or loss based on the input.
+
+Sample input 1:
+
+	Enter Cost Price (CP): ₹50
+	Enter Selling Price (SP): ₹60
+
+Sample Output : 
+	Profit per unit = 10₹
+	Total Profit on 100 units = 1000₹
+
+-----------------------------
+
+Sample input 2:
+
+Enter Cost Price (CP): ₹50
+Enter Selling Price (SP): ₹45
+
+Sample Output : 
+Loss per unit = 5₹ 
+Total Loss on 100 units = 500₹
+
+
+============================================================================================================================================================================================
+Que 2 : 
+========
+
+	Write a JavaScript Program to read the value of input fields and validate the entered values : 
+	
+	Description : 
+		1) There are two input fields given to you Username and Password you have to validate the username and password that user entered and check whether the user enters correct username or password if user enters correct username and password display the appropriate message.
+		2) on click of the button the function "loginValidate()" will be executed to validate the username and password.
+
+	Sample Input : 
+		Enter UserName : Ravindra
+		Enter Password : Ravindra@123
+	Sample output : 
+		Welcome Ravindra! you logged in successfully.
+
+	Sample Input : 
+		Enter UserName : Ravindra
+		Enter Password : Ravindra@1
+	Sample output : 
+		Sorry! incorrect Password.
+
+	Sample Input : 
+		Enter UserName : Ravi
+		Enter Password : Ravindra@123
+	Sample output : 
+		Sorry! incorrect Username.
+	
+===========================================================================================================================================================================================
+Que 3 :
+=======
+
+Write a JavaScript program for a service center by following given Rules and Guide lines.
+
+
+-> This service center only accepts 2 wheeler ,3 wheeler & 4 wheeler . If any other vehicle 
+
+came to you , you have to alert the user "this service center is not accepting
+
+other than 2 wheeler, 3 wheeler and 4 wheeler".
+
+
+-> If the age your vehicle is above 8 months then only accept the service center 
+
+otherwise you have to alert the user "your vehicle service will done after a while".
+
+
+Additional Information:
+--------
+
+Take the required input fields and accept only numbers for vehicle type, age and strings for owner name and problem get the values of the fields and check the input values entered by the user and calculate the total bill based on the following pricings. 
+
+Inputs : 
+	Name of the owner, Name of the vehicle, age of the vehicle, Issue, number of tyres facing problem(if applicable).
+
+
+
+-> For tyre problem cost is Rs.400 per tyre
+
+-> For fuels problem cost is Rs.1500
+
+-> For engine issue cost is Rs.5000
+
+-> For general servicing cost is Rs.1000
+
+
+-> For example tyre cost Rs. 400 , if the user providing 2 tyre then the bill should be
+
+generated as Rs. 800 in below format.
+
+	Name of the owner : Ravindra
+
+	Name of the vehicle : bike
+
+	Issue : tyre
+	
+	how many tyres : 2
+	
+	Total bill : 800
+	
+And generate the bill in the above format.
+
+
+NOTE : take the button to calculate the bill, to calculate the bill onclick of the button "calculateBill()" funtion will be executed.
+=======================================================================================================================================================================================

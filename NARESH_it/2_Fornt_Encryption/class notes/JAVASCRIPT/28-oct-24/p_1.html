@@ -1,0 +1,40 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-28 04:28:12 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-28 04:48:53 PM   16:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+ 
+    <script>
+      //object init
+      const emp = { id: 101, "name": "sam", job: "sme", sal: 90000 };
+      //                    property name can be "name " or name directly
+              
+      document.write(`${emp}<br>`)
+      document.write(`${emp.id} &nbsp; ${emp.name} &nbsp;${emp.job} &nbsp;${emp.sal} &nbsp;<br>`)
+      
+      const i ={src:'a.jpg',width:100,height:120,title:'A',alt:'not loaded'}
+      
+    //   keys()  => property   return type is array
+    //   syn -:  Object.key(refname)
+
+    
+    //   values() => values     return type is array
+    //   syn -:  Object.values(refname)
+
+    let k=Object.keys(i);
+    let v=Object.values(i);
+    document.write(`keys => ${k}<br>`)
+    document.write(`values => ${v}<br>`)
+    
+    document.write(`keys => ${Object.keys(document)}<br>`)
+    document.write(`keys => ${Object.values(document)}<br>`)
+    </script>
+  </body>
+</html>

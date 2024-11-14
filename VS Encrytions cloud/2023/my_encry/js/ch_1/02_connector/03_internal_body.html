@@ -1,0 +1,46 @@
+<!-- 
+  @Author: Dastan_Alam
+  @Date:   02-07-2023 01:44:56 PM       13:44:56
+  @Last Modified by:   Dastan_Alam
+  @Last Modified time: 06-07-2023 10:44:04 AM       10:44:04
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- //css -->
+        <style>
+        
+        p {
+          font-size:10px
+          }
+        </style>
+    </head>
+    <body>
+      <h1>INTERNAL_CONNECTOR html/css to js</h1>
+      <h1>by body</h1>
+      <p id="one">NAME??</p>
+      
+      <button type="button" onclick="html_changer()">html changer</button>
+      <button type="button" onclick="css_changer()">css changer</button>
+      
+      
+      <script>
+        //  document is use to get access of html file ,HTML document is loaded 
+    
+        //  properties and methods can be used on HTML documents 
+        //  getElementById  , getElementsByClassName , getElementsByName ,etc
+        function html_changer() 
+        {
+          // innerHTML is use to change the content of html
+          document.getElementById("one").innerHTML="DASTAN";
+        }
+        
+        
+        function css_changer(){
+          // style."any_property" is use to change the property of css
+          document.getElementById("one").style.fontSize="34px";
+        }
+      </script>
+    </body>
+</html>

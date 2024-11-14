@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-14 04:27:06 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-14 05:27:25 PM   17:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Addtion() {
+            let x,y,res;
+            x=+Firstnum.value;
+            y=+SecNum.value;
+            res=x+y;
+            op.value=res
+            
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <h3>Arithmatic Calc</h3>
+        <input type="number" name="" id="FN" placeholder="Enter the Firstnum"><br>
+        <input type="number" name="" id="SN"  placeholder="Enter the Second"> <br>
+        <input type="number" name="" id="res" placeholder="Result" readonly>
+        <!-- <output id="op"></output> -->
+        <br>
+        <button onclick="res.value=+FN.value + +SN.value">+</button>
+        <button onclick="res.value=FN.value - SN.value">-</button>  
+        <!-- pasint is remove it is possible  -->
+        <button onclick="res.value=+FN.value * +SN.value">*</button>
+        <button onclick="res.value.toFixed(2)=+FN.value / +SN.value">/</button>
+        <button onclick="res.value=FN.value%SN.value">%</button>
+        <button onclick="res.value=FN.value**SN.value">^</button>
+    </div>
+</body>
+</html>

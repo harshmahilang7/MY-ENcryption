@@ -1,0 +1,12 @@
+/*Program 04:
+-----------
+Write a program to input the basic salary of a person. He gets 15% of the basic as HRA, 15% of the basic as Conveyance allowance and 10% of the basic as Entertainment allowance. The total salary is calculated by adding Basic + HRA + Conveyance + Entertainment Allowance. Calculate and print the total salary of person.
+Take the Basic Salary from Command Line Argument*/
+class p_9 
+{
+	public static void main(String[] args) 
+	{
+		int 
+		System.out.println("Hello World!");
+	}
+}

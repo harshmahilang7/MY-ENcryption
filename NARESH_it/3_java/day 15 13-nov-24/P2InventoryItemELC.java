@@ -1,0 +1,8 @@
+class P2InventoryItemELC
+{
+	public static void main(String[] args) 
+	{
+		P2InventoryItem obj1=new P2InventoryItem("Apples",10,15);
+		System.out.println("Total Value of Apples in Stock: "+obj1.calculateTotalValue());
+	}
+}

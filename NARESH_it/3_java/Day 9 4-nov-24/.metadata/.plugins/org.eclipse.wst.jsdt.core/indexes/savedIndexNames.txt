@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\harsh\OneDrive\MY ENcryption\NARESH_it\3_java\Day 9 4-nov-24\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1531993089.index

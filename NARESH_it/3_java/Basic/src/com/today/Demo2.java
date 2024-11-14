@@ -1,0 +1,28 @@
+package com.today;
+import java.util.Scanner;
+public class Demo2 {
+	int employeeId;
+	String employeeName;
+	double employeeSalary;
+	
+	public void setEmployeeData()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the Enployee ID");
+		employeeId=sc.nextInt();
+		System.out.print("enter the employee name ");
+		employeeName=sc.next();
+		System.out.print("enter the employee salary");
+		employeeSalary=sc.nextDouble();
+        //sc.close();
+	
+    }
+    public void getEmployeeData()
+	{
+	 System.out.println("the Enployee ID"+employeeId);
+	 System.out.println("the Enployee name"+employeeName);
+	 System.out.println("the Enployee salary"+employeeSalary);
+	}
+    
+	
+}

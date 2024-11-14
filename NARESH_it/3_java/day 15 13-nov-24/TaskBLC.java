@@ -1,0 +1,52 @@
+
+
+public class TaskBLC 
+{
+	private String title;
+	private String description;
+	private String priority;
+	private boolean taskCompleted;
+	TaskBLC(String title,String description,String priority,boolean taskCompleted)
+	{
+		this.title=title;
+		this.description=description;
+		this.priority=priority;
+		this.taskCompleted=taskCompleted;
+	}
+	
+	public void updateDescription(String newDescription)
+	{
+		this.description=newDescription;
+	}
+	public void updatePriority(String newPriority)
+	{
+		this.priority=newPriority;
+	}
+	public void markAsCompleted()
+	{
+		taskCompleted=true;
+	}
+	
+	String getTitle()
+	{
+		return title;
+	}
+	String getDescription()
+	{
+		return description;
+	}
+	String getPriority()
+	{
+		return priority;
+	}
+	boolean isCompleted()
+	{
+		return taskCompleted;
+	}
+	
+    @Override
+	public String toString()
+	{
+		return "TaskBLC [title : "+title+"description :"+description+"priority :"+priority+"taskCompleted :"+taskCompleted+"]";
+	}
+}

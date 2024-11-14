@@ -1,0 +1,56 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-21 04:45:57 PM   16:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-21 05:15:55 PM   17:10
+-->
+<h1>demo on array destructor (JS6)</h1>\
+<script>
+    
+
+
+    const a=[10,20,30]
+    // let x=a[0],y=a[1],z=a[2];
+    const [x,y,z]=a;  // destructor uper line  is same  
+    // [value]
+    // x=10
+    // y=20
+    // z=30
+
+    document.write(`x= ${x}`)
+    document.write(`y= ${y}`)
+    document.write(`z= ${z}`)
+
+    // this are balance data xyz is 3 var and a have 3 so balance
+    // now unbalance?
+    const eles=[20,30,40,506,60]
+    let [i,j,k]=eles;
+    document.write(`i= ${i}<br>`)
+    document.write(`j= ${j}<br>`)
+    document.write(`k= ${k}<br>`)
+    
+    // let [p,,,,q]=eles;
+    // document.write(`p= ${p}<br>`)
+    // document.write(`q= ${q}<br>`)
+    let [p,,...q]=eles;
+    document.write(`p= ${p}<br>`)
+    document.write(`q= ${q}<br>`)
+
+
+    let v1=100,v2=200;
+    // 3rd var
+    // +--
+    // *//
+    // ^^^
+
+    document.write(`v1= ${v1}<br>`)
+    document.write(`v2= ${v2}<br>`)
+
+    [v2,v1]=[v1,v2];  // swaping number
+
+    
+    document.write(`v1= ${v1}<br>`)
+    document.write(`v2= ${v2}<br>`)
+
+    
+</script>

@@ -1,0 +1,43 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-23 11:44:37 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-23 11:52:50 AM   11:10
+-->
+<!--   
+Q 4)
+Convert Seconds to Hours, Minutes, and Seconds in JavaScript
+Problem Statement:
+   Write a JavaScript program to take a number of seconds as input from the user and convert it into hours, minutes, and seconds.
+
+Sample Input :
+   Enter the total number of seconds: 3665
+Sample Output :
+   1 hour(s) 1 hour(s) and 5 second(s).
+
+Sample Input :
+   Enter the number of seconds: 7322
+Sample Output :
+   2 hour(s) 2 hour(s) and 2 second(s).
+
+============================================================================================================================================================================================ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seconds to hr min and sec</title>
+</head>
+<body>
+    <script>
+        let seconds=+prompt("Enter the total number of seconds:")
+        document.write(`the total sec is ${seconds}<br>`);
+        let hour=parseInt((seconds/60)/60);
+        let minutes=parseInt((seconds/60)%60);
+        let sec=parseInt((seconds%60));
+        document.write(`${hour} hour(s) ${minutes} minutes(s) and ${sec} sec(s).<br>`);
+    </script>
+    
+</body>
+</html>

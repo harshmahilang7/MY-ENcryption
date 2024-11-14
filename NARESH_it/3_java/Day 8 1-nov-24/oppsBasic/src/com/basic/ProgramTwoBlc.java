@@ -1,0 +1,29 @@
+package com.basic;
+//Program 02
+//----------
+//Write a Program on OOPs to define Fan class properties and behaviour.
+//
+//properties :
+//
+//name    : String
+//coil    : String
+//wings	: int
+//
+//behaviour:
+//
+//switchOn()  : public void
+//switchOff() : public void   
+//-----------------------------------------------------------------------
+public class ProgramTwoBlc {
+	int wings;
+	String coil;
+	String name;
+	public void switchOn() 
+	{
+		System.out.println(name+" have "+coil+" have "+wings+" wings is on");
+	}
+	public void switchOff() 
+	{
+		System.out.println(name+" have "+coil+" have "+wings+" wings is off");
+	}
+}

@@ -1,0 +1,308 @@
+Running Notes
+-----------------
+-> How many programming elements we have?
+Ans : 
+     1. module   
+     2. package
+     3. class
+     4. variable
+     5. method
+     6. block
+     7. constructor
+     8. inner classes
+       
+-> What is an object?
+-> How to create object and syntax to create object.
+   className referencevar = new className()
+                                [constructor]
+   Student s = new Student();
+   Dog d = new Dog();
+   Student s1 = null;
+   int : 0
+   double : 0.0
+   Animal : null
+   String : null
+-> What is a reference variable?
+A reference variable is a variable that stores the memory address of an object. It doesn't directly store the object's data but points to the location where the object is stored in memory.
+
+-> What type of values we can store in a reference variable?
+Reference variables can store references to objects of any class type or null. They cannot store primitive data types like int, double, boolean, etc.
+
+-> What is the work of new keyword?
+The new keyword is used to create new objects in Java. It allocates memory for the object the assigns default values to its instance variable after that it invokes the constructor and finally returns the object reference to that memory location.
+
+-> Objects are created in which area?
+Objects are created in the heap memory area. When you use the new keyword, memory is allocated in the heap for the object, and its address is stored in the reference variable.
+
+-> Memory allocation diagram.
+
+-> What is constructor?
+A constructor is a special method in Java that is  called when an object of a class is created. It's used to initialize the object's instance variables.
+
+-> Work of constructor.
+Initialization: Initializes the object's instance variables with default or specified values.
+
+-> What is default constructor?
+A default constructor is a constructor that has no parameters. It is automatically added by the compiler if you don't explicitly define any constructors in your class.
+
+-> What is the work of default constructor?
+-> Is default constructor present in every class?
+Yes, unless you explicitly define one or more constructors in your class, the compiler will automatically add a default constructor.
+
+-> Who adds default constructor to our class?
+The Java compiler adds the default constructor.
+
+-> Why compiler adds default constructor to our class?
+The compiler adds a default constructor to ensure that you can create objects of the class without providing any arguments. It provides a convenient way to create objects with default initialization.
+==================================================
+
+-> Types of variable?
+    //Based on data type
+      1.primitive var(8)
+      2.reference var(5)[class,interface, Enum, array, annotation]
+
+   //Based on scope...
+      1. class level
+            a) static - var    
+            b) non - static var
+      2. method level
+            c) local var
+            d) parameters
+
+-> Memory allocation of all above variables.  
+    
+     
+-> Local variable and its rules.
+-> Initial or default values of variable?
+
+   -> Only class level var have default values
+      byte: 0
+      short: 0
+      int : 0
+      long: 0
+
+      float:0.0
+      double: 0.0
+      
+      boolean:false
+      char: \\u0000
+
+       reference type: null
+        String: null
+        Integer: null
+        Student: null
+
+      
+-> Scope and life-time of static and non-static variable.
+
+Static Variables:
+
+Scope: Class-level scope, accessible from any static or non-static member of the class.
+Lifetime: Exists throughout the program's execution, even when no objects of the class exist.
+Memory Allocation: Allocated in the static memory area.
+Initialization: Initialized only once, when the class is loaded.
+
+Non-Static Variables (Instance Variables):
+
+Scope: Instance-level scope, accessible only from within the instance of the class.
+Lifetime: Exists as long as the object exists.
+Memory Allocation: Allocated on the heap when an object is created.
+Initialization: Initialized either explicitly or with default values (0 for numbers, null for objects) when an object is created.
+
+class MyClass {
+    static int staticVar = 10; // Static variable
+    int instanceVar = 20; // Instance variable
+
+    public static void staticMethod() {
+        System.out.println(staticVar); // Can access staticVar
+        // Cannot access instanceVar directly
+    }
+
+    public void instanceMethod() {
+        System.out.println(staticVar); // Can access staticVar
+        System.out.println(instanceVar); // Can access instanceVar
+    }
+}
+
+
+-> How many members we can define inside a class?
+       1. static members        2. Non-static members
+          -> SV                      -> NSV
+          -> SM                      -> NSM
+          -> SB                      -> NSB
+          -> MM                      -> Constructor
+          -> SIC                     -> NIC
+    
+       
+-> What are the members called as Non-static members?
+-> Types of non-static members?
+-> When do all these members get memory location and by whom.
+When: When an object of the class is created using the new keyword.
+By Whom: The Java Virtual Machine (JVM) allocates memory for the object on the heap.
+
+===============================================================================
+
+-> What is an object ?
+An object is an instance of a class. It represents a real-world entity with specific properties (attributes) ,behaviors (methods) and identity(unique address).
+
+-> What is non-static variable/Instance variable?
+A non-static variable, also known as an instance variable, is a variable declared within a class but outside of any method. Each object of the class has its own copy of these variables.
+
+-> Will JVM executes non-static variable automatically?
+The JVM doesn't automatically execute non-static variables. They come into existence when an object of the class is created using the new keyword.
+
+-> When, Where, how and by whom non-static variables get memory location?
+When: When an object is created using the new keyword.
+Where: In the heap memory.
+How: The JVM allocates memory for the object and its instance variables.
+By Whom: The JVM allocates memory.
+
+-> How many objects can be created for a class?
+You can create as many objects of a class as you need. Each object will have its own set of instance variables.
+
+-> If we modify one object data will another object data also modified?
+No, modifying one object will not affect another object, even if they are of the same class.
+
+Each object in Java has its own unique set of instance variables. When you create multiple objects of the same class, each object gets its own copy of these instance variables.   
+
+class Car {
+    String color;
+    int mileage;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car();
+        Car car2 = new Car();
+
+        car1.color = "Red";
+        car2.color = "Blue";
+
+        // Modifying car1's color won't affect car2's color
+    }
+}
+
+-> Initializing non-static variable.
+    -> Direct initialization at the time of declaring the variable.
+    -> How to initialize instance variable by using object reference.
+    -> How to provide our own user-defined values for the instance variable by.
+       using no parameterized method.
+    -> How to initialize the Object properties through parameter variable.
+
+
+
+
+-> Non-static methods
+
+-> Does JVM executes non static method automatically when object is created?
+No, the JVM doesn't automatically execute non-static methods when an object is created. They are executed only when called explicitly on an object of the class.
+
+-> Can we create object without having non-static variable in the class?
+Yes, you can create an object even if a class doesn't have any non-static variables. 
+
+-> Can we access non-static variable inside a non-static method?
+Non-static methods are associated with specific instances of a class. When you create an object of that class, each object has its own set of non-static variables. A non-static method can access these non-static variables directly by their name.
+
+
+-> How it is possible to call non-static members directly without object?
+Ans : 
+Non-static method gives guarantees that to invoke it we need an object, so when object is created to call non-static method then all the variable memory is also available, so we can access non-static variable inside a non-static method.
+
+When we are calling non-static variable directly by its name implicitly com pilers adds this keyword before every non -static variable.
+
+Example Program : 
+=========================
+import java.util.Scanner;
+class Student 
+{
+	int sId;
+	String sName;
+	String course;
+	double fee;
+	double marks;  
+    
+	public void setDetails(int sId, String sName,String course, double fee, double marks ) {
+       //If the name of parameter an instance variables are same then it is called variable shadowing.
+       //To overcome of variable shadowing we are using this keyword to differentiate between local and instance variable..
+	 this.sId = sId;
+	 this.sName = sName;
+	 this.course = course;
+	 this.fee = fee;
+	 this.marks = marks;
+
+	}
+	public  void displayDetails() {
+		System.out.println("Student id : "+this.sId);
+		System.out.println("Student name : "+this.sName);
+		System.out.println("Student course : "+this.course);
+		System.out.println("Student fee : "+this.fee);
+		System.out.println("Student marks : "+this.marks);
+		
+	}
+	
+	
+}
+class Test06
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Main");
+		Student s1 = new Student();
+		
+		
+		s1.setDetails();
+		s1.displayDetails();
+		
+		
+	}
+}
+
+
+-> Variable shadowing.
+=============================
+Variable shadowing occurs when a variable declared in an inner scope (like a method or a block) has the same name as a variable declared in an outer scope (like a class or a method). In such cases, the inner-scope variable "shadows" the outer-scope variable, meaning that within the inner scope, the inner-scope variable takes precedence.
+
+
+-> Compiler and JVM activity in variable shadowing.
+During execution, when the variable is accessed within the scope where it's declared, the JVM uses the value of the inner-scope variable. The outer-scope variable is temporarily hidden.
+
+The inner-scope variable takes precedence within its scope.
+
+public class ShadowingExample {
+    int x = 10; // Outer scope variable
+
+    public void myMethod() {
+        int x = 20; // Inner scope variable (shadows the outer scope variable)
+        System.out.println(x); // Prints 20
+    }
+}
+
+Q) How to overcome from variable shadowing?
+Ans : Using this keyword for non-static variable we can overcome from variable shadowing.
+
+Test case of this kw:
+---------------------------
+class Test07 
+{
+	int x = 10;
+	void m1() {
+          System.out.println("m1: "+ this.x);// Here this kw holds current object reference/address
+	}	
+	public static void main(String[] args) 
+	{
+		Test07 t1 = new Test07(); 
+		Test07 t2 = new Test07(); 
+		t1.x = 20;
+                t2.x = 30;
+		t1.m1();
+		t2.m1();
+		
+		
+		
+	}
+}
+Q)What is current object?
+Ans : On which object we are performing operation that is known as current object.
+
+
+

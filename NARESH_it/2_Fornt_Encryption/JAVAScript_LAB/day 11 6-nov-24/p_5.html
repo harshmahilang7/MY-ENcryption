@@ -1,0 +1,62 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-06 11:57:45 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-07 11:12:17 AM   11:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Q 5)
+Create a Simple To-Do List with Deletion Option
+Create an input field for a to-do item and an "Add Item" button.
+Implement a function addItem() that:
+    - Reads the input value.
+    - Creates a list item with a "Delete" button.
+    - Adds the item to a to-do list on the webpage.
+    - When the "Delete" button is clicked, remove the item from the list. -->
+
+    <h1>Simple To-Do List</h1>
+    <input type="text" id="task" placeholder="Emter the task">
+    <br>
+    <button onclick="addTask()">Add task</button>
+    <button onclick="deleteTask()">Delete task</button>
+    <h1>To-Do List</h1>
+    <output id="op"></output>
+
+    <script>
+        let tasklist=[]
+        function addTask()
+        {
+            let x=document.getElementById("task").value;
+            tasklist.push(x);
+            op.innerHTML=tasklist;
+        }
+        
+        function deleteTask()
+        {
+            let x=document.getElementById("task").value;
+            console.log(x);
+            let i=0
+            for (i = 0; i < tasklist.length; i++) {
+                if(x==tasklist[i])
+            {
+                for(let j=i; j < tasklist.length; j++)
+            {
+                tasklist[j]=tasklist[j+1]
+            }
+            }
+            }
+            op.innerHTML=tasklist;
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+Que 1 :
+=======
+
+Write a C program that takes an hour in the 24-hour format as input and identifies the time of day as "Morning," "Afternoon," "Evening," or "Night." 
+Implement this using a series of if statements. Ensure that the program also checks for invalid input, displaying an appropriate message if the entered hour is not within the valid range (0-23). 
+Present the program with a suitable title and header for clarity.
+
+Sample input : Enter the hour (24-hour format): 13
+Sample output : It's Afternoon.
+
+==========================================================================================================
+
+
+Que 2 : 
+=======
+
+Write a C program to find maximum between three numbers.
+
+Sample input  : int a = 100, b = 200, c = 300
+Sample output : 300
+
+
+==========================================================================================================
+
+Que 3 : 
+=======
+
+Write a C program to check whether a number is negative, positive or zero.
+
+Sample input  : int a = 10
+Sample output : possitive number
+
+Sample input  : int a = 0
+Sample output : zero
+
+Sample input  : int a = -2
+Sample output : negative number
+
+
+==========================================================================================================
+
+Que 4 :
+=======
+
+Write a C program to input any character and check whether it is alphabet, digit or special character.
+
+
+Sample input  : char ch = 'A';
+Sample output : Alphabet
+
+Sample input  : char ch = '9';
+Sample output : Digit
+
+Sample input  : char ch = '@';
+Sample output : Special character
+
+==========================================================================================================
+
+Que 5 :
+=======
+
+Write a C program to input all sides of a triangle and check whether triangle is valid or not.
+ 
+          Validity Check:
+          The sum of side1 and side2 must be greater than side3.
+          The sum of side1 and side3 must be greater than side2.
+          The sum of side2 and side3 must be greater than side1.
+          If all three conditions are true, the program prints "The triangle is valid."
+          If any of the conditions are false, the program prints "The triangle is not valid."
+
+Sample input  : Enter the lengths of the three sides of the triangle:
+                Side 1: 3
+                Side 2: 4
+                Side 3: 5
+
+Sample output : The triangle is valid.
+
+
+
+Sample input  : Enter the lengths of the three sides of the triangle:
+                Side 1: 1
+                Side 2: 2
+                Side 3: 3
+
+Sample output : The triangle is not valid.

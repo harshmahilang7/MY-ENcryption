@@ -1,0 +1,39 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-27 05:36:28 PM   17:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-27 05:50:38 PM   17:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart</title>
+    <style>
+        @keyframes pulse {
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }            
+            50%{
+                transform: scale(3);
+                opacity: 0.5;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            } 
+        }
+        .heart{
+            animation: pulse 1s  infinite;
+        }
+        h1,div{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body align="center">
+    <h1 class="heart">&#x1F496;</h1>
+</body>
+</html>

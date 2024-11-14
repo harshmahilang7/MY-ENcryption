@@ -1,0 +1,81 @@
+<!-- /**
+ * @Author: Dastan Alam
+ * @Date:   2024-10-24 11:04:48 AM   11:10
+ * @Last Modified by:   Dastan Alam
+ * @Last Modified time: 2024-10-24 12:11:59 PM   12:10
+ */
+/ 'use strict';
+/ Que 1 : 
+/ ========
+/ Write a JavaScript program for the following scenario : 
+/ Imagine you are running a small shop selling various items like groceries, stationery, and household products. 
+/ One day, you decided to sell 100 units of a particular item that you bought in bulk. 
+/ 
+/ Here is the information you have:
+	/ Cost Price (CP) per unit: ₹50
+	/ Selling Price (SP) per unit: ₹60
+/ Using the JavaScript, calculate the total profit or loss you made from selling all 100 units of the item. 
+/ Additionally, what would be the outcome if you had to reduce the selling price to ₹45 per unit due to a sudden market drop?
+/ 
+/ Note : 	1) Take three input fields and one Button to calculate profit or loss, two input fields are for accepting the cost price and selling price accordingly and the third input field must be read only and it displays the output of the program on click of the button.
+	/ 2) The function "calculateProfitorLoss()" will be executed and calculates the profit or loss based on the input.
+/ 
+/ Sample input 1:
+/ 
+	/ Enter Cost Price (CP): ₹50
+	/ Enter Selling Price (SP): ₹60
+/ 
+/ Sample Output : 
+	/ Profit per unit = 10₹
+	/ Total Profit on 100 units = 1000₹
+/ 
+/ -----------------------------
+/ 
+/ Sample input 2:
+/ 
+/ Enter Cost Price (CP): ₹50
+/ Enter Selling Price (SP): ₹45
+/ 
+/ Sample Output : 
+/ Loss per unit = 5₹ 
+/ Total Loss on 100 units = 500₹
+/ 
+/ 
+/ ============================================================================================================================================================================================
+function calculateProfitorLoss()
+{
+    let cp=50;
+    let sp=60;
+    
+} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculate Profit or Loss</title>
+  </head>
+  <body>
+   
+
+      <input type="number" name="costp" id="c" placeholder="enter the cost price"/>
+      <input type="number" name="sellingp" id="sp" placeholder="enter the sell price"/>
+      <input type="number" name="output" id="op" readonly/>
+      <input type="number" name="output" id="op100" readonly placeholder="Total Loss on 100 units"/>
+      <button onclick="calculateProfitorLoss()">calculate</button>
+
+
+
+	<script>
+		function calculateProfitorLoss() {
+	
+			//let sp =Number(sp.value);
+			 let selling = Number(sp.value);
+			 let cp =Number(c.value);
+			 op.value= (selling-cp);
+			 op100.value=(selling-cp)*100;
+      }
+    </script>
+  </body>
+</html>

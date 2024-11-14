@@ -1,0 +1,38 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-05 11:35:41 AM   11:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-05 11:49:30 AM   11:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 1</title>
+</head>
+<body>
+    <!-- Q 1)
+	Write a JavaScript program to create a constructor function to initialize Person details (First Name, Last Name, age) create an object using person constructor and display the details of the person. -->
+    <h1>constructor function</h1>
+    <output id="op"></output>
+    
+    <script>
+        let firstName;
+        let lastName;
+        let age;
+        function Person(first, last, age) 
+        {
+           this.firstName=first;
+           this.lastName=last;
+           this.age=age;
+        }
+        
+        const obj1= new Person("dastan","alam",18);
+
+        document.getElementById("op").innerHTML ="My name is " + obj1.firstName +" "+ obj1.lastName+" and age is "+obj1.age+ "."; 
+    </script>
+
+    
+</body>
+</html>

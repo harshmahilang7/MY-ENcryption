@@ -1,0 +1,41 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-02 05:43:03 PM   17:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-03 08:10:57 PM   20:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>demo on element object's properties(style)</h3>
+    <h1 id="heading1"  style="background:red;color: white;">hello worldl!</h1>
+
+
+    <script>
+        const h1=document.getElementById("heading1");
+        
+        // obj1.style.prop
+        
+        document.write(`${h1.style.color}<br>${h1.style.background}`)
+
+        h1.style.color="pink";
+        h1.style.background="cyan";
+
+        h1.style.width="50%";
+        h1.style.borderRadius="10px"
+        // h1.style.border-radius="10px"  it is not working by css it is valid 
+        //  border-radius =borderRadius  next latter Capital R and remove the the -
+        h1.style.textAlign="center"; 
+        
+
+        
+    </script>
+</body>
+</html>
+
+

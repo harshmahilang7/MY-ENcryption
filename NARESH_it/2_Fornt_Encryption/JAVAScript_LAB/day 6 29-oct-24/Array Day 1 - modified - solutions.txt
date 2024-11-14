@@ -1,0 +1,137 @@
+
+Q 1) 
+	write a JavaScript program to create an array of 10 elements(string) and print them using for-each loop.
+
+	Ans :
+		let words = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", 
+             		     "White", "Black", "Pink", "Brown", "Gray", "Teal", 
+             		     "Gold", "Silver", "Beige", "Maroon", "Navy", "Lime", 
+                             "Cyan", "Violet"];
+
+		words.forEach((word) => {
+   			 console.log(word);
+		});
+
+
+Q 2) 
+	write a JavaScript program to find the second max element in an array.
+
+	Ans :
+		function findSecondMax(arr) {
+
+    let max = arr[0];
+    let secondMax = -Infinity;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            secondMax = max;
+            max = arr[i];
+        } else if (arr[i] > secondMax && arr[i] < max) {
+            secondMax = arr[i];
+        }
+    }
+}
+
+// Example Usage
+let numbers = [5, 12, 8, 20, 10, 20];
+findSecondMax(numbers);  // Output: Second Maximum Element: 12
+
+
+Q 3) 
+	Write a JavaScript program to insert an element on given index of array.
+
+	Ans :
+	function insertAtIndex(arr, element, index) {
+   		 for (let i = arr.length; i > index; i--) {
+       			 arr[i] = arr[i - 1];
+    		}
+    			arr[index] = element;
+    			console.log(arr);
+		}
+
+		let arr = [1, 2, 3, 5];
+		insertAtIndex(arr, 4, 3);  // Output: [1, 2, 3, 4, 5]
+	
+
+Q 4) 
+	Write a JavaScript program to remove the element from given index from array.
+
+	Ans : 
+	
+	function removeAtIndex(arr, index) {
+  		  for (let i = index; i < arr.length - 1; i++) {
+      			  arr[i] = arr[i + 1];
+   		 }
+   		 arr.length--;  // Adjust the length to remove the last element
+   		 console.log(arr);
+		}
+
+		let arr = [1, 2, 3, 4, 5];
+		removeAtIndex(arr, 2);  // Output: [1, 2, 4, 5]
+
+
+Q 5) 
+	write a JavaScript program to create mixed array of 20 elements and separate the integers and strings in separate arrays.
+
+	Ans : 
+	
+	function separateTypes(arr) {
+   		 let numbers = [];
+   		 let strings = [];
+
+   		 for (let i = 0; i < arr.length; i++) {
+       			 if (typeof arr[i] === "number") {
+          			  numbers[numbers.length] = arr[i];
+       			 } else if (typeof arr[i] === "string") {
+           			 strings[strings.length] = arr[i];
+     		   }
+   		 }
+
+    		console.log("Numbers:", numbers);
+   		 console.log("Strings:", strings);
+	}
+
+		let mixedArray = [1, "Apple", 2, "Banana", 3, "Cherry", 4, "Mango", 
+                  "Orange", 5, 6, "Grapes", 7, "Pineapple", 8, 9, "Guava", "Pear"];
+
+	separateTypes(mixedArray);
+
+	
+
+Q 6) 
+	write a JavaScript program to create array of 10 image names and display those images on webpage.
+	
+
+
+	Ans :
+
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <script>
+      let arr = [
+        "pexels-anniroenkae-4175054.jpg",
+        "pexels-didsss-3844786.jpg",
+        "pexels-rdgraphics-1154723.jpg",
+        "pexels-steve-1418595.jpg",
+        "pexels-steve-1684430.jpg",
+      ];
+      for (let i = 0; i < arr.length; i++) {
+        document.write(`<img src = ${arr[i]} >`);
+        document.write(`   `);
+      }
+    </script>
+  </body>
+</html>
+

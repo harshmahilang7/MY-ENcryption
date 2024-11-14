@@ -1,0 +1,56 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-02 04:57:31 PM   16:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-03 08:09:41 PM   20:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h3>demo on element object properties (attributes )</h3>
+    <img src="./photo_2023-06-08_16-38-28.jpg" alt="" width="160" height="140">
+    <br>
+    <input type="text" id="pw">
+    <br>
+    <!-- <img src="./SKY_Branch_jvm_press.png" alt=""  width="160" height="140"> -->
+    <hr>
+    <script>
+        // obj.attribute="val"; add value
+        // obj.attribute=""; delete the value;
+        
+        // const i=document.images[0]; //or
+        const i=document.querySelector("img");
+        document.write(`${i.src}<br>${i.width}<br>${i.height}<br>`)
+                       // i.getAttribute("src")
+
+
+                       i.src="./SKY_Branch_jvm_press.png" ;  //or // i.setAttribute("src","./SKY_Branch_jvm_press.png")    
+        i.width="200";
+        i.height="400";
+        i.title="new pic"
+
+        i.removeAttribute("height")
+        i.removeAttribute("width")
+        
+        document.querySelector("#pw").type="password";
+    </script>
+</body>
+</html>
+
+&kom
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

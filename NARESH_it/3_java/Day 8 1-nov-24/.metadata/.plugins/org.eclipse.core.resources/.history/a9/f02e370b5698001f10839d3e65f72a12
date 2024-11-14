@@ -1,0 +1,21 @@
+package com.basic;
+
+public class ProgramThreeMain {
+
+	public static void main(String[] args) {
+		ProgramThreeBlc person1=new ProgramThreeBlc();
+		person1.name="salu";
+		person1.age=25;
+		person1.howManyLaud=20;
+		person1.hieght=5.8;
+		person1.isGoodBad="good";
+		person1.thinking();
+		person1.taking();
+		person1.isLaura();
+		person1.IsGoodBad();
+		person1.Hieght();
+		person1.age();
+
+	}
+
+}

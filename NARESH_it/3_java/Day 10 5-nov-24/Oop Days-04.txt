@@ -1,0 +1,58 @@
+Program 01:
+
+Write a Program on OOPs to define a Product class with the following properties and behavior.
+
+Properties:
+
+productId : int
+productName : String
+productPrice : double
+
+Behavior:
+
+Define a method setProductData(int productId, String productName, double productPrice) : public void to initialize these properties directly using the this keyword.
+Define a method getProductInfo() : public void to display the properties.
+Use the Scanner class in ELC class to input values for productId, productName, and productPrice and initialize the properties using the setProductData method.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Program 02: 
+
+Write a Program on OOPs to define a Book class with the following properties and behavior.
+
+Properties:
+
+bookId : int
+bookTitle : String
+bookPrice : double
+Behavior:
+
+Define a method setBookData(int bookId, String bookTitle, double bookPrice) : public void to initialize these properties directly using the this keyword.
+Define a method applyDiscount(double discountPercentage) : public void that applies a discount to bookPrice based on the percentage provided.
+Define a method getBookInfo() : public void to display the properties.
+Use the Scanner class in LibraryApp class to input values for bookId, bookTitle, and bookPrice, and initialize the properties using the setBookData method. Then, apply a discount and display the book details.
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Program 03 :
+----------------
+
+Write a Program on OOPs to define a Customer class with the following properties and behavior.
+
+Properties:
+
+customerId : int
+customerName : String
+customerBalance : double
+
+Behavior:
+
+Define a method setCustomerData(int Id, String Name, double Balance) : public void to initialize these properties directly using the this keyword.
+
+Define a method addFunds(double amount) : public void to add funds to customerBalance.
+
+Define a method getCustomerInfo() : public void to display the properties.
+
+Use the Scanner class in CustomerApp class to input values for customerId, customerName, and customerBalance, initialize the properties using setCustomerData, add funds, make a purchase, and display customer details.

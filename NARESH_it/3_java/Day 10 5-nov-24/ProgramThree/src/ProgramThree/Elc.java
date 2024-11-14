@@ -1,0 +1,27 @@
+package ProgramThree;
+
+import java.util.Scanner;
+
+
+public class Elc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter the customer id");
+		int customerId=sc.nextInt();
+		System.out.print("enter the customer name");
+		String customerName=sc.next();
+		System.out.print("enter the customerBalance");
+		double customerBalance=sc.nextDouble();
+		System.out.print("enter the amount ");
+		double amount=sc.nextDouble();
+		
+		Blc obj1 = new Blc();
+		obj1.setcustomerData(customerId,customerName,customerBalance);
+		obj1.deposit(amount);
+		obj1.getcustomerInfo();
+		sc.close();
+		
+	}
+}

@@ -1,0 +1,101 @@
+/*
+Ques - 3
+--------------
+You are tasked with creating a Book class for a library system. The class should have the following attributes:
+
+class name: Book (BLC)
+
+private: title (String)
+private: author (String)
+private: ISBN (String)
+private: price (double)
+private: discountPercentage (double) - the percentage of discount applied to the book.
+You cannot use constructors for initialization, and you must provide setter methods to initialize the attributes and getter methods to retrieve the values.
+
+Additionally, implement a method to calculate the final price of the book after applying the discount.
+
+Implement below methods:
+
+Implement public setter methods to initialize each of these attributes.
+Implement public getter methods to retrieve the values of these attributes.
+
+Add a method getFinalPrice() that calculates and returns the price of the book after applying the discount:
+method name: getFinalPrice()
+return type: double
+modifier: public
+Logic:
+finalPrice = price - (price * discountPercentage / 100)
+
+Create an ELC class BookTester,
+Write a main method where you:
+Create an instance of the Book class.
+Use the setter methods to initialize the attributes of the book.
+Calculate the final price using the getFinalPrice() method.
+Print the details of the book, including the final price.
+
+*/
+
+class P3Book
+{
+	private String title;
+	private String author;
+	private String ISBN;
+	private double price;
+	private double discountPercentage;
+	//private double finalPrice;
+	
+	P3Book(String title,String author,String ISBN,double price,double discountPercentage)
+	{
+		this.title=title;
+		this.author=author;
+		this.ISBN=ISBN;
+		this.price=price;
+		this.discountPercentage=discountPercentage;
+	}
+	public double getFinalPrice()
+	{
+		price = price - (price * discountPercentage / 100);
+		return price;
+	}
+		
+	
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getDiscountPercentage() {
+        return discountPercentage;
+    }
+
+    public void setDiscountPercentage(double discountPercentage) {
+        this.discountPercentage = discountPercentage;
+    }
+}

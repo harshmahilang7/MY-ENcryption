@@ -1,0 +1,45 @@
+Que 1 :
+======
+
+Write a c Program to check whether two given strings are anagram of each other or not.
+
+Sample input 1:- listen
+Sample input 2:- silent
+Sample output: this are anagram String
+
+Sample input 1:- Jack
+Sample input 2:- Jake
+Sample output : this is not are anagram String
+
+==============================
+
+Que 2 :
+=======
+
+Write a c program to print all the frequency of character present in string .
+
+Sample input: String s=" Hello Everyone"
+
+Sample output  :-
+The frequency of H is 1
+The frequency of e is 3
+The frequency of l is 2
+The frequency of o is 2
+The frequency of   is 1  --------THIS IS FOP CHECKING THE SPACE COUNT 
+The frequency of E is 1
+The frequency of v is 1
+The frequency of r is 1
+The frequency of y is 1
+The frequency of n is 1
+
+==============================
+
+Que 3 :
+=======
+
+Write a C program to swap first and last character of given String.
+
+Sample input : "Welcome"
+Sample output : eelcomW
+
+==============================

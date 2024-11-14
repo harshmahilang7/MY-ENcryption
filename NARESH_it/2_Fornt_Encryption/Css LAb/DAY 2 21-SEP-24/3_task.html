@@ -1,0 +1,79 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-09-21 12:20:01 PM   12:09
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-09-21 12:45:26 PM   12:09
+-->
+  <!-- <h1>Q 3) Write an CSS to demonstrate the Font and Text formatting :</h1> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 3) Write an CSS to demonstrate the Font and Text formatting :</title>
+    <style>
+        body{
+            background-color: black;
+            color: grey;
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        #times{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #Arial{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Lucida{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #left{
+            text-align: left;
+        }
+        #right{
+            text-align: right;
+        }
+        .overline{
+            text-decoration: overline;
+        }
+        .underline{
+            text-decoration: underline;
+            
+        }
+        #linethrought{
+            text-decoration: line-through;
+        }
+        #UPPERCASE{
+            text-transform: uppercase;
+        }
+        #lowercase{
+            text-transform: lowercase;
+        }
+        #Capitalized{
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS font-family</h1>
+    <p id="times">This is a paragraph shown in the Times New Roman font</p>
+    <p id="Arial">This is a paragraph shown in the Arial font</p>
+    <p id="Lucida">This is a paragraph, shown in the Lucida console font.</p>
+    <p id="">Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+    <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo. the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+    <h1>Heading 1 (center)</h1>
+    <h2 id="left">Heading 2 (left)</h2>
+    <h2 id="right">Heading 3 (Right)</h2>
+    <p>The three headings above are aligned center, left and right.</p>
+    <h1 class="overline">Overline text decoration</h1>
+    <p id="linethrought">line throught text decoration</p>
+    <p class="underline">Underline text decoration</p>
+    <p class="underline overline" >Overline and underline text decoration.</p>
+    <H1>Using the text-transform property</H1>
+    <P id="UPPERCASE">this text is transformed to UPPERCASE.</P>
+    <P id="lowercase">tHIS TEXT IS TRANSFORMED TO lowercase.</P>
+    <P id="Capitalized">this text is Capitalized.</P>
+</body>
+</html>

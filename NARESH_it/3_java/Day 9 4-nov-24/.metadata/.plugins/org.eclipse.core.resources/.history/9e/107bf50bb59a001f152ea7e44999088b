@@ -1,0 +1,36 @@
+package program2;
+
+//Read the class notes and develop the programs.
+//Program 01:
+//-----------
+//Write a Program on OOPs to define Product class properties and behaviour.
+//
+//properties :
+//productId : int
+//productName : String
+//productPrice : double
+//
+//Initialize these properties with the help of Method parameter using Scanner class in ELC class.
+//
+//behavior:
+//setProductData(int Id ,String Name,double Price) : public void
+//getProductInfo() : public void
+public class blc {
+	int productId;
+	String productName;
+	double productPrice;
+	
+	public void setProductData(int Id ,String Name,double Price)
+	{
+		productId=Id;
+		productName=Name;
+		productPrice=Salary;
+	}
+	public void ProductInfo()
+	{
+		System.out.println("productId "+productId);
+		System.out.println("productName "+productName);
+		System.out.println("productPrice "+productPrice);
+	}
+}
+	

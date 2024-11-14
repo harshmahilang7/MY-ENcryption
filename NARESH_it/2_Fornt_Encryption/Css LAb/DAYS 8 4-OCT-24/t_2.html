@@ -1,0 +1,65 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-04 12:07:04 PM   12:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-04 12:48:47 PM   12:10
+-->
+<!-- Q 2) Write an CSS to demonstrate box-shadows in CSS: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> box-shadows in CSS</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #main-flex{
+            display: flex;
+            justify-content: space-around;
+        }
+        .box{
+            border: 2px solid  #ADD8E6;
+            /* border-radius: 10px; */
+            height: 200px;
+            width: 200px;
+            background-color: #ADD8E6;
+            text-align: center;
+            color: white;
+            align-items: center;
+            
+        }
+        #Simple{
+            box-shadow: 1px 1px 1px black;
+        }
+        #Blurred{
+            box-shadow: 0px 0px 8px rgb(103, 103, 103);
+        }
+        #Spread{
+            box-shadow: 0px 0px 5px lightgreen,0px 0px 5px lightgreen,0px 0px 5px lightgreen,0px 0px 5px lightgreen;
+        }
+        #Multiple{
+            box-shadow:-2px -2px 8px blue,2px 2px 8px red;
+        }
+        #Inset{
+            box-shadow:-2px -2px 8px gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>
+        Css Box Shadow Example
+    </h1>
+
+    <div id="main-flex">
+        <div class="box" id="Simple">Simple Box Shadow</div>
+        <div class="box" id="Blurred">Blurred Box Shadow</div>
+        <div class="box" id="Spread">Spread Effect Box Shadow</div>
+        <div class="box" id="Multiple">Multiple Box Shadows</div>
+        <div class="box" id="Inset">Inset Box Shadow</div>
+    </div>
+</body>
+</html>

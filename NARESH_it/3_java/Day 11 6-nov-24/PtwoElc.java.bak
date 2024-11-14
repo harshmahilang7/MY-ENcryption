@@ -1,0 +1,43 @@
+/*
+program -02
+----------------
+ Calculator Program with Various Methods
+Create a Calculator class with the following specifications:
+
+Attributes:
+
+result (double): Holds the latest calculation result.
+
+Methods:
+
+void add(double num): Adds num to result and updates it.
+void subtract(double num): Subtracts num from result and updates it.
+void multiply(double num): Multiplies result by num and updates it.
+void divide(double num): Divides result by num and updates it, ensuring there’s no division by zero.
+double getResult(): Returns the current result.
+
+Task:
+
+Create a main method to:
+
+Instantiate the Calculator class.
+Perform a sequence of operations (e.g., addition, subtraction, multiplication, division) using method calls.Print the result after each operation.
+*/
+class PtwoElc 
+{
+	public static void main(String[] args) 
+	{
+		PtwoBlc obj1 =new PtwoBlc();
+		System.out.println(obj1.getResult());
+		obj1.add(10);
+		System.out.println(obj1.getResult());
+		obj1.subtract(10);
+		System.out.println(obj1.getResult());
+		obj1.multiply(10);
+		System.out.println(obj1.getResult());
+		obj1.division(10);
+		System.out.println(obj1.getResult());
+		
+		
+	}
+}

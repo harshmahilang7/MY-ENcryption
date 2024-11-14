@@ -1,0 +1,72 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-30 11:16:10 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-30 12:00:53 PM   12:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+      //             Q 4)
+      // 	(Using Parameterized Function)
+      // 	Write a JavaScript program to find and print all Strong numbers within a given range of two integers, N1 and N2.
+      // 	The program should read N1 and N2 from the user and display all Strong numbers in this range.
+
+      // 	A strong number is a number in which the sum of the factorials of its digits is equal to the number itself.
+      // 	For example:
+      // 	145 is a strong number because 1!+4!+5!=145.
+
+      // 	Sample input  : N1 = 1 & N2 = 100000
+      // 	Sample output :
+      // 	Strong numbers between 1 and 100000 are:
+      // 	1
+      // 	2
+      // 	145
+      // 	40585
+
+      // Create a function named findStrong() which accepts the range and check whether the number is strong or not, if the number is strong store it into an array and print it, create a separate function factorial() to calculate the factorial of the number
+
+      function findStrong(x, y) {
+        for (let i = x; i <= y; i++) {
+          let cp = i;
+          let sumFact = 0;
+          let rev = 0;
+          while (cp != 0) {
+            rev = cp % 10;
+            sumFact = sumFact + factorial(rev);
+            cp = Math.floor(cp / 10);
+          }
+          if (i == sumFact) {
+            // op.value=op.value+sumFact+"\n"
+            op.innerHTML =op.innerHTML+sumFact+"<br>";
+            // op.innerHTML += sumFact + "<br>";
+
+            // document.write(`${sumFact} <br>`);
+          }
+        }
+      }
+
+      function factorial(a) {
+        if (a == 1|| a==0) 
+        {
+          return 1;
+        } 
+        else return a * factorial(a - 1);
+      }
+
+    //   findStrong(1, 100000);
+      //   document.write(factorial(1));
+    </script>
+
+    <h1>find and print all Strong numbers within a given range of two integers, Ns1 and N2.</h1>
+    <input type="text" name="" id="n1" placeholder="Enter the start number"><br>
+    <input type="text" name="" id="n2" placeholder="Enter the End Number"><br>
+    <button onclick="findStrong(n1.value,n2.value)">find and print all Strong numbers</button><br>
+    <h2>Answer are</h2>
+    <output id="op"></output>
+  </body>
+</html>

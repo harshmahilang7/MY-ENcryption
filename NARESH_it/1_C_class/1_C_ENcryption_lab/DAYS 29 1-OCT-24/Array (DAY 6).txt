@@ -1,0 +1,90 @@
+Que 1 :
+=======
+
+Write a program in C to find the sum of rows and columns of a matrix.
+
+Sample input :
+Input the size of the square matrix : 2
+Input elements in the 2*2 matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+
+Sample Output :
+The matrix is :
+5 6
+7 8
+
+The sum or rows and columns of the matrix is :
+5   6  11
+7   8  15
+12 14
+
+===================================
+
+Que 2 : 
+=======
+
+Write a program in C to accept two matrices and check whether they are equal.
+
+Sample input :
+Input Rows and Columns of the 1st matrix :2 2
+Input Rows and Columns of the 2nd matrix :2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+
+Input elements in the second matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+
+Sample output :
+The first matrix is :
+1 2
+3 4
+The second matrix is :
+1 2
+3 4
+Two matrices are equal.
+
+===================================
+
+Que 3 :
+=======
+
+Write a C program to find the maximum element of each row.
+
+Examples: 
+
+Input : [1, 2, 3, 21]
+        [12, 1, 65, 9]
+        [1, 56, 34, 2]
+
+Output :
+Maximum element of row 1: 21
+Maximum element of row 2: 65
+Maximum element of row 3: 56
+
+===================================
+
+Que 4 :
+=======
+
+Write a C program to check given matrix is magic matrix or not.
+
+sum of each rows , sum of each columns , sum of principal diagonal and sum of horizontal diagonal is same then the matrix is magic matrix.
+ 
+Example : arr[][] = [ 2   7   6 ]
+                    [ 9   5   1 ]
+                    [ 4   3   8 ]
+   
+Output : given matrix is magic matrix
+
+Explanation: In matrix sum of each row and each column and diagonals sum is same = 15.
+   
+

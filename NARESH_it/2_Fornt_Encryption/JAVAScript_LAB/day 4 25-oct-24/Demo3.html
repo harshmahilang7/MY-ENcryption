@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" placeholder="vehicle Type" id="VT" />
+    <br />
+    <input type="number" placeholder=" age" id="age2" />
+    <br />
+    <input type="text" placeholder="Name of the Vehicle" id="NV" />
+    <br />
+    <input type="text" placeholder="Issue" id="issue" />
+    <br />
+    <input type="text " placeholder="owner name" id="ON" />
+    <br />
+    <input type="number" placeholder="Number of tyres(if applicable)" id="NT" />
+    <br />
+    <button onclick="calculateBill()">Calculate Bill</button>
+
+    <script>
+      function calculateBill() {
+        let type = Number(VT.value);
+        let age = Number(age2.value);
+        let vehicleName = NV.value;
+        let iss = issue.value;
+        let ownerName = ON.value;
+        let numberofTyres = Number(NT.value);
+        let totalBill = 0;
+        if (type == 2 || type == 3 || type == 4) {
+          if (age > 8) {
+            switch (iss) {
+              case "fuels":
+                totalBill = 1500;
+                document.write("<p> Name of the Owner : " + ownerName + "</p>");
+                document.write(
+                  "<p> Name of the vehicle : " + vehicleName + "</p>"
+                );
+                document.write("<p> Issue : " + iss + "</p>");
+                document.write("<p> Total Bill : " + totalBill + "</p>");
+            }
+          } else {
+            alert("your vehicle service will done after a while");
+          }
+        } else {
+          alert(
+            "this service center is not accepting other than 2 wheeler, 3 wheeler and 4 wheeler"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

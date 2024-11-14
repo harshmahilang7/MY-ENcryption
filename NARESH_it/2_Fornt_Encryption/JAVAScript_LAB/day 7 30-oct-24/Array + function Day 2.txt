@@ -1,0 +1,32 @@
+Q 1) 
+	Write a JavaScript program to convert an array to string using predefined method.
+
+Q 2) 
+	Write a JavaScript program to remove last and first element and insert new element at the start and end using predefined methods.
+
+Q 3) 
+	write a JavaScript program to add or remove element from the specified index of the array using predefined methods.
+
+Q 4) 
+	(Using Parameterized Function)
+	Write a JavaScript program to find and print all Strong numbers within a given range of two integers, N1 and N2. 
+	The program should read N1 and N2 from the user and display all Strong numbers in this range. 
+
+	A strong number is a number in which the sum of the factorials of its digits is equal to the number itself. 
+	For example:
+	145 is a strong number because 1!+4!+5!=145.
+
+	Sample input  : N1 = 1 & N2 = 100000
+	Sample output :
+	Strong numbers between 1 and 100000 are:
+	1
+	2
+	145
+	40585
+
+Create a function named findStrong() which accepts the range and check whether the number is strong or not, if the number is strong store it into an array and print it, create a separate function factorial() to calculate the factorial of the number
+Q 5) 
+	write a JavaScript program to print the multiplication table of a given number using arrow function.
+
+	
+	

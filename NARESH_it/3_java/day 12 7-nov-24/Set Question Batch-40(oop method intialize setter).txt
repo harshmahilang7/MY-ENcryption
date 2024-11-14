@@ -1,0 +1,353 @@
+														Set-A
+													      ----------
+
+Q-1)
+------
+Create a Circle class with the following specifications:
+
+Attributes:
+radius (double)
+Methods:
+void setRadius(double radius): Uses the this keyword to set the radius of the circle.
+double calculateArea(): Returns the area of the circle (π × radius × radius).
+double calculateCircumference(): Returns the circumference of the circle (2 × π × radius).
+Task:
+
+Take a Tester class (ELC class):
+Create a main method to:
+
+Initialize a Circle object with a specific radius.
+Use setRadius to set the radius.
+Display the area and circumference.
+
+Q-2)
+------
+You are developing a task management application that allows users to create and manage their tasks efficiently. 
+
+Design a Java class named Task (Business Class)
+
+Attributes :
+
+name			data type
+-------			------------
+title			:       String
+description	:       String
+priority		:       String
+
+Acess modifier : private(for all varriables)
+
+Take Individual setter Method to initialize the variables.
+
+Methods:
+[Return type of all methods is void and acess modifier is public]
+
+updateDescription(String newDescription): This method should update the description of the task.
+
+updatePriority(String newPriority): This method should update the priority level of the task.
+
+getTitle(): This method should return the title of the task.
+
+getDescription(): This method should return the description of the task.
+
+getPriority(): This method should return the priority level of the task.
+
+isCompleted(boolean check): This method should take the input from the user as boolean value and return true if the task is completed, and false otherwise.
+
+
+Create another class Main which is having main method and instantiate the task object and execute the method.
+
+
+Sample Input :
+-------------------
+Task Title: Finish Project
+Task Description: Complete documentation
+Task Priority: High
+Is Task Completed? false
+
+Expected Output: 
+----------------------
+Updated Task Description: Complete documentation and final review
+
+Updated Task Priority: Medium
+
+Is Task Completed? true
+
+Q-3)
+------
+
+Create a BLC class StudentGradeCalculator :
+
+Instance Variables:
+
+studentName  : private String
+marks              : private int
+grade               : private char
+
+
+Setter Methods:
+
+Define individual setter methods for studentName and marks to initialize these fields.
+
+Methods:
+
+Method Name: 
+
+calculateGrade()
+
+Access Modifier: public
+
+Return Type: char
+
+Description: This method calculates the student's grade based on the marks field and assigns a grade based on the following criteria:
+
+Marks       Grade
+> 90           A
+>= 75        B
+>= 60        C
+< 60          D
+
+Method Name: displayStudentDetails
+
+Access Modifier: public
+Return Type: void
+Description: This method prints the student's name, marks, and calculated grade.
+
+Main class (ELC class):
+
+Within the main method, create an instance of StudentGradeCalculator.
+Use the setter methods to initialize the student's name and marks.
+
+Call calculateGrade to compute the grade based on the initialized marks.
+
+Finally, use displayStudentDetails to print the student’s name, marks, and grade.
+
+
+														Set-B
+													      ----------
+Q-1)
+------
+Square Calculation using Side Length
+
+Create a Square class (BLC class)  with the following specifications:
+
+Attributes:
+sideLength (double)
+Methods:
+void setSideLength(double sideLength): Uses the this keyword to set the side length of the square.
+double calculateArea(): Returns the area of the square (sideLength × sideLength).
+double calculatePerimeter(): Returns the perimeter of the square (4 × sideLength).
+
+
+Take a Tester class (ELC class):
+Create a main method to:
+
+Initialize a Square object with a specific side length.
+Use setSideLength to set the side length.
+Display the area and perimeter.
+
+
+Q-2)
+------
+Event Management Application - Manage Event Details
+
+You are developing an event management application that allows users to create and manage event details efficiently.
+
+Design a Java class named Event (Business Class)
+Attributes:
+name		data type
+eventName	String
+location		String
+eventDate	String
+
+Access modifier: private (for all variables)
+
+Take individual setter methods to initialize the variables.
+
+Methods:
+void updateLocation(String newLocation): This method should update the location of the event.
+void updateEventDate(String newEventDate): This method should update the event date.
+String getEventName(): This method should return the name of the event.
+String getLocation(): This method should return the location of the event.
+String getEventDate(): This method should return the date of the event.
+boolean isEventScheduled(boolean check): This method should take input from the user as a boolean value and return true if the event is scheduled, and false otherwise.
+
+Task:
+Create another EventApp class with the main method, instantiate an Event object, and execute the methods.
+
+Sample Input :
+-------------------
+Event Name: Annual Conference
+Event Location: S.R Nagar
+Event Date: 2024-12-15
+Is Event Scheduled? false
+
+
+Expected Output :
+----------------------
+Updated Event Location: Ameerpet
+
+Updated Event Date: 2024-12-20
+
+Is Event Scheduled? true
+
+
+Q-3)
+------
+
+Employee Performance Calculator with Bonus Calculation
+
+Create a BLC (Business Logic Class) named EmployeePerformanceCalculator.
+
+Instance Variables:
+
+employeeName:          private String
+performanceScore:     private int
+bonusAmount:             private double
+
+Setter Methods:
+
+Define individual setter methods for employeeName and performanceScore to initialize these fields.
+
+Methods:
+
+Method Name: calculateBonusAmount()
+
+Access Modifier: public
+
+Return Type: double
+
+Description: This method calculates the employee’s bonus amount based on their performanceScore and assigns a bonus based on the following criteria:
+
+Performance Score	Bonus Amount
+> 90						5000
+>= 75					3000
+>= 60					2000
+< 60						0
+
+Method Name: displayEmployeeDetails()
+
+Access Modifier: public
+Return Type: void
+
+[Description: This method prints the employee’s name, performance score, and calculated bonus amount.  ]
+
+
+Main class (ELC class):
+Within the main method:
+
+Create an instance of EmployeePerformanceCalculator.
+Use the setter methods to initialize the employee’s name and performance score.
+Call calculateBonusAmount to compute the bonus based on the initialized score.
+Use displayEmployeeDetails to print the employee’s name, performance score, and bonus amount.
+
+
+														Set-C
+													      ----------
+Q-1)
+------
+Triangle Calculation using Base and Height
+
+Create a Triangle class with the following specifications:
+
+Attributes:
+base (double)
+height (double)
+side (double) - This represents the third side of the triangle (other than the base and height).
+Methods:
+void setDimensions(double base, double height, double side): Uses the this keyword to set the base, height, and side of the triangle.
+double calculateArea(): Returns the area of the triangle (0.5 × base × height).
+double calculatePerimeter(): Returns the perimeter of the triangle (base + height + side).
+
+Task:
+
+Take a Tester (ELC class):
+Create a main method to:
+
+Initialize a Triangle object with specific dimensions (base, height, and side).
+Use setDimensions to set the dimensions.
+Display the area and perimeter.
+
+Q-2)
+------
+Library Management Application - Manage Book Details
+
+You are developing a library management application that allows users to keep track of book details.
+
+Design a Java class named Book (Business Class)
+Attributes:
+name	data type
+title	String
+author	String
+availability	boolean
+Access modifier: private (for all variables)
+
+Take individual setter methods to initialize the variables.
+
+Methods:
+void updateAuthor(String newAuthor): This method should update the author of the book.
+void setAvailability(boolean status): This method should set the availability status of the book.
+String getTitle(): This method should return the title of the book.
+String getAuthor(): This method should return the author of the book.
+boolean isAvailable(): This method should return true if the book is available, and false otherwise.
+
+
+Task:
+Create another LibraryApp class with the main method, instantiate a Book object, and execute the methods.
+
+Sample Input :
+-------------------
+
+Book Title: Introduction to Java
+Book Author: John Doe
+Availability: true
+
+
+Expected Output :
+----------------------
+Updated Book Author: Jane Smith
+
+Is Book Available? false
+
+Q-3)
+------
+
+ Cricket Player Performance Evaluation with Match Fee Calculation
+Create a BLC (Business Logic Class) named CricketPlayerPerformance.
+
+Instance Variables:
+playerName: private String
+runsScored: private int
+matchFee: private double
+Setter Methods:
+Define individual setter methods for playerName and runsScored to initialize these fields.
+
+Methods:
+Method Name: calculateMatchFee()
+
+Access Modifier: public
+
+Return Type: double
+
+Description: This method calculates the player’s match fee based on runsScored and assigns a fee based on the following criteria:
+
+Runs Scored	Match Fee
+> 100		10000
+>= 75		7500
+>= 50		5000
+< 50			2000
+
+Method Name: displayPlayerDetails()
+
+Access Modifier: public
+Return Type: void
+
+Description: This method prints the player’s name, runs scored, and calculated match fee.
+
+Main Class (ELC class):
+
+Within the main method:
+
+Create an instance of CricketPlayerPerformance.
+Use the setter methods to initialize the player’s name and runs scored.
+Call calculateMatchFee to compute the fee based on the initialized runs.
+Use displayPlayerDetails to print the player’s name, runs scored, and match fee.

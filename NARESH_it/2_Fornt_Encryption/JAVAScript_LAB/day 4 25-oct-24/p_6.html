@@ -1,0 +1,125 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-25 12:10:44 PM   12:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-25 12:46:45 PM   12:10
+-->
+<!-- Que 6 :
+=======
+
+Write a JavaScript program to check whether the number is a palindrome or not in a given range and print all the palindrome numbers is given range. A number is considered a palindrome if the reverse of the number is equal to the original number. 
+The program should prompt the user to enter an integer, reverse the number, and then compare it to the original number to determine if it is a palindrome.
+
+Sample input  : Enter an integer: 1 500
+Sample Output : The palindrome Numbers in range 1 - 500 are :
+1
+2
+3
+4
+5
+6
+7
+8
+9
+11
+22
+33
+44
+55
+66
+77
+88
+99
+101
+111
+121
+131
+141
+151
+161
+171
+181
+191
+202
+212
+222
+232
+242
+252
+262
+272
+282
+292
+303
+313
+323
+333
+343
+353
+363
+373
+383
+393
+404
+414
+424
+434
+444
+454
+464
+474
+484
+494
+ -->
+<script src=""></script>
+ <script>
+    let n=+prompt("enter the number");
+    for(let i = 0; i <= n; i++)
+    {
+        let sum=0;
+        let cp=i;
+        while (cp!=0) {
+        
+            let rev=cp%10;
+            sum=sum*10+rev;
+            cp=Math.floor(cp / 10);
+        }
+        if(sum==i)
+        {
+            document.write(`${i}<br>`);
+        }
+    }
+//    let n = parseInt(prompt("Enter the number"));
+// for (let i = 0; i <= n; i++) {
+//     let cp = i;
+//     let sum = 0;  // Reset sum for each i
+//     while (cp != 0) {
+//         let rev = cp % 10;
+//         sum = sum*10 + rev;
+//         cp = Math.floor(cp / 10);
+//     }
+//     if (sum == i) {
+//         document.write(`${i}<br>`);
+//     }
+// }
+// let n = +prompt("Enter the number");
+
+// document.write(`The numbers where the sum of digits equals the number itself, in the range 0 to ${n}, are: <br>`);
+
+// for (let i = 0; i <= n; i++) {
+//     let cp = i;
+//     let sum = 0;  // Reset sum for each i
+//     while (cp != 0) {
+//         let digit = cp % 10;
+//         sum += digit;
+//         cp = Math.floor(cp / 10);
+//     }
+    
+//     // Check if the sum of digits is equal to the number
+//     if (sum == i) {
+//         document.write(`${i}<br>`);
+//     }
+// }
+
+ </script>
+ 

@@ -1,0 +1,66 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-24 12:12:36 PM   12:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-24 12:19:55 PM   12:10
+-->
+<!-- Que 2 : 
+========
+
+	Write a JavaScript Program to read the value of input fields and validate the entered values : 
+	
+	Description : 
+		1) There are two input fields given to you Username and Password you have to validate the username and password that user entered and check whether the user enters correct username or password if user enters correct username and password display the appropriate message.
+		2) on click of the button the function "loginValidate()" will be executed to validate the username and password.
+
+	Sample Input : 
+		Enter UserName : Ravindra
+		Enter Password : Ravindra@123
+	Sample output : 
+		Welcome Ravindra! you logged in successfully.
+
+	Sample Input : 
+		Enter UserName : Ravindra
+		Enter Password : Ravindra@1
+	Sample output : 
+		Sorry! incorrect Password.
+
+	Sample Input : 
+		Enter UserName : Ravi
+		Enter Password : Ravindra@123
+	Sample output : 
+		Sorry! incorrect Username.
+	
+=========================================================================================================================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+  </head>
+  <body>
+    <script>
+      function loginValidate()
+      {
+          let u=user.value;
+          let p=password.value;
+          if (u==="Ravindra"&&p==="Ravindra@123") {
+              op.innerHTML="Welcome Ravindra! you logged in successfully."
+          } else if(u!=="Ravindra"&&p==="Ravindra@123") {
+              op.innerHTML="Sorry! incorrect Username."
+          }
+          else if(u==="Ravindra"&&p!=="Ravindra@123") {
+              op.innerHTML="Sorry! incorrect Password."
+            }
+            else 
+            op.innerHTML="Sorry! incorrect username and Password."
+      }
+    </script>
+    <input type="text" id="user" placeholder="enter the username" />
+    <input type="password" id="password" placeholder="enter the password" />
+    <button onclick="loginValidate()">login</button>
+    <output id="op"></output>
+  </body>
+</html>
