@@ -1,0 +1,338 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Nov 25 10:20:18 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: c##HARSH
+Enter password:
+Last Successful login time: Mon Nov 25 2024 09:48:52 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> SELECT * FROM EMP;
+
+no rows selected
+
+SQL> DROP EMP;
+DROP EMP
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+
+
+SQL> DROP TABLE EMP;
+
+Table dropped.
+
+SQL> drop table emp;
+drop table emp
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> drop table dept;
+drop table dept
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> drop table salgrade;
+drop table salgrade
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL>
+SQL> CREATE TABLE EMP
+  2         (EMPNO NUMBER(4) NOT NULL,
+  3          ENAME VARCHAR2(10),
+  4          JOB VARCHAR2(9),
+  5          MGR NUMBER(4),
+  6          HIREDATE DATE,
+  7          SAL NUMBER(7, 2),
+  8          COMM NUMBER(7, 2),
+  9          DEPTNO NUMBER(2));
+
+Table created.
+
+SQL>
+SQL> INSERT INTO EMP VALUES
+  2          (7369, 'SMITH',  'CLERK',     7902,
+  3          TO_DATE('17-DEC-1980', 'DD-MON-YYYY'),  800, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7499, 'ALLEN',  'SALESMAN',  7698,
+  3          TO_DATE('20-FEB-1981', 'DD-MON-YYYY'), 1600,  300, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7521, 'WARD',   'SALESMAN',  7698,
+  3          TO_DATE('22-FEB-1981', 'DD-MON-YYYY'), 1250,  500, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7566, 'JONES',  'MANAGER',   7839,
+  3          TO_DATE('2-APR-1981', 'DD-MON-YYYY'),  2975, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7654, 'MARTIN', 'SALESMAN',  7698,
+  3          TO_DATE('28-SEP-1981', 'DD-MON-YYYY'), 1250, 1400, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7698, 'BLAKE',  'MANAGER',   7839,
+  3          TO_DATE('1-MAY-1981', 'DD-MON-YYYY'),  2850, NULL, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7782, 'CLARK',  'MANAGER',   7839,
+  3          TO_DATE('9-JUN-1981', 'DD-MON-YYYY'),  2450, NULL, 10);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7788, 'SCOTT',  'ANALYST',   7566,
+  3          TO_DATE('09-DEC-1982', 'DD-MON-YYYY'), 3000, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7839, 'KING',   'PRESIDENT', NULL,
+  3          TO_DATE('17-NOV-1981', 'DD-MON-YYYY'), 5000, NULL, 10);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7844, 'TURNER', 'SALESMAN',  7698,
+  3          TO_DATE('8-SEP-1981', 'DD-MON-YYYY'),  1500, NULL, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7876, 'ADAMS',  'CLERK',     7788,
+  3          TO_DATE('12-JAN-1983', 'DD-MON-YYYY'), 1100, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7900, 'JAMES',  'CLERK',     7698,
+  3          TO_DATE('3-DEC-1981', 'DD-MON-YYYY'),   950, NULL, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7902, 'FORD',   'ANALYST',   7566,
+  3          TO_DATE('3-DEC-1981', 'DD-MON-YYYY'),  3000, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES
+  2          (7934, 'MILLER', 'CLERK',     7782,
+  3          TO_DATE('23-JAN-1982', 'DD-MON-YYYY'), 1300, NULL, 10);
+
+1 row created.
+
+SQL>
+SQL> CREATE TABLE DEPT
+  2         (DEPTNO NUMBER(2),
+  3          DNAME VARCHAR2(14),
+  4          LOC VARCHAR2(13) );
+
+Table created.
+
+SQL>
+SQL> INSERT INTO DEPT VALUES (10, 'ACCOUNTING', 'NEW YORK');
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES (20, 'RESEARCH',   'DALLAS');
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES (30, 'SALES',      'CHICAGO');
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES (40, 'OPERATIONS', 'BOSTON');
+
+1 row created.
+
+SQL>
+SQL> CREATE TABLE SALGRADE
+  2          (GRADE NUMBER,
+  3           LOSAL NUMBER,
+  4           HISAL NUMBER);
+
+Table created.
+
+SQL>
+SQL> INSERT INTO SALGRADE VALUES (1,  700, 1200);
+
+1 row created.
+
+SQL> INSERT INTO SALGRADE VALUES (2, 1201, 1400);
+
+1 row created.
+
+SQL> INSERT INTO SALGRADE VALUES (3, 1401, 2000);
+
+1 row created.
+
+SQL> INSERT INTO SALGRADE VALUES (4, 2001, 3000);
+
+1 row created.
+
+SQL> INSERT INTO SALGRADE VALUES (5, 3001, 9999);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+SQL> alter table emp add constraint emp_pk primary key (empno);
+
+Table altered.
+
+SQL> alter table dept add constraint dept_pk primary key (deptno);
+
+Table altered.
+
+SQL> alter table emp add constraint emp_fk foreign key (deptno) references dept (deptno);
+
+Table altered.
+
+SQL>
+SQL> SELECT * FROM EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+        20
+
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+14 rows selected.
+
+SQL> SET LINES 200 PAGES 200;
+SQL> SELECT * FROM EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500                    30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+14 rows selected.
+
+SQL> CONN
+Enter user-name: SYSTEM
+Enter password:
+Connected.
+SQL> CREATE USER DASTAN
+  2  IDENTIFIED BY sudo
+  3  ;
+CREATE USER DASTAN
+            *
+ERROR at line 1:
+ORA-65096: invalid common user or role name
+
+
+SQL> alter session set "_oracle_script"=true;
+
+Session altered.
+
+SQL> CREATE USER DASTAN
+  2  IDENTIFIED BY sudo
+  3  ;
+
+User created.
+
+SQL> conn

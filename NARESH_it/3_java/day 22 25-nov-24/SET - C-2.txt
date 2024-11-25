@@ -1,0 +1,176 @@
+Que 1 :
+=======
+
+DigitSum Class:
+
+Attributes:
+int num (private)
+
+Constructor :
+parameterized constructor to initialize num attribute.
+
+Methods:
+
+int addFirstAndNthDigit(int position): This method adds the first digit and the Nth digit from the (num) and will return the addition as result.
+
+Main Method:
+Asks the user to input a number and a position (n).
+Creates an instance of DigitSum class .
+Calls the addFirstAndNthDigit() by passing Nth position as an argument. and print the output which is return by addFirstAndNthDigit() method.
+
+Sample Input and Output:
+--------------------------------
+Example 1:
+
+Input:
+
+Enter a number: 45678
+Enter the position (n): 2
+
+
+Sample Output:
+
+The sum of the first digit and the 2th digit from the right is: 11
+
+===============================================
+
+Que 2 :
+=======
+
+Class Design : AirConditioner
+
+Attributes:
+
+String brand: The brand of the AC.
+boolean isOn: Indicates whether the AC is currently on or off.
+int temperature: The current temperature set on the AC.
+String mode: The current mode of operation (e.g., "Cool", "Heat", "Fan").
+
+Constructors:
+Default Constructor:
+Initializes the AC with default values: brand as "Generic", isOn as false, temperature as 24, and mode as "Cool".
+
+Parameterized Constructor:
+Initializes all attributes with user-provided values.
+
+Methods:
+void powerOn():
+Turns the AC on and displays a message indicating that the AC is now on.
+
+void powerOff():
+Turns the AC off and displays a message indicating that the AC is now off.
+
+void setTemperature(int temp):
+Sets the AC temperature to the given value.
+Ensure the temperature is within a valid range (e.g., 16°C to 30°C).
+Display an appropriate message if the temperature is out of range.
+
+void changeMode(String newMode):
+Changes the mode of the AC to the specified value.
+Ensure the mode is one of "Cool", "Heat", or "Fan".
+Display an error message for invalid modes.
+
+void displayStatus():
+Displays the current status of the AC, including whether it is on or off, the temperature, and the mode.'
+
+
+Create  Test class
+
+Take Multiple AC Objects:
+In the main method, create at least two AC objects:
+One using the default constructor.
+One using the parameterized constructor with user-provided values for brand, initial temperature, and mode.
+
+
+Sample Input :
+-------------------
+brand = "CoolMaster", isOn = true, temperature = 22, mode = "Cool"
+
+Sample Output :
+---------------------
+The AC is now ON.
+Temperature set to 18°C.
+Mode changed to Heat.
+Invalid temperature! Please set a value between 16°C and 30°C.
+AC Status:
+Brand: Generic
+Power: ON
+Temperature: 18°C
+Mode: Heat
+
+===============================================
+
+Que 3 :
+=======
+
+Class Descriptions: Student and ID Card Management System
+
+IDCard Class:
+
+Attributes:
+
+cardNumber (String): The unique ID card number.
+issueDate (String): The date on which the ID card was issued.
+
+instituteName (String): The name of the institute. 
+It is common for all ID cards and should be initialized using an instance initializer block.
+
+Methods:
+displayDetails(): Displays the details of the ID card.
+
+
+Take one more BLC class
+
+IDCardMaker Class:
+
+Methods:
+static wearIDCard(String cardNumber, String issueDate): Creates and returns an IDCard object using the given details. This is a static factory method.
+Take another BLC class 
+
+Student Class:
+
+Attributes:
+name (String): The name of the student.
+age (int): The age of the student.
+idCard (IDCard): The ID card assigned to the student.
+
+Methods:
+Method Name :assignIDCard(): Assigns the given ID card to the student.
+Return Type : void
+Parameter : IDCard idCard
+
+displayDetails(): Displays the details of the student and their ID card (if assigned).
+
+Main (AdminChecker Class):
+
+This class should demonstrate the following:
+Use the IDCardMaker class to create an ID card.
+
+Create a Student object.
+
+Assign the ID card to the student.
+
+Display the student's details along with their ID card details.
+
+
+Sample Input :
+-------------------
+Example : 1
+---------------
+IDCard idCard = IDCardMaker.wearIDCard("ID12345", "01-01-2023");
+Student student = new Student("Alice", 20);
+student.assignIDCard(idCard);
+student.displayDetails();
+
+
+Sample Output :
+--------------------
+
+Creating ID Card...
+Student Name: Alice
+Age: 20
+ID Card Details:
+Institute Name: Global Institute of Technology
+ID Card Number: ID12345
+Issue Date: 01-01-2023
+

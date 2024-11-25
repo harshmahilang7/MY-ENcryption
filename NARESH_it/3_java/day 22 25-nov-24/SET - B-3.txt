@@ -1,0 +1,169 @@
+Que 1 :
+=======
+
+Palindrome Checker :
+Write a Java program to create a PalindromeChecker class that has the following attributes and methods:
+
+Attributes:
+num (int): Stores the num to be checked if it's a palindrome.
+
+Constructor :
+parameterized constructor that initializes the num attribute
+
+Methods:
+boolean isPalindrome(): This method should return true if the num is a palindrome and false otherwise. A num is considered a palindrome if it reads the same forward and backward.
+
+String printResult(): This method should return the result in a given format, e.g [121 is palindrom] OR [122 is not palindrom]
+
+Task:
+In the main method:
+Create a PalindromeChecker object with a specific num.
+
+Call the printResult() method to display whether the num is a palindrome or not.
+
+
+Example 1 :
+Sample Input  : 121
+Sample Output : [121 is palindrom] OR [122 is not palindrom]
+
+Example 2 :
+Sample Input  : 122
+Sample Output : [122 is not palindrom]
+
+=======================================
+
+Que 2 :
+=======
+
+Room Heater Management System
+
+Class Design:  RoomHeater
+
+Attributes:
+String modelName: The model name of the room heater.
+boolean isOn: Indicates whether the heater is currently on or off.
+int temperature: The current temperature set on the heater.
+String heatingLevel: The current heating level (e.g., "Low", "Medium", "High").
+
+Constructors:
+
+Default Constructor:
+Initializes the heater with default values: model name as "Standard", isOn as false, temperature as 22, and heating level as "Medium".
+
+Parameterized Constructor:
+Initializes all attributes with user-provided values.
+
+Methods:
+void turnOn():
+Turns the heater on and displays a message indicating that the heater is now on.
+
+void turnOff():
+Turns the heater off and displays a message indicating that the heater is now off.
+
+void setTemperature(int temp):
+Sets the heater's temperature to the given value.
+Ensure the temperature is within a valid range (e.g., 18°C to 28°C).
+Display an appropriate message if the temperature is out of range.
+
+void setHeatingLevel(String level):
+Sets the heater's heating level to the specified value.
+Ensure the level is one of "Low", "Medium", or "High".
+Display an error message for invalid heating levels.
+
+void displayStatus():
+Displays the current status of the room heater, including whether it is on or off, the temperature, and the heating level.
+
+
+Create  Test class
+
+Take Multiple RoomHeater Objects:
+In the main method, create at least two RoomHeater objects:
+One using the default constructor.
+One using the parameterized constructor with user-provided values for all the properties.
+
+
+Sample Input :
+------------------
+modelName = "ProHeat2000", isOn = false, temperature = 24, heatingLevel = "High"
+
+Sample Output:
+-------------------
+The Room Heater is now ON.
+Temperature set to 20°C.
+Heating level set to Low.
+Invalid heating level! Please choose one of: Low, Medium, High.
+Room Heater Status:
+Model Name: ProHeat2000
+Power: ON
+Temperature: 20°C
+Heating Level: Low
+
+=======================================
+
+Que 3 :
+=======
+
+Class Descriptions:
+
+Batch Class:
+
+Attributes:
+batchName (String): The name of the batch.
+timing (String): The timing of the batch.
+department (String): The department name, which is common for all batches and initialized using an instance initializer block.
+
+Methods:
+displayDetails(): Displays the details of the batch.
+
+
+BLC class
+BatchManager Class:
+
+Methods:
+static Batch createBatch(String batchName, String timing): Creates and returns a Batch object with the given details.
+
+
+//BLC class
+Student Class:  
+
+Attributes:
+name (String): The name of the student.
+rollNumber (int): The roll number of the student.
+batch (Batch): The current batch assigned to the student.
+
+Methods:
+assignBatch(Batch batch): Assigns the given batch to the student at the time of admission.
+shiftBatch(Batch newBatch): Shifts the student to a new batch due to poor performance.
+displayDetails(): Displays the details of the student and their current batch.
+
+
+Main (Tester Class):
+
+This class should demonstrate the following:
+
+Use the BatchManager class to create batches.
+Create a Student object and assign a batch at the time of admission.
+
+Shift the student to a new batch due to poor performance.
+Display the student's details before and after the batch shift.
+
+
+Sample Input and Output:
+Input (Initial Assignment):
+---------------------------------
+Batch Details:
+Batch Name: "Morning Batch"
+Timing: "8 AM - 12 PM"
+Student Details:
+Name: "John Doe"
+Roll Number: 101
+
+
+Output (Initial Assignment):
+-----------------------------------
+Student Name: John Doe
+Roll Number: 101
+Current Batch Details:
+Department: Computer Science
+Batch Name: Morning Batch
+Timing: 8 AM - 12 PM
