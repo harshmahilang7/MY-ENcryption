@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+printf("kon hu m\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+printf("DASTAN ALAM");
+
+getch();
+}

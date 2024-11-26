@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{int i,j,a,s,q,w;clrscr();
+
+for(i=1;i<=3;i++)
+{
+ for(j=1;j<=3;j++)
+ {
+
+  if(i==1||(i==3)||j==1)
+	{printf("*");}
+	else
+	{printf(" ");}
+ }
+    printf("\n");
+
+ for(q=1;q<=3;q++)
+ {
+ for(w=1;w<=3;w++)
+ {//if((q==5)||q==1)
+	{printf("*");}
+     //	else
+  //	{printf(" ");}
+ }
+    printf("\n");
+     }
+}

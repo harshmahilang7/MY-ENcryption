@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+unsigned long int a=0,b=1,n,i,temp;
+clrscr();
+ printf("**\n\n find the fibonacci series in between 0 to 24 rang \n\n**");
+  scanf("%ld",&n);
+ printf("the first %uld element of fibonacci series ",n);
+ printf("\n%ld\n%ld",a,b);
+ for(i=3;i<=n;i++)
+ { temp=a+b;
+ printf("\n%ld",temp);
+ a=b;
+ b=temp;
+    }
+ getch();
+ return 0;
+     }

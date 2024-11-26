@@ -1,0 +1,190 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   15-04-2022  Fri 03:25:28 PM  15:04:96
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 15-04-2022  Fri 03:28:58 PM  15:04:24
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    </body>
+</html>-->
+<html><head></head><body>
+
+    <center>
+    <h1> Predefined C++ Functions </h1>
+    </center>
+    
+    Most programming languages to have facilities to
+    name pieces of reusable code.  The terms <i>procedure,
+    subprogram, method</i> and <i>function</i> all mean essentially
+    the same thing.
+    <p>
+    Like most languages, C++ provides a library of predefined
+    functions. The definitions of many common functions are
+    found in the cmath and cstdlib libraries.  To access these
+    functions, your program must contain the directive(s)
+    </p><xmp>
+        #include <cmath>
+        #include <cstdlib>
+    </xmp>
+    in addition to <tt>using namespace std;</tt>
+    <p>
+    Some common functions are listed below.  A larger
+    table of functions is included in the text on page 96.
+    <table border="1" width="75%">
+    <tbody><tr><th>Function
+    </th><th>Description
+    </th><th>Argument type
+    </th><th>Return type
+    </th><th>Header file
+    </th></tr><tr>
+    <td>sqrt
+    </td><td>Square root
+    </td><td>double
+    </td><td>double
+    </td><td>cmath
+    </td></tr><tr>
+    <td>pow
+    </td><td>Powers
+    </td><td>double
+    </td><td>double
+    </td><td>cmath
+    </td></tr><tr>
+    <td>abs
+    </td><td>Absolute value<br>for int
+    </td><td>int
+    </td><td>int
+    </td><td>cstdlib
+    </td></tr><tr>
+    <td>exit
+    </td><td>End program
+    </td><td>int
+    </td><td>void
+    </td><td>cstdlib
+    </td></tr><tr>
+    <td>assert
+    </td><td>Abort program with message
+    </td><td>boolean
+    </td><td>void
+    </td><td>assert
+    </td></tr></tbody></table>
+    
+    </p><xmp>
+    //------------------------------------------
+    // File: SqrtPowAbsExit.cpp
+    //
+    //  Other required file header stuff here
+    //
+    //  An example of the proper use of the
+    //  sqrt(), pow(), abs() and exit() functions
+    //-------------------------------------------
+    
+    #include <iostream>
+    #include <cmath>
+    #include <cstdlib>
+    
+    using namespace std;
+    
+    int main ( )
+    {
+       // calling the functions with literal
+       cout << "The sqrt of 36 is " << sqrt(36.0) << endl;
+    
+       cout << "36 to the 2nd power is " << pow(36.0, 2.0) << endl;
+    
+       cout << "The absolute value of -44 is " << abs(-44) << endl;
+       cout << endl;
+    
+       // calling the functions with variables
+       double x = 36.0;
+       double y = 2.0;
+       int z = -44;
+    
+       cout << "The sqrt of " << x << " is " << sqrt( x ) << endl;
+    
+       cout << x << " to the " << y << " power is " << pow(x, y) << endl;
+    
+       cout << "The absolute value of " << z << " is " << abs( z ) << endl;
+       cout << endl;
+    
+       exit ( -1 );
+    
+       return 0;
+    }
+    
+    
+    </xmp>
+    
+    The ANSI compiler is very picky about the arguments
+    that are passed to these functions (because of function "overloading"
+    which is discussed soon).  For example, this code
+    <xmp>
+    
+    // File: BadSqrt.cpp
+    //
+    // Other required file header stuff here
+    //
+    // An example to show potential compiler errors
+    // when using the wrong parameter types for some
+    // math functions
+    //----------------------------------------------
+    #include <iostream>
+    #include <cmath>
+    #include <cstdlib>
+    
+    using namespace std;
+    
+    int main ( )
+    {
+    
+       cout << "The sqrt of 36 is " << sqrt( 36 ) << endl;
+    
+       cout << "36 to the 2nd power is " << pow( 36, 2 ) << endl;
+    
+       cout << "The absolute value of -44 is " << abs( -44.0 ) << endl;
+    
+       exit( -1 );
+    
+       return 0;
+    }
+    
+    </xmp>
+    generates this compiler error.  What does it mean?
+    How do we fix it?
+    <xmp>
+    linux1[7]% g++ -ansi -Wall BadSqrtPow.cpp
+    BadSqrtPow.cpp: In function `int main()':
+    BadSqrtPow.cpp:10: call of overloaded `sqrt(int)' is ambiguous
+    /usr/include/bits/mathcalls.h:146: candidates are: double sqrt(double)
+       /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:465:
+    long double std::sqrt(long double)
+       /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:461:
+    float std::sqrt(float)
+       BadSqrtPow.cpp:12: call of overloaded `pow(int, int)' is ambiguous
+    /usr/include/bits/mathcalls.h:143: candidates are: double pow(double, double)
+    /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:427:
+             long double std::pow(long double, int)
+    /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:423:
+             float std::pow(float, int)
+    /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:419:
+             double std::pow(double, int)
+    /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:410:
+             long double std::pow(long double, long double)
+    /usr/local/lib/gcc-lib/i686-pc-linux-gnu/3.2.1/include/c++/cmath:401:
+             float std::pow(float, float)
+    
+    </xmp>
+    
+    
+    <p>
+    </p><hr noshade="" size="4" width="100%" align="left">
+    <font size="-1"><center> 
+    Last Modified: Monday, 28-Aug-2006 10:16:00 EDT
+    </center></font>
+    
+    
+    
+    </body></html>

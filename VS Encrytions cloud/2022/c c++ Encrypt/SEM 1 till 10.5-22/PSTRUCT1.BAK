@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+struct employee
+{
+ int id;
+ char name[20];
+ float sal;
+ char phone[15];
+ char add[20];
+}emp;
+void main()
+{
+ clrscr();
+ printf("Enter the Address:");
+ gets(emp.add);
+ printf("enter the Employee id:");
+ scanf("%d",&emp.id);
+ printf("enter the employee name:");
+ scanf("%s",emp.name);
+ printf("Enter the Employee salary:");
+ scanf("%d",&emp.sal);
+ printf("Enter the employee phone no.:");
+ scanf("%s",emp.phone);
+
+ printf("--***Employee details***--\n") ;
+ printf("Id:%d\n",emp.id);
+ printf("Name:%s\n",emp.name);
+ printf("salary:%d\n",emp.sal);
+ printf("Phone no.:%s\n",emp.phone);
+ printf("Address:%s\n",emp.add);
+ getch();
+}

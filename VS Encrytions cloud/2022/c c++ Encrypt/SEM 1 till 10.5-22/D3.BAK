@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ clrscr();
+ int a,b;
+ printf("Enter two no.s=");
+ scanf("%d%d",&a,&b);
+ printf("Sum is=%d\n",a+b);
+ printf("Diffrenceis=%d\n",a-b);
+ printf("Product is=%d\n",a*b);
+ printf("Division is=%d\n",a/b);
+ printf("Press any key");
+ getch();
+}

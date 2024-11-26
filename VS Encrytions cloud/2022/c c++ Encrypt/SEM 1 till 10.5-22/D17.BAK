@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+
+// Increament & Decreament Opertor
+void main()
+{
+ clrscr();
+ int a,b,c;
+ a=5;
+ //b=a++;      //post increament
+ //b=++a;      //pre  increament
+ //b=a--;      //post decreament
+ //b=--a;      //pre  decreament
+ printf("b=%d",b);
+ printf("\na=%d",a);
+
+
+ getch();
+}

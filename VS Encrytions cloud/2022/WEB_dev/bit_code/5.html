@@ -1,0 +1,29 @@
+<!-- 
+  @Author: Dastan_Alam
+  @Date:   17-02-2023 06:09:57 PM       18:09:57
+  @Last Modified by:   Dastan_Alam
+  @Last Modified time: 17-02-2023 07:32:36 PM       19:32:36
+-->
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function run(){
+            const value = document.getElementById('text_input').value;
+            document.getElementById('data').innerHTML = "Hello Buddy apkin value ye rhi : " + value ; 
+        }
+    </script>
+</head>
+
+<body>
+    <H1>Helloo Beta ji ye program ha</H1>
+    <form>
+        <label for="ta">Enter the name : </label>
+        <input type="text" name="ta" id="text_input">
+        <input type="button" onclick="run()" value="submit">
+    </form>
+    
+    <h6 id = "data">Here the message will popup.. </h6>
+</body>
+
+</html>

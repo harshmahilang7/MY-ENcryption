@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[3][3],i,j,s;
+clrscr();
+for(i=0;i<=2;i++)
+{
+ for(j=0;j<=2;j++)
+   {
+   printf("enter the mertix =");             //sum of horzointal row
+   scanf("%d",&a[i][j]);
+   }
+}
+for(i=0;i<=2;i++)
+{
+
+  s=0;
+  for(j=0;j<=2;j++)
+  {
+  s=s+a[i][j];
+ }
+ printf("the sum of horzonotal row = %d\n",s);
+}
+getch();
+}

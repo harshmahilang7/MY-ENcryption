@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<conio.h>
+
+// Comparison Of Three No.
+void main()
+{
+ clrscr();
+ int a,b,c;
+ printf("Input three no.s\n");
+ scanf("%d%d%d",&a,&b,&c);
+ if(a>b)
+   {
+      if(a>c)
+	{ printf("a is greater\n");
+	}
+
+    /* else
+      {
+      }*/
+
+
+
+   }
+ else
+   {
+     if(b>c)
+       { printf("b is greater");
+       }
+
+     else
+     { printf("c is greater");
+     }
+
+
+
+    }
+
+
+
+ getch();
+}

@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()                       //armstrog
+{
+int a,s=0,r;
+clrscr();
+printf("enter the no=");
+scanf("%d",&a);
+while(a>0)
+    {
+     r=a%10;
+     s=s+pow(r,3);
+     a=a/10;
+     }
+if(a==s)
+  {
+  printf(" the give no is armstrong");
+  }
+else
+  {
+  printf(" the give not no is armstrong");
+  }
+getch();
+}

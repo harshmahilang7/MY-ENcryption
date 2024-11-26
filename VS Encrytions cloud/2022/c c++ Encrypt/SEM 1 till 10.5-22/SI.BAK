@@ -1,0 +1,16 @@
+
+void main();
+{
+int p,r,t,si;
+clrscr();					 // si=p*r*t
+printf("entre the value of p=");
+scanf("%d",&p);
+printf("entre the value of r=");
+scanf("%d",&r);
+printf("entre the value of t=");
+scanf("%d",&t);
+si=p*r*t;
+printf("the simple intrest is = %d",si);
+getch();
+}
+

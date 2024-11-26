@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ int d;
+ clrscr();
+ printf("what personality do you have right now\n");
+ printf("are you HARSH_MAHILANG\n");
+ printf("are you DASTAN_ALAM\n");
+ scanf("%d",&d);
+ switch(d)
+ {
+ case 1: printf("i am normal") ;
+ break;
+ case 2 : printf("i am satyrmania");
+ break;
+ default :printf("are you kidding me");
+}
+getch();
+}

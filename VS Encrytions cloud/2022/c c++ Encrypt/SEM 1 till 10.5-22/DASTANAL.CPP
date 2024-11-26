@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+printf("dddddd  dddddd  ddddd  dddddddd   ddddddd   ddd   dd\n");
+printf("d   dd  dd  dd  dd        dd      dd   dd   dd d  dd\n");
+printf("d   dd  dddddd  ddddd     dd      ddddddd   dd  d dd\n");
+printf("d   dd  dd  dd     dd     dd      dd   dd   dd   ddd\n");
+printf("dddddd  dd  dd  ddddd     dd      dd   dd   dd    dd\n");
+printf("\n");
+printf("dddddd  dd      dddddd   dd       dd\n");
+printf("dd  dd  dd      dd  dd   ddd     ddd\n");
+printf("dddddd  dd      dddddd   dd d   d dd\n");
+printf("dd  dd  dd      dd  dd   dd  d d  dd\n");
+printf("dd  dd  ddddddd dd  dd   dd   d   dd\n");
+getch();
+}

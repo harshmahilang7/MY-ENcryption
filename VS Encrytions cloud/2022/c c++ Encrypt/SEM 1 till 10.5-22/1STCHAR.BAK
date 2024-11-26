@@ -1,0 +1,8 @@
+void main()
+{
+char r[20];
+int i;
+for r=65;i<=90;r++;
+printf("%c",r);
+getch();
+}

@@ -1,0 +1,9 @@
+void main()
+{
+clrscr();
+float i=3.14,r,a;				    //2*pi*r
+scanf("%d",&r);
+a=2*i*r;
+printf("%d",a);
+getch();
+}

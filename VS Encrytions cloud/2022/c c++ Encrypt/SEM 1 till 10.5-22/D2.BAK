@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+
+// Sum
+void main()
+{
+ clrscr();
+ int a,b,c;
+ printf("Enter the value of a and b\n");
+ scanf("%d%d",&a,&b);
+ c=a+b;
+ printf("sum is %d",c);
+ getch();
+}

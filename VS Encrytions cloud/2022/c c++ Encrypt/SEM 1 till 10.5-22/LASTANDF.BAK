@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int D,A,S,T,a1,N;
+clrscr();
+printf("entre the no=");
+scanf("%d",&D);
+printf("enterthe last no=");
+scanf("%d",&A);
+for (S=1;S<6;S++)
+{
+  T=D+S;
+  printf("first 5 digit are= %d\n",T);
+}
+for (a1=1;a1>6;a1++)
+{
+  N=A-a1;
+  printf("last 5 digit are= %d\n",N);
+}
+getch();
+}

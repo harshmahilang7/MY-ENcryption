@@ -1,0 +1,99 @@
+<!-- 
+  @Author: Dastan_Alam
+  @Date:   17-02-2023 10:29:13 AM       10:29:13
+  @Last Modified by:   Dastan_Alam
+  @Last Modified time: 17-02-2023 10:29:16 AM       10:29:16
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+  <script type="text/javascript">
+    function resume_build()
+    {
+      var a=document.form_1.t1.value;
+      alert(a);
+      var b=document.form_1.t2.value;
+      var c=document.form_1.t3.value;
+      var d=document.form_1.g1.value;
+      var e=document.form_1.c1.value;
+      var f=document.form_1.Board1.value;
+      var g=document.form_1.tm1.value;
+      var h=document.form_1.pt1.value;
+      var i=document.form_1.Board2.value;
+      var j=document.form_1.tm2.value;
+      var k=document.form_1.pt2.value;
+      var l=document.form_1.College_Type.value;
+      var m=document.form_1.co.value;
+      var n=document.form_1.p.value;
+      var o=document.form_1.r.value;
+      var p=document.form_1.w.value;
+      var q=document.form_1.m.value;
+      var r=document.getElementById("Preview");
+      r.innerHTML=r.innerHTML+a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q;
+    }
+
+  </script>
+</head>
+    <body>
+        <h1>Resume Builder<h1><hr>
+        <h2>Basic Information<h2>
+        <form name="form_1">
+          <input type="text" name="t1" placeholder="Name"> &nbsp;
+          <input type="text" name="t2" placeholder="Mobile no."> &nbsp;
+          <input type="text" name="t3" placeholder="E-mail ID"> &nbsp;<hr>
+           Gender&nbsp;&nbsp;&nbsp;<input type="radio" name="g1">Male&nbsp;&nbsp;&nbsp;<input type="radio" name="g1">Female<br>  
+          
+          Caste &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="c1">ST&nbsp;&nbsp;&nbsp;<input type="radio" name="c1">SC&nbsp;&nbsp;&nbsp;<input type="radio" name="c1">OBC&nbsp;&nbsp;&nbsp;<input type="radio" name="c1">Gen&nbsp;&nbsp;&nbsp;<hr>
+            
+        
+          <h4>Academic Info<h4>
+        
+          High School Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="School Name"> &nbsp;
+          
+          <select name="Board1">
+          <option>--Select your board--</option>
+          <option>CBSE</option>
+          <option>CG Board</option>
+          </select>&nbsp;
+                   <input type="text" name="tm1" placeholder="total marks"> &nbsp;
+          <input type="text" name="pt1" placeholder="percentage"> &nbsp;<br>
+          
+        
+          Higher Secondary Info <input type="text" placeholder="School Name"> &nbsp;
+          
+          <select name="Board2">
+          <option>--Select your board--</option>
+          <option>CBSE</option>
+          <option>CG Board</option>
+          </select>&nbsp;
+                   <input type="text" name="tm2" placeholder="total marks"> &nbsp;
+          <input type="text" name="pt2" placeholder="percentage"> &nbsp;<br>
+          
+        
+          UG Info &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <input type="text" placeholder="College Name"> &nbsp;
+          
+          <select name="College_Type">
+          <option>--Select your college--</option>
+          <option>Autonomous</option>
+          <option>Non-Autonomous</option>
+          </select>&nbsp;
+                   <input type="text" name="tm3"placeholder="total marks"> &nbsp;
+          <input type="text" name="pt3" placeholder="percentage">&nbsp;<hr>
+          
+          <h2>Career Objective<h2>
+          <textarea cols=50 rows=10 name="co"></textarea><hr>
+          Hobby &nbsp;&nbsp;<input type="checkbox" name="p">Playing&nbsp;&nbsp;&nbsp;<input type="checkbox" name="r">Reading&nbsp;&nbsp;&nbsp;<input type="checkbox" name="w">Writing&nbsp;&nbsp;&nbsp;<input type="checkbox" name="m">Music<br>
+          <input type="reset" value="Reset">&nbsp;&nbsp;&nbsp;
+          <input type="button" value="Preview" onclick="resume_build()"><br>
+          <div id="Preview">
+
+          </div>
+        </form>
+            
+          
+    </body>
+</html>

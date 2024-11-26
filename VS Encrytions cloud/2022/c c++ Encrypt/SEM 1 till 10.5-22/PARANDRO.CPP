@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int x,n,d,sum=0;
+printf("program to check number");
+printf("enter any number:");
+scanf("%d",n);
+n=x;
+while(n!=0)
+{
+d=n%10;
+sum=sum*10+d;
+n=n/10;
+}
+if(sum==x)
+{
+printf("the number is")
+}

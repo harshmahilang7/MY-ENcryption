@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{ int a[4],e,i;clrscr();
+for(i=0;i<=3;i++)
+ {
+ printf("enter the value a[%d]",i);
+ scanf("%d",&a[i]);
+ }
+
+ e=a[0];
+ a[0]=a[3];
+ a[3]=e;
+
+ e=a[1];
+ a[1]=a[2];
+ a[2]=e;
+
+for(i=0;i<=3;i++)
+ {
+ printf("the value of a[%d]=%d\n ",i,a[i]);
+ }
+ getch();}
+

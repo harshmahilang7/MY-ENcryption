@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ float tem[30];
+ int i,j,temp,avg,sum=0;
+ clrscr();
+ for(i=1;i<=30;i++)
+	{
+	printf("enter the temperature of day %d : ",i);
+	scanf("%f",&tem[i]);
+	sum=sum+tem[i];
+	}
+  for(i=0;i<30;i++)
+  {
+	 for(j=1;j<29;j++)
+	  {
+	    if(tem[j]>tem[j+1])
+	    {
+		temp=tem[j];
+		tem[j]=tem[j+1];
+		tem[j+1]=temp;
+	    }
+	  }
+  }
+
+for(i=1;i<=30;i++)
+   {
+      printf("\n\t\ttemperature of day of %d: %.f c",i,tem[i]);
+   }
+avg=sum/30;
+printf("\nAverage temperature in a month %d",avg);
+printf("\ndetails of month : ");
+printf("\n\nthe temperature of hottest day of month is : %.f c ",tem[29]);
+printf("\n\nthe temperature of coldest day of month is : %.f c",tem[1]);
+getch();
+}
+//End of main function.

@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{ int a[5],i;clrscr();
+for(i=0;i<=4;i++)
+ {
+ printf("enter the value a[%d]",i);
+ scanf("%d",&a[i]);
+ }
+
+for(i=4;i>=0;i--)
+ {
+ printf("the reveses value of a[%d]=%d\n ",i,a[i]);
+ }
+ getch();}
+

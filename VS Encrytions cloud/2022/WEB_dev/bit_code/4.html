@@ -1,0 +1,27 @@
+<!-- 
+  @Author: Dastan_Alam
+  @Date:   17-02-2023 06:09:57 PM       18:09:57
+  @Last Modified by:   Dastan_Alam
+  @Last Modified time: 17-02-2023 07:28:18 PM       19:28:18
+-->
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function f1() 
+	    {
+            var a=document.resume.uname.value;
+            document.getElementById("pr").innerHTML = "Ye lo jii value aa gii : "  + a
+        }
+    </script>
+</head>
+
+<body>
+    <form name="resume">
+        <input type="text" id="uname" name="uname" placeholder="username">
+        <input type="button" value="preview" onclick="f1()">
+        <div id="pr"></div>
+    </form>
+</body>
+
+</html>

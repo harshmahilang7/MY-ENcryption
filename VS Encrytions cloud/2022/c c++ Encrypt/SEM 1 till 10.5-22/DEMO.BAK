@@ -1,0 +1,7 @@
+#incude<stdio.h>
+
+int main()
+{clrscr();
+ printf("Welcome to Visual Lab\n");
+ return 0;
+}

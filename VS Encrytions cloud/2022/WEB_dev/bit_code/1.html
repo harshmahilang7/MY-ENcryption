@@ -1,0 +1,118 @@
+<!-- 
+  @Author: Dastan_Alam
+  @Date:   17-02-2023 09:08:04 AM       09:08:04
+  @Last Modified by:   Dastan_Alam
+  @Last Modified time: 17-02-2023 10:48:00 AM       10:48:00
+-->
+<html>
+    <head>
+        <script type="text/javascript">
+            function abc()
+            {
+                var a=document.f1.t1.value;
+                alert(a);
+                var b=document.f1.t2.value;
+                var c=document.f1.t3.value;
+                var d=document.f1.r1.value;
+                var e=document.f1.r2.value;
+                var f=document.f1.t4.value;
+                var g=document.f1.board1.value;
+                var h=document.f1.t5.value;
+                var i=document.f1.t6.value;
+                var j=document.f1.t7.value;
+                var k=document.f1.board2.value;
+                var l=document.f1.t8.value;
+                var m=document.f1.t9.value;
+                var o=document.f1.t10.value;
+                var p=document.f1.CollegeType.value;
+                var q=document.f1.t11.value;
+                var r=document.f1.t12.value;
+                var s=document.f1.ta1.value;
+                var t=document.f1.c1.value;
+                var u=document.f1.c2.value;
+                var v=document.f1.c3.value;
+                var w=document.f1.c4.value;
+                var z=document.getElementById("p");
+                z.innerHTML=+a;
+            }
+            
+        </script>
+    </head>
+
+<body>
+    <h1>Resume Builder<h1>
+            <hr>
+            <h2>Basic Information<h2>
+                    <form name="f1">
+                        <input type="text" name="t1" placeholder="Name"> &nbsp;
+                        <input type="text" name="t2" placeholder="Mobile no."> &nbsp;
+                        <input type="text" name="t3" placeholder="E-mail ID"> &nbsp;
+                        <hr>
+                        Gender&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="r1">Male&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="r1">Female<br>
+
+                        Caste &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio"name="r2">ST&nbsp;&nbsp;&nbsp;
+                        <input type="radio"name="r2">SC&nbsp;&nbsp;&nbsp;
+                        <input type="radio"name="r2">OBC&nbsp;&nbsp;&nbsp;
+                        <input type="radio"name="r2">Gen&nbsp;&nbsp;&nbsp;
+                        <hr>
+
+
+                        <h4>Academic Info<h4>
+
+                                High School Info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                <input type="text" name="t4" placeholder="School Name"> &nbsp;
+                                <select name="Board1">
+                                    <option>--Select your board--</option>
+                                    <option>CBSE</option>
+                                    <option>CG Board</option>
+                                </select>&nbsp;
+                                <input type="text" name="t5" placeholder="total marks"> &nbsp;
+                                <input type="text" name="t6" placeholder="percentage"> &nbsp;<br>
+
+
+                                Higher Secondary Info 
+                                <input type="text" name="t7" placeholder="School Name"> &nbsp;
+
+                                <select name="Board2">
+                                    <option>--Select your board--</option>
+                                    <option>CBSE</option>
+                                    <option>CG Board</option>
+                                </select>&nbsp;
+                                <input type="text" name="t8" placeholder="total marks"> &nbsp;
+                                <input type="text" name="t9" placeholder="percentage"> &nbsp;<br>
+                                UG Info &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                <input type="text" name="t10"placeholder="College Name"> &nbsp;
+
+                                <select name="CollegeType">
+                                    <option>--Select your college--</option>
+                                    <option>Autonomous</option>
+                                    <option>Non-Autonomous</option>
+                                </select>&nbsp;
+                                <input type="text" name="t11" placeholder="total marks"> &nbsp;
+                                <input type="text" name="t12"placeholder="percentage">&nbsp;
+                                <hr>
+
+                                <h2>Career Objective<h2>
+                                        <textarea name="ta1" cols=50 rows=10></textarea>
+                                        <hr>
+                                        Hobby &nbsp;&nbsp;
+                                        <input type="checkbox" name="c1">Playing&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="c2">Reading&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="c3">Writing&nbsp; &nbsp;&nbsp;
+                                        <input type="checkbox" name="c4">Music<br>
+                                        <input type="reset" value="Reset">&nbsp;&nbsp;&nbsp;
+                                        <input type="Submit" value="Submit">
+                                        <input type="button" value="perview" onclick="abc()"><br>
+                                        <div id=p>
+                                        </div>
+                                        
+                    </form>
+
+
+</body>
+
+</html>

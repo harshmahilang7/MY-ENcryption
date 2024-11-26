@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a,s=0,a1,r;
+clrscr();
+//printf("enter the no=");
+//scanf("%d",&a);
+a1=a;
+for (a=100;a>=1000;a++)
+{
+  while(a>0)
+    {
+     r=a%10;
+     s=s*10+r;
+     a=a/10;
+     printf("%d",s);
+     }
+}
+if(a1==s)
+  {
+  printf(" the give no is palamdrom");
+  }
+else
+  {
+  printf(" the give not no is palamdrom");
+  }
+getch();
+}
