@@ -276,6 +276,11 @@ class B extends A
         System.out.println("i = " + i);
     }
 }
+
+
+OutPut.java:24: error: cannot find symbol
+inside the constructor it is local 
+
 _____________________________________________________________________________
 Que-8)
 _________________
@@ -292,13 +297,15 @@ class Constructors {
     }
 }
 class A {
-    A(int i) {  
-  print(i * 2);   
-     }
+    A(int i) 
+{  
+ print(i * 2);   
+}
     void print(int i) { 
     System.out.print(i + " ");   
     }
 }
+
 class B extends A {
     B(int j, int k) {
         super(j);
@@ -317,6 +324,10 @@ class C extends B {
       print(i * 6);   
       }
 }
+
+6
+
+
 ________________________________________________________
 Que-9)
 ________________
@@ -366,6 +377,22 @@ class Car extends Vehicle
         System.out.print("Executed Successfully");
     }
 }
+
+
+
+
+/*
+FourWheeler.java:32: error: no suitable constructor found for Vehicle(no arguments)
+    {
+    ^
+    constructor Vehicle.Vehicle(int) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor Vehicle.Vehicle(int,int) is not applicable
+      (actual and formal argument lists differ in length)
+1 error
+error: compilation failed
+*/
+
 _____________________________________________________________
 Que-10)
 ______________
@@ -392,6 +419,10 @@ public class ChildClass extends BaseClass {
         new ChildClass("hello");
     }
 }
+
+
+*#$hello
+
 ______________________________________________________________
 Que-11)
 ________________
@@ -416,6 +447,12 @@ public class Black extends Purple {
         new Purple("nice");
     }
 }
+
+
+white is awesome , white is nice
+
+
+
 _______________________________________________________________
 Que-12)
 ________________
@@ -424,7 +461,7 @@ What will be the output of the following program?
 public class IAm {
     public static void main(String arg[]) {
         School ref = null;
-        ref = new Office();
+        ref = new Office();   //upcasting
         ref.display();
     }
 }
@@ -445,6 +482,9 @@ class Office extends School {
         System.out.println("S/W company");
     }
 }
+
+10th class B.Tech S/W company
+
 __________________________________________________________________
 Que-13)
 ______________
@@ -480,6 +520,12 @@ class Office extends School {
         System.out.println("I am working in S/W company.");
     }
 }
+
+
+
+I am working in S/W company.
+
+
 ____________________________________________________________________
 Que-14)
 ________________
@@ -522,6 +568,14 @@ System.out.println("Name of the second fruit: "+ f2.showName());
 System.out.println("Price of the second fruit: "+ f2.showPrice());  
 }  
 }
+
+
+Name of the first fruit : Ruby Roman Grapes
+Price of the first fruit : 399.00000000
+After invoking the Copy Constructor:
+Name of the second fruit : Ruby Roman Grapes
+Price of the second fruit : 399.00000000
+
 ______________________________________________________________________ 
 Que-15)
 ________________
@@ -543,6 +597,11 @@ public class TestingConstructor
     TestingConstructor tc = new TestingConstructor();
   }
 }
+
+
+Antarctica
+
+
 ______________________________________________________________________
 Que-16)
 ________________
@@ -563,6 +622,10 @@ public class Constructor3
     Constructor3 con = new Constructor3();
   }
 }
+
+Birds= 20
+
+
 _____________________________________________________________________
 Que-17)
 ________________
@@ -581,6 +644,10 @@ public class Constructor7
     Constructor7 con = new Constructor7(50.5f);
   }
 }
+
+
+Pen= 50.5
+
 ____________________________________________________________________
 Que-18)
 _________________
@@ -588,30 +655,33 @@ What will be the output of the following Java program?
 
 class A
 {
-int i;
-void display()
-{
-System.out.println(i);
-}
+	int i;
+	void display()
+	{
+		System.out.println(i);
+	}
 }
 class B extends A
 {
-int j;
-void display()
-{
-System.out.println(j);
-}
+	int j;
+	void display()
+	{
+		System.out.println(j);
+	}
 }
 class Inheritance
 {
-public static void main(String args[])
-{
-B obj = new B();
-obj.i=1;
-obj.j=2;
-obj.display();
+	public static void main(String args[])
+	{
+		B obj = new B();
+		obj.i=1;
+		obj.j=2;
+		obj.display();
+	}
 }
-}
+
+2
+
 _________________________________________________________________
 Que-19)
 ______________
@@ -633,6 +703,11 @@ class Main {
     Main obj3 = new Main("C");
   }
 }
+
+
+Java Programming Language
+Python Programming Language
+C Programming Language
 ________________________________________________________________
 Que-20)
 _____________
@@ -663,3 +738,6 @@ class Main {
     obj2.getName();
   }
 } 
+
+Programming Langauage: Java
+Programming Langauage: Python
