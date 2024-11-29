@@ -1,1 +1,11 @@
 2024-11-27 12:28:29,731 [Worker-12: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-28 11:28:01,125 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-28 11:28:55,911 [Worker-8: Auto share git projects] WARN  org.eclipse.jgit.util.FS - Cannot run program "\usr\bin\git" (in directory "\usr\bin"): CreateProcess error=2, The system cannot find the file specified
+2024-11-28 11:32:44,258 [main] INFO  org.eclipse.jetty.server.Server - jetty-12.0.12; built: 2024-07-25T21:58:37.668Z; git: cc6f1b74db755fed228b50701ad967aeaa68e83f; jvm 21.0.5+9-LTS-239
+2024-11-28 11:32:44,347 [main] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@534a1469{/wse,/wse,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2dcb9429{STARTED}}
+2024-11-28 11:32:44,349 [main] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2024-11-28 11:32:44,382 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@576e61f4{HTTP/1.1, (http/1.1)}{0.0.0.0:53620}
+2024-11-28 11:32:44,410 [main] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@159ff111{STARTING}[12.0.12,sto=0] @316617ms
+2024-11-28 11:32:45,163 [qtp1756718510-222] INFO  o.e.j.e.nested.ContextHandler._wse - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2024-11-28 12:45:00,594 [Framework stop - Equinox Container: e9b9a69b-c572-46a2-b98a-3c7e9d8621e1] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@159ff111{STOPPING}[12.0.12,sto=0]
+2024-11-28 12:45:00,606 [Framework stop - Equinox Container: e9b9a69b-c572-46a2-b98a-3c7e9d8621e1] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@576e61f4{HTTP/1.1, (http/1.1)}{0.0.0.0:0}

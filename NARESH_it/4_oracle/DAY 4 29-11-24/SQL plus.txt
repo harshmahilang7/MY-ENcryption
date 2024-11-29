@@ -1,0 +1,345 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Nov 29 09:45:53 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan/sudo
+Last Successful login time: Thu Nov 28 2024 17:20:18 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> create table emp1 as select * from emp;
+
+Table created.
+
+SQL>
+SQL> update emp1 set sal=3500 where empno=7924
+  2  ;
+
+0 rows updated.
+
+SQL> update emp1 set sal=3500 where empno=7934;
+
+1 row updated.
+
+SQL> update emp1 set job='MANAGER',sal=sal+2000 where empno=7369;
+
+1 row updated.
+
+
+SQL> update emp1 set sal=sal+sal*0.2 where job='MANAGER';
+
+4 rows updated.
+
+SQL> update emp1 set sal=sal+1000;
+
+14 rows updated.
+
+SQL> update emp1 set sal=sal+sal*0.2,comm=comm+com*0.15 where com
+m is not null;
+update emp1 set sal=sal+sal*0.2,comm=comm+com*0.15 where comm is not null
+                                          *
+ERROR at line 1:
+ORA-00904: "COM": invalid identifier
+
+
+SQL> update emp1 set sal=sal+sal*0.2,comm=comm+comm*0.15 whereco
+mm is not null;
+
+3 rows updated.
+
+SQL> select * from emp1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      MANAGER         7902 17-DEC-80       4360
+        20
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       3120        345
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       2700        575
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 JONES      MANAGER         7839 02-APR-81       4570
+        20
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       2700       1610
+        30
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       4420
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       3940
+        10
+
+      7788 SCOTT      ANALYST         7566 09-DEC-82       4000
+        20
+
+      7839 KING       PRESIDENT            17-NOV-81       6000
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 TURNER     SALESMAN        7698 08-SEP-81       2500
+        30
+
+      7876 ADAMS      CLERK           7788 12-JAN-83       2100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81       1950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7902 FORD       ANALYST         7566 03-DEC-81       4000
+        20
+
+      7934 MILLER     CLERK           7782 23-JAN-82       4500
+        10
+
+
+14 rows selected.
+
+SQL> set pages 100 lines 100;
+SQL> select * from emp1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      MANAGER         7902 17-DEC-80       4360    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       3120        345          30
+      7521 WARD       SALESMAN        7698 22-FEB-81       2700        575          30
+      7566 JONES      MANAGER         7839 02-APR-81       4570    20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       2700       1610          30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       4420    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       3940    10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       4000    20
+      7839 KING       PRESIDENT            17-NOV-81       6000    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       2500    30
+      7876 ADAMS      CLERK           7788 12-JAN-83       2100    20
+      7900 JAMES      CLERK           7698 03-DEC-81       1950    30
+      7902 FORD       ANALYST         7566 03-DEC-81       4000    20
+      7934 MILLER     CLERK           7782 23-JAN-82       4500    10
+
+14 rows selected.
+
+SQL> select * from emp1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      MANAGER         7902 17-DEC-80       4360                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       3120        345         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       2700        575         30
+      7566 JONES      MANAGER         7839 02-APR-81       4570                    20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       2700       1610         30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       4420                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       3940                    10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       4000                    20
+      7839 KING       PRESIDENT            17-NOV-81       6000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       2500                    30
+      7876 ADAMS      CLERK           7788 12-JAN-83       2100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81       1950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       4000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       4500                    10
+
+14 rows selected.
+
+SQL> update emp1 set comm=700 where comm is null;
+
+11 rows updated.
+
+SQL> select * from emp1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      MANAGER         7902 17-DEC-80       4360        700        20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       3120        345        30
+      7521 WARD       SALESMAN        7698 22-FEB-81       2700        575        30
+      7566 JONES      MANAGER         7839 02-APR-81       4570        700        20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       2700       1610        30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       4420        700        30
+      7782 CLARK      MANAGER         7839 09-JUN-81       3940        700        10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       4000        700        20
+      7839 KING       PRESIDENT            17-NOV-81       6000        700        10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       2500        700        30
+      7876 ADAMS      CLERK           7788 12-JAN-83       2100        700        20
+      7900 JAMES      CLERK           7698 03-DEC-81       1950        700        30
+      7902 FORD       ANALYST         7566 03-DEC-81       4000        700        20
+      7934 MILLER     CLERK           7782 23-JAN-82       4500        700        10
+
+14 rows selected.
+
+SQL> update emp1 set comm=null where empno in(7521,7698,7900);
+
+3 rows updated.
+
+SQL> update emp1 set deptno=20 where deptno=10;
+
+3 rows updated.
+
+SQL> update emp1 set sal=sal+sal*0.1 where hiredate like '%82';
+
+
+2 rows updated.
+
+SQL> update emp1 set sal=sal+sal*0.2 where (sysdate-hiredate)>4
+0;
+
+14 rows updated.
+
+SQL> update emp1 set sal=sal+sal*0.2 where (sysdate-hiredate)/365>40;
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                   20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300        30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500        30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                   20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400        30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                   30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                   10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                   20
+      7839 KING       PRESIDENT            17-NOV-81       5000                   10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500                   30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                   20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                   30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                   20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                   10
+
+14 rows selected.
+
+SQL> update emp1 set sal=sal+sal*0.2 where ename like 'A%S';
+
+1 row updated.
+
+SQL> delete from emp1 where empno=7900;
+
+1 row deleted.
+
+SQL> delete from emp1 where (sysdate-hiredate/365)>42;
+delete from emp1 where (sysdate-hiredate/365)>42
+                                *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected NUMBER got DATE
+
+
+SQL> delete from emp1 where (sysdate-hiredate)/365>42;
+
+12 rows deleted.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                   20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300        30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500        30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                   20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400        30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                   30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                   10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                   20
+      7839 KING       PRESIDENT            17-NOV-81       5000                   10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500                   30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                   20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                   30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                   20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                   10
+
+14 rows selected.
+
+SQL> select * from emp1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7876 ADAMS      CLERK           7788 12-JAN-83     3628.8        700        20
+
+SQL> drop emp1;
+drop emp1
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+
+
+SQL> drop table emp1;
+
+Table dropped.
+
+SQL> create table emp1 as select * from emp;
+
+Table created.
+
+SQL> delete form emp1 where job='MANAGER';
+delete form emp1 where job='MANAGER'
+       *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> delete frOm emp1 where job='MANAGER';
+
+3 rows deleted.
+
+SQL> delete from emp1 where deptno in(10,30);
+
+7 rows deleted.
+
+SQL> delete from emp1;
+
+4 rows deleted.
+
+SQL> select * from emp1;
+
+no rows selected
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp1;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                   20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300        30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500        30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                   20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400        30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                   30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                   10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                   20
+      7839 KING       PRESIDENT            17-NOV-81       5000                   10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500                   30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                   20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                   30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                   20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                   10
+
+14 rows selected.
+
+SQL>
