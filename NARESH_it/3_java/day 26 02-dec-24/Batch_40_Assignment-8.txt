@@ -10,26 +10,37 @@ Q 1. what is the output of this program?
               System.out.println(x+" ");
         }
       }
+
+10
+20
+
 ------------------------------------------------------
 
 Q 2. What is the output of this below program ?
  class Test2 {
 	static {
-		System.out.println(�Test2 class Static Block�);
+		System.out.println("Test2 class Static Block");
 }
 public static  void main(String[] args) {
-	System.out.println(�Test2 class main method�);
+	System.out.println("Test2 class main method");
 } 
 } 
+
+
+Test2 class Static Block
+Test2 class main method
+
 ------------------------------------------------------
 
 Q 3. What is the output of this below program ?
 class Test3 {
 	public static  void  main(String[] args) {
 	  	int a;
-	System.out.println(�A : �+a);
+	System.out.println("A : "+a);
 } 
 }
+
+: error: variable a might not have been initialized
 ------------------------------------------------------
 
 Q 4. Can we declare local variable as static if not what is the error?
@@ -39,6 +50,9 @@ Q 4. Can we declare local variable as static if not what is the error?
 			System.out.println(x);
 		}
 	}
+
+Compilation failed due to following error(s).Test3.java:3: error: illegal start of expression
+			static  int x =10;
  ------------------------------------------------------
 
  Q 5. Define a class having one static variable say  static int x=10 and invoke x variable 
@@ -52,6 +66,9 @@ Q 4. Can we declare local variable as static if not what is the error?
 			System.out.println("main X : "+x);			
 		}
 	}
+
+
+main X : 10
  ------------------------------------------------------
 
 
@@ -63,6 +80,10 @@ Q 6. Is it possible to access non-static variable in static method directly if n
 			System.out.println("A  value :  "+a);
 		}
 	}
+
+error: non-static variable a cannot be referenced from a static context
+			System.out.println("A  value :  "+a);
+			                                  ^
 ------------------------------------------------------
 
 Q 7 . What are the different ways are there to call static variables ?
@@ -72,7 +93,15 @@ Q 7 . What are the different ways are there to call static variables ?
 		public static void main(String[] args) {
 			//write code here to access a variable with diff ways
 		}
+
+
 	}
+
+
+	System.out.println(a);
+	System.out.println(Test7.a);
+	Test7 t= new Test7();
+	System.out.println(t.a);
 ------------------------------------------------------
 
 Q 8. What are the different ways to call/invoke static methods from main method 
@@ -83,8 +112,15 @@ Q 8. What are the different ways to call/invoke static methods from main method
 
 		public static void main(String[] args) {
 			//write code here
+
 		}
 	}
+
+
+m1();
+Test8.m1();
+Test8 obj = new Test8();
+obj.m1();
 ------------------------------------------------------
 
 Q 9. What is the output of the below program ?
@@ -101,6 +137,9 @@ Q 9. What is the output of the below program ?
 			m2();
 		}
 	}
+
+Test9 : m1()
+Test9 : m2()
 ------------------------------------------------------
 
 Q 10. What is the output of the below program ?
@@ -115,6 +154,10 @@ Q 10. What is the output of the below program ?
 			Test10.m1();
 		}
 	}
+
+SB1
+m1()
+
 ------------------------------------------------------
 
 
@@ -141,6 +184,16 @@ Q 11. Example on execution order of static members in same class?
 			System.out.println("y : "+y);
 		}
 	} 
+
+
+---Test11 SB1 called---
+X : 10
+y : 20
+---Test11 SB2 called---
+X : 10
+y : 20
+X : 10
+y : 20
 ------------------------------------------------------
 
 Q 12 . Can we call static method inside static block if yes ,what is the output?
@@ -156,6 +209,11 @@ Q 12 . Can we call static method inside static block if yes ,what is the output?
 			//no operation
 		}
 	}
+
+
+Test12 : SB1 called
+Test12 : m1() called
+
 ------------------------------------------------------
 
 Q 13 . Is main method mandatory to execute java program if yes, what is the error ?
@@ -167,6 +225,10 @@ Q 13 . Is main method mandatory to execute java program if yes, what is the erro
 			System.out.println("Test13 : m1() called");
 		}
 	}
+
+
+Error: Main method not found in class Test13, please define the main method as:
+   public static void main(String[] args)
 ------------------------------------------------------
 
 Q 14 . What is the  output below program ? 
@@ -177,6 +239,9 @@ Q 14 . What is the  output below program ?
 			System.exit(0);
 		}
 	}
+
+Error: Main method not found in class Test14, please define the main method as:
+   public static void main(String[] args)
 ------------------------------------------------------
 
 Q 15 . What is the output of the below program ?
@@ -202,6 +267,13 @@ Q 15 . What is the output of the below program ?
 			m2();
 		}
 	}
+
+
+
+Test15Super : SB1 called
+Test15Sub : SB1 called
+Test15Super : m1()
+Test15Sub : m2()
 -----------------------------------------------------------------------
 Q 16)
 public class JVMArc {
@@ -210,6 +282,10 @@ public class JVMArc {
 		System.out.println(JVMArc.class.getClass());
 	}
 }
+
+
+jdk.internal.loader.ClassLoaders$AppClassLoader@4b85612c
+class java.lang.Class
 
 -----------------------------------------------------------------------
 Q 17)
@@ -222,6 +298,10 @@ public class JVMArc {
 	}
 }
 
+
+jdk.internal.loader.ClassLoaders$AppClassLoader@4b85612c
+jdk.internal.loader.ClassLoaders$PlatformClassLoader@5fdef03a
+null
 
 
 
