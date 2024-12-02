@@ -1,0 +1,69 @@
+                              DDL COMMANDS TASK
+                            ====================
+1.Write a query to add 2 columns(address,m1)to the STUDENT table?
+
+2.Write a query to increase the datatype size of sname?
+
+3.Write a query to drop any any two columns?
+
+4.Write a query to rename column sname--->name
+
+5.Write a query to drop student table?
+
+Note:-if we are using oracle 21c express edition means recyclebin
+      concept is not there.once you drop the table means perminently
+      deleted.we can not get it back by using flashback command also.
+
+6.Write a query to get it back student table?
+
+7.What is the command to to delete the table data perminently
+  from the database?
+
+8.what is the command to rename the tablename
+  
+simply STUDENT------>STUDENTDATA
+
+--------------------------------------------------------------------------
+1.Display the all employee records and arrange them in desending order
+   according to salary
+
+
+2.display the all employee records and arrange them according to
+   seniority
+
+
+3.display the employee records and display salaries in ascending order
+   according to deptno
+
+
+4.check the following order by clause outputs
+1)SQL>select ename,comm 
+         from emp
+         order by comm desc;
+
+2)SQL>select ename,comm
+     from emp
+     order by comm desc nulls last;
+
+
+5.Display first 5 rows only from emp table?
+
+6.Display all emp records except first 5 rows?
+
+7.Display 6th row to 10th row?
+
+8.Display top 3 salaried emp records?
+
+9.Display the most seniour employee record by using
+  fetch first clause?
+NOTE:-By default calender order is asending order
+
+10.Write a query to display 2nd maximum salary by using
+   offset and fetch clauses?
+
+11.display job column from emp table by using distinct
+   clause?
+   
+
+
+

@@ -1,0 +1,947 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Dec 2 10:25:09 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan/sudu
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+Enter user-name: dastan/sudo
+Last Successful login time: Fri Nov 29 2024 09:46:00 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> alter table emp add(address varchar2(30),m1 varchar2(30));
+
+Table altered.
+
+SQL> alter table emp modify(m1 varchar2(40));
+
+Table altered.
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ ENAME                                              VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+ ADDRESS                                            VARCHAR2(30)
+ M1                                                 VARCHAR2(40)
+
+SQL> alter table emp modify(m1 int(4));
+alter table emp modify(m1 int(4))
+                             *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> alter table emp modify(m1 number(4));
+
+Table altered.
+
+SQL> alter table emp modify(m1 int);
+
+Table altered.
+
+SQL> alter table emp drop (address,m1)
+  2  ;
+
+Table altered.
+
+SQL> alter table emp add(m1 int);
+
+Table altered.
+
+SQL> alter table emp drop m1
+  2  ;
+alter table emp drop m1
+                     *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table emp drop column m1;
+
+Table altered.
+
+SQL> alter table emp rename emp to em;
+alter table emp rename emp to em
+                       *
+ERROR at line 1:
+ORA-14155: missing PARTITION, PARTITIONS, SUBPARTITION, or SUBPARTITIONS
+keyword
+
+
+SQL> alter table emp rename 'emp' to 'em';
+alter table emp rename 'emp' to 'em'
+                       *
+ERROR at line 1:
+ORA-14155: missing PARTITION, PARTITIONS, SUBPARTITION, or SUBPARTITIONS
+keyword
+
+
+SQL> alter table emp rename column name to "emp name";
+alter table emp rename column name to "emp name"
+                              *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier
+
+
+SQL> desc;
+Usage: DESCRIBE [schema.]object[@db_link]
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ ENAME                                              VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+SQL> alter table emp rename column ename to "emp name";
+
+Table altered.
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ emp name                                           VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+SQL> drop table emp;
+
+Table dropped.
+
+SQL> show recyclebin;
+ORIGINAL NAME    RECYCLEBIN NAME                OBJECT TYPE  DROP TIME
+---------------- ------------------------------ ------------ -------------------
+EMP              BIN$BXCc8SnVQli8JRh6Gg8XnA==$0 TABLE        2024-12-02:10:37:05
+EMP1             BIN$UoouW0MqR9iPfHN7//ts9Q==$0 TABLE        2024-11-29:10:07:13
+STUDENT          BIN$HbPEeu5aSkOOnPBoOb6AWQ==$0 TABLE        2024-11-26:10:45:34
+SQL> flashback emp;
+flashback emp
+          *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> flashback table emp;
+flashback table emp
+                  *
+ERROR at line 1:
+ORA-00921: unexpected end of SQL command
+
+
+SQL> flashback table emp to before drop;
+
+Flashback complete.
+
+SQL> show recyclebin;
+ORIGINAL NAME    RECYCLEBIN NAME                OBJECT TYPE  DROP TIME
+---------------- ------------------------------ ------------ -------------------
+EMP1             BIN$UoouW0MqR9iPfHN7//ts9Q==$0 TABLE        2024-11-29:10:07:13
+STUDENT          BIN$HbPEeu5aSkOOnPBoOb6AWQ==$0 TABLE        2024-11-26:10:45:34
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ emp name                                           VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+SQL> flashback table "BIN$HbPEeu5aSkOOnPBoOb6AWQ==$0" to before drop;
+flashback table "BIN$HbPEeu5aSkOOnPBoOb6AWQ==$0" to before drop
+*
+ERROR at line 1:
+ORA-38312: original name is used by an existing object
+
+
+SQL> alter table emp rename emp to em;
+alter table emp rename emp to em
+                       *
+ERROR at line 1:
+ORA-14155: missing PARTITION, PARTITIONS, SUBPARTITION, or SUBPARTITIONS
+keyword
+
+
+SQL> alter table emp rename to em;
+
+Table altered.
+
+SQL> select * from em
+  2  order by sal desc;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+        20
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+        20
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+
+14 rows selected.
+
+SQL> select * from em
+  2  order by deptno asc sal desc;
+order by deptno asc sal desc
+                    *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> order by deptno asc,sal desc;
+SP2-0734: unknown command beginning "order by d..." - rest of line ignored.
+SQL> select * from em
+  2  order by deptno asc,sal desc;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+        20
+
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+        20
+
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+14 rows selected.
+
+SQL> set pages 100 lines 100;
+SQL> select * from em
+  2  order by deptno asc,sal desc;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+
+14 rows selected.
+
+SQL> select * from em order by deptno asc,sal asc;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+
+14 rows selected.
+
+SQL> select * from em order by comm asc null first;
+select * from em order by comm asc null first
+                                   *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select * from em order by comm asc null last;
+select * from em order by comm asc null last
+                                   *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select * from em order by comm asc nulls first;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+
+14 rows selected.
+
+SQL> select * from em order by comm asc nulls last;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+
+14 rows selected.
+
+SQL>  select ename,comm
+  2           from emp
+  3           order by comm desc;
+         from emp
+              *
+ERROR at line 2:
+ORA-00942: table or view does not exist
+
+
+SQL>  select ename,comm
+  2           from em
+  3           order by comm desc;
+ select ename,comm
+        *
+ERROR at line 1:
+ORA-00904: "ENAME": invalid identifier
+
+
+SQL>  select "emp name",comm
+  2           from em
+  3           order by comm desc;
+
+emp name         COMM
+---------- ----------
+SMITH
+CLARK
+FORD
+JAMES
+JONES
+BLAKE
+MILLER
+SCOTT
+KING
+TURNER
+ADAMS
+MARTIN           1400
+WARD              500
+ALLEN             300
+
+14 rows selected.
+
+SQL>  select "emp name",comm
+  2           from em
+  3           order by comm desc nulls last;
+
+emp name         COMM
+---------- ----------
+MARTIN           1400
+WARD              500
+ALLEN             300
+MILLER
+SCOTT
+KING
+TURNER
+ADAMS
+JAMES
+FORD
+BLAKE
+JONES
+SMITH
+CLARK
+
+14 rows selected.
+
+SQL> select * from em fetch first 5 rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800               20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+
+SQL> select * from em offset 5 rows;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+
+9 rows selected.
+
+SQL> select * from em;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+
+14 rows selected.
+
+SQL> select * from em offset 5 rows next 5 rows only;
+select * from em offset 5 rows next 5 rows only
+                               *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select * from em offset 5 rows to next 5 rows only;
+select * from em offset 5 rows to next 5 rows only
+                               *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> alter table em rename to emp;
+
+Table altered.
+
+SQL> select * from em offset 5 rows to next 5 rows only;
+select * from em offset 5 rows to next 5 rows only
+                               *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select * from emp offset 5 rows fetch next 5 rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+
+SQL> set lines 100;
+SQL> select * form emp order by sal desc fetch 3 rows only;
+select * form emp order by sal desc fetch 3 rows only
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select * from emp order by sal desc fetch 3 rows only;
+select * from emp order by sal desc fetch 3 rows only
+                                          *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> select * from emp order by sal desc fetch first 3 rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+
+SQL> select * from emp order by hiredate asc fetch first 1 row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+
+SQL> select * from emp order by sal desc offset 1 rows fetch next 1 row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+
+SQL> select * from emp order by sal desc offset 1 row fetch next 1 row only;
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+
+SQL> select * from emp order by sal desc;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+  20
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+  20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+  10
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+  30
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+  10
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400    30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+  20
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+  30
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+  20
+
+14 rows selected.
+
+SQL> select * from emp order by sal desc offset 0  fetch next 1 row only;
+select * from emp order by sal desc offset 0  fetch next 1 row only
+                                              *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> select * from emp order by sal desc offset 0 rows fetch next 1 row only
+;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+  10
+
+SQL> select * from emp order by sal desc offset 1 rows fetch next 1 row only
+;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+  20
+
+SQL> select * from emp order by sal desc offset 1 rows fetch next 0 row only
+;
+
+no rows selected
+
+SQL> select * from emp order by sal desc offset 0 rows fetch next 1 row only
+;    select * from emp order by sal desc offset 1 rows fetch next 1 row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYSTNT       7566 09-DEC-82       3000                    20
+  10
+SQL> select * from emp order by sal desc;
+SQL>
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500                    30
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+
+14 rows selected.
+
+SQL> select * from emp order by sal desc offset 0 rows fetch next 1 row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+
+SQL> select * from emp order by sal desc offset 1 rows fetch next 1 row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+
+SQL> select * from emp order by sal desc offset 1 rows fetch next row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+
+SQL> select * from emp order by sal desc offset 1 rows fetch next rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+
+SQL> select * from emp order by sal desc offset  row fetch next rows only;
+select * from emp order by sal desc offset  row fetch next rows only
+                                            *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> select * from emp order by sal desc offset 0 row fetch next rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+
+SQL> select * from emp order by sal desc offset 0 row fetch next 2 rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+
+SQL> select * from emp order by sal desc offset 0 row fetch next 3 rows only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+SQL> select * from emp order by sal desc;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500                    30
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+
+14 rows selected.
+
+SQL> select job distint from emp;
+
+DISTINT
+---------
+CLERK
+SALESMAN
+SALESMAN
+MANAGER
+SALESMAN
+MANAGER
+MANAGER
+ANALYST
+PRESIDENT
+SALESMAN
+CLERK
+CLERK
+ANALYST
+CLERK
+
+14 rows selected.
+
+SQL> select job distinct from emp;
+select job distinct from emp
+           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select * from emp order by sal desc offset 1 row fetch next 1 row only;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20
+
+SQL> select distinct sal from emp order by sal desc offset 1 row fetch next 1 row only;
+
+       SAL
+----------
+      3000
+
+SQL> select * from(select ename,sal,dense_rank()over(order by sal desc)r from emp)
+  2  where r=2;
+select * from(select ename,sal,dense_rank()over(order by sal desc)r from emp)
+                     *
+ERROR at line 1:
+ORA-00904: "ENAME": invalid identifier
+
+
+SQL> select * from(select emp name,sal,dense_rank()over(order by sal desc)r from emp)
+  2  where r=2;
+select * from(select emp name,sal,dense_rank()over(order by sal desc)r from emp)
+                     *
+ERROR at line 1:
+ORA-00904: "EMP": invalid identifier
+
+
+SQL> select * from(select "emp name",sal,dense_rank()over(order by sal desc)r from emp)
+  2  where r=2;
+
+emp name          SAL          R
+---------- ---------- ----------
+SCOTT            3000          2
+FORD             3000          2
+
+SQL> select distinct job from emp;
+
+JOB
+---------
+CLERK
+SALESMAN
+MANAGER
+ANALYST
+PRESIDENT
+
+SQL>
