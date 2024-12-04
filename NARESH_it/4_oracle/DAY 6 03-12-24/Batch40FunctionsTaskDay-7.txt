@@ -1,0 +1,160 @@
+                           Functions Task
+                         =================
+
+
+1)Write a query to display emp table enames to uppercase?
+
+2)Write a query to display emp table enames to lowercase?
+
+3)Modify all emp table enames to initcap case perminently?
+   
+
+NOTE:-To modify the the database data in lowercase,uppercase,
+===== initcap case we use update statement.
+      select query results are temporary.
+
+
+4)create table with fname,lastname insert the records as follows
+
+FNAME      LNAME     
+---------- ---------- 
+gowtham    raj        
+naga       raj        
+subba      rao        
+kavya      sri
+
+->add a new column NAME by using alter with add
+      
+
+SQL>alter table students add name varchar2(10);
+SQL>select * from students;
+
+FNAME      LNAME        NAME
+---------- -----     ---------
+gowtham    raj       
+naga       raj        
+subba      rao        
+kavya      sri        
+
+--->set the output for the NAME column as follows
+
+     NAME
+  -----------
+  Gowtham Raj
+  Naga Raju
+  Subba Rao
+  Kavya Sri
+
+Hint:-our requirement is combine FNAME and LNAME means use 
+====   concatination operator.and their starting letter
+       of name column  is capital letter for that one use initcap
+      store it in a NAME column by using single update command.
+
+5)Write a query to display the emp records whose names
+  having 4 characters?
+
+
+6)display the emp records whose names are having more than 5
+  charcters?
+
+
+NOTE:-length function returns total length of string including 
+=====       spaces.
+
+7)what the o/p of the following
+select length('AB CD') from dual
+A)4
+B)5
+C)6
+D)none of the above
+ 
+
+8)check the following substr() query output
+
+
+ *
+***Substr():- It will extract portion of the string within given
+ * ========        string based on last two parameters.
+
+
+Syntax:-
+========
+substr(columnname ,substing position, no of characters position);
+          (or)           |->where to start        |->how many char
+      string name                                    cters from that
+                                                     position
+
+
+Starting position-> can be +ve or –ve
+Starting position and no of characters position-> must be numbers
+
+
+SQL>select substr(ABCDEFGH,2,3) from dual;
+
+
+SQL> select substr(ABCDEFGH,-2,3) from dual; 
+
+
+SQL> select substr(ABCDEFGH,-4) from dual;
+
+
+SQL>select substr('GOWTHAM RAJ',1,7) from dual;
+
+
+SQL)select substr('GOWTHAM RAJ',9) from dual;
+
+         
+SQL)select substr('GOWTHAM RAJ',4,4) from dual;
+
+
+
+SQL)select substr('GOWTHAM RAJ',-1) from dual;
+
+
+
+SQL)select substr('GOWTHAM RAJ',-3,4) from dual;
+
+
+
+SQL> select substr('GOWTHAM RAJ',-8) from dual;
+
+
+
+9)create the table person as below
+    pname                 dob           password
+  ---------           ----------       ----------
+  kiran kumar        30-june-96
+ 
+genarate the password as kira96 by using substr()
+
+
+10) write a query to display the employees whose ename second 
+    letter would be LA fromemp table using 
+    substring function?
+
+
+11)write a query to display employee records whose name started
+   with M by using substring function?
+
+
+12) write a query to display employee records whose
+    names are started with vowel by using 
+    substring function?
+
+
+13)write a query to display employee records whose name
+   started and end with same letter by using 
+   substring function?
+
+
+14)write a query to display employee records whose name
+   started and end with vowel letter by using
+   substring function?
+
+
+
+15)genarate the message if the account no is 1234567473 
+output--->ammount debited from XXXXXX7473
+
+
+

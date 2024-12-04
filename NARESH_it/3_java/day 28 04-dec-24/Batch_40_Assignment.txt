@@ -1,0 +1,139 @@
+1.	In java which of the following stages for program execution
+A.	Compiler and instruction
+B.	Only Interpreter
+C.	Compiler and interpreter
+D.	Only Compiler
+Answer: C
+
+2.	Which of the following area is stores object of class?
+A.	Stack
+B.	Heap
+C.	File
+D.	Pool
+Answer: B
+
+3.	what is JDK?
+A.	It is a just runtime environment.
+B.	It is a just development tool.
+C.	It is a set of libraries with a Java runtime environment.
+D.	It is a development tool with a Java runtime environment.
+Answer: D
+
+4.	Which of the following is responsible to run Java program 
+A.	JIT
+B.	JVM
+C.	JDK
+D.	JRE
+Answer: D
+
+5.	Which of the following is used to fix bugs in java programs
+A.	Java Runtime environment
+B.	Java Development kit
+C.	Java Debugger
+D.	Java virtual machine
+Answer: C
+
+6.	JVM Stands for?
+A.	Java Runtime environment
+B.	Java Development kit
+C.	Java Debugger
+D.	Java virtual machine
+Answer: D
+
+7.	Which of the following is convert byte code to machine code
+A.	JRE
+B.	JDK
+C.	JVM
+D.	JIT
+Answer: C
+
+8.	What Byte code ?
+A.	Machine Independent
+B.	Machine dependent
+C.	System Program
+D.	Machine Compiler
+Answer: A
+
+9.	Which extension is used for compiled the java file
+A.	.java
+B.	.js
+C.	.class
+D.	.exe
+Answer: C
+
+10.	What is the output of the following code
+public class JVMArc {
+	public static void main(String[] args) {
+		System.out.println(JVMArc.class.getClassLoader());
+		System.out.println(JVMArc.class.getClass());
+	}
+}
+A.	sun.misc.Launcher$AppClassLoader@2a139a55
+	class java.lang.Class
+B.	sun.misc.Launcher$AppClassLoader@2a139a55
+	error
+C.	sun.misc.Launcher$AppClassLoader@2a139a55
+	null
+D.	null
+	class java.lang.Class
+Answer: A
+
+11.	ClassLoader is which package
+A.	java.util.ClassLoader
+B.	java.io.ClassLoader
+C.	java.lang.ClassLoader
+D.	java.String.ClassLoader
+Answer: C
+
+12.	Which of the following is not in JVM
+A.	Heap Area
+B.	Stack Area
+C.	Static Area
+D.	Memory Area
+Answer: C
+--------------------------------------------------------------------------
+Create HEAP and Stack Diagram for the following program :
+
+class Alpha
+{
+	int val;
+
+	static int sval = 200;
+	static Beta b = new Beta();
+
+	public Alpha(int val)
+	{
+      this.val = val;
+	}
+}
+
+public class Beta     
+{
+	public static void main(String[] args) 
+	{
+		Alpha am1 = new Alpha(9);
+		Alpha am2 = new Alpha(2);
+
+		Alpha []ar = fill(am1, am2); 
+
+		ar[0] = am1; 
+        System.out.println(ar[0].val); 
+        System.out.println(ar[1].val);
+	}
+
+	public static Alpha[] fill(Alpha a1, Alpha a2)
+	{
+		a1.val = 15;   
+
+        Alpha fa[] = new Alpha[]{a2, a1}; 
+			
+		return fa;
+	}
+}
+
+
+
+
+
+
+

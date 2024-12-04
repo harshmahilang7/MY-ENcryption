@@ -1,0 +1,768 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Tue Dec 3 09:37:19 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan/sudo
+Last Successful login time: Mon Dec 02 2024 10:28:25 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select upercase(ename) from emp;
+select upercase(ename) from emp
+       *
+ERROR at line 1:
+ORA-00904: "UPERCASE": invalid identifier
+
+
+SQL> select uppercase(ename) from emp;
+select uppercase(ename) from emp
+       *
+ERROR at line 1:
+ORA-00904: "UPPERCASE": invalid identifier
+
+
+SQL> select upper(ename) from emp;
+select upper(ename) from emp
+             *
+ERROR at line 1:
+ORA-00904: "ENAME": invalid identifier
+
+
+SQL> select * from emp;
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+        20
+
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO emp name   JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+14 rows selected.
+
+SQL> alter table emp rename column "emp name" to ename;
+
+Table altered.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000
+        20
+
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+14 rows selected.
+
+SQL> select upper(ename) from emp;
+
+UPPER(ENAM
+----------
+SMITH
+ALLEN
+WARD
+JONES
+MARTIN
+BLAKE
+CLARK
+SCOTT
+KING
+TURNER
+ADAMS
+
+UPPER(ENAM
+----------
+JAMES
+FORD
+MILLER
+
+14 rows selected.
+
+SQL> select lower(ename) from emp;
+
+LOWER(ENAM
+----------
+smith
+allen
+ward
+jones
+martin
+blake
+clark
+scott
+king
+turner
+adams
+
+LOWER(ENAM
+----------
+james
+ford
+miller
+
+14 rows selected.
+
+SQL> update emp set ename=initcap(ename);
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 Smith      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 Jones      MANAGER         7839 02-APR-81       2975
+        20
+
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7698 Blake      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 Clark      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7788 Scott      ANALYST         7566 09-DEC-82       3000
+        20
+
+      7839 King       PRESIDENT            17-NOV-81       5000
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7876 Adams      CLERK           7788 12-JAN-83       1100
+        20
+
+      7900 James      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7902 Ford       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+        10
+
+
+14 rows selected.
+
+SQL> create table names;
+create table names
+                 *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> create table names (firstname varchar2(10),lastname varchar2(10));
+
+Table created.
+
+SQL> alter table names add (name varchar(20));
+
+Table altered.
+
+SQL> select * from names;
+
+no rows selected
+
+SQL> insert table names(firstname,lastname) values('gowtham','raj');
+insert table names(firstname,lastname) values('gowtham','raj')
+       *
+ERROR at line 1:
+ORA-00925: missing INTO keyword
+
+
+SQL> insert into table names(firstname,lastname) values('gowtham','raj');
+insert into table names(firstname,lastname) values('gowtham','raj')
+            *
+ERROR at line 1:
+ORA-00903: invalid table name
+
+
+SQL> insert into names(firstname,lastname) values('gowtham','raj');
+
+1 row created.
+
+SQL> inset into names(firstname,lastname) values('naga','raj');
+SP2-0734: unknown command beginning "inset into..." - rest of line ignored.
+SQL> insert into names(firstname,lastname) values('naga','raj');
+
+1 row created.
+
+SQL> insert all
+  2  into names(firstname,lastname) values('subba','rao');
+into names(firstname,lastname) values('subba','rao')
+                                                   *
+ERROR at line 2:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert all
+  2  into names(firstname,lastname) values('subba','rao');
+into names(firstname,lastname) values('subba','rao')
+                                                   *
+ERROR at line 2:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert all
+  2  into names(firstname,lastname) values('subba','rao')
+  3  into names(fisrtname,lastname) values('kavya','sri')
+  4  select * from dual;
+into names(fisrtname,lastname) values('kavya','sri')
+           *
+ERROR at line 3:
+ORA-00904: "FISRTNAME": invalid identifier
+
+
+SQL> insert all
+  2  into names(firstname,lastname) values('subba','rao')
+  3  into names(firstname,lastname) values('kavya','sri')
+  4  select * from dual;
+
+2 rows created.
+
+SQL> select * from names;
+
+FIRSTNAME  LASTNAME   NAME
+---------- ---------- --------------------
+gowtham    raj
+naga       raj
+subba      rao
+kavya      sri
+
+SQL> select firstname,lastname,name=concat(firstname,lastname) from names;
+select firstname,lastname,name=concat(firstname,lastname) from names
+                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select firstname,lastname,concat(firstname,lastname) as name from names
+;
+
+FIRSTNAME  LASTNAME   NAME
+---------- ---------- --------------------
+gowtham    raj        gowthamraj
+naga       raj        nagaraj
+subba      rao        subbarao
+kavya      sri        kavyasri
+
+SQL> update names set name=concat(firstname,' ',lastname);
+update names set name=concat(firstname,' ',lastname)
+                      *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> update names set name=concat(firstname, ' ',lastname);
+update names set name=concat(firstname, ' ',lastname)
+                      *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> UPDATE names
+  2  SET name = CONCAT(firstname, ' ', lastname);
+SET name = CONCAT(firstname, ' ', lastname)
+           *
+ERROR at line 2:
+ORA-00909: invalid number of arguments
+
+
+SQL> UPDATE names
+  2  SET name = firstname||' '||lastname;
+
+4 rows updated.
+
+SQL> select * from NAMES;
+
+FIRSTNAME  LASTNAME   NAME
+---------- ---------- --------------------
+gowtham    raj        gowtham raj
+naga       raj        naga raj
+subba      rao        subba rao
+kavya      sri        kavya sri
+
+SQL> ALTER TABLE NAMES ADD (LNAME VARCHAR2(10))
+  2  ;
+
+Table altered.
+
+SQL> ALTER NAMES ADD (LNAME VARCHAR2(10))
+  2  ;
+ALTER NAMES ADD (LNAME VARCHAR2(10))
+      *
+ERROR at line 1:
+ORA-00940: invalid ALTER command
+
+
+SQL> SELECT * FROM EMP WHERE LENGTH(ENAME)=4;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+      7839 King       PRESIDENT            17-NOV-81       5000
+        10
+
+      7902 Ford       ANALYST         7566 03-DEC-81       3000
+        20
+
+
+SQL> SLECT * FROM EMP WHERE LENGTH(ENAME)>5;
+SP2-0734: unknown command beginning "SLECT * FR..." - rest of line ignored.
+SQL> SLECT * FROM EMP WHERE LENGTH(ENAME)=5;
+SP2-0734: unknown command beginning "SLECT * FR..." - rest of line ignored.
+SQL> SELECT * FROM EMP WHERE LENGTH(ENAME)>5;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+        10
+
+
+SQL> SELECT LENGTH('AB CD') FROM DUAL;
+
+LENGTH('ABCD')
+--------------
+             5
+
+SQL> select substr(ABCDEFGH,2,3) from dual;
+select substr(ABCDEFGH,2,3) from dual
+              *
+ERROR at line 1:
+ORA-00904: "ABCDEFGH": invalid identifier
+
+
+SQL> select substr('ABCDEFGH',2,3) from dual;
+
+SUB
+---
+BCD
+
+SQL> select substr('ABCDEFGH',-2,3) from dual;
+
+SU
+--
+GH
+
+SQL> select substr('ABCDEFGH',-4) from dual;
+
+SUBS
+----
+EFGH
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',1,7);
+SELECT SUBSTR('GOWTHAM RAJ',1,7)
+                               *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',1,7) FROM DUAL;
+
+SUBSTR(
+-------
+GOWTHAM
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',9) FROM DUAL;
+
+SUB
+---
+RAJ
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',4,4) FROM DUAL;
+
+SUBS
+----
+THAM
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',-1) FROM DUAL;
+
+S
+-
+J
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',-3,4) FROM DUAL;
+
+SUB
+---
+RAJ
+
+SQL> SELECT SUBSTR('GOWTHAM RAJ',-8) FROM DUAL;
+
+SUBSTR('
+--------
+THAM RAJ
+
+SQL> CREATE TABLE PERSON(PNAME VARACHAR2(20),DOB DATE,PASWORD VARCHAR2(20));
+
+CREATE TABLE PERSON(PNAME VARACHAR2(20),DOB DATE,PASWORD VARCHAR2(20))
+                                   *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> CREATE TABLE PERSON(PNAME VARCHAR2(20),DOB DATE,PASWORD VARCHAR2(20));
+
+Table created.
+
+SQL> INSERT INTO PERSON VALUES('KARAN KUMAR','30-JUN-1996','HELLO');
+
+1 row created.
+
+SQL> SELECT * FROM PERSON;
+
+PNAME                DOB       PASWORD
+-------------------- --------- --------------------
+KARAN KUMAR          30-JUN-96 HELLO
+
+SQL> UPDATE PERSON SET PASWORD=SUBSTR(PNAME,1,4)||SUBSTR(DOB,-2);
+
+1 row updated.
+
+SQL> SELECT * FROM PERSON;
+
+PNAME                DOB       PASWORD
+-------------------- --------- --------------------
+KARAN KUMAR          30-JUN-96 KARA96
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,3)='LA';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2)='L';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,2)='L';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,2)='A';
+
+no rows selected
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 Smith      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 Jones      MANAGER         7839 02-APR-81       2975
+        20
+
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7698 Blake      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 Clark      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7788 Scott      ANALYST         7566 09-DEC-82       3000
+        20
+
+      7839 King       PRESIDENT            17-NOV-81       5000
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500
+        30
+
+      7876 Adams      CLERK           7788 12-JAN-83       1100
+        20
+
+      7900 James      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7902 Ford       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+        10
+
+
+14 rows selected.
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,2)='C';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,2)='c';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,3)='a';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,2,2)='a';
+
+no rows selected
+
+SQL> SELECT *
+  2  FROM emp
+  3  WHERE SUBSTR(ename, 2, 2) = 'LA';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)='m';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)='M';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+        10
+
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1) IN ('a','e','i','o','u');
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1) IN ('A','E','I','O','U');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7876 Adams      CLERK           7788 12-JAN-83       1100
+        20
+
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)=substr(ename,-1);
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)=substr(ename,-1) in ('a','e',
+'i','o','u');
+SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)=substr(ename,-1) in ('a','e','i','o','u')
+                                                           *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)=substr(ename,-1)||substr(enam
+e,-1) in ('a','e','i','o','u');
+SELECT * FROM EMP WHERE SUBSTR(ENAME,1,1)=substr(ename,-1)||substr(ename,-1) in ('a','e','i','o','u')
+
+ *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT *
+  2  FROM EMP
+  3  WHERE UPPER(SUBSTR(ENAME, 1, 1)) = UPPER(SUBSTR(ENAME, -1, 1)) || UPPER(SUBSTR(ENAME, -1, 1))
+  4    AND UPPER(SUBSTR(ENAME, 1, 1)) IN ('A', 'E', 'I', 'O', 'U');
+
+no rows selected
+
+SQL>

@@ -1,0 +1,130 @@
+Que 1 : Write a java program the given number is palindrom or not.
+        Given number : 121 
+        Output = palindrom
+
+-----------------------------
+
+Que 2 : Write a java program to find count of digit of given number.
+        Given number : 6372 
+        Output = 4
+
+-----------------------------
+
+Que 3 : Write a program to print fibonacci serise for given number .
+        Given number : 7 
+        Output = 0 1 1 2 3 5 8
+
+-----------------------------
+
+Que 4 : Write a java program to check given number is armstrong or not.
+        Given input : 153
+        Output : 153 is armstrong number.
+
+-----------------------------
+
+Que 5 : Write a java program to print all armstrong numbers between given range.
+        (in this question iterviewer wants to check logic for multidigit armstrong number like 4,5..n digit.)
+        given range : 100 to 10000
+        Output : 
+        153
+        370
+        371
+        407
+        1634
+        8208
+        9474
+
+-----------------------------
+
+Que 6 : Write a java program to check given number is perfect number or not.
+        Explanation : sum of divisors is equal to given number then its known as perfect number. for example 6 is perfect number because(1+2+3 = 6)
+        Given number : 6
+        Output : true
+        Given number : 28
+        Output : true
+        Given number : 7
+        Output : false
+
+-----------------------------
+
+Que 7 : Write a java program to check given number number is prime or not.
+        Given input : 7
+        Output : true
+        Given input : 4
+        Output : false
+
+-----------------------------
+
+Que 8 : Write a java program to print given pattern
+
+*
+*  *
+*  *  *
+*  *  *  *
+*  *  *  *  *
+
+-----------------------------
+
+Que 9 : Write a java program to print given pattern
+
+*
+*  *
+*     *
+*        *
+*  *  *  *  *
+
+-----------------------------
+
+Que 10 : Write a java program to print given pattern
+
+            *
+         *  *
+      *  *  *
+   *  *  *  *
+*  *  *  *  *
+
+-----------------------------
+
+Que 11 : Write a java program to print given pattern
+
+            *
+         *  *
+      *     *
+   *        *
+*  *  *  *  *
+
+-----------------------------
+
+Que 12 : Write a java program to print given pattern
+
+        *
+      *   *
+    *   *   *
+  *   *   *   *
+*   *   *   *   *
+
+-----------------------------
+
+Que 13 : Write a java program to print given pattern
+
+            *
+         *  *  *
+      *  *  *  *  *  
+   *  *  *  *  *  *  *
+*  *  *  *  *  *  *  *  *
+
+
+
+
+
+        
+
+
+   
+                   
+       
+
+        
+
+
+

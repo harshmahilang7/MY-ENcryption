@@ -1,0 +1,167 @@
+                            Functions TASK
+                         ---------------------
+
+1.check the outputs of following instr() queries
+
+instr():-it is used to check whether the substring is existed 
+=======         in the given string or not.
+
+
+.if sub string existed it returns the position.
+.if sub string not existed ,it returns 0.
+
+Syntax: instr(columnname(or)string name, sub string, searching
+=======              position, No of occurrences from searching position);
+
+
+Searching position -> +ve or –ve
+Searching and No. of occurrences -> must be numbers.
+
+
+Always instr() returns position based on last two parameters 
+but oracle server counts no of characters left side first 
+position onwards
+
+
+SQL> select instr('ABC*D','*') from dual;
+
+
+SQL> select instr('ABCDEFGHCDKMNBCDJ','CD',-5,2) from dual;
+
+
+SQL>select instr('krishna stami lord krishna jai krishna',
+                 'krishna',1,2) from dual;
+
+
+
+SQL>select instr('krishna stami lord krishna jai krishna',
+                  'krishna',-1,3) from dual;
+
+
+SQL>select instr('gowtham raj','raj') from dual;
+
+
+
+SQL>select instr('gowtham raj','sai') from dual;
+
+
+2.Find 4th appearence of 'a' in the string 'Maharashtraa'
+
+
+3.Example
+  -------
+Create the following TEST table as below
+     
+           NAME      
+     -----------------
+       RADHA KRISHNA
+       GOWTHAM RAJ
+       SUBBA RAO
+       NAGA RAJU
+       MADAM SIR
+
+---->add two columns FNAME and LNAME  by using alter with add command 
+    
+---->And set the output for FNAME,LNAME as follows by using
+     substr(),instr()as follows.
+         
+          FNAME            LNAME
+       ---------        ----------
+         RADHA            KRISHNA 
+        GOWTHAM            RAJ
+        SUBBA              RAO
+        NAGA               RAJU
+        MADAM              SIR      
+
+
+4.Check the following lpad() and rpad()  queries output
+
+SQL>select lpad('kiran',10,'#") from dual;
+
+
+SQL>select lpad('ABC',2,'*') from dual;
+
+
+SQL>select lapd('sai',10,'@$') from dual;
+
+
+SQL>select lpad('X',4,'X') from dual;
+
+
+SQL> select rpad('ABCD',10,'#')from dual;
+
+
+SQL> select rpad(ENAME,20,-)||sal from emp;
+
+
+SQL>select rpad('kiran,10,'@#$') from dual;
+
+
+SQL>select rpad('kiran',10)||'hello' from dual;
+
+
+5.Check the following queries outputs
+ 
+SQL> select ltrim('SSMISSTHSS','S')from dual;
+
+
+SQL>select ltrim('*****GOWTHAM*****') from dual;
+
+
+SQL>select ltrim('     GOWTHAM     ') from dual;
+
+
+SQL>select rtrim('*****GOWTHAM*****') from dual;
+
+
+SQL>select trim(both '*' from '*****GOWTHAM*****') from dual;
+
+
+6.Check the following query outputs
+
+ *
+***Translate() and Replace():-
+ * =========================
+
+Translate() is used to replaces character by character 
+where as replace() is used to replaces character by string (or)
+string by string.
+
+
+SQL> select translate('india','in','xy'),replace('india','in','xy')
+ from dual;
+
+
+SQL> select translate('ABCDEF','FEDCBA',123456);
+
+
+SQL> select replace('ABC',' ','india')from dual;
+
+
+SQL> select job,replace(job, 'SALESMAN','MARKETING') from emp;
+
+
+Note: in oracle whenever we are not using third parameter
+      in replace function then second parameter specified
+      character or string perminently removed from the
+      given first parameter.
+
+
+SQL> select replace('SSMISSTHSS','S') from dual;
+
+
+SQL>select replace('SSMISSTHS','THS') from dual;
+
+
+7. Write a query to count number of times that particular I occurred
+    within given string india by using length(),replace()function?
+
+
+NOTE:-If you want to count number of times particular character
+      occurs within a given string then also we are using 
+      replace function along with length function.
+
+
+8.Combine the two strings NARESH,IT by using concat() function
+
+
