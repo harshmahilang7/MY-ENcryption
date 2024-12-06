@@ -4,9 +4,9 @@ public class prime {
 
 	public static void main(String[] args) {
 
-		int num=7;
+		int num=1000000000;
 		int c=0;
-		for (int i = 2; i<=num-1; i++)
+		for (int i = 2; i*i<=num; i++)
 		{
 			if(num%i==0)
 			{
