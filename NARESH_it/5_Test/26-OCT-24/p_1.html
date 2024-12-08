@@ -1,0 +1,105 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-10-26 11:10:32 AM   11:10
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-10-26 11:37:14 AM   11:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q 1) Create the following web layout in HTML and CSS :</title>
+    <style>
+      header {
+        border: solid red 1px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: red;
+        /* font-family  */
+      }
+      main {
+        border: solid red 1px;
+        display: flex;
+      }
+      footer {
+        border: solid red 1px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      footer h3{
+        text-align: center;
+        color: red;
+      }
+      .in-main-first {
+        height: 650px;
+        width: 300px;
+        border-right: solid black 3px;
+      }
+      .first-boxes {
+        height: 50px;
+        margin: 10px;
+        border: solid black 1px;
+        border-radius: 5px;
+      }
+      .in-main-sec {
+        display: flex;
+        flex-direction: column;
+        /* width: 1200px; */
+      }
+      .sec-boxes {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        border: solid black 1px;
+        border-radius: 5px;
+      }
+      .f10{
+        display: flex;
+      }
+      .f11{
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3>Header</h3>
+    </header>
+    <main>
+      <div class="in-main-first">
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+        <div class="first-boxes"></div>
+      </div>
+      <div class="in-main-sec">
+        <div class="f10">
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+        </div>
+
+        <div  class="f11">
+          <div class="sec-boxes"></div>
+          <div class="sec-boxes"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>This is Footer</h3>
+    </footer>
+  </body>
+</html>

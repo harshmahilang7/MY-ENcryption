@@ -1,0 +1,40 @@
+<!-- 
+  @Author: Dastan Alam
+  @Date:   2024-11-02 09:34:20 AM   09:11
+  @Last Modified by:   Dastan Alam
+  @Last Modified time: 2024-11-02 09:45:32 AM   09:11
+-->
+
+<!-- Que 5 : 
+=======
+	write a JavaScript program to sort the array of integers using bubble sort -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Que 5</title>
+  </head>
+  <body>
+    <script>
+      let a = [3, 4, 1, 9, 8, 88, 9, 88, 88, 1];
+
+      document.write(`<h1>
+	write a JavaScript program to sort the array of integers using bubble sort</h1>`);
+      document.write(`<h3>the array is -: ${a}</h3>`);
+
+      for (let i = 0; i < a.length; i++) {
+        for (let j = i + 1; j < a.length; j++) {
+          if (a[i] > a[j]) {
+            let temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+          }
+        }
+      }
+
+      document.write(`after sorting array is : `);
+      document.write(a);
+    </script>
+  </body>
+</html>

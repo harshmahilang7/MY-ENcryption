@@ -16,6 +16,12 @@ Que-1) : What is the output of below program ?
 			x = x+Example19.x;
 		}
 	}
+
+
+
+40	
+
+
 ------------------------------------------------------
 
 Que-2) : What is the output of below program ?
@@ -35,6 +41,10 @@ Que-2) : What is the output of below program ?
 		}
 		
 	}
+
+0
+60
+
 ------------------------------------------------------
 
 Que-3) : What is the output of below program ?
@@ -57,6 +67,11 @@ Que-3) : What is the output of below program ?
 			return 20;
 		}
 	}
+
+10
+20
+
+
 ------------------------------------------------------
 
 Que-4) : What is the output of below program ?
@@ -73,6 +88,9 @@ Que-4) : What is the output of below program ?
 			return Example22.x;
 		} 
 	}
+
+220
+
 ------------------------------------------------------
 
 Que-5) : What is the output of below program ?
@@ -99,6 +117,11 @@ Que-5) : What is the output of below program ?
 			return 100;
 		}
 	}
+
+50
+100
+120
+
 ------------------------------------------------------
 
 Que-6) : What is the output of below program ?
@@ -128,6 +151,10 @@ Que-6) : What is the output of below program ?
 			return Example24.a+20;
 		}
 	}
+
+30
+30
+100
 ------------------------------------------------------
 
 Que-7) : What is the output of below program ?
@@ -144,6 +171,10 @@ Que-7) : What is the output of below program ?
 			System.out.println(Example25.a); 
 		}
 	}
+
+60
+50
+
 ------------------------------------------------------
 
 Que-8) : What is the output of below program ?
@@ -160,6 +191,9 @@ class Test50 {
 		System.out.print(x + " "); 
 	} 
 }
+
+
+10  20
 ------------------------------------
 Que-9) : What is the output of below program ?
 
@@ -174,6 +208,9 @@ class Test51 {
 		System.out.print(x + " "); 
 	} 
 }
+
+ce
+error: non-static variable x cannot be referenced from a static context
 -------------------------------------
 Que-10) : What is the output of below program ?
 
@@ -190,6 +227,8 @@ class Test52 {
 		System.out.print(x + " "); 
 	} 
 }
+
+20   10
 ----------------------------------------------------------------------
 Que-11) : What is the output of below program ?
 
@@ -218,6 +257,12 @@ Que-11) : What is the output of below program ?
 			return Example24.a+20;
 		}
 	}
+
+30
+30
+100
+
+
 ________________________________________________________________________________________________
 
 Que-12): What is the output of below program ?
@@ -234,6 +279,11 @@ Que-12): What is the output of below program ?
 			System.out.println(Example25.a); 
 		}
 	}
+
+
+60 
+50
+
 ________________________________________________________________________________________________
 
 Que-13) : What is the output of below program ?
@@ -250,6 +300,8 @@ class Test50 {
 		System.out.print(x + " "); 
 	} 
 }
+
+10 20
 ________________________________________________________________________________________________
 
 Que-14) : What is the output of below program ?
@@ -265,6 +317,9 @@ class Test51 {
 		System.out.print(x + " "); 
 	} 
 }
+
+
+ce
 ________________________________________________________________________________________________
 
 Que-15) : What is the output of below program ?
@@ -273,7 +328,7 @@ class Test52 {
 	int x = 10; 
 	public static void main(String[] args) 
 	{ 
-		Test1 t1 = new Test1(); 
+		Test1 t1 = new Test1();    // Test52
 		System.out.println(t1.x); 
 	} 
 	static
@@ -282,6 +337,8 @@ class Test52 {
 		System.out.print(x + " "); 
 	} 
 }
+
+20 10 
 ________________________________________________________________________________________________
 
 Que-16) : What is the output of below program ?
@@ -298,6 +355,9 @@ class Test53 {
 		System.out.print(x + " "); 
 	} 
 }
+
+ce
+
 ________________________________________________________________________________________________
 
 Que-17) : What is the output of below program ?
@@ -314,6 +374,9 @@ class Test54 {
 		System.out.println(t2.x); 
 	} 
 }
+
+
+20 20
 ________________________________________________________________________________________________
 
 Que-18) : What is the output of below program ?
@@ -328,6 +391,9 @@ class Test55 {
 		} 
 	} 
 }
+
+
+3  6   9
 ________________________________________________________________________________________________
 
 Que-19) : What is the output of below program ?
@@ -343,6 +409,10 @@ class Test56 {
 		} 
 	} 
 }
+
+
+3 5 7 9 11 13 15 17 19 
+
 ________________________________________________________________________________________________
 
 Que-20) : What is the output of below program ?
@@ -358,4 +428,8 @@ class Test57 {
 		} 
 	} 
 }
+
+
+err
+
 
