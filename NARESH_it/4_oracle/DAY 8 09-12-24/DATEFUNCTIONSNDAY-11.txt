@@ -1,0 +1,106 @@
+                          DATE FUNCTIONS TASK
+                         =====================
+
+
+1.Write a query to display the employees who are 
+     joining in the year '81' from emp table
+               using to_char()?
+
+2.Write a query to display ename,4 digit year from emp table by
+  using to_char()?
+
+
+3.Write a query to display the employees who are joining
+      in the month December from emp table by
+               using to_char()?
+
+4.Write a query to display the employee records who are joined
+  in 1980,1982,1984
+
+5.Write a query to display the employees who are joining in
+  jan,march,dec months?
+
+6.Write a query to display the employees who are joining in 1981
+    december?
+
+7.Write a query to display the employees who are joining in
+   1st and 4th quarter?
+
+8.Write a query to display the employees who are joining in 1981 
+   1st quarter?
+
+9.Write a query to display employee names,day of join(which day they are join)
+
+
+10.Write a query to display the employees who are joining 
+    on sunday from emp table?
+
+
+11.Write a query to display the employees who are joining
+     before 15th of every month from emp table 
+                using to_char()?
+
+
+12.Write a query to display the employee records who are joined in 
+   leap year?
+
+
+13.Write a query to display the emplloyee records along with 
+        hiredates and display the hiredates in 
+           INDIA date formatt[DD/MM/YYYY]?
+
+
+14.Write a query to display the emplloyee records along with
+       hiredates and display the hiredates in 
+            US date formatt[MM/DD/YYYY]?
+
+
+15.Write a query to convert given date string into client
+    requirement format by using to_char() 
+
+Given date is -> '15-JUN-05'
+display format is-> '15/JUNE/05'
+
+
+16.write a query which is used to add 5 days to the given date
+  '18-apr-08'
+
+
+17.write a query which is used to add 5 days to the given date
+  '10-04-08'
+
+18.Write a query to display the YEAR from '15-aug-2024' ?
+
+
+19.Find which day india got independence by using to_char()?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
