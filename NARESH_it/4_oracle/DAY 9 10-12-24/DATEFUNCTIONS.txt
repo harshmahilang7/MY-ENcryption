@@ -1,0 +1,53 @@
+                               Date Functions Task
+                            ========================
+
+1.Write a query to display current system date?
+
+
+2.Display the current system date and time?
+
+
+3.Find the last day from sysdate?
+
+
+4.Find the last day from given date 16-APR-2024?
+
+
+5.Find next month first date?
+
+
+6.Find current month 1st date?
+
+
+7.Find next friday date?
+
+
+8.Find next month first sunday date?
+
+
+9.Find the experience of all employees from emp table by using 
+   months_between()?
+
+
+10.Calulate age( in the form of years and months) of kiran. if dob of
+   kiran is 31-DEC-1997?
+
+
+11.display the employee records who are joined today?
+
+
+12.Write a query which is used to substitute a message 
+   inplace of null values in mgr column from emp table
+           by using to_char()?
+
+Hint:king has no manager.in king mgr column we need to display
+      NO MANAGER 
+
+13.Write a query which is used to substitute a message
+   inplace of null values in comm column from emp table 
+             by using to_char()?
+
+
+
+
+

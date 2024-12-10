@@ -1,0 +1,388 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Tue Dec 10 09:36:25 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: DASTAN
+Enter password:
+Last Successful login time: Mon Dec 09 2024 09:46:23 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select sysdate from dual
+  2  ;
+
+SYSDATE
+---------
+10-DEC-24
+
+SQL> select to_char(sysdate,'dd-month-yyyy hh-mi-ss' from dual;
+select to_char(sysdate,'dd-month-yyyy hh-mi-ss' from dual
+                                                *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> select to_char(sysdate,'dd-month-yyyy hh-mi-ss') from dual;
+
+TO_CHAR(SYSDATE,'DD-MONTH-YYYYHH-MI-SS')
+-----------------------------------------------------
+10-december -2024 09-41-00
+
+SQL> select to_char(sysdate,'dd-month-yyyy hh24-mi-ss') from dual;
+
+TO_CHAR(SYSDATE,'DD-MONTH-YYYYHH24-MI-SS')
+-----------------------------------------------------
+10-december -2024 09-41-14
+
+SQL> select to_char(sysdate,'dd-month-yyyy hh24-mi-ss-pm') from dual;
+
+TO_CHAR(SYSDATE,'DD-MONTH-YYYYHH24-MI-SS-PM')
+--------------------------------------------------------
+10-december -2024 09-41-23-am
+
+SQL> select sysdate-1 from dual;
+
+SYSDATE-1
+---------
+09-DEC-24
+
+SQL> select to_date('16-APR-2024','dd-mon-yyyy')-1 from dual;
+
+TO_DATE('
+---------
+15-APR-24
+
+SQL> select to_char(sysdate-1,'day') from dual;
+
+TO_CHAR(SYSDATE-1,'DAY')
+------------------------------------
+monday
+
+SQL> select to_char(to_date('16-APR-2024','dd-mon-yyyy')-1),'day') from dual
+;
+select to_char(to_date('16-APR-2024','dd-mon-yyyy')-1),'day') from dual
+                                                            *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select to_char(to_date('16-APR-2024','dd-mon-yyyy'-1),'day') from dual;
+
+select to_char(to_date('16-APR-2024','dd-mon-yyyy'-1),'day') from dual
+                                                  *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> select to_char((to_date('16-APR-2024','dd-mon-yyyy')-1),'day') from dua
+l;
+
+TO_CHAR((
+---------
+monday
+
+SQL> select to_char((to_date('16-APR-2024','dd-mon-yyyy')-1),'day') as "day"from dual;
+
+day
+---------
+monday
+
+SQL> SELECT DATE_FORMAT(DATE_ADD(CURRENT_DATE, INTERVAL 1 MONTH), '%Y-%m-01') AS first_date_next_month;
+SELECT DATE_FORMAT(DATE_ADD(CURRENT_DATE, INTERVAL 1 MONTH), '%Y-%m-01') ASfirst_date_next_month
+                                                   *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> SELECT TO_CHAR(ADD_MONTHS(TRUNC(SYSDATE, 'MM'), 1), 'YYYY-MM-DD') AS first_date_next_month
+  2  FROM dual;
+
+FIRST_DATE
+----------
+2025-01-01
+
+SQL> select trunc(sysdate,1) from dual;
+select trunc(sysdate,1) from dual
+                     *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE UNIT got NUMBER
+
+
+SQL> select trunc(19,1) from dual;
+
+TRUNC(19,1)
+-----------
+         19
+
+SQL> select trunc(19.9,1) from dual;
+
+TRUNC(19.9,1)
+-------------
+         19.9
+
+SQL> select trunc(19.9,0) from dual;
+
+TRUNC(19.9,0)
+-------------
+           19
+
+SQL> select trunc(19.9,-1) from dual;
+
+TRUNC(19.9,-1)
+--------------
+            10
+
+SQL> sysdate
+SP2-0042: unknown command "sysdate" - rest of line ignored.
+SQL> select to_char(sysdate,mm) from dual;
+select to_char(sysdate,mm) from dual
+                       *
+ERROR at line 1:
+ORA-00904: "MM": invalid identifier
+
+
+SQL> select to_char(sysdate,'mm') from dual;
+
+TO
+--
+12
+
+SQL> select to_char(trunc(sysdate,'mm'),1) from dual;
+select to_char(trunc(sysdate,'mm'),1) from dual
+                                   *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> select to_char(trunc(sysdate,'mm')) from dual;
+
+TO_CHAR(TRUNC(SYSD
+------------------
+01-DEC-24
+
+SQL> select to_char(trunc(sysdate,'dd')) from dual;
+
+TO_CHAR(TRUNC(SYSD
+------------------
+10-DEC-24
+
+SQL> select to_char(trunc(sysdate,'yy')) from dual;
+
+TO_CHAR(TRUNC(SYSD
+------------------
+01-JAN-24
+
+SQL> select to_char(ceil(sysdate,'yy')) from dual;
+select to_char(ceil(sysdate,'yy')) from dual
+               *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select to_char(cail(sysdate,'yy')) from dual;
+select to_char(cail(sysdate,'yy')) from dual
+               *
+ERROR at line 1:
+ORA-00904: "CAIL": invalid identifier
+
+
+SQL> select to_char(ceil(sysdate,'yy')) from dual;
+select to_char(ceil(sysdate,'yy')) from dual
+               *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select to_char(ceil(sysdate,'yy'),1) from dual;
+select to_char(ceil(sysdate,'yy'),1) from dual
+               *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select to_char(round(sysdate,'yy')) from dual;
+
+TO_CHAR(ROUND(SYSD
+------------------
+01-JAN-25
+
+SQL> select to_char(round(sysdate,'mm')) from dual;
+
+TO_CHAR(ROUND(SYSD
+------------------
+01-DEC-24
+
+SQL> select to_char(round(sysdate,'dd')) from dual;
+
+TO_CHAR(ROUND(SYSD
+------------------
+10-DEC-24
+
+SQL> select to_char(round(sysdate,'yy')) from dual;
+
+TO_CHAR(ROUND(SYSD
+------------------
+01-JAN-25
+
+SQL> select to_char(add_month(sysdate,'mm'),1) from dual;
+select to_char(add_month(sysdate,'mm'),1) from dual
+               *
+ERROR at line 1:
+ORA-00904: "ADD_MONTH": invalid identifier
+
+
+SQL> select to_char(add_months(sysdate,'mm'),1) from dual;
+select to_char(add_months(sysdate,'mm'),1) from dual
+                                        *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> select to_char(add_months(sysdate,'mm'),1)) from dual;
+select to_char(add_months(sysdate,'mm'),1)) from dual
+                                          *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select to_char(add_months(sysdate,'mm'),1),'dd-mm-yyyy') from dual;
+select to_char(add_months(sysdate,'mm'),1),'dd-mm-yyyy') from dual
+                                                       *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select to_char(add_months(sysdate,'mm')+1),'dd-mm-yyyy') from dual;
+select to_char(add_months(sysdate,'mm')+1),'dd-mm-yyyy') from dual
+                                                       *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select add_months(sysdate),2
+  2  from dual;
+select add_months(sysdate),2
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select add_months(sysdate)+2 from dual;
+select add_months(sysdate)+2 from dual
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select add_months(sysdate,'mm'),2 from dual;
+select add_months(sysdate,'mm'),2 from dual
+                          *
+ERROR at line 1:
+ORA-01722: invalid number
+
+
+SQL> select to_char(add_months(sysdate,1)) form dual;
+select to_char(add_months(sysdate,1)) form dual
+                                           *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select to_char(add_months(sysdate,1)) from dual;
+
+TO_CHAR(ADD_MONTHS
+------------------
+10-JAN-25
+
+SQL> select add_months(sysdate,1) from dual;
+
+ADD_MONTH
+---------
+10-JAN-25
+
+SQL> select add_months(trunc(sysdate),1) from dual;
+
+ADD_MONTH
+---------
+10-JAN-25
+
+SQL> select add_months(trunc(sysdate,'mm'),1) from dual;
+
+ADD_MONTH
+---------
+01-JAN-25
+
+SQL> select add_months(trunc(sysdate,'yy'),1) from dual;
+
+ADD_MONTH
+---------
+01-FEB-24
+
+SQL> select (trunc(sysdate,'yy') from dual;
+select (trunc(sysdate,'yy') from dual
+                            *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> select trunc(sysdate,'yy') from dual;
+
+TRUNC(SYS
+---------
+01-JAN-24
+
+SQL> select trunc(sysdate,'mm') from dual;
+
+TRUNC(SYS
+---------
+01-DEC-24
+
+SQL> select trunc(sysdate,'dd') from dual;
+
+TRUNC(SYS
+---------
+10-DEC-24
+
+SQL> select trunc(sysdate,'mon') from dual;
+
+TRUNC(SYS
+---------
+01-DEC-24
+
+SQL> select add_months(trunc(sysdate,'mon'),1)\ from dual;
+select add_months(trunc(sysdate,'mon'),1)\ from dual
+                                         *
+ERROR at line 1:
+ORA-00911: invalid character
+
+
+SQL> select add_months(trunc(sysdate,'mon'),1) from dual;
+
+ADD_MONTH
+---------
+01-JAN-25
+
+SQL>
+SQL> select add_months(trunc(sysdate,'dd'),1) from dual;
+
+ADD_MONTH
+---------
+10-JAN-25
+
+SQL> select add_months(trunc(sysdate,'mm'),1) from dual;
+
+ADD_MONTH
+---------
+01-JAN-25
+
+SQL> select trunc(sysdate,'mm') from dual;
+
+TRUNC(SYS
+---------
+01-DEC-24
+
+SQL> select last_da
