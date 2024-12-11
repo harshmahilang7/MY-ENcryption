@@ -1,0 +1,436 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Wed Dec 11 09:54:40 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan
+Enter password:
+Last Successful login time: Tue Dec 10 2024 09:36:37 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select ename,sal,comm,sal+comm from emp;
+
+ENAME             SAL       COMM   SAL+COMM
+---------- ---------- ---------- ----------
+Smith             800
+Allen            1600        300       1900
+Ward             1250        500       1750
+Jones            2975
+Martin           1250       1400       2650
+Blake            2850
+Clark            2450
+Scott            3000
+King             5000
+Turner           1500
+Adams            1100
+
+ENAME             SAL       COMM   SAL+COMM
+---------- ---------- ---------- ----------
+James             950
+Ford             3000
+Miller           1300
+
+14 rows selected.
+
+SQL> set 100 lines 100 pages;
+SP2-0158: unknown SET option "100"
+SQL> set lines 100 pages 100;
+SQL> select ename,sal,comm,sal+comm from emp;
+
+ENAME             SAL       COMM   SAL+COMM
+---------- ---------- ---------- ----------
+Smith             800
+Allen            1600        300       1900
+Ward             1250        500       1750
+Jones            2975
+Martin           1250       1400       2650
+Blake            2850
+Clark            2450
+Scott            3000
+King             5000
+Turner           1500
+Adams            1100
+James             950
+Ford             3000
+Miller           1300
+
+14 rows selected.
+
+SQL> update emp set comm=nvl2(comm,500);
+update emp set comm=nvl2(comm,500)
+                    *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> update emp set comm=nvl(comm,500);
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800        500  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        300  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250        500  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975        500  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850        500  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450        500  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000        500  20
+      7839 King       PRESIDENT            17-NOV-81       5000        500  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500        500  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100        500  20
+      7900 James      CLERK           7698 03-DEC-81        950        500  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000        500  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300        500  10
+
+14 rows selected.
+
+SQL> rollback emp;
+rollback emp
+         *
+ERROR at line 1:
+ORA-02181: invalid option to ROLLBACK WORK
+
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800
+  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        300  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250        500  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975
+  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450
+  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 King       PRESIDENT            17-NOV-81       5000
+  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100
+  20
+      7900 James      CLERK           7698 03-DEC-81        950
+  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000
+  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+  10
+
+14 rows selected.
+
+SQL> update emp set com=nvl(com+500,null);
+update emp set com=nvl(com+500,null)
+                       *
+ERROR at line 1:
+ORA-00904: "COM": invalid identifier
+
+
+SQL> update emp set com=nvl(comm+500,null);
+update emp set com=nvl(comm+500,null)
+               *
+ERROR at line 1:
+ORA-00904: "COM": invalid identifier
+
+
+SQL> update emp set comm=nvl(comm+500,null);
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800
+  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        800  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250       1000  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975
+  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1900  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450
+  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 King       PRESIDENT            17-NOV-81       5000
+  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100
+  20
+      7900 James      CLERK           7698 03-DEC-81        950
+  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000
+  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+  10
+
+14 rows selected.
+
+SQL> select ename,sal,comm,sal+nal(comm,0) from emp;
+select ename,sal,comm,sal+nal(comm,0) from emp
+                          *
+ERROR at line 1:
+ORA-00904: "NAL": invalid identifier
+
+
+SQL> select ename,sal,comm,sal+nvl(comm,0) from emp;
+
+ENAME             SAL       COMM SAL+NVL(COMM,0)
+---------- ---------- ---------- ---------------
+Smith             800                        800
+Allen            1600        800            2400
+Ward             1250       1000            2250
+Jones            2975                       2975
+Martin           1250       1900            3150
+Blake            2850                       2850
+Clark            2450                       2450
+Scott            3000                       3000
+King             5000                       5000
+Turner           1500                       1500
+Adams            1100                       1100
+James             950                        950
+Ford             3000                       3000
+Miller           1300                       1300
+
+14 rows selected.
+
+SQL> select nvl2(null,2,3) from dual;
+
+NVL2(NULL,2,3)
+--------------
+             3
+
+SQL> select nvl2(1,2,3) from dual;
+
+NVL2(1,2,3)
+-----------
+          2
+
+SQL> select nvl2(1,null,3) from dual;
+
+NVL2(1,NULL,3)
+--------------
+
+
+SQL> select nvl2(null,null,3) from dual;
+
+NVL2(NULL,NULL,3)
+-----------------
+                3
+
+SQL> update emp set com=nvl(comm+500,500);
+update emp set com=nvl(comm+500,500)
+               *
+ERROR at line 1:
+ORA-00904: "COM": invalid identifier
+
+
+SQL> update emp set comm=nvl(comm+500,500);
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800        500  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600       1300  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250       1500  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975        500  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       2400  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850        500  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450        500  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000        500  20
+      7839 King       PRESIDENT            17-NOV-81       5000        500  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500        500  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100        500  20
+      7900 James      CLERK           7698 03-DEC-81        950        500  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000        500  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300        500  10
+
+14 rows selected.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800
+  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        300  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250        500  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975
+  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1400  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850
+  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450
+  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000
+  20
+      7839 King       PRESIDENT            17-NOV-81       5000
+  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500
+  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100
+  20
+      7900 James      CLERK           7698 03-DEC-81        950
+  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000
+  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300
+  10
+
+14 rows selected.
+
+SQL> update emp set comm=nvl(comm+500,500);
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800        500  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        800  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250       1000  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975        500  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1900  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850        500  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450        500  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000        500  20
+      7839 King       PRESIDENT            17-NOV-81       5000        500  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500        500  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100        500  20
+      7900 James      CLERK           7698 03-DEC-81        950        500  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000        500  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300        500  10
+
+14 rows selected.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> update emp set comm=nvl2(com,comm+500,500);
+update emp set comm=nvl2(com,comm+500,500)
+                         *
+ERROR at line 1:
+ORA-00904: "COM": invalid identifier
+
+
+SQL> update emp set comm=nvl2(comm,comm+500,500);
+
+14 rows updated.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 Smith      CLERK           7902 17-DEC-80        800        500  20
+      7499 Allen      SALESMAN        7698 20-FEB-81       1600        800  30
+      7521 Ward       SALESMAN        7698 22-FEB-81       1250       1000  30
+      7566 Jones      MANAGER         7839 02-APR-81       2975        500  20
+      7654 Martin     SALESMAN        7698 28-SEP-81       1250       1900  30
+      7698 Blake      MANAGER         7839 01-MAY-81       2850        500  30
+      7782 Clark      MANAGER         7839 09-JUN-81       2450        500  10
+      7788 Scott      ANALYST         7566 09-DEC-82       3000        500  20
+      7839 King       PRESIDENT            17-NOV-81       5000        500  10
+      7844 Turner     SALESMAN        7698 08-SEP-81       1500        500  30
+      7876 Adams      CLERK           7788 12-JAN-83       1100        500  20
+      7900 James      CLERK           7698 03-DEC-81        950        500  30
+      7902 Ford       ANALYST         7566 03-DEC-81       3000        500  20
+      7934 Miller     CLERK           7782 23-JAN-82       1300        500  10
+
+14 rows selected.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp where nvl(mgr,'no_manager',mgr);
+select * from emp where nvl(mgr,'no_manager',mgr)
+                        *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select * from emp where nvl2(mgr,'no_manager',mgr);
+select * from emp where nvl2(mgr,'no_manager',mgr)
+                                                 *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> select * from emp where nvl2(mgr,'no_manager',mgr+0);
+select * from emp where nvl2(mgr,'no_manager',mgr+0)
+                                                   *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> select * from emp where nvl(mgr,'no_manager');
+select * from emp where nvl(mgr,'no_manager')
+                                            *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> select * from emp where nvl(to_char(mgr),'no_manager');
+select * from emp where nvl(to_char(mgr),'no_manager')
+                                                     *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> select * from emp where nvl(to_char(mgr),'no_manager')='no_manager';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM   DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7839 King       PRESIDENT            17-NOV-81       5000
+  10
+
+SQL> select ename, nvl(to_char(mgr),'no_msnsger') from emp;
+
+ENAME      NVL(TO_CHAR(MGR),'NO_MSNSGER')
+---------- ----------------------------------------
+Smith      7902
+Allen      7698
+Ward       7698
+Jones      7839
+Martin     7698
+Blake      7839
+Clark      7839
+Scott      7566
+King       no_msnsger
+Turner     7698
+Adams      7788
+James      7698
+Ford       7566
+Miller     7782
+
+14 rows selected.
+
+SQL>

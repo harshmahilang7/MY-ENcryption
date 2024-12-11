@@ -1,0 +1,46 @@
+                              NVL & NVL2 FUNCTIONS
+                            ======================= 
+
+ 
+1.Write a query to display ename, sal, comm, sal+comm of the 
+    employees from emp table?
+
+
+2.Update the employee commission with in emp table by using nvl2() 
+  based on following conditions?
+
+1.if comm-->null then update
+     comm-->500
+
+2.if comm-->not null then update
+     comm-->comm+500
+
+-----------------------------------------------------------------------------------
+                       to_char[number to char] 
+                    ============================
+
+1.Write a query which is used to substitute a message 
+   inplace of null values in mgr column from emp table
+           by using to_char()?
+
+Hint:king has no manager.in king mgr column we need to display a message
+      NO MANAGER 
+
+
+2.Write a query which is used to substitute a message
+   inplace of null values in comm column from emp table 
+             by using to_char()?
+
+
+Hint:-11 employees are not getting the commission.in place of null
+      display a message N/A
+
+------------------------------------------------------------------------------------
+                               ascii() & chr()  
+                             ==================              
+
+1.find the ascii value of 'A' and '&'
+
+
+2.find the characters for the ascii values of 68,35
+

@@ -1,0 +1,215 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Wed Dec 11 10:28:15 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan
+Enter password:
+Last Successful login time: Wed Dec 11 2024 09:56:29 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(
+---------
+31-DEC-24
+
+SQL> select last_day('22-sep-24') from dual;
+
+LAST_DAY(
+---------
+30-SEP-24
+
+SQL> select systimestamp from dual;
+
+SYSTIMESTAMP
+---------------------------------------------------------------------------
+11-DEC-24 10.31.15.857000 AM +05:30
+
+SQL> select last_day(sysdate)+1 from dual;
+
+LAST_DAY(
+---------
+01-JAN-25
+
+SQL> select add_months(sysdate,-1) form dual;
+select add_months(sysdate,-1) form dual
+                                   *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select add_months(sysdate,-1) from dual;
+
+ADD_MONTH
+---------
+11-NOV-24
+
+SQL> select LAST_dAY(add_months(sysdate,-1)) from dual;
+
+LAST_DAY(
+---------
+30-NOV-24
+
+SQL> select LAST_dAY(add_months(sysdate,-1))+1 from dual;
+
+LAST_DAY(
+---------
+01-DEC-24
+
+SQL> SELECT NEXT_DAY(SYSDATE,'FIRDAY') FROM DUAL;
+SELECT NEXT_DAY(SYSDATE,'FIRDAY') FROM DUAL
+                        *
+ERROR at line 1:
+ORA-01846: not a valid day of the week
+
+
+SQL> SELECT LAST_dAY(SYSDATE) FROM DUAL;
+
+LAST_DAY(
+---------
+31-DEC-24
+
+SQL> SELECT NEXT_DAY(LAST_dAY(SYSDATE),'SUNDAY') FROM DUAL;
+
+NEXT_DAY(
+---------
+05-JAN-25
+
+SQL> SELECT NEXT_DAY(SYSDATE,'FRIDAY') FROM DUAL;
+
+NEXT_DAY(
+---------
+13-DEC-24
+
+SQL> SELECT ENAME,HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE) AS EXP FROM EMPL
+
+  2  ;
+SELECT ENAME,HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE) AS EXP FROM EMPL
+                                                                   *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT ENAME,HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE) AS EXP FROM EMP;
+
+                                                                           ENAME      HIREDATE         EXP
+---------- --------- ----------
+Smith      17-DEC-80 527.820824
+Allen      20-FEB-81 525.724049
+Ward       22-FEB-81 525.659533
+Jones      02-APR-81 524.304695
+Martin     28-SEP-81 518.465985
+Blake      01-MAY-81 523.336953
+Clark      09-JUN-81 522.078888
+Scott      09-DEC-82 504.078888
+King       17-NOV-81 516.820824
+Turner     08-SEP-81 519.111146
+Adams      12-JAN-83 502.982114
+
+ENAME      HIREDATE         EXP
+---------- --------- ----------
+James      03-DEC-81 516.272437
+Ford       03-DEC-81 516.272437
+Miller     23-JAN-82 514.627275
+
+14 rows selected.
+
+SQL> SELECT ENAME,HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE)/12 AS EXP FROM E
+MP;
+
+ENAME      HIREDATE         EXP
+---------- --------- ----------
+Smith      17-DEC-80 43.9850689
+Allen      20-FEB-81 43.8103377
+Ward       22-FEB-81 43.8049614
+Jones      02-APR-81 43.6920582
+Martin     28-SEP-81  43.205499
+Blake      01-MAY-81  43.611413
+Clark      09-JUN-81 43.5065743
+Scott      09-DEC-82 42.0065743
+King       17-NOV-81 43.0684022
+Turner     08-SEP-81 43.2592625
+Adams      12-JAN-83 41.9151764
+
+ENAME      HIREDATE         EXP
+---------- --------- ----------
+James      03-DEC-81 43.0227033
+Ford       03-DEC-81 43.0227033
+Miller     23-JAN-82 42.8856065
+
+14 rows selected.
+
+SQL> SELECT ENAME,HIREDATE,FLOOR(MONTHS_BETWEEN(SYSDATE,HIREDATE)/12) AS EXP
+ FROM EMP;
+
+ENAME      HIREDATE         EXP
+---------- --------- ----------
+Smith      17-DEC-80         43
+Allen      20-FEB-81         43
+Ward       22-FEB-81         43
+Jones      02-APR-81         43
+Martin     28-SEP-81         43
+Blake      01-MAY-81         43
+Clark      09-JUN-81         43
+Scott      09-DEC-82         42
+King       17-NOV-81         43
+Turner     08-SEP-81         43
+Adams      12-JAN-83         41
+
+ENAME      HIREDATE         EXP
+---------- --------- ----------
+James      03-DEC-81         43
+Ford       03-DEC-81         43
+Miller     23-JAN-82         42
+
+14 rows selected.
+
+SQL> SELECT MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12 FROM DUAL;
+
+MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12
+----------------------------------------
+                              26.9474402
+
+SQL> SELECT TRUNC(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12) FROM DUAL;
+
+TRUNC(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12)
+-----------------------------------------------
+                                             26
+
+SQL> SELECT TRUNC(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12) AS AGE,MOD(MONTH
+S_BETWEEN(SYSDATE,'31-DEC-1997'),12) AS MOD FROM DUAL;
+
+       AGE        MOD
+---------- ----------
+        26 11.3693216
+
+SQL> SELECT TRUNC(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12) AS AGE,MOD(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997'),12) AS MONTHS FROM DUAL;
+
+       AGE     MONTHS
+---------- ----------
+        26 11.3693287
+
+SQL> SELECT TRUNC(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997')/12) AS AGE,TRUNC(MOD
+(MONTHS_BETWEEN(SYSDATE,'31-DEC-1997'),12)) AS MONTHS FROM DUAL;
+
+       AGE     MONTHS
+---------- ----------
+        26         11
+
+SQL> SELECT * FROM EMP WHERE HIREDATE=TO_CHAR('SYSDATE','DD-MON-YYYY');
+SELECT * FROM EMP WHERE HIREDATE=TO_CHAR('SYSDATE','DD-MON-YYYY')
+                                         *
+ERROR at line 1:
+ORA-01722: invalid number
+
+
+SQL> SELECT * FROM EMP WHERE HIREDATE=TO_CHAR(SYSDATE,'DD-MON-YYYY');
+
+no rows selected
+
+SQL>
