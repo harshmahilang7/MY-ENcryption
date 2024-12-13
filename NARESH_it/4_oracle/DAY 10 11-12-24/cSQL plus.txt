@@ -1,0 +1,1523 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Wed Dec 11 16:24:05 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan
+Enter password:
+Last Successful login time: Wed Dec 11 2024 10:28:21 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select level chr(level) as char from dual
+  2  connect by level <=255;
+select level chr(level) as char from dual
+                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select level chr(level) as "char" from dual
+  2  connect by level <=255;
+select level chr(level) as "char" from dual
+                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select level chr(level) from dual
+  2  connect by level <=255;
+select level chr(level) from dual
+                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select level chr(level) as "char" form dual
+  2  connect by level <=255;
+select level chr(level) as "char" form dual
+                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select level,chr(level) from dual
+  2  connect by level <=255;
+
+     LEVEL CHR(
+---------- ----
+         1
+         2
+         3
+         4
+         5
+         6
+         7
+         8
+         9
+        10
+        11
+
+
+     LEVEL CHR(
+---------- ----
+        12
+
+        13
+        14
+        15
+        16
+        17
+        18
+        19
+        20
+        21
+        22
+
+     LEVEL CHR(
+---------- ----
+        23
+        24
+        25
+        26 ␦
+        27
+
+                8
+        29
+        30
+        31
+        32
+        33 !
+
+     LEVEL CHR(
+---------- ----
+        34 "
+        35 #
+        36 $
+        37 %
+        38 &
+        39 '
+        40 (
+        41 )
+        42 *
+        43 +
+        44 ,
+
+     LEVEL CHR(
+---------- ----
+        45 -
+        46 .
+        47 /
+        48 0
+        49 1
+        50 2
+        51 3
+        52 4
+        53 5
+        54 6
+        55 7
+
+     LEVEL CHR(
+---------- ----
+        56 8
+        57 9
+        58 :
+        59 ;
+        60 <
+        61 =
+        62 >
+        63 ?
+        64 @
+        65 A
+        66 B
+
+     LEVEL CHR(
+---------- ----
+        67 C
+        68 D
+        69 E
+        70 F
+        71 G
+        72 H
+        73 I
+        74 J
+        75 K
+        76 L
+        77 M
+
+     LEVEL CHR(
+---------- ----
+        78 N
+        79 O
+        80 P
+        81 Q
+        82 R
+        83 S
+        84 T
+        85 U
+        86 V
+        87 W
+        88 X
+
+     LEVEL CHR(
+---------- ----
+        89 Y
+        90 Z
+        91 [
+        92 \
+        93 ]
+        94 ^
+        95 _
+        96 `
+        97 a
+        98 b
+        99 c
+
+     LEVEL CHR(
+---------- ----
+       100 d
+       101 e
+       102 f
+       103 g
+       104 h
+       105 i
+       106 j
+       107 k
+       108 l
+       109 m
+       110 n
+
+     LEVEL CHR(
+---------- ----
+       111 o
+       112 p
+       113 q
+       114 r
+       115 s
+       116 t
+       117 u
+       118 v
+       119 w
+       120 x
+       121 y
+
+     LEVEL CHR(
+---------- ----
+       122 z
+       123 {
+       124 |
+       125 }
+       126 ~
+       127
+       128 ┐
+       129 ┐
+       130 ┐
+       131 ┐
+       132 ┐
+
+     LEVEL CHR(
+---------- ----
+       133 ┐
+       134 ┐
+       135 ┐
+       136 ┐
+       137 ┐
+       138 ┐
+       139 ┐
+       140 ┐
+       141 ┐
+       142 ┐
+       143 ┐
+
+     LEVEL CHR(
+---------- ----
+       144 ┐
+       145 ┐
+       146 ┐
+       147 ┐
+       148 ┐
+       149 ┐
+       150 ┐
+       151 ┐
+       152 ┐
+       153 ┐
+       154 ┐
+
+     LEVEL CHR(
+---------- ----
+       155 ┐
+       156 ┐
+       157 ┐
+       158 ┐
+       159 ┐
+       160 ┐
+       161 ┐
+       162 ┐
+       163 ┐
+       164 ┐
+       165 ┐
+
+     LEVEL CHR(
+---------- ----
+       166 ┐
+       167 ┐
+       168 ┐
+       169 ┐
+       170 ┐
+       171 ┐
+       172 ┐
+       173 ┐
+       174 ┐
+       175 ┐
+       176 ┐
+
+     LEVEL CHR(
+---------- ----
+       177 ┐
+       178 ┐
+       179 ┐
+       180 ┐
+ERROR:
+ORA-29275: partial multibyte character
+
+
+
+180 rows selected.
+
+SQL> "waq to desplay 2025 calender?"
+SP2-0734: unknown command beginning ""waq to de..." - rest of line ignored.
+SQL> select level+to_date('31-dec-2024','dd-mon-yyyy')
+  2  from dual
+  3  connect by level <=365;
+
+LEVEL+TO_
+---------
+01-JAN-25
+02-JAN-25
+03-JAN-25
+04-JAN-25
+05-JAN-25
+06-JAN-25
+07-JAN-25
+08-JAN-25
+09-JAN-25
+10-JAN-25
+11-JAN-25
+
+LEVEL+TO_
+---------
+12-JAN-25
+13-JAN-25
+14-JAN-25
+15-JAN-25
+16-JAN-25
+17-JAN-25
+18-JAN-25
+19-JAN-25
+20-JAN-25
+21-JAN-25
+22-JAN-25
+
+LEVEL+TO_
+---------
+23-JAN-25
+24-JAN-25
+25-JAN-25
+26-JAN-25
+27-JAN-25
+28-JAN-25
+29-JAN-25
+30-JAN-25
+31-JAN-25
+01-FEB-25
+02-FEB-25
+
+LEVEL+TO_
+---------
+03-FEB-25
+04-FEB-25
+05-FEB-25
+06-FEB-25
+07-FEB-25
+08-FEB-25
+09-FEB-25
+10-FEB-25
+11-FEB-25
+12-FEB-25
+13-FEB-25
+
+LEVEL+TO_
+---------
+14-FEB-25
+15-FEB-25
+16-FEB-25
+17-FEB-25
+18-FEB-25
+19-FEB-25
+20-FEB-25
+21-FEB-25
+22-FEB-25
+23-FEB-25
+24-FEB-25
+
+LEVEL+TO_
+---------
+25-FEB-25
+26-FEB-25
+27-FEB-25
+28-FEB-25
+01-MAR-25
+02-MAR-25
+03-MAR-25
+04-MAR-25
+05-MAR-25
+06-MAR-25
+07-MAR-25
+
+LEVEL+TO_
+---------
+08-MAR-25
+09-MAR-25
+10-MAR-25
+11-MAR-25
+12-MAR-25
+13-MAR-25
+14-MAR-25
+15-MAR-25
+16-MAR-25
+17-MAR-25
+18-MAR-25
+
+LEVEL+TO_
+---------
+19-MAR-25
+20-MAR-25
+21-MAR-25
+22-MAR-25
+23-MAR-25
+24-MAR-25
+25-MAR-25
+26-MAR-25
+27-MAR-25
+28-MAR-25
+29-MAR-25
+
+LEVEL+TO_
+---------
+30-MAR-25
+31-MAR-25
+01-APR-25
+02-APR-25
+03-APR-25
+04-APR-25
+05-APR-25
+06-APR-25
+07-APR-25
+08-APR-25
+09-APR-25
+
+LEVEL+TO_
+---------
+10-APR-25
+11-APR-25
+12-APR-25
+13-APR-25
+14-APR-25
+15-APR-25
+16-APR-25
+17-APR-25
+18-APR-25
+19-APR-25
+20-APR-25
+
+LEVEL+TO_
+---------
+21-APR-25
+22-APR-25
+23-APR-25
+24-APR-25
+25-APR-25
+26-APR-25
+27-APR-25
+28-APR-25
+29-APR-25
+30-APR-25
+01-MAY-25
+
+LEVEL+TO_
+---------
+02-MAY-25
+03-MAY-25
+04-MAY-25
+05-MAY-25
+06-MAY-25
+07-MAY-25
+08-MAY-25
+09-MAY-25
+10-MAY-25
+11-MAY-25
+12-MAY-25
+
+LEVEL+TO_
+---------
+13-MAY-25
+14-MAY-25
+15-MAY-25
+16-MAY-25
+17-MAY-25
+18-MAY-25
+19-MAY-25
+20-MAY-25
+21-MAY-25
+22-MAY-25
+23-MAY-25
+
+LEVEL+TO_
+---------
+24-MAY-25
+25-MAY-25
+26-MAY-25
+27-MAY-25
+28-MAY-25
+29-MAY-25
+30-MAY-25
+31-MAY-25
+01-JUN-25
+02-JUN-25
+03-JUN-25
+
+LEVEL+TO_
+---------
+04-JUN-25
+05-JUN-25
+06-JUN-25
+07-JUN-25
+08-JUN-25
+09-JUN-25
+10-JUN-25
+11-JUN-25
+12-JUN-25
+13-JUN-25
+14-JUN-25
+
+LEVEL+TO_
+---------
+15-JUN-25
+16-JUN-25
+17-JUN-25
+18-JUN-25
+19-JUN-25
+20-JUN-25
+21-JUN-25
+22-JUN-25
+23-JUN-25
+24-JUN-25
+25-JUN-25
+
+LEVEL+TO_
+---------
+26-JUN-25
+27-JUN-25
+28-JUN-25
+29-JUN-25
+30-JUN-25
+01-JUL-25
+02-JUL-25
+03-JUL-25
+04-JUL-25
+05-JUL-25
+06-JUL-25
+
+LEVEL+TO_
+---------
+07-JUL-25
+08-JUL-25
+09-JUL-25
+10-JUL-25
+11-JUL-25
+12-JUL-25
+13-JUL-25
+14-JUL-25
+15-JUL-25
+16-JUL-25
+17-JUL-25
+
+LEVEL+TO_
+---------
+18-JUL-25
+19-JUL-25
+20-JUL-25
+21-JUL-25
+22-JUL-25
+23-JUL-25
+24-JUL-25
+25-JUL-25
+26-JUL-25
+27-JUL-25
+28-JUL-25
+
+LEVEL+TO_
+---------
+29-JUL-25
+30-JUL-25
+31-JUL-25
+01-AUG-25
+02-AUG-25
+03-AUG-25
+04-AUG-25
+05-AUG-25
+06-AUG-25
+07-AUG-25
+08-AUG-25
+
+LEVEL+TO_
+---------
+09-AUG-25
+10-AUG-25
+11-AUG-25
+12-AUG-25
+13-AUG-25
+14-AUG-25
+15-AUG-25
+16-AUG-25
+17-AUG-25
+18-AUG-25
+19-AUG-25
+
+LEVEL+TO_
+---------
+20-AUG-25
+21-AUG-25
+22-AUG-25
+23-AUG-25
+24-AUG-25
+25-AUG-25
+26-AUG-25
+27-AUG-25
+28-AUG-25
+29-AUG-25
+30-AUG-25
+
+LEVEL+TO_
+---------
+31-AUG-25
+01-SEP-25
+02-SEP-25
+03-SEP-25
+04-SEP-25
+05-SEP-25
+06-SEP-25
+07-SEP-25
+08-SEP-25
+09-SEP-25
+10-SEP-25
+
+LEVEL+TO_
+---------
+11-SEP-25
+12-SEP-25
+13-SEP-25
+14-SEP-25
+15-SEP-25
+16-SEP-25
+17-SEP-25
+18-SEP-25
+19-SEP-25
+20-SEP-25
+21-SEP-25
+
+LEVEL+TO_
+---------
+22-SEP-25
+23-SEP-25
+24-SEP-25
+25-SEP-25
+26-SEP-25
+27-SEP-25
+28-SEP-25
+29-SEP-25
+30-SEP-25
+01-OCT-25
+02-OCT-25
+
+LEVEL+TO_
+---------
+03-OCT-25
+04-OCT-25
+05-OCT-25
+06-OCT-25
+07-OCT-25
+08-OCT-25
+09-OCT-25
+10-OCT-25
+11-OCT-25
+12-OCT-25
+13-OCT-25
+
+LEVEL+TO_
+---------
+14-OCT-25
+15-OCT-25
+16-OCT-25
+17-OCT-25
+18-OCT-25
+19-OCT-25
+20-OCT-25
+21-OCT-25
+22-OCT-25
+23-OCT-25
+24-OCT-25
+
+LEVEL+TO_
+---------
+25-OCT-25
+26-OCT-25
+27-OCT-25
+28-OCT-25
+29-OCT-25
+30-OCT-25
+31-OCT-25
+01-NOV-25
+02-NOV-25
+03-NOV-25
+04-NOV-25
+
+LEVEL+TO_
+---------
+05-NOV-25
+06-NOV-25
+07-NOV-25
+08-NOV-25
+09-NOV-25
+10-NOV-25
+11-NOV-25
+12-NOV-25
+13-NOV-25
+14-NOV-25
+15-NOV-25
+
+LEVEL+TO_
+---------
+16-NOV-25
+17-NOV-25
+18-NOV-25
+19-NOV-25
+20-NOV-25
+21-NOV-25
+22-NOV-25
+23-NOV-25
+24-NOV-25
+25-NOV-25
+26-NOV-25
+
+LEVEL+TO_
+---------
+27-NOV-25
+28-NOV-25
+29-NOV-25
+30-NOV-25
+01-DEC-25
+02-DEC-25
+03-DEC-25
+04-DEC-25
+05-DEC-25
+06-DEC-25
+07-DEC-25
+
+LEVEL+TO_
+---------
+08-DEC-25
+09-DEC-25
+10-DEC-25
+11-DEC-25
+12-DEC-25
+13-DEC-25
+14-DEC-25
+15-DEC-25
+16-DEC-25
+17-DEC-25
+18-DEC-25
+
+LEVEL+TO_
+---------
+19-DEC-25
+20-DEC-25
+21-DEC-25
+22-DEC-25
+23-DEC-25
+24-DEC-25
+25-DEC-25
+26-DEC-25
+27-DEC-25
+28-DEC-25
+29-DEC-25
+
+LEVEL+TO_
+---------
+30-DEC-25
+31-DEC-25
+
+365 rows selected.
+
+SQL> select level+to_date('31-dec-2024','dd-mon-yyyy') as "date",to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') as "day" from dual;
+select level+to_date('31-dec-2024','dd-mon-yyyy') as "date",to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') as "day" from dual
+                                                                                                                                    *
+ERROR at line 1:
+ORA-01788: CONNECT BY clause required in this query block
+
+
+SQL> select level+to_date('31-dec-2024','dd-mon-yyyy') as "date",to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') as "day" from dual connect by lev
+el<=365;
+
+date      day
+--------- ------------------------------------
+01-JAN-25 wednesday
+02-JAN-25 thursday
+03-JAN-25 friday
+04-JAN-25 saturday
+05-JAN-25 sunday
+06-JAN-25 monday
+07-JAN-25 tuesday
+08-JAN-25 wednesday
+09-JAN-25 thursday
+10-JAN-25 friday
+11-JAN-25 saturday
+
+date      day
+--------- ------------------------------------
+12-JAN-25 sunday
+13-JAN-25 monday
+14-JAN-25 tuesday
+15-JAN-25 wednesday
+16-JAN-25 thursday
+17-JAN-25 friday
+18-JAN-25 saturday
+19-JAN-25 sunday
+20-JAN-25 monday
+21-JAN-25 tuesday
+22-JAN-25 wednesday
+
+date      day
+--------- ------------------------------------
+23-JAN-25 thursday
+24-JAN-25 friday
+25-JAN-25 saturday
+26-JAN-25 sunday
+27-JAN-25 monday
+28-JAN-25 tuesday
+29-JAN-25 wednesday
+30-JAN-25 thursday
+31-JAN-25 friday
+01-FEB-25 saturday
+02-FEB-25 sunday
+
+date      day
+--------- ------------------------------------
+03-FEB-25 monday
+04-FEB-25 tuesday
+05-FEB-25 wednesday
+06-FEB-25 thursday
+07-FEB-25 friday
+08-FEB-25 saturday
+09-FEB-25 sunday
+10-FEB-25 monday
+11-FEB-25 tuesday
+12-FEB-25 wednesday
+13-FEB-25 thursday
+
+date      day
+--------- ------------------------------------
+14-FEB-25 friday
+15-FEB-25 saturday
+16-FEB-25 sunday
+17-FEB-25 monday
+18-FEB-25 tuesday
+19-FEB-25 wednesday
+20-FEB-25 thursday
+21-FEB-25 friday
+22-FEB-25 saturday
+23-FEB-25 sunday
+24-FEB-25 monday
+
+date      day
+--------- ------------------------------------
+25-FEB-25 tuesday
+26-FEB-25 wednesday
+27-FEB-25 thursday
+28-FEB-25 friday
+01-MAR-25 saturday
+02-MAR-25 sunday
+03-MAR-25 monday
+04-MAR-25 tuesday
+05-MAR-25 wednesday
+06-MAR-25 thursday
+07-MAR-25 friday
+
+date      day
+--------- ------------------------------------
+08-MAR-25 saturday
+09-MAR-25 sunday
+10-MAR-25 monday
+11-MAR-25 tuesday
+12-MAR-25 wednesday
+13-MAR-25 thursday
+14-MAR-25 friday
+15-MAR-25 saturday
+16-MAR-25 sunday
+17-MAR-25 monday
+18-MAR-25 tuesday
+
+date      day
+--------- ------------------------------------
+19-MAR-25 wednesday
+20-MAR-25 thursday
+21-MAR-25 friday
+22-MAR-25 saturday
+23-MAR-25 sunday
+24-MAR-25 monday
+25-MAR-25 tuesday
+26-MAR-25 wednesday
+27-MAR-25 thursday
+28-MAR-25 friday
+29-MAR-25 saturday
+
+date      day
+--------- ------------------------------------
+30-MAR-25 sunday
+31-MAR-25 monday
+01-APR-25 tuesday
+02-APR-25 wednesday
+03-APR-25 thursday
+04-APR-25 friday
+05-APR-25 saturday
+06-APR-25 sunday
+07-APR-25 monday
+08-APR-25 tuesday
+09-APR-25 wednesday
+
+date      day
+--------- ------------------------------------
+10-APR-25 thursday
+11-APR-25 friday
+12-APR-25 saturday
+13-APR-25 sunday
+14-APR-25 monday
+15-APR-25 tuesday
+16-APR-25 wednesday
+17-APR-25 thursday
+18-APR-25 friday
+19-APR-25 saturday
+20-APR-25 sunday
+
+date      day
+--------- ------------------------------------
+21-APR-25 monday
+22-APR-25 tuesday
+23-APR-25 wednesday
+24-APR-25 thursday
+25-APR-25 friday
+26-APR-25 saturday
+27-APR-25 sunday
+28-APR-25 monday
+29-APR-25 tuesday
+30-APR-25 wednesday
+01-MAY-25 thursday
+
+date      day
+--------- ------------------------------------
+02-MAY-25 friday
+03-MAY-25 saturday
+04-MAY-25 sunday
+05-MAY-25 monday
+06-MAY-25 tuesday
+07-MAY-25 wednesday
+08-MAY-25 thursday
+09-MAY-25 friday
+10-MAY-25 saturday
+11-MAY-25 sunday
+12-MAY-25 monday
+
+date      day
+--------- ------------------------------------
+13-MAY-25 tuesday
+14-MAY-25 wednesday
+15-MAY-25 thursday
+16-MAY-25 friday
+17-MAY-25 saturday
+18-MAY-25 sunday
+19-MAY-25 monday
+20-MAY-25 tuesday
+21-MAY-25 wednesday
+22-MAY-25 thursday
+23-MAY-25 friday
+
+date      day
+--------- ------------------------------------
+24-MAY-25 saturday
+25-MAY-25 sunday
+26-MAY-25 monday
+27-MAY-25 tuesday
+28-MAY-25 wednesday
+29-MAY-25 thursday
+30-MAY-25 friday
+31-MAY-25 saturday
+01-JUN-25 sunday
+02-JUN-25 monday
+03-JUN-25 tuesday
+
+date      day
+--------- ------------------------------------
+04-JUN-25 wednesday
+05-JUN-25 thursday
+06-JUN-25 friday
+07-JUN-25 saturday
+08-JUN-25 sunday
+09-JUN-25 monday
+10-JUN-25 tuesday
+11-JUN-25 wednesday
+12-JUN-25 thursday
+13-JUN-25 friday
+14-JUN-25 saturday
+
+date      day
+--------- ------------------------------------
+15-JUN-25 sunday
+16-JUN-25 monday
+17-JUN-25 tuesday
+18-JUN-25 wednesday
+19-JUN-25 thursday
+20-JUN-25 friday
+21-JUN-25 saturday
+22-JUN-25 sunday
+23-JUN-25 monday
+24-JUN-25 tuesday
+25-JUN-25 wednesday
+
+date      day
+--------- ------------------------------------
+26-JUN-25 thursday
+27-JUN-25 friday
+28-JUN-25 saturday
+29-JUN-25 sunday
+30-JUN-25 monday
+01-JUL-25 tuesday
+02-JUL-25 wednesday
+03-JUL-25 thursday
+04-JUL-25 friday
+05-JUL-25 saturday
+06-JUL-25 sunday
+
+date      day
+--------- ------------------------------------
+07-JUL-25 monday
+08-JUL-25 tuesday
+09-JUL-25 wednesday
+10-JUL-25 thursday
+11-JUL-25 friday
+12-JUL-25 saturday
+13-JUL-25 sunday
+14-JUL-25 monday
+15-JUL-25 tuesday
+16-JUL-25 wednesday
+17-JUL-25 thursday
+
+date      day
+--------- ------------------------------------
+18-JUL-25 friday
+19-JUL-25 saturday
+20-JUL-25 sunday
+21-JUL-25 monday
+22-JUL-25 tuesday
+23-JUL-25 wednesday
+24-JUL-25 thursday
+25-JUL-25 friday
+26-JUL-25 saturday
+27-JUL-25 sunday
+28-JUL-25 monday
+
+date      day
+--------- ------------------------------------
+29-JUL-25 tuesday
+30-JUL-25 wednesday
+31-JUL-25 thursday
+01-AUG-25 friday
+02-AUG-25 saturday
+03-AUG-25 sunday
+04-AUG-25 monday
+05-AUG-25 tuesday
+06-AUG-25 wednesday
+07-AUG-25 thursday
+08-AUG-25 friday
+
+date      day
+--------- ------------------------------------
+09-AUG-25 saturday
+10-AUG-25 sunday
+11-AUG-25 monday
+12-AUG-25 tuesday
+13-AUG-25 wednesday
+14-AUG-25 thursday
+15-AUG-25 friday
+16-AUG-25 saturday
+17-AUG-25 sunday
+18-AUG-25 monday
+19-AUG-25 tuesday
+
+date      day
+--------- ------------------------------------
+20-AUG-25 wednesday
+21-AUG-25 thursday
+22-AUG-25 friday
+23-AUG-25 saturday
+24-AUG-25 sunday
+25-AUG-25 monday
+26-AUG-25 tuesday
+27-AUG-25 wednesday
+28-AUG-25 thursday
+29-AUG-25 friday
+30-AUG-25 saturday
+
+date      day
+--------- ------------------------------------
+31-AUG-25 sunday
+01-SEP-25 monday
+02-SEP-25 tuesday
+03-SEP-25 wednesday
+04-SEP-25 thursday
+05-SEP-25 friday
+06-SEP-25 saturday
+07-SEP-25 sunday
+08-SEP-25 monday
+09-SEP-25 tuesday
+10-SEP-25 wednesday
+
+date      day
+--------- ------------------------------------
+11-SEP-25 thursday
+12-SEP-25 friday
+13-SEP-25 saturday
+14-SEP-25 sunday
+15-SEP-25 monday
+16-SEP-25 tuesday
+17-SEP-25 wednesday
+18-SEP-25 thursday
+19-SEP-25 friday
+20-SEP-25 saturday
+21-SEP-25 sunday
+
+date      day
+--------- ------------------------------------
+22-SEP-25 monday
+23-SEP-25 tuesday
+24-SEP-25 wednesday
+25-SEP-25 thursday
+26-SEP-25 friday
+27-SEP-25 saturday
+28-SEP-25 sunday
+29-SEP-25 monday
+30-SEP-25 tuesday
+01-OCT-25 wednesday
+02-OCT-25 thursday
+
+date      day
+--------- ------------------------------------
+03-OCT-25 friday
+04-OCT-25 saturday
+05-OCT-25 sunday
+06-OCT-25 monday
+07-OCT-25 tuesday
+08-OCT-25 wednesday
+09-OCT-25 thursday
+10-OCT-25 friday
+11-OCT-25 saturday
+12-OCT-25 sunday
+13-OCT-25 monday
+
+date      day
+--------- ------------------------------------
+14-OCT-25 tuesday
+15-OCT-25 wednesday
+16-OCT-25 thursday
+17-OCT-25 friday
+18-OCT-25 saturday
+19-OCT-25 sunday
+20-OCT-25 monday
+21-OCT-25 tuesday
+22-OCT-25 wednesday
+23-OCT-25 thursday
+24-OCT-25 friday
+
+date      day
+--------- ------------------------------------
+25-OCT-25 saturday
+26-OCT-25 sunday
+27-OCT-25 monday
+28-OCT-25 tuesday
+29-OCT-25 wednesday
+30-OCT-25 thursday
+31-OCT-25 friday
+01-NOV-25 saturday
+02-NOV-25 sunday
+03-NOV-25 monday
+04-NOV-25 tuesday
+
+date      day
+--------- ------------------------------------
+05-NOV-25 wednesday
+06-NOV-25 thursday
+07-NOV-25 friday
+08-NOV-25 saturday
+09-NOV-25 sunday
+10-NOV-25 monday
+11-NOV-25 tuesday
+12-NOV-25 wednesday
+13-NOV-25 thursday
+14-NOV-25 friday
+15-NOV-25 saturday
+
+date      day
+--------- ------------------------------------
+16-NOV-25 sunday
+17-NOV-25 monday
+18-NOV-25 tuesday
+19-NOV-25 wednesday
+20-NOV-25 thursday
+21-NOV-25 friday
+22-NOV-25 saturday
+23-NOV-25 sunday
+24-NOV-25 monday
+25-NOV-25 tuesday
+26-NOV-25 wednesday
+
+date      day
+--------- ------------------------------------
+27-NOV-25 thursday
+28-NOV-25 friday
+29-NOV-25 saturday
+30-NOV-25 sunday
+01-DEC-25 monday
+02-DEC-25 tuesday
+03-DEC-25 wednesday
+04-DEC-25 thursday
+05-DEC-25 friday
+06-DEC-25 saturday
+07-DEC-25 sunday
+
+date      day
+--------- ------------------------------------
+08-DEC-25 monday
+09-DEC-25 tuesday
+10-DEC-25 wednesday
+11-DEC-25 thursday
+12-DEC-25 friday
+13-DEC-25 saturday
+14-DEC-25 sunday
+15-DEC-25 monday
+16-DEC-25 tuesday
+17-DEC-25 wednesday
+18-DEC-25 thursday
+
+date      day
+--------- ------------------------------------
+19-DEC-25 friday
+20-DEC-25 saturday
+21-DEC-25 sunday
+22-DEC-25 monday
+23-DEC-25 tuesday
+24-DEC-25 wednesday
+25-DEC-25 thursday
+26-DEC-25 friday
+27-DEC-25 saturday
+28-DEC-25 sunday
+29-DEC-25 monday
+
+date      day
+--------- ------------------------------------
+30-DEC-25 tuesday
+31-DEC-25 wednesday
+
+365 rows selected.
+
+SQL> select level+to_date('31-dec-2024','dd-mon-yyyy') as "date",to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') as "day" from dual where to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') ='sunday' connect by level<=365;
+
+no rows selected
+
+SQL> select level+to_date('31-dec-2024','dd-mon-yyyy') as "date",to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') as "day" from dual where to_char(level+to_date('31-dec-2024','dd-mon-yyyy'),'day') ='Sunday' connect by level<=365;
+
+no rows selected
+
+SQL> select lpad('*','level','*')
+  2  from dual
+  3  connect by level <=10;
+select lpad('*','level','*')
+                *
+ERROR at line 1:
+ORA-01722: invalid number
+
+
+SQL> select lpad('*',level,'*')
+  2  from dual
+  3  connect by level <=10;
+
+LPAD('*',LEVEL,'*')
+--------------------------------------------------------------------------------
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+
+10 rows selected.
+
+SQL> select lpad('*',5,'*') from dual;
+
+LPAD(
+-----
+*****
+
+SQL> select lpad('*',1,'*') from dual;
+
+L
+-
+*
+
+SQL> select rpad('*',1,'*') from dual;
+
+R
+-
+*
+
+SQL> select rpad('*',5,'*') from dual;
+
+RPAD(
+-----
+*****
+
+SQL> select rpad('*',5,'a') from dual;
+
+RPAD(
+-----
+*aaaa
+
+SQL> select rpad('x',5,'a') from dual;
+
+RPAD(
+-----
+xaaaa
+
+SQL> select lpad('x',5,'a') from dual;
+
+LPAD(
+-----
+aaaax
+
+SQL> select lpad('',10-level,'')||
+  2  lpad('*'level-1,'*')||
+  3  lpad('*'level,'*')
+  4  from dual
+  5  connect by level<=10;
+lpad('*'level-1,'*')||
+        *
+ERROR at line 2:
+ORA-00907: missing right parenthesis
+
+
+SQL> select lpad('',10-level,'')||
+  2  lpad('*',level-1,'*')||
+  3  lpad('*',level,'*')||
+  4  connect by level<=10;
+connect by level<=10
+*
+ERROR at line 4:
+ORA-00936: missing expression
+
+
+SQL> select lpad('',10-level,'')||
+  2  lpad('*',level-1,'*')||
+  3  lpad('*',level,'*')||
+  4  from dual
+  5  connect by level<=10;
+from dual
+*
+ERROR at line 4:
+ORA-00936: missing expression
+
+
+SQL> select lpad('',10-level,'')||
+  2  select lpad('',10-level,'')||;
+select lpad('',10-level,'')||
+*
+ERROR at line 2:
+ORA-00936: missing expression
+
+
+SQL> select lpad('',10-level,'')||lpad('*',level-1,'*')||lpad('*',level,'*') from dual connect by level<=10;
+
+LPAD('',10-LEVEL,'')||LPAD('*',LEVEL-1,'*')||LPAD('*',LEVEL,'*')
+--------------------------------------------------------------------------------
+*
+***
+*****
+*******
+*********
+***********
+*************
+***************
+*****************
+*******************
+
+10 rows selected.
+
+SQL> select lpad('',10-level,' ')||lpad('*',level-1,'*')||lpad('*',level,'*') from dual connect by level<=10;
+
+LPAD('',10-LEVEL,'')||LPAD('*',LEVEL-1,'*')||LPAD('*',LEVEL,'*')
+--------------------------------------------------------------------------------
+*
+***
+*****
+*******
+*********
+***********
+*************
+***************
+*****************
+*******************
+
+10 rows selected.
+
+SQL> select lpad(' ',10-level,' ')||lpad('*',level-1,'*')||lpad('*',level,'*') from dual connect by level<=10;
+
+LPAD('',10-LEVEL,'')||LPAD('*',LEVEL-1,'*')||LPAD('*',LEVEL,'*')
+--------------------------------------------------------------------------------
+         *
+        ***
+       *****
+      *******
+     *********
+    ***********
+   *************
+  ***************
+ *****************
+*******************
+
+10 rows selected.
+
+SQL> select lpad(' ',level,' ')||lpad('*',level-1,'*')||lpad('*',level,'*') from dual connect by level<=10;
+
+LPAD('',LEVEL,'')||LPAD('*',LEVEL-1,'*')||LPAD('*',LEVEL,'*')
+--------------------------------------------------------------------------------
+ *
+  ***
+   *****
+    *******
+     *********
+      ***********
+       *************
+        ***************
+         *****************
+          *******************
+
+10 rows selected.
+
+SQL> select lpad(' ',level,' ')||lpad('*',10-level,'*') from dual connect by level<=10;
+
+LPAD('',LEVEL,'')||LPAD('*',10-LEVEL,'*')
+--------------------------------------------------------------------------------
+ *********
+  ********
+   *******
+    ******
+     *****
+      ****
+       ***
+        **
+         *
+
+
+10 rows selected.
+
+SQL> select lpad(' ',level,' ')||lpad('*',10-level,'*')||lpad('*',9-level,'*') from dual connect by level<=10;
+
+LPAD('',LEVEL,'')||LPAD('*',10-LEVEL,'*')||LPAD('*',9-LEVEL,'*')
+--------------------------------------------------------------------------------
+ *****************
+  ***************
+   *************
+    ***********
+     *********
+      *******
+       *****
+        ***
+         *
+
+
+10 rows selected.
+
+SQL> Select empno,ename,sal,
+  2  Rank() over( order by sal desc) as mk from emo;
+Rank() over( order by sal desc) as mk from emo
+                                           *
+ERROR at line 2:
+ORA-00942: table or view does not exist
+
+
+SQL> Select empno,ename,sal,
+  2  Rank() over( order by sal desc) as mk from emp;
+
+     EMPNO ENAME             SAL         MK
+---------- ---------- ---------- ----------
+      7839 King             5000          1
+      7902 Ford             3000          2
+      7788 Scott            3000          2
+      7566 Jones            2975          4
+      7698 Blake            2850          5
+      7782 Clark            2450          6
+      7499 Allen            1600          7
+      7844 Turner           1500          8
+      7934 Miller           1300          9
+      7521 Ward             1250         10
+      7654 Martin           1250         10
+
+     EMPNO ENAME             SAL         MK
+---------- ---------- ---------- ----------
+      7876 Adams            1100         12
+      7900 James             950         13
+      7369 Smith             800         14
+
+14 rows selected.
+
+SQL>
+SQL> Select empno,ename,sal,
+  2  dense_Rank() over( order by sal desc) as mk from emp;
+
+     EMPNO ENAME             SAL         MK
+---------- ---------- ---------- ----------
+      7839 King             5000          1
+      7902 Ford             3000          2
+      7788 Scott            3000          2
+      7566 Jones            2975          3
+      7698 Blake            2850          4
+      7782 Clark            2450          5
+      7499 Allen            1600          6
+      7844 Turner           1500          7
+      7934 Miller           1300          8
+      7521 Ward             1250          9
+      7654 Martin           1250          9
+
+     EMPNO ENAME             SAL         MK
+---------- ---------- ---------- ----------
+      7876 Adams            1100         10
+      7900 James             950         11
+      7369 Smith             800         12
+
+14 rows selected.
+
+SQL>
