@@ -144,6 +144,9 @@ select state,count(*) from person group by state;
 2.Find state wise,gender wise count(population)
   from the following table?
 
+select gender,state , count(*) group by gender,state;
+
+
        PID      PNAME         GENDER        STATE
       ------   ---------     --------      --------
          1     SUBBARAO         M             AP
@@ -244,6 +247,9 @@ orderid     ordername           orderdate            ORDERAMT
   5	   SURYA	       08-MAR-24	       1200
   6	   KIRAN	       02-NOV-23	       600
   7	   RAJU	               04-FEB-24               900
+
+
+select to_char(orderdate,'yyyy'),count(*) from order group by to_char(orderdate,'yyyy');
 
 -----------------------------------------------------------------------------------
 What are the differences b/w where and having clause?
