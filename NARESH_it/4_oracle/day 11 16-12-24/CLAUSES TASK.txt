@@ -188,6 +188,11 @@ NOTE:-we can also use invisible group functions within having
 8.Write a query to display duplicate records from the
   following TEST table ?
 
+select sno,count(*) from test2 group by sno ;   => all records
+
+
+select sno,count(*) from test2 group by sno hiving count(*)>1;   => duplicate records
+
 SQL>select * from test;
 
          deptno
