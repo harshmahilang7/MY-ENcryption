@@ -1,0 +1,430 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Dec 16 09:40:31 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan
+Enter password:
+Last Successful login time: Sat Dec 14 2024 09:21:50 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select deptno from emp;
+
+    DEPTNO
+----------
+        20
+        30
+        30
+        20
+        30
+        30
+        10
+        20
+        10
+        30
+        20
+
+    DEPTNO
+----------
+        30
+        20
+        10
+
+14 rows selected.
+
+SQL> set lines 200 pages 200;
+SQL> select deptno from emp;
+
+    DEPTNO
+----------
+        20
+        30
+        30
+        20
+        30
+        30
+        10
+        20
+        10
+        30
+        20
+        30
+        20
+        10
+
+14 rows selected.
+
+SQL> select deptno from emp group by deptno;
+
+    DEPTNO
+----------
+        20
+        30
+        10
+
+SQL> select deptno from emp group by deptno;
+
+    DEPTNO
+----------
+        20
+        30
+        10
+
+SQL> select deptno from emp group by deptno;
+
+    DEPTNO
+----------
+        20
+        30
+        10
+
+SQL> select deptno from emp group by deptno;
+
+    DEPTNO
+----------
+        20
+        30
+        10
+
+SQL> select deptno,count(*) from emp group by deptno;
+
+    DEPTNO   COUNT(*)
+---------- ----------
+        20          5
+        30          6
+        10          3
+
+SQL> select sum(sal),sum(sal),sum(sal) from emp group by deptno;
+
+  SUM(SAL)   SUM(SAL)   SUM(SAL)
+---------- ---------- ----------
+     10875      10875      10875
+      9400       9400       9400
+      8750       8750       8750
+
+SQL> select sum(Sal) from emp;
+
+  SUM(SAL)
+----------
+     29025
+SQL> select deptno,sum(Sal) from emp;
+select deptno,sum(Sal) from emp
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select deptno,sum(Sal),sum(sal),sum(sal) from emp;
+select deptno,sum(Sal),sum(sal),sum(sal) from emp
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+SQL> select deptno,sum(Sal),sum(sal),sum(sal) from emp where deptno=10;
+select deptno,sum(Sal),sum(sal),sum(sal) from emp where deptno=10
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+SQL> select deptnofrom emp where deptno=10;
+select deptnofrom emp where deptno=10
+                      *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expectedSQL> select deptno from emp where deptno=10;
+
+    DEPTNO
+----------
+        10
+        10
+        10
+
+SQL> select distint deptno,sum(sal) from emp where deptno=10;
+select distint deptno,sum(sal) from emp where deptno=10
+       *
+ERROR at line 1:
+ORA-00904: "DISTINT": invalid identifier
+
+
+SQL> select distinct deptno,sum(sal) from emp where deptno=10;
+select distinct deptno,sum(sal) from emp where deptno=10
+                *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select distinct deptno,sum(sal) from emp ;
+select distinct deptno,sum(sal) from emp
+                *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select distinct deptno,sum(sal) from emp ;
+select distinct deptno,sum(sal) from emp
+                *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select ename from emp ;
+
+ENAME
+----------
+Smith
+Allen
+Ward
+Jones
+Martin
+Blake
+Clark
+Scott
+King
+Turner
+Adams
+James
+Ford
+Miller
+
+14 rows selected.
+
+SQL> select ename,sum(sal) from emp where ename='Smith';
+select ename,sum(sal) from emp where ename='Smith'
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select ename,sum(sal) from emp group by sal;
+select ename,sum(sal) from emp group by sal
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression
+
+
+SQL> select sal,sum(sal) from emp group by sal;
+
+       SAL   SUM(SAL)
+---------- ----------
+       800        800
+      1600       1600
+      1250       2500
+      2975       2975
+      2850       2850
+      2450       2450
+      3000       6000
+      5000       5000
+      1500       1500
+      1100       1100
+       950        950
+      1300       1300
+
+12 rows selected.
+
+SQL> select deptno,sum(sal) from emp group by deptno;
+
+    DEPTNO   SUM(SAL)
+---------- ----------
+        20      10875
+        30       9400
+        10       8750
+
+SQL> select job,deptno,sum(sal) from emp group by job,deptno;
+
+JOB           DEPTNO   SUM(SAL)
+--------- ---------- ----------
+CLERK             20       1900
+SALESMAN          30       5600
+MANAGER           20       2975
+MANAGER           30       2850
+MANAGER           10       2450
+ANALYST           20       6000
+PRESIDENT         10       5000
+CLERK             30        950
+CLERK             10       1300
+
+9 rows selected.
+
+SQL> select * from emp group by *;
+select * from emp group by *
+                           *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> select deptno,count(*) from emp group by deptno;
+
+    DEPTNO   COUNT(*)
+---------- ----------
+        20          5
+        30          6
+        10          3
+
+SQL> select job,count(*) as "no of emp" from emp group by job;
+
+JOB        no of emp
+--------- ----------
+CLERK              4
+SALESMAN           4
+MANAGER            3
+ANALYST            2
+PRESIDENT          1
+
+SQL> select deptno,min(sal),max(sal) from emp group by deptno;
+
+    DEPTNO   MIN(SAL)   MAX(SAL)
+---------- ---------- ----------
+        20        800       3000
+        30        950       2850
+        10       1300       5000
+
+SQL> select distinct deptno,min(sal),max(sal) from emp group by deptno;
+
+    DEPTNO   MIN(SAL)   MAX(SAL)
+---------- ---------- ----------
+        20        800       3000
+        30        950       2850
+        10       1300       5000
+
+SQL> select deptno,count(*) from emp group by deptno having count(*)
+  2  >3
+  3  ;
+
+    DEPTNO   COUNT(*)
+---------- ----------
+        20          5
+        30          6
+
+SQL> select deptno,count(*) from emp group by deptno having count(*)>3;
+
+    DEPTNO   COUNT(*)
+---------- ----------
+        20          5
+        30          6
+
+SQL> select deptno,sal(sal) from emp group by deptno having sal(sal)>9000;
+select deptno,sal(sal) from emp group by deptno having sal(sal)>9000
+                                                       *
+ERROR at line 1:
+ORA-00904: "SAL": invalid identifier
+
+
+SQL> select deptno,sum(sal) from emp group by deptno having sum(sal)>9000;
+
+    DEPTNO   SUM(SAL)
+---------- ----------
+        20      10875
+        30       9400
+
+SQL> select to_char(hiredate,'yyyy'),count(*) group by to_char(hiredate,'yyyy') having count(*)>1;
+select to_char(hiredate,'yyyy'),count(*) group by to_char(hiredate,'yyyy') having count(*)>1
+                                         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select to_char(hiredate,'yyyy'),count(*) from emp group by to_char(hire
+date,'yyyy') having count(*)>1;
+
+TO_C   COUNT(*)
+---- ----------
+1981         10
+1982          2
+
+SQL> select to_char(hiredate,'yyyy'),count(*) from emp group by to_char(hiredate,'yyyy') having count(*);
+select to_char(hiredate,'yyyy'),count(*) from emp group by to_char(hiredate,'yyyy') having count(*)
+
+                      *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> select to_char(hiredate,'yyyy'),count(*) from emp group by to_char(hiredate,'yyyy');
+
+TO_C   COUNT(*)
+---- ----------
+1980          1
+1981         10
+1982          2
+1983          1
+
+SQL> select to_char(hiredate,'mon'),count(*) from emp group by to_char(hiredate,'mon') having to_char(hiredate,'mon') in ('jan','sept');
+
+TO_CHAR(HIRE   COUNT(*)
+------------ ----------
+jan                   2
+
+SQL> select to_char(hiredate,'mon'),count(*) from emp group by to_char(hiredate,'mon') having to_char(hiredate,'mon') in ('jan','sep');
+
+TO_CHAR(HIRE   COUNT(*)
+------------ ----------
+sep                   2
+jan                   2
+
+SQL> select to_char(hiredate,'mon'),count(*) from emp where to_char(hiredate
+,'mon') in ('jan','sep');
+select to_char(hiredate,'mon'),count(*) from emp where to_char(hiredate,'mon') in ('jan','sep')
+               *
+ERROR at line 1:
+ORA-00937: not a single-group group function
+
+
+SQL> select to_char(hiredate,'mon'),count(*) from emp where to_char(hiredate,'mon') in ('jan','sep') group by to_char(hiredate,'mon');
+
+TO_CHAR(HIRE   COUNT(*)
+------------ ----------
+sep                   2
+jan                   2
+
+SQL> select deptno,sum(sal) from emp where deptno in (10,30) group by deptno
+;
+
+    DEPTNO   SUM(SAL)
+---------- ----------
+        30       9400
+        10       8750
+
+SQL> select ename,to_char(hiredate,'q'),count(*) from emp group by to_char(h
+iredate,'q');
+select ename,to_char(hiredate,'q'),count(*) from emp group by to_char(hiredate,'q')
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression
+
+
+SQL> select to_char(hiredate,'q'),count(*) from emp group by to_char(hiredat
+e,'q');
+
+T   COUNT(*)
+- ----------
+4          5
+1          4
+2          3
+3          2
+
+SQL> select deptno,sum(sal) from emp group by deptno having count(*)>3;
+
+    DEPTNO   SUM(SAL)
+---------- ----------
+        20      10875
+        30       9400
+
+SQL> select deptno,sum(sal) from emp group by deptno having max(*)>3;
+select deptno,sum(sal) from emp group by deptno having max(*)>3
+                                                           *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> select deptno,sum(sal) from emp group by deptno having sum(sal)>3;
+
+    DEPTNO   SUM(SAL)
+---------- ----------
+        20      10875
+        30       9400
+        10       8750
+
+SQL> select deptno,sum(sal) from emp group by deptno having sum(sal)>3;

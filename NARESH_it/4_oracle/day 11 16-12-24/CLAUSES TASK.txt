@@ -1,0 +1,267 @@
+                            CLAUSES TASK
+                     ===========================
+
+
+GROUP BY:- Group by clause is used to divide similar data items
+=========  into set of logical groups.and also group by clause    
+           reduces no of rows in each group.
+
+Syntax:-select columnname.......
+======  from tablename 
+        group by columnname;
+
+Execution order:-
+==============
+1.FROM 
+2.WHERE
+3.GROUP BY 
+4.HAVING
+5.SELECT
+6.DISTINCT
+7.ORDER BY
+8.OFFSET
+9.FETCH
+
+
+RULE:- Other than group function columns specified after select
+=====  then those all columns must be specified after group by.
+       Otherwise oracle server returns an error not a GROUP BY 
+       expression.
+
+Note:- In all database systems we can also use group by clauses
+=====   without using group functions.
+
+EG:-select deptno from emp
+==    group by deptno;
+
+    SQL>select deptno from emp
+        group by deptno;
+
+        DEPTNO
+      ----------
+          30
+          10
+          20
+
+step1:-group by deptno;
+
+deptno                                                  Result set table    
+------                                                  ----------------
+10                         10 it reduces into '1' 10          deptno
+20                         10--------------------->    10      10                                       
+30                         10
+10 similar data items into 20 it reduces into '1' 20
+20  set of logical groups  20---------------------->   20      20
+30-----------------------> 20
+10                         30 it reduces into '1' 30
+20                         30 ---------------------->  30      30
+30                         30
+
+step2:-select deptno from....
+=====          | 
+               |-------->This deptno is selected from result set table
+                         not from the original table.
+
+
+        DEPTNO
+      ----------
+          30
+          10
+          20
+
+individual group functions means there is no problem
+---------------------------------------------------
+SQL>select sum(Sal) from emp;
+
+    SUM(SAL)
+   ----------         
+     46425
+
+individual group functions there is no problem.
+
+  
+ SQL>select deptno,sum(Sal) from emp;//it won't work
+             ||          ||
+             ||          ||
+normal column means     group function means always
+record by record         all values at a time executed. 
+    executed       
+
+         synchronization is not there
+                   ||
+                   ||Solution is
+                   ||
+           we must use group by
+
+error:not agroup by expression
+
+solution:-
+=========
+SQL>select deptno,sum(sal) 
+        from emp 
+     group by deptno;
+       ||
+     it takes other than group function column.
+
+
+    
+
+HAVING Clause:- In all relational databses after group by clause we 
+==============  are not allowed to use where clause. In place of this
+                one ansi/iso SQL provided another clause having.
+               
+Generally where clause is used to restrict the rows in a table.
+where as having clause is used to restricting the groups
+after group by.
+
+in where clause we are not allowed to use group functions 
+where as in having clause we can also use group functions.
+
+
+1.Write a query to display no of persons in each state 
+        from following Person table
+-->simply i want state wise count
+
+
+EG:    Detailed data-------------------------------------->Summarized data
+
+
+        pid        pname        state                     state      count(*)      
+     ---------    -------      --------                  -------    ---------         
+         1         SUBBARAO      AP                         AP          4        
+         2         KIRAN         TS                         TS          2             
+         3         RAJU          TS                         MP          1           
+         4         ADITYA        MP                         MH          1              
+         5         GOWTHAM       AP                                     
+         6         VISWAJITH     MH 
+         7         SURYA         AP
+         8         SAI TEJA      AP
+
+select state,count(*) from person group by state;
+
+
+
+2.Find state wise,gender wise count(population)
+  from the following table?
+
+       PID      PNAME         GENDER        STATE
+      ------   ---------     --------      --------
+         1     SUBBARAO         M             AP
+         2      KAVYA           F             TS
+         3      KIRAN           M             TS
+         4     GOWTHAM          M             AP
+         5     KERTHI           F             AP
+         6     SURYA            M             AP
+         7    ANUSHKA           F             AP
+         8      RAJU            M             TS
+
+
+
+
+
+3.Write a query to display number of employees in each department 
+   from emp table using group by?
+
+
+4.Write a query to display number of employees in each job from emp
+   table using group by?
+
+
+5.Write a query to display deptno, minimum and maximum salary from 
+   emp using group by?
+
+
+6.Write a query to display those departments having more than 3
+  employees from emp table?
+
+NOTE:-we can also use invisible group functions within having
+====  clause.
+
+
+7. Write a query to display those departments sum(sal) more than 9000
+   from emp table by using group by clause?
+
+
+8.Write a query to display duplicate records from the
+  following TEST table ?
+
+SQL>select * from test;
+
+         deptno
+      ----------
+           10
+           10
+           10
+           20
+           20
+           20
+           30
+           30
+           40
+           50
+
+
+
+
+8.Write a query to display year, no of employees per year 
+  in which more than one employee was hired from 
+            emp table using group by?
+
+
+9.How many employees are joined in january or september month by
+  using group by?
+
+
+10.Display the sum of salaries of 10th and 30th department by using
+  group by?
+
+
+11.Write a query to display no of employees joined in each QUARTER 
+   from emp table using group by?
+
+
+12.Write a query to display those departments sum(Sal) having more 
+  than 3 employees from emp table by using group by clause?
+
+Note:-in all realtional databases we can also use invisible group 
+===== functions with in having clause.whenever we are implimenting
+      group function reports by using group by clause then 
+      database internally having all other group functions.
+
+
+
+13.Find year wise sales from the following ORDERS table
+
+
+B.Find quarter wise sales from the following ORDERS table
+
+orderid     ordername           orderdate            ORDERAMT
+-------    ----------         ------------          ---------
+  1	    SURYA	       12-DEC-24	       1300
+  2	   GOWTHAM	       17-JUN-22	       1800
+  3	    RAJU	       16-JAN-22	       800
+  4	   GOWTHAM	       23-DEC-23	       1000
+  5	   SURYA	       08-MAR-24	       1200
+  6	   KIRAN	       02-NOV-23	       600
+  7	   RAJU	               04-FEB-24               900
+
+-----------------------------------------------------------------------------------
+What are the differences b/w where and having clause?
+
+-----------------------------------------------------------------------------------
+               where                   |                   having
+-----------------------------------------------------------------------------------
+1.where clause condition is applied on |1.having clause condition is applied on
+  every row.                           |  every group.
+                                       |
+2.it filters the rows                  |2.it filters the groups
+                                       |
+3.group fuctions can not be used in    |3.group fuctions can be used in having
+  where clause                         |  clause
+                                       |
+4.where gets executed before group by  |4.having gets executed after group by
+                                       |
+5.it can be used with out group by     |5.it can not be used with out group by
+------------------------------------------------------------------------------------
+
+
