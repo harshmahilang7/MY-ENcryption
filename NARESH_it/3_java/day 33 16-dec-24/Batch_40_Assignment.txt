@@ -291,24 +291,29 @@ class Test17
 
     a = new MySubclass();          // (5)
     b = new Test17();             // (6)
+
+
   }
 }
 
 class MySubclass extends Test17 {}
 
+//4 line
+child class refrence variable not assign papa class construstutor.
 -----------------------------------------------------------------------
 Q10)
 class A 
 {
-private void printName(){
-System.out.println("Value-A");
-}
+	private void printName(){
+	System.out.println("Value-A");
+	}
 }
 class B extends A
 {
-public void printName(){
-System.out.println("Name-B");
-}
+	public void printName()
+	{
+	System.out.println("Name-B");
+	}
 }
 public class Test23
 {
@@ -318,6 +323,12 @@ A b = new B();
 b.printName();
 }
 }
+
+Test23.java:19: error: printName() has private access in A
+		b.printName();
+		 ^
+1 error
+
 ----------------------------------------------------------------------
 Q11)
 class A 
@@ -355,6 +366,9 @@ System.out.println("Name-C");
  a.printValue();
  }
  }
+
+Value-A
+Value-A
 --------------------------------------------------------------------
 Q12)
 
@@ -384,6 +398,8 @@ public static void newPrint(A1 a)
 a.printName();
 }
 }
+
+Name-B
 -----------------------------------------------------------------------
 Q13)
 class A 
@@ -419,6 +435,8 @@ public static void newPrint(A a){
 a.printName();
 }
 }
+
+Name-C
 -----------------------------------------------------------------------
 Q14)
 
@@ -457,6 +475,11 @@ public static void newPrint(A a)
 a.printName();
  }
  }
+
+Test30.java:28: error: incompatible types: C cannot be converted to B
+		b = c;
+		    ^
+1 error
 ----------------------------------------------------------------------
 Q15)
 
@@ -482,6 +505,10 @@ System.out.println(b.getCountryName().toString());
 }
 }
 
+Test32.java:8: error: method getCountryName() is already defined in class B
+	public StringBuffer getCountryName()
+	                    ^
+1 error
 ----------------------------------------------------------------------
 Q16)
 
@@ -507,6 +534,8 @@ A a = new B();
 a.printName();
 }
 }
+
+Value-A
 ----------------------------------------------------------------------
 Q17)
 
@@ -536,6 +565,12 @@ A b = new B();
 b.printValue();
 }
 }
+
+Test41.java:24: error: cannot find symbol
+		b.printValue();
+		 ^
+  symbol:   method printValue()
+  location: variable b of type A
 ----------------------------------------------------------------------
 Q18)
 
@@ -567,6 +602,8 @@ b.printName();
 }
 }
 
+Exception in thread "main" java.lang.ClassCastException: class A cannot be cast to class B (A and B are in unnamed module of loader 'app')
+        at Test42.main(Test42.java:24)
 ----------------------------------------------------------------------
 Q19)
 
@@ -596,6 +633,9 @@ A a = (A)b;
 a.printName();
 }
 }
+
+Name-B
+
 ---------------------------------------------------------------------
 Q20)
 
@@ -622,6 +662,8 @@ A a = new B();
 a.printName();
 }
 }
+
+  return type String is not compatible with void
 -----------------------------------------------------------------------
 
 
