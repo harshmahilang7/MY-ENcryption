@@ -1,0 +1,125 @@
+                                 JOIN TASK
+                              ==============
+
+JOINS:- Joins are used to retrieve data from single or 
+======            multiple tables. 
+ 
+
+.In all databases when we are joining 'n' tables then we must use 
+ 'n-1' joining conditions. 
+
+.join condition decides which record in one table should joined
+ with which record in another table.
+
+1.Inner join:- This join also returns matching rows only.Here also
+=============   joining conditional columns must belongs to same 
+                data type.Whenever tables having common columns then
+                only we are using this join. Inner join (9i) 
+                performance is very high compare to oracle 8i 
+                equi join.
+
+-----------------------------------------------------------------------------------
+Q)What is join?and how many types of joins?read each join purpose?
+ 
+NOTE:-Equi join and inner join is same.if we are interested in inner 
+      join write the queries by using inner join.no problem
+
+
+USING ALIASNAMES JOINS:-
+======================
+   In oracle we can also use table aliasnames in joins.whenever joins
+having aliasnames then those joins improves performance of the query
+because those joins very fastly retrieve data from database.in this
+case we must create table aliasnames in from clause and then only
+we must use those aliasnames in place of table with in select list
+and also with in the joining condition.
+
+-----------------------------------------------------------------------------------
+1.Write a query to display the employee names and their 
+  department names from emp,dept tables.
+
+2.Write a query to display the employees who are working
+  in the location Chicago from emp,dept tables by using
+  inner join?
+
+Note: If we want to filter the data after joining condition then we 
+===== must use and operator in 8i joins.where as in 9i joins we are
+      using either and operator or where clause also.
+
+
+
+3.Write a query to display no of employees in each location from 
+  emp,dept tables by using equi join or inner join?
+
+
+4.Write a query to display dname,sum(Sal) from emp,dept
+   tables by using equi join or inner join?
+
+
+5.Write a query to display blake employee record along with dept details
+   from emp,dept tables?
+   
+-----------------------------------------------------------------------------------
+Self join:-joining a table to itself is called self join.here 
+=========  joining joining conditional columns must belongs to
+           same data type.
+
+Method1:-compare one table one column any value with all other values
+========  in same table.
+
+Method2:-compare two different column values in a same table(these
+========  columns belong to same data type.
+
+
+whenever we are using self joins then we must create table
+aliasnames in from clause.these aliasnames must be different names.
+these aliasnames internally behave like exact tables when query
+execution time.
+
+-----------------------------------------------------------------------------------
+6. Write a query to display the employees who are getting same salary
+    as scott salary from emp table using self join?
+
+NOTE:-when we are comparing one column any value with all
+====   other values in same column by using self join then
+       we must display data from second alias table only.
+
+
+7.Write a query to display the employee names and their manager names
+  from emp table by using self join
+
+
+8.Write a query to display the employee records who are reporting
+   to BLAKE manager by using self join?
+
+
+
+9.Write a query to display the employees who are getting more salary 
+   than their manager salary from emp table using self join?
+
+
+10.Write a query to display BLAKE'S manager name from emp table by
+  using self join?
+
+
+11.Write a query to display the employees who are joining
+         before their managers from emp table
+                by using self join?
+
+
+12.Write a query to display those doctors which are working
+  in same hospital with different specality from the below
+  table?
+
+note:-Here h1 or h2 any table we can use in select why because of
+=====  condition is not there direct comparing.
+
+SQL>select * from hospital;
+
+         ID      NAME    HOSPITALNAME     SPECALITY
+      ------ ----------  -------------    ----------
+         1     SMITH        APPOLO        PHYSICIAN
+         2     ALLEN        APPOLO        HOMEOPATHY
+         3     WARD         KIMS          PHYSICIAN
+         4     JONES        PRIME         PHYSICIAN 
+
