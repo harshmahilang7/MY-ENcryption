@@ -1,0 +1,87 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Wed Dec 18 09:59:02 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan
+Enter password:
+Last Successful login time: Mon Dec 16 2024 16:24:10 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> drop table student;
+
+Table dropped.
+
+SQL> create table student (sid number(2) primary key,sname varchar(40) notnull ,m1 number check>0 and check<100);
+create table student (sid number(2) primary key,sname varchar(40) notnull ,m1 number check>0 and check<100)
+                                                                  *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number check>0 and check<100);
+create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number check>0 and check<100)
+               *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check>0 and check<100);
+create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check>0 and check<100)
+                  *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check(m between 0 and 100);
+create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check(m between 0 and 100)
+
+                                      *
+ERROR at line 1:
+ORA-02438: Column check constraint cannot reference other columns
+
+
+SQL> create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check(m1 between 0 and 100);
+create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check(m1 between 0 and 100)
+
+                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> create table student (sid number(2) primary key,sname varchar(40) not null ,m1 number(2) check(m1 between 0 and 100));
+
+Table created.
+
+SQL> create table employee (userid number(2) not null unique,username varchar2(40) not null unique, pwd varchar2(9) check(len(pwd) between 0 and 8))
+  2  ;
+create table employee (userid number(2) not null unique,username varchar2(40) not null unique, pwd varchar2(9) check(len(pwd) between 0 and 8))
+
+                                         *
+ERROR at line 1:
+ORA-00904: "LEN": invalid identifier
+
+
+SQL> create table employee (userid number(2) not null unique,username varchar2(40) not null unique, pwd varchar2(9) check(lenght(pwd) between 0 and 8))
+  2  ;
+create table employee (userid number(2) not null unique,username varchar2(40) not null unique, pwd varchar2(9) check(lenght(pwd) between 0 and 8))
+
+                                         *
+ERROR at line 1:
+ORA-00904: "LENGHT": invalid identifier
+
+
+SQL> create table employee (userid number(2) not null unique,username varchar2(40) not null unique, pwd varchar2(9) check(length(pwd) between 0 and 8));
+
+
+Table created.
+
+SQL> create table emp3(empno number(2) not null unique, ename varchar2(30) not null,gender char(1) check(gender in ('M','F')),sal number(7,2) check(sal>=5000));
+
+Table created.
+
+SQL> create

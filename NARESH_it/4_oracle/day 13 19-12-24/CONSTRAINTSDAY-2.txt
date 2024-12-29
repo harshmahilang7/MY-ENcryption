@@ -1,0 +1,146 @@
+                                  CONSTRAINTS TASK
+                               =====================
+
+
+ON DELETE CASCADE:-On delete cascade clause used along with
+=================  foreign key constraint.whenever child table having
+                   on delete cascade clause.if we deleting master
+                   table records from master table then automatically 
+                   deleted from child.
+
+syntax:-        |---->constraintname
+======          |
+ constraint userdefinedname constrainttype
+                                |
+                                |----->unique
+                                       not null
+                                       primary key
+                                       foreign key
+                                       check
+
+1.Create mas table,child table and establish relation b/w tables.
+
+--->after creating the tables insert the records.delete the mas table
+    records and observe the outputs in child table.
+
+mas
+---
+sno ---->primary key (create user defined constrint)
+
+child
+----
+sno ---->foreign key(create user defined constraint use 
+                         on delete cascade)
+
+
+
+-----------------------------------------------------------------------------------
+
+Adding (or) Dropping constraints on existing table:-
+==================================================
+      In all relational databases by using alter command we
+can also add or drop constraints on existing table.
+
+NOTE 1:- If we want to add constraints on existing table 
+          existing column then we are using  
+            table level syntax method.
+
+Eg:-
+===
+SQL> alter table a1 add primary key(sno);
+
+NOTE 2: If we want to add a new column along with 
+         constraint then we are using 
+          Column level syntax method.
+
+Eg:-
+===
+SQL> alter table a1 add name varchar2(10) unique;
+
+Adding foreign key to existing table
+====================================
+SQL>alter table a2 add foreign key(sno) references a1(sno)
+       on delete cascade;
+
+
+NOTE 3:-in oracle If we want to add NOT NULL constraint on
+======   existing table existing column then we are using 
+         alter with modify by using following syntax.
+
+Syntax:-
+=======
+SQL>alter table tablename modify columnname not null; 
+Eg:-
+=== 
+SQL> create table a3(sno number(10));
+SQL> alter table a3 modify sno not null;
+SQL>desc a3;
+
+                                
+-----------------------------------------------------------------------------------
+ *
+*** How to Copying table and copying records
+ * =========================================
+.copying a table means,creating new table from existing table
+
+.for copying table we use create command
+
+.new table will created with select query result.
+ 
+NOTE:- In al relational databases whenever we are copying a
+=====  table from another table all constraints are never
+       copied except not null constraint.
+
+Eg:-
+===
+SQL> create table dept1
+     as
+     select * from dept;
+
+2.Create new table with name emp6 from existing table emp
+
+--------------------------------------------------------------------------
+ *
+***How to copying table structure
+ *
+syntax:-
+=======
+create table newtablename
+  as
+select stmt
+from oldtablename
+where false condition;
+
+.eg of false condition
+----> 1=2
+---->'A'='B'
+
+3.Create a table with the name emp7 from existing table emp without
+  rows(copying table structure)
+--------------------------------------------------------------------------
+
+NOTE:- In Oracle, if you want to view column names 
+            along with constraint names then
+             we are using user_cons_columns.
+
+SQL> desc user_cons_columns;
+SQL> select column_name,constraint_name 
+     from user_cons_columns
+     where table_name='EMP';
+
+
+      COLUMN_NAME       CONSTRAINT_NAME 
+    --------------      ---------------
+       EMPNO                 PK_EMPNO 
+       DEPTNO                FK_DEPTNO
+
+------------------------------------------------------------------------------------
+          
+
+
+
+
+
+
+
+

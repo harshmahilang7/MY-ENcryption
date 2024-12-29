@@ -1,0 +1,76 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Dec 20 04:51:43 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: dastan
+Enter password:
+Last Successful login time: Fri Dec 20 2024 04:20:02 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select count(*),e.ename,d.deptno,e.job,d.loc
+  2  from emp e inner join dept d
+  3  on e.deptno=d.deptno
+  4  group by d.loc;
+select count(*),e.ename,d.deptno,e.job,d.loc
+                *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression
+
+
+SQL> select e.name,e.sal,e.deptno,d.name,d.loc
+  2  form emp e inner join dept d
+  3  on e.deptno=d.deptno
+  4  where d.loc='CHICAGO'
+  5  ;
+form emp e inner join dept d
+     *
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select e.name,e.sal,e.deptno,d.name,d.loc
+  2  from emp e inner join dept d
+  3  on e.deptno=d.deptno
+  4  where d.loc='CHICAGO';
+select e.name,e.sal,e.deptno,d.name,d.loc
+                             *
+ERROR at line 1:
+ORA-00904: "D"."NAME": invalid identifier
+
+
+SQL> select e.name,e.sal,e.deptno,d.dname,d.loc
+  2  from emp e inner join dept d
+  3  on e.deptno=d.deptno
+  4  where d.loc='CHICAGO';
+select e.name,e.sal,e.deptno,d.dname,d.loc
+       *
+ERROR at line 1:
+ORA-00904: "E"."NAME": invalid identifier
+
+
+SQL> ed
+SP2-0110: Cannot create save file "afiedt.buf"
+SQL> ed
+SP2-0110: Cannot create save file "afiedt.buf"
+SQL> select e.ename,e.sal,e.deptno,d.dname,d.loc
+  2  from emp e inner join dept d
+  3  on e.deptno=d.deptno
+  4  where d.loc='CHICAGO';
+
+ENAME             SAL     DEPTNO DNAME          LOC
+---------- ---------- ---------- -------------- -------------
+Ward             1250         30 SALES          CHICAGO
+Turner           1500         30 SALES          CHICAGO
+Allen            1600         30 SALES          CHICAGO
+James             950         30 SALES          CHICAGO
+Blake            2850         30 SALES          CHICAGO
+Martin           1250         30 SALES          CHICAGO
+
+6 rows selected.
+
+SQL>

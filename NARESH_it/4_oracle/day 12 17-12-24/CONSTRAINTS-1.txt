@@ -1,0 +1,168 @@
+                         CONSTRAAINTS TASK
+                       =====================
+
+                           CONSTRAINTS
+                         ---------------
+
+                        Data integrity(To maintaine proper data)or
+                           /      \    (To maintaine valid data)
+                          /        \
+                        SQL      TRIGGERS
+                    CONSTRAINTS    
+
+    Constraints are used to prevents or stops invalid data
+entry into our tables. Generally constraints are created on
+table columns. Oracle server having following types of constraints.
+These are
+
+1. Not null
+2. Unique
+3. Primary key
+4. Foreign key
+5. Check
+6. Default
+  
+   in database if we want to maintain proper data or valid data 
+according to client requirement then we are using sql language
+constraints,Procedure language triggers.
+
+
+1)NOT NULL:- in all relational databases not null constraint doesn't
+===========  support table level. This constraint doesn't accepts
+             null values. But it will accepts duplicate values.
+
+
+2.UNIQUE:-This constraint is created on column level,table level.
+========  This constraint doesn't accepts duplicate values. But 
+          it will accepts null values.
+
+
+3.Primary Key:- Primary key is Uniquely identifying a record in a 
+=============   table. There can be only one primary key in a table 
+                and also primary key doesn't accepts duplicate 
+                null values. 
+
+
+4.Foreign Key:-in all relational databases If we want to establishes
+=============  relationship between tables then we are using 
+               Referential Integrity Constraint Foreign Key.
+
+  generally One table foreign key must belongs to another table
+primary key.and also primary key,foreign key columns must belong
+to same data types.
+
+  Always foreign key values based on primary key values only.
+Generally,primary key doesn't accepts duplicate, null, values 
+where as foreign key accepts duplicate, null values.
+
+
+5)CHECK:-Check constraint is used to define logical conditions
+========  according to business rules.
+
+
+--------------------------------------------------------------------------
+1.Create a student table with constraints based on following
+  conditions.
+
+---->after creating the table insert the records and observe
+     the outputs.
+
+SID     Don't accept nulls and duplicates
+
+SNAME   Don't accept nulls
+
+M1      Marks between 0 to 100
+
+--------------------------------------------------------------------------
+2.Create a employee table with constraints based on following
+  conditions.
+
+---->after creating the table insert the records and observe
+     the outputs.
+
+USERID     don't accept nulls and duplicates
+
+USERNAME   don't accept nulls and duplicates
+
+PWD         Password minimum 8 characters
+
+--------------------------------------------------------------------------
+3.Create the emp3 table with constraints based on following
+  conditions.
+
+--->after creating the table insert the records and observe
+    the outputs.
+
+EMPNO      don't accept nulls and duplicates 
+
+ENAME      don't accept nulls
+
+GENDER     Must be M or F
+
+SAL        Minimum 5000 (means 5000 or above it will accept)
+
+--------------------------------------------------------------------------
+6.Default
+=========
+.it is used to apply default value to table column.
+.if we pass the value,it takes that value.if we dont pass the value
+ it takes default value.
+
+4.Create a emp4 table with 4 columns and apply following constraints.
+
+--->after creating the table insert the records and observe
+    the outputs.
+
+SID           PK
+SNAME         NOTNULL
+INAME         default ---->NARESHIT
+CITY          default ---->AMMERPET 
+fee           default ---->30000
+
+----------------------------------------------------------------------------------
+    
+5.Establish the relation b/w course and student table by using
+  Primary key,Forign key
+
+--->after creating the table insert the records and observe
+    the outputs.
+
+COURSE                         STUDENT
+=======                        ========
+PK                                              FK
+CID    CNAME                  SID     SNAME     CID
+
+--------------------------------------------------------------------------
+6.Create the BANK table with constraints based on following
+  conditions.
+
+--->after creating the table insert the records and observe
+    the outputs.
+
+ACCNO       Should not be duplicate & null
+ACCTYPE     Must be 'S' OR 'C'
+BAL         Must be min 1000
+
+-----------------------------------------------------------------------------------
+7.Establish the relation b/w DOCTORS and PATIENTS table by using
+  Primary key,Forign key
+
+
+DOCTORS                                       PATIENTS
+=======                                      ==========
+    PK                                           PK                    FK
+ DOCTORID     NAME    SPECIALTY                PATIENTID    NAME    DOCTORID 
+
+ 
+-----------------------------------------------------------------------------------
+8.Create the emp5 table with following columns.and you only 
+   think which constraint is suitable at table creation 
+   it self and use all constraints
+
+
+NOTE:-for this question just create the table with constrints
+       is enough.
+
+EMPNO     ENAME     SAL     MGRNO     AGE     ADDRESS    PHONO
+
+------------------------------------------------------------------------------------
