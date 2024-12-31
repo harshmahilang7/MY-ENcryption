@@ -1,0 +1,170 @@
+                                JOINS
+                             ==========
+
+left outer join:-This join returns all rows from left side table
+================  and matching rows from right side table.and also
+                  this join returns null values in place of non
+                  matching rows in another table.
+
+execution:-
+==========
+left outer join=====>inner join+left side table remaing
+                                records(here left side table
+                                         is main table)
+-----------------------------------------------------------------------------------
+Right outer join:-This join returns all rows from right side table
+================  and matching rows from left side table and also
+                  returns null values in place of non matching
+                  rows in another table.
+
+
+execution:-
+==========
+Right outer join=====>inner join+right side table remaing
+                                records(here right side table
+                                         is main table)
+
+-----------------------------------------------------------------------------------
+SQL> SELECT * FROM EMPLOYEES;
+
+       EMPID     NAME         DEPTNO
+     -------  ----------      --------
+         1      KIRAN           10
+         2     GOWTHAM          20
+         3      SURYA
+         4      RAJU            20
+
+
+SQL> SELECT * FROM DEPARTMENTS;
+
+      DEPTNO      DNAME
+     -------    ----------
+        10         HR
+        20         IT
+        40      FINANCE
+
+1.Write a query to display employee details along with department details
+   also display the employees to whoom deptno not assign?
+
+
+2.Write a query to display department details along with employee details,
+  including employees who are not assigned to any department 
+  and departments that do not have employees.
+
+
+3.Write a query to display all employeenames,all departmentnames
+   from emp,dept tables by using full outer join?
+
+
+4.consider the following two tables perform inner join ,left outer 
+  join ,right outer join,full outer join and check the outputs.
+
+SQL>select * from test7;
+
+       SNO
+   ----------
+        10
+        20
+        30
+
+SQL>select * from test8;
+
+       SNO
+   ----------
+        10
+        20
+        40
+
+5.check the following non equi join output
+SQL>select * from test3;
+ 
+      deptno
+     ---------
+        10
+        20
+
+SQL>select * from test4;
+       
+       deptno
+     ---------
+         10
+         20
+         30
+
+SQL>select * from 
+    test3,test4
+    where test3.deptno>test4.deptno;
+
+
+
+NOTE:-in oracle when ever one table columns lies between another table
+=====  two columns then also we are retriving data from those tables
+      by using non equi join.
+
+EG:-
+===
+SQL>select * from emp;
+SQL>select * from salgrade;
+
+SQL>select ename,sal,losal,hisal 
+    from emp,salgrade
+    where sal between losal and hisal;
+              (OR)
+SQL>select ename,sal,losal,hisal
+    from emp,salgrade
+    where sal>=losal and sal<=hisal;
+
+
+6.Describe in these two tables what is o/p of inner join,left outer
+ join ,right outer join,full outer join
+
+NOTE:- guess with out executing queries what is output in all cases
+
+SQL> select * from test10;
+
+       SNO
+   ----------
+         1
+         1
+
+SQL> select * from test20;
+
+       SNO
+   ----------
+         1
+         1
+         1
+-----------------------------------------
+7.Write a query to fetch all employee records from the employee details
+  table who have a salary record in the employee salary table
+
+EMPLOYEE DETAILS TABLE:-
+======================
+
+empid     name         dob          state
+-------  ------      -------       -------
+  1      JOHN       1995-04-23       NY
+  2      SMITH      1990-08-15       CA
+  3      ROHAN      1996-04-27       TX
+  4      JOHNSON    1975-02-12       CA
+  5      BROWN      2000-11-05       AL
+  6      JILL       1999-06-15       CA
+  7      JAMES      1983-09-12       WA
+  8      JACK       1982-10-25       CA
+
+EMPLOYEE SALARY TABLE:-
+======================
+
+  ID          SALARY
+------      ----------
+   1           15000
+   2           20000
+   3           25000
+   4           18000
+   5           35000
+   6           40000
+   7           45000
+
+
+
+
