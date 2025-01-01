@@ -1,0 +1,1 @@
+package multiple_inheritance_using_default_method;
