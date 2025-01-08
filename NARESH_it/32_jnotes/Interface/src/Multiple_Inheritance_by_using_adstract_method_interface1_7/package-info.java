@@ -1,0 +1,1 @@
+package Multiple_Inheritance_by_using_adstract_method_interface1_7;

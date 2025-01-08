@@ -1,0 +1,1 @@
+package private_static_and_non_static_method;

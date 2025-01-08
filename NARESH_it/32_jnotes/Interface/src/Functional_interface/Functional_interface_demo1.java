@@ -20,6 +20,11 @@ public class Functional_interface_demo1 {
 			{
 				System.out.println("Car is Running");				
 			}
+			@Override
+			public void runing()
+			{
+				System.out.println("car is runnnnnnning");
+			}
 			
 		};
 		
@@ -35,5 +40,6 @@ public class Functional_interface_demo1 {
 		car.run();
 		car.runing();
 		bike.run();
+		bike.runing();
 	}
 }

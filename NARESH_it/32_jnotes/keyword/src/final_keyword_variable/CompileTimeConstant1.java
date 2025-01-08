@@ -1,4 +1,4 @@
-package final_keyword;
+package final_keyword_variable;
 class Foo1
 {
 	public static final int A = returnValue(); 

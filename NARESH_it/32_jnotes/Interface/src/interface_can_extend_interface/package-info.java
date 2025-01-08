@@ -1,0 +1,1 @@
+package interface_can_extend_interface;

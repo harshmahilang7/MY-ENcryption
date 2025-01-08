@@ -1,0 +1,1 @@
+package Automorphic_numbers;

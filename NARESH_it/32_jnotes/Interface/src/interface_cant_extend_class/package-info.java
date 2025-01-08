@@ -1,0 +1,1 @@
+package interface_cant_extend_class;
