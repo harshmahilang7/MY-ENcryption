@@ -1,0 +1,27 @@
+                                  VIEWS
+                                =========
+
+1.What is view?View store data or not?How can you give the guarantee
+  view does not store the data?
+
+2.Create a view from emp table with following columns
+  empno,ename,sal,deptno
+  After creating the view insert the records
+  into view?
+
+3.Create view from emp table and store only department 10th details?
+
+
+4.What is comlex view?Create a complex view from the following 
+  two tables?Can you perform DML operations through complex view 
+  to base table possible or not possible? 
+
+SQL>create table test1(name varchar2(10));
+SQL>create table test2(sub varchar2(10));
+
+5.What is Materialized view?MVIEWS stores data or not?What is the 
+  Purpose of MVIEWS?
+
+6.What are the differences b/w View and Materialized VIEW?
+
+7.What are the uses of the views?

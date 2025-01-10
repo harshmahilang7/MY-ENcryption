@@ -1,0 +1,63 @@
+                                SEQUENCE
+                              ===========
+
+1.What is Sequence?What is main purpose of Sequence?
+
+
+2.Create a sequence ?Sequence stat with 5 and genarate values
+  upto 10
+
+3.Genarate the primary key values for the following column sno
+  by using sequence.
+
+SQL>create table test(sno number(10) primary key,name varchar2(10));
+
+---->create a sequence first 
+---->create the table test table as shown in above
+---->insert into test(sno,name)values(s1.nextval,'&name');
+---->only we are proving the values to name column.by using
+     sequence pseudo column nextval we are generating values 
+     automatically to sno column.
+
+
+---->after inserting the records add Rollno column
+
+SNO      NAME       ROLLNO
+---     ------     --------
+1        GOWTHAM     
+2        SUBBARAO    
+3        RAJU        
+4        KIRAN  
+
+---->create one more sequence s2 and stating value is 73     
+
+---->by using one update command with sequence pseudo 
+     column(nextval)
+     genarate the output as follows
+
+SNO      NAME       ROLLNO
+---     ------     --------
+1        GOWTHAM     73
+2        SUBBARAO    74
+3        RAJU        75
+4        KIRAN       76
+
+4.NOTE:-Oracle 12c onwards we can also use sequence pseudo columns
+        with in default clause
+
+syntax:-
+=======
+columnname number(size) default sequencename.nextval primary key
+
+--->Create a sequence first and sequence start with 1001
+--->Create table test1 with ACCNO column by using above syntax
+    and NAME,BAL columns
+--->Insert the values only NAME,BAL columns by using 
+    skipping columns method
+--->And observe the output and beauty of sequence
+
+NOTE:-This kind of EXAMPLE is very usefull in Advance Java JDBC
+         
+5.What is cache?what is default size of cache?
+
+         

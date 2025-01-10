@@ -1,0 +1,72 @@
+    
+                            SubQurys
+                          =============
+                       
+1. Inline view:- Oracle 7.2 introduced Inline views.in place of tablename
+                 we are writing subquery is called inline view.
+
+
+Syntax:-
+=======
+ select * from (subquery);
+
+
+
+1.Write a query to display the employees who are getting more
+  than 30000 annsal from emp table?
+
+
+Note:-in where clause we are not allowed to use column aliasname.
+=====   then those type of queries we are putting in inline view.
+      then internally column aliasname behaves like a exact table
+      column 
+
+
+               -----------------------------
+select * from( |  ename  |  sal |  annsal  |)where annsal>300000;
+               -----------------------------
+               |         |      |          |
+               -----------------------------
+
+
+
+----------------------------------------------------------------------
+
+                               ROWNUM
+                             ==========
+
+1.Write a query to display first row from emp table using rownum?
+
+
+
+NOTE:-Generally, rownum doesn't work with more than 1 +ve integer, 
+=====  i.e.,it works with <, <= operators.
+
+
+ *
+***Write a query to display last 2 rows from emp table by using
+ *     rownum aliasname?
+ 
+
+ *
+***Note:-in oracle we are creating rownum alliasnames in inline views 
+ * ====  then that aliasname work with all sql operators.
+
+3.Write a query to display second record from emp table using  
+   rownum aliasname?
+
+4.Write a query to display rows between 4 to 8 from emp
+  table by using rownum aliasname?
+
+5.Write a query to display 2,3,5,7,9th records from emp
+  table by using rownum aliasname?
+
+6.Write a query to display even no of records from emp 
+  table by using rownum aliasname?
+
+
+7.Write a quey to display first row,last row from emp table by
+  using rownum aliasname?
+
+8.Write a query to skip 3 rows and then display remaing all rows from
+  emp table by using rownum aliasname?

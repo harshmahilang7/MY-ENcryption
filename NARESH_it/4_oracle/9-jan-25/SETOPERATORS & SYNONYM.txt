@@ -1,0 +1,98 @@
+                                SET OPERATORS
+                           =====================
+
+Set operators are used to retrivew data from single or multiple
+tables.
+
+Set operators are also called as virtical joins.oracle having following
+set operators.These are
+
+1.UNION       ---------->return values unique time+sorting
+2.UNION ALL   ---------->unique+dulicates
+3.INTERSECT   ---------->common values
+4.MINUS       ---------->values are in first query and those values are not
+                         in second query
+
+1.UNION:-Returns the values unique+sorting
+========
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              union
+    select job from emp where deptno=20;
+
+JOB
+---------
+ANALYST
+CLERK
+MANAGER
+PRESIDENT
+
+2.UNION ALL:-unique+dulicates
+===========
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              union all
+    select job from emp where deptno=20;
+
+JOB
+---------
+MANAGER
+PRESIDENT
+CLERK
+CLERK
+MANAGER
+ANALYST
+CLERK
+ANALYST
+
+3.INTERSECT:-common values
+===========
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              intersect
+    select job from emp where deptno=20;
+
+JOB
+---------
+CLERK
+MANAGER
+
+
+4.MINUS:-values are in first query and those values are not
+=======   in second query
+
+
+eg:-
+===
+SQL>select job from emp where deptno=10
+              minus
+    select job from emp where deptno=20;
+
+JOB
+---------
+PRESIDENT
+
+------------------------------------------------------------------------------------
+                                      Synonym
+                                    ===========
+
+  Synonym is a perminent aliasname for the actual database object.generally
+synonyms created from tables,views,procedures.synonym is perminent aliasname
+which is used to provide security because it hides another schema username,
+object name.
+
+syntax:-
+=======
+create synonym synonymname for
+username.objectname;
+
+
+
+
+

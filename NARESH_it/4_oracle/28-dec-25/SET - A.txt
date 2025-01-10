@@ -1,0 +1,216 @@
+Que 1 :
+=======
+
+Task: Develop a Multilingual Greeting Program
+You need to implement a Java program that greets users in different languages based on their preferences. 
+The program should prompt the user to input their preferred language and display a greeting message accordingly. 
+The program will utilize interfaces, concrete classes, and a factory class to manage language selection dynamically.
+
+Steps to Implement
+1. Create the Language Interface
+Define an abstract method getMessage() in the interface.
+This method will be implemented by concrete classes representing different languages.
+
+2. Create the Hindi Class
+Implement the Language interface in the Hindi class.
+Provide the implementation for the getMessage() method, returning "Namaste" as the greeting.
+
+3. Create the Telugu Class
+Implement the Language interface in the Telugu class.
+Provide the implementation for the getMessage() method, returning "Namaskaram" as the greeting.
+
+4. Create the Non Class
+Implement the Language interface in the Non class.
+Provide the implementation for the getMessage() method, returning "Invalid Language....".
+This serves as a fallback for unsupported language selections.
+
+5. Create the FactoryClass
+Create a class named FactoryClass to handle language selection.
+Implement a factory method named factory(String lang) in this class.
+Use the equalsIgnoreCase() method to compare the provided input and return the corresponding language object:
+Return a Hindi object if the input is "hindi".
+Return a Telugu object if the input is "telugu".
+Return a Non object for any unsupported input.
+
+6. Create the ELC Class (Main Class)
+This is the entry point of the program.
+Prompt the user to input their preferred language.
+Pass the input to the FactoryClass using its factory() method to obtain the appropriate language object.
+Display the greeting message by calling the getMessage() method on the language object.
+
+TEST CASE 1 :
+=============
+Sample Input :
+Enter your preferred language  :  Hindi
+
+Sample Output : 
+Namaste
+
+----------------------
+
+TEST CASE 2 :
+=============
+Sample Input :
+Enter your preferred language  :  Telugu
+
+Sample Output : 
+Namaskaram
+
+----------------------
+
+TEST CASE 3 :
+=============
+Sample Input :
+Enter your preferred language  :  Arebic
+
+Sample Output :
+Invalid Language....
+
+
+################################################################
+
+Que 2 :
+=======
+
+Task : Vehicle Rental System
+Imagine you are developing a system for a vehicle rental service. The service rents different types of vehicles, such as cars and bikes, 
+and calculates the total cost dynamically based on the rental duration. The system must also allow for special discounts in certain scenarios.
+
+Requirements
+1. Abstract Class Vehicle
+Purpose: Defines the common structure and behavior of all vehicles in the rental system.
+Modifiers: abstract, public.
+Attributes:
+vehicleType (Type: String, Modifier: private) - Type of the vehicle (e.g., Car, Bike).
+baseRate (Type: double, Modifier: private) - The base rental rate per hour.
+Constructor:
+A protected constructor with parameters vehicleType and baseRate.
+Methods:
+Setters and Getters: Protected methods for all attributes.
+showDetails(): A protected method that prints the vehicle type and base rate.
+abstract calculateRentalCost(int hours): An abstract method to calculate the rental cost dynamically based on the rental duration.
+
+2. Concrete Subclasses
+
+2.1 Car Class
+Inherits from Vehicle.
+Additional Attribute:
+driverIncluded (Type: boolean, Modifier: private) - Whether the rental includes a driver.
+Constructors:
+A public constructor with parameters baseRate and driverIncluded.
+Methods:
+Overrides calculateRentalCost(int hours):
+Calculates the cost as baseRate * hours.
+Adds an additional 200 if the driver is included.
+Overrides showDetails():
+Prints details including whether a driver is included.
+
+2.2 Bike Class
+Inherits from Vehicle.
+Additional Attribute:
+helmetIncluded (Type: boolean, Modifier: private) - Whether the rental includes a helmet.
+Constructors:
+A public constructor with parameters baseRate and helmetIncluded.
+Methods:
+Overrides calculateRentalCost(int hours):
+Calculates the cost as baseRate * hours.
+Adds an additional 50 if the helmet is included.
+Overrides showDetails():
+Prints details including whether a helmet is included.
+
+3. VehicleMain Class
+Purpose: Test the functionality of the Vehicle system.
+Flow:
+Create instances of Car and Bike with different configurations.
+Display the details of each vehicle using the showDetails() method.
+Calculate and display the rental cost for each vehicle using calculateRentalCost().
+
+
+Sample Output :
+---------------
+
+Car Details:
+Vehicle Type: Car, Base Rate: Rs.500.00 per hour
+Driver Included: Yes
+Rental Cost for 5 hours: Rs.2700.00
+
+
+Bike Details:
+Vehicle Type: Bike, Base Rate: Rs.100.00 per hour
+Helmet Included: Yes
+Rental Cost for 3 hours: Rs.350.00
+
+
+#########################################
+
+                                 SQL EXAM
+                                ==========
+
+1.Find the state-wise and gender-wise population count from the 
+following PERSON table:
+
+   PID	    PNAME     GENDER     STATE
+  -----   --------   --------   -------
+    1	  SUBBARAO	M	  AP
+    2	   KAVYA	F	  TS
+    3	   KIRAN	M	  TS
+    4	  GOWTHAM	M	  AP
+    5	   KERTHI	F	  AP
+    6	   SURYA 	M	  AP
+    7	  ANUSHKA	F	  AP
+    8	   RAJU  	M	  TS
+
+2.Write a query to display the year and the number of employees hired per year
+  from the EMP table using GROUP BY?
+
+3.Write a query to display duplicate records from the TEST table?
+
+
+SQL>SELECT * FROM test;
+
+      deptno
+    ---------
+       10
+       10
+       10
+       20
+       20
+       20
+       30
+       30
+       40
+       50
+
+4.Write a query to display the employee names and their manager names
+  from the EMP table by using a self-join?
+
+5.Write a query to display the employees working in the location 'Chicago' 
+  from the EMP and DEPT tables?
+
+6.Write a query to display the employees who are getting the same salary as
+ SCOTT's salary from the EMP table using a self-join?
+
+7.Write a query to display the employees who are getting more salary than 
+  the highest-paid employee in the 20th department 
+  from the EMP table?
+
+8.Write a query to display the senior-most employee details
+  from the EMP table?
+
+9.Write a query to display the second-highest salary from the EMP table?
+
+10.Establish the relationship between the COURSE and STUDENT tables 
+  by using Primary Key and Foreign Key
+
+COURSE Table:
+============
+CID	CNAME
+
+STUDENT Table:
+=============
+SID	SNAME	CID
+
+
+
+
+

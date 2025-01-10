@@ -1,0 +1,347 @@
+                             VIEWS
+                      ==================
+
+    View is database object which is used to provide table security.
+Generally views are created from tables.those table also called as
+base tables.
+    Generally database adminstator(DBA) only creates views from tables
+and then only those views are are given to number of users.then only 
+those users are allowed to view portion of the data through view to
+base table.
+ 
+   Generally view does not store any data.that's why view is also 
+called as virtual table or window of table.
+
+NOTE:-view stores select statement only.
+
+     Generally views are created from base tables.based on base tables
+views are categorized into 2 views these are
+
+1)simple view
+
+2)complex view
+
+   simple view is a view which is created from only one base table
+where as complex view is a view which is created from multiple base
+tables.
+
+syntax:-
+=======
+create  [or replace] view viewname
+as
+select * from tablename where condition;
+
+
+DML operations on simple view:-
+==============================
+  in oracle we can also perform dml operations through simple view to
+base table based on following restrictions.these are
+1)if a simple view having group functions,group by clause,distinct,
+  rownum,set operators,joins then we can not perform dml operations
+  through simple view to base table.
+2)we must include base table not null column or primary key column
+ into the view then only we are allowed to perform insertion
+ operation through view to base table.
+
+eg1:-
+====
+create or replace view v1 
+as
+select * from emp where deptno=10;
+
+SQL>select * from v1;
+SQL>insert into v1(empno,ename,deptno)values(1,'subbarao',30);
+SQL>select * from emp;
+
+eg2:-
+===
+create or replace view v2
+as
+select ename,sal,deptno
+from emp
+where deptno=10;
+
+SQL>select * from v2;
+SQL>insert into v2(ename,sal,deptno)values('abc',2000,30);
+error:cannot insert null into empno
+
+   in all relational databases whenever we are creating view then 
+automatically view definations(select stmt) are perminently stored
+in database.in oracle if we want to view these definations then we are
+using text property from user_views data dictionary.
+
+eg:-
+===
+SQL>desc user_views;
+SQL>select text from user_views
+    where view_name='V1';
+ 
+  generally in all relational databases simplyfying complex queries
+purpose we can use views.in this case regularly used complex queries
+are putting in a view & whenever necessary we are selecting view by
+using select * from viewname.
+  
+  in oracle when a view having functions or expressions then we must
+create aliasname for those functions or expressions otherwise oracle 
+server returns an error.
+
+SQL>create or replace view v1
+    as
+    select deptno,max(sal) from emp
+    group by deptno;
+
+error:must name this expression with a column aliasname
+
+sol
+===
+SQL>create or replace view v1
+    as
+    select deptno,max(sal) a
+    from emp
+    group by deptno;
+
+SQL>select * from v1;
+
+Testing:-
+========
+SQL>desc user_views;
+SQL>select text from user_views where view_name='V1';
+
+O/p:-
+===
+select deptno,max(sal) a
+from emp
+group by deptno;
+
+
+2)complex view (or) join view
+==============================
+  a view which is created from multiple tables is also called as join
+view or complex view.
+  
+  generally in all relational databases we can not perform dml 
+operations through complex view to base tables.
+
+eg:-
+===
+SQL>create table test1(name varchar2(10));
+SQL>create table test2(sub varchar2(10));
+
+create or replace view v3
+as
+select name,sub
+from test1,test2;
+
+SQL>insert into v3 values('subbarao','oracle');
+error:can not modify a column which maps to a non key preserved table.
+
+
+ *
+***Materialized view
+ * =================
+
+   Oracle 8i introdused materialized views.generally view does not 
+store any data whereas materialized views stores data.generally 
+materialized views also created from base tables.
+syntax:-
+======
+create materialized view viewname
+as
+select statement;
+
+  generally materialized views created by databse adminstator and also
+materialized views are used to improve performance of the joined or
+aggrigatable queries.generally materialized view stores result of the
+query.materialized view also stores data same like table but,when we
+refreshing materialized view it synchrronizes data based on base 
+tables.materialized view stores replication of remote database into
+local node.
+
+ *
+***Differnce b/w view & materialized view(V.V.I.M.P)
+ * ======================================
+
+          View                              Materialized view
+------------------------------------------------------------------------------------
+1.view does not stores any data     |1.M.views stores data
+                                    |
+2.security purpose                  |2.improves performance(for joins,aggrigate
+                                    |  functions)purpose.
+                                    |
+3.when we are dropping a base table |3.when we are dropping a base table  
+  then view can not be accessable.  |  also. M.view can be accessable. 
+                                    |
+4.we can perform dml operations on  |4.we can not perform dml operations on
+  views                             |  M.views
+
+
+Eg:-
+===
+SQL>create table base(sno number(10),name varchar2(10));
+SQL>insert into base values(......);
+SQL>select * from base;
+  
+     SNO           NAME
+  ---------    ------------
+     1              a
+     2              b
+     3              c
+     4              d
+
+eg:-
+===
+create materialized view mv1
+as
+select * from base;
+
+   in this materialized view also behaves like a view i.e whenever
+we are creating materialized view also then materialized view
+definations(select stmt) are automatically perminently stored in
+oracle database like view definations.
+
+   in oracle if we want to view materialized view definations then
+we are using user_mviews data dictionary.i.e if we want to view 
+materialized view definations then we are using query property from
+user_mviews data dictionary.
+
+SQL>select user_mviews;
+SQL>select query from user_mviews
+    where mview_name='MV1';
+
+QUERY
+------
+select * from base;
+
+View execution
+==============
+    in oracle when we are creating a view then automatically view
+definations are perminently stored in oracle database.whenever user
+requesting a view by using select * from viewname.then oracle server
+automatically executes view definations that's why in this case 
+corresponding base tables are affected.i.e whenever we are requesting
+view no of times then each and every time view definations are 
+executed and also each and every time base tables are affected.
+
+materialized view execution
+============================
+ whenever we are creating materialized view then materialized view
+definations are automatically stored in oracle database and also
+query result is automatically stored in materialized view.whenever
+user requesting materialized view by using  select * from materialized 
+viewname.then oracle server directly retrive data from materialized 
+view.in this case base tables are never affected because here
+materialized view definations(select stmt)are never affected because
+here materialized view definations are never executed but whenever
+we are refreshing materialized view then only oracle server executes
+materialized view definations and automatically affects base tables.
+that's why compare to views in materialized view base tables are 
+effected less no of times.that's why materialized views improves 
+performance compare to views.
+
+SQL>select * from v1;                |SQL>select * from mv1;
+                                     |
+SNO     NAME                         |  SNO        NAME
+----   -------                       | -----      -------
+1        a                           |   1           a
+2        b                           |   2           b
+3        c                           |   3           c
+4        d                           |   4           d
+
+
+SQL>select sno,name,rowid from base;
+SQL>select sno,name,rowid from v1;
+
+      here view rowids are same as base table rowids.that's why view
+does not store any data.that's why view is also called as virtual 
+table or window of a table.but through the view we can access base
+table data.
+
+SQL>select sno,name,rowid from base;
+SQL>select sno,name,rowid from from mv1;
+  
+   here materialized view rowids are different from base table rowids.
+that's why materialized view stores data.
+
+SQL>select * from base;
+  
+    SNO           NAME
+  ---------    ------------
+     1              a
+     2              b
+     3              c
+     4              d
+
+SQL>update base set name=upper(name);
+
+
+SQL>select * from base;              |SQL>select * from v1;
+                                     |
+SNO     NAME                         |  SNO        NAME
+----   -------                       | -----      -------
+1        A                           |   1           A
+2        B                           |   2           B
+3        C                           |   3           C
+4        D                           |   4           D
+
+
+SQL>select * from mv1;  
+
+    SNO           NAME
+  ---------    ------------
+     1              a
+     2              b
+     3              c
+     4              d
+
+  Materialized view also stores data same like a table,but when we are
+refreshing materialized view it synchronizes data based on base table.
+in oracle if we want to refresh Materialized view then we are using
+following syntax.
+
+syntax:-
+======
+exec dbms_mview.refresh('Materialized view ');
+         |        |
+     package    procedure
+       name        name
+
+SQL>exec dbms_mview.refresh('mv1');
+SQL>select * from mv1;
+
+            
+    SNO           NAME
+  ---------    ------------
+     1              A
+     2              B
+     3              C
+     4              D
+
+Q)create a materialized view which contain joins and aggregatable
+functions.
+
+create materialized view  mv2
+as
+select dname,sum(sal)
+from emp e,dept d
+where e.deptno=d.deptno
+group by dname;
+
+we can also drop materialized view by using following syntax
+
+drop materialized view viewname;
+
+eg:-
+===
+SQL>drop materialized view mv2;
+
+materialized view dropped
+
+ *
+***Uses of Views
+ * =============
+     in all relational databases views are used in following 2
+senarious.these are
+1.providing table level security
+2.for simplifying complex queries
+
+

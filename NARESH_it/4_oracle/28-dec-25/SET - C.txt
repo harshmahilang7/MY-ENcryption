@@ -1,0 +1,212 @@
+Que 1 :
+=======
+
+Task: Develop a Program to Calculate Discounts Based on Membership Type
+You are tasked with developing a Java program that calculates and displays the discount percentage a customer is entitled to based on their membership type. 
+The program will use interfaces, concrete classes, and a factory class to handle membership type selection dynamically.
+
+Create the Membership Interface
+Define an abstract method getDiscount() in the interface.
+This method will be implemented by concrete classes representing different membership types.
+
+Create the GoldMember Class
+Implement the Membership interface in the GoldMember class.
+Provide the implementation for the getDiscount() method, returning 20% as the discount.
+
+Create the SilverMember Class
+Implement the Membership interface in the SilverMember class.
+Provide the implementation for the getDiscount() method, returning 10% as the discount.
+
+Create the NonMember Class
+Implement the Membership interface in the NonMember class.
+Provide the implementation for the getDiscount() method, returning 0% as the discount.
+This serves as a fallback for customers without a membership.
+
+Create the MembershipFactory Class
+Create a class named MembershipFactory to handle membership type selection.
+Implement a factory method named factory(String membershipType) in this class.
+Use the equalsIgnoreCase() method to compare the provided input and return the corresponding membership object:
+
+Return a GoldMember object if the input is "gold".
+Return a SilverMember object if the input is "silver".
+Return a NonMember object for any unsupported input.
+Create the Main Class (DiscountCalculator)
+This is the entry point of the program.
+
+Prompt the user to input their membership type.
+Pass the input to the MembershipFactory using its factory() method to obtain the appropriate membership object.
+Display the discount percentage by calling the getDiscount() method on the membership object.
+
+Test Case 1
+------------
+Input:
+Enter your membership type: Gold
+
+Output:
+You are entitled to a 20% discount.
+
+------------------------------
+
+Test Case 2
+------------
+Input:
+Enter your membership type: Silver
+Output:
+You are entitled to a 10% discount.
+------------------------------
+
+Test Case 3
+------------
+Input:
+Enter your membership type: None
+Output:
+You are entitled to a 0% discount.
+
+##############################################
+
+Que 2 :
+=========
+Tast : Employee Payroll Management System
+Imagine you are developing a system to manage payroll for employees in a company. 
+The system calculates salaries for different types of employees based on their roles. 
+For example, full-time employees receive a fixed salary, while part-time employees are paid based on the hours they work. 
+Additionally, the system should provide details about each employee.
+
+Requirements
+1. Abstract Class Employee
+Purpose: Defines the common attributes and behavior for all employees.
+Modifiers: abstract, public.
+Attributes:
+employeeId (Type: int, Modifier: private) - Unique ID for the employee.
+name (Type: String, Modifier: private) - Name of the employee.
+Constructor:
+A protected constructor with parameters employeeId and name.
+Methods:
+Setters and Getters: Protected methods for all attributes.
+showDetails(): A protected method that prints the employee ID and name.
+abstract calculateSalary(): An abstract method to calculate the employee's salary.
+
+2. Concrete Subclasses
+2.1 FullTimeEmployee Class
+Inherits from Employee.
+Additional Attribute:
+monthlySalary (Type: double, Modifier: private) - Fixed monthly salary for the employee.
+Constructor:
+A public constructor with parameters employeeId, name, and monthlySalary.
+Methods:
+Overrides calculateSalary():
+Returns the monthlySalary.
+Overrides showDetails():
+Prints details including the monthly salary.
+
+2.2 PartTimeEmployee Class
+Inherits from Employee.
+Additional Attributes:
+hourlyRate (Type: double, Modifier: private) - Hourly rate for the employee.
+hoursWorked (Type: int, Modifier: private) - Number of hours worked by the employee.
+Constructor:
+A public constructor with parameters employeeId, name, hourlyRate, and hoursWorked.
+Methods:
+Overrides calculateSalary():
+Calculates the salary as hourlyRate * hoursWorked.
+Overrides showDetails():
+Prints details including the hourly rate and hours worked.
+
+3. PayrollSystem Class
+Purpose: Test the functionality of the payroll system.
+Flow:
+Create instances of FullTimeEmployee and PartTimeEmployee.
+Display the details of each employee using the showDetails() method.
+Calculate and display the salary for each employee using calculateSalary().
+
+
+
+Sample Output :
+-----------------
+
+Full-Time Employee Details:
+Employee ID: 101, Name: Alice
+Monthly Salary: Rs.50000.00
+Calculated Salary: Rs.50000.00
+
+
+
+Part-Time Employee Details:
+Employee ID: 102, Name: Bob
+Hourly Rate: Rs.200.00, Hours Worked: 25
+Calculated Salary: Rs.5000.00
+
+
+#################################################
+
+                                 SQL EXAM
+                                ==========
+
+1.Find the state-wise and gender-wise population count from the 
+following PERSON table:
+
+   PID	    PNAME     GENDER     STATE
+  -----   --------   --------   -------
+    1	  SUBBARAO	M	  AP
+    2	   KAVYA	F	  TS
+    3	   KIRAN	M	  TS
+    4	  GOWTHAM	M	  AP
+    5	   KERTHI	F	  AP
+    6	   SURYA 	M	  AP
+    7	  ANUSHKA	F	  AP
+    8	   RAJU  	M	  TS
+
+2.Write a query to display the year and the number of employees hired per year
+  from the EMP table using GROUP BY?
+
+3.Write a query to display duplicate records from the TEST table?
+
+
+SQL>SELECT * FROM test;
+
+      deptno
+    ---------
+       10
+       10
+       10
+       20
+       20
+       20
+       30
+       30
+       40
+       50
+
+4.Write a query to display the employee names and their manager names
+  from the EMP table by using a self-join?
+
+5.Write a query to display the employees working in the location 'Chicago' 
+  from the EMP and DEPT tables?
+
+6.Write a query to display the employees who are getting the same salary as
+ SCOTT's salary from the EMP table using a self-join?
+
+7.Write a query to display the employees who are getting more salary than 
+  the highest-paid employee in the 20th department 
+  from the EMP table?
+
+8.Write a query to display the senior-most employee details
+  from the EMP table?
+
+9.Write a query to display the second-highest salary from the EMP table?
+
+10.Establish the relationship between the COURSE and STUDENT tables 
+  by using Primary Key and Foreign Key
+
+COURSE Table:
+============
+CID	CNAME
+
+STUDENT Table:
+=============
+SID	SNAME	CID
+
+
+
+
+

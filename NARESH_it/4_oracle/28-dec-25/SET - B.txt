@@ -1,0 +1,245 @@
+Que 1 :
+=======
+
+Task: Develop a Software System for Education Loan Schemes
+You are tasked with creating a software system for a government agency responsible for administering education loan schemes across different states. 
+Each state has unique policies for education loans, including different loan amounts provided by the central government. 
+The system should dynamically determine and display the education loan scheme for a given state. 
+For states that do not yet offer loan facilities, the system will display an appropriate message.
+
+System Requirements
+1. Create the CentralGovernment Interface
+Purpose: This interface defines the contract for all states participating in the central government's education loan scheme.
+Components:
+A final double amt = 20000.0, representing the base loan amount provided by the central government.
+An abstract method educationLoanScheme() that each state will implement to define its specific loan scheme.
+A static method message() that prints a welcome message for the central government education loan scheme.
+
+2. Create Concrete State Classes
+
+Maharashtra Class
+Implements the CentralGovernment interface.
+Provides an additional loan amount of 10000.0 on top of the base amount.
+Implements the educationLoanScheme() method to display the scheme details.
+
+Telangana Class
+Implements the CentralGovernment interface.
+Provides an additional loan amount of 15000.0 on top of the base amount.
+Implements the educationLoanScheme() method to display the scheme details.
+
+NonState Class
+Implements the CentralGovernment interface.
+Represents states that do not currently provide education loan facilities.
+Implements the educationLoanScheme() method to display the message: "Yet, Your State is not providing any loan facility."
+
+3. Create the StateFactory Class
+Purpose: This class is responsible for generating instances of the state classes dynamically based on the state name provided.
+Components:
+A static factory method getStateInstance(String stateName) that: Accepts the name of the state as input.
+Returns an instance of the corresponding state class (Maharashtra, Telangana, or NonState).
+Uses conditional logic (equalsIgnoreCase()) to determine the correct state class.
+
+4. Create the ELC Test Class
+Purpose: Serves as the entry point of the program to test the functionality.
+Steps:
+Call the static message() method from the CentralGovernment interface to display the welcome message.
+Prompt the user to input the name of the state.
+Use the StateFactory class to generate the appropriate state instance.
+Call the educationLoanScheme() method on the generated instance to display the loan scheme or a fallback message for non-participating states.
+
+TEST CASE 1 :
+=============
+Sample Input :
+Enter the name of your state:
+Maharashtra
+
+Sample Output :
+Welcome to the Central Government Education Loan Scheme!
+Maharashtra Education Loan Scheme: Base Amount = 20000.0, Additional Amount = 10000.0
+
+-------------------
+
+TEST CASE 2 :
+=============
+Sample Input :
+Enter the name of your state:
+Telangana
+
+Sample Output :
+Welcome to the Central Government Education Loan Scheme!
+Telangana Education Loan Scheme: Base Amount = 20000.0, Additional Amount = 15000.0
+
+
+-------------------
+
+TEST CASE 3 :
+=============
+Sample Input : 
+Enter the name of your state:
+Karnataka
+
+Sample Output :
+Welcome to the Central Government Education Loan Scheme!
+Yet, Your State is not providing any loan facility.
+
+
+##########################################################
+
+Que 2 :
+======
+
+Create an abstract class named Student with the following specifications:
+ - Instance Variables:
+     - studentName (protected String): 
+     - studentClass (protected String): 
+     - totalNoOfStudents (protected static int): Tracks the total number of students.
+
+ - Methods:
+    - An abstract method getPercentage() that returns an int.
+    - A static method getTotalNoOfStudents() that returns the total number of students.
+
+- Constructors:
+     - A no-argument constructor.
+     - A parameterized constructor that initializes the name and class of the student and increments the total number of students.
+
+            
+Create a subclass named ScienceStudent that inherits from Student with the following specifications:
+
+ - Instance Variables:
+     - physicsMarks (private int): 
+     - chemistryMarks (private int): 
+     - mathsMarks (private int): 
+
+ - Constructor:
+     - A parameterized constructor that initializes all instance variables, including those in the parent class.
+
+ - Methods:
+     - Method Name :- getPercentage() method to calculate average of marks or percentage
+        Return type :-   double 	
+
+     - Method Name :- isPromoted() that checks if the student has failed in two or more subjects (marks below 40) or its's total percentage is less than 60 % then it's not promoted to next batch otherwise it's promoted to next batch.
+      -Return type :-   boolean
+
+Create another subclass named ArtsStudent that inherits from Student with the following specifications:
+- Instance Variables:
+     - historyMarks (private int): 
+     - civicsMarks (private int): 
+     - english Marks(private int):
+     - social Science(private int):
+
+- Constructor:
+     - A parameterized constructor that initializes all instance variables, including those in the parent class.
+
+- Methods:
+     - Method Name :- getPercentage() method to calculate average of marks or percentage
+        Return type :-   double 	
+
+     - Method Name :- isPromoted() that checks if the student has failed in two or more subjects (marks below 40) or its's total percentage is less than 60 % then it's not promoted to next batch otherwise it's promoted to next batch.
+      -Return type :-   boolean
+
+Create a StudentTester class with the following 
+specifications:
+ - In the main method, test the implementation of ScienceStudent and ArtsStudent.
+ - Display the name, percentage, promotion status, and total number of students.
+
+
+Sample Input :
+-------------------
+For a ScienceStudent:
+
+Name: Biren
+Class: 11th
+Marks: Physics = 85, Chemistry = 40, Maths = 95
+
+
+For a ArtsStudent:
+
+Name: Virat
+Class: 11th
+Marks: History = 70, Civics = 35,English=60,Social=35;
+
+Sample Output :
+--------------------
+Science Student: Biren
+Percentage: 73%
+Promoted: Yes
+
+History Student: Virat
+Percentage: 66%
+Promoted: No
+
+Total Number of Students: 2
+
+#######################################################
+
+                                 SQL EXAM
+                                ==========
+
+1.Find the state-wise and gender-wise population count from the 
+following PERSON table:
+
+   PID	    PNAME     GENDER     STATE
+  -----   --------   --------   -------
+    1	  SUBBARAO	M	  AP
+    2	   KAVYA	F	  TS
+    3	   KIRAN	M	  TS
+    4	  GOWTHAM	M	  AP
+    5	   KERTHI	F	  AP
+    6	   SURYA 	M	  AP
+    7	  ANUSHKA	F	  AP
+    8	   RAJU  	M	  TS
+
+2.Write a query to display the year and the number of employees hired per year
+  from the EMP table using GROUP BY?
+
+3.Write a query to display duplicate records from the TEST table?
+
+
+SQL>SELECT * FROM test;
+
+      deptno
+    ---------
+       10
+       10
+       10
+       20
+       20
+       20
+       30
+       30
+       40
+       50
+
+4.Write a query to display the employee names and their manager names
+  from the EMP table by using a self-join?
+
+5.Write a query to display the employees working in the location 'Chicago' 
+  from the EMP and DEPT tables?
+
+6.Write a query to display the employees who are getting the same salary as
+ SCOTT's salary from the EMP table using a self-join?
+
+7.Write a query to display the employees who are getting more salary than 
+  the highest-paid employee in the 20th department 
+  from the EMP table?
+
+8.Write a query to display the senior-most employee details
+  from the EMP table?
+
+9.Write a query to display the second-highest salary from the EMP table?
+
+10.Establish the relationship between the COURSE and STUDENT tables 
+  by using Primary Key and Foreign Key
+
+COURSE Table:
+============
+CID	CNAME
+
+STUDENT Table:
+=============
+SID	SNAME	CID
+
+
+
+
+

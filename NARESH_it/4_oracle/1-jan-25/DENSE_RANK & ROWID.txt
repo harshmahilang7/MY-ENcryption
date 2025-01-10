@@ -1,0 +1,164 @@
+                          ANALYTICAL FUNCTIONS & ROWID
+                       =================================
+
+Analytical functions
+====================
+Oracle having following analytical functions.these are
+   1.row_number()
+   2.rank()
+ *
+***3.dense_rank()
+ *
+
+
+syntax:-
+=======
+Analytical functionname()over
+    (partition by columnname
+     order by columnname[asc/desc])
+
+   these 3 analytical functions automatically assigns ranks either
+group wise or rows wise in a table.
+
+   Row_number() analytical function automatically assigns different
+rank numbers when values are same whereas rank(),dense_rank() 
+functions automatically assigns same rank numbers when values are
+same and also rank() skips next consecutive rank numbers where as
+dense_rank() does not skips next consecutive rank numbers
+
+eg:-
+=====
+ROW_NUMBER():-
+=============
+
+        DEPTNO       ENAME        SAL         R
+       --------     --------    -------     -----
+          20         SCOTT        2000        1
+          20         FORD         2000        2
+          20         JONES        3000        3
+          20         ALLEN        4000        4
+          20         SMITH        5000        5
+          20         MILLER       5000        6
+          20         MARTIN       5000        7
+          20         ADAMS        6000        8
+
+
+
+RANK():-
+========
+
+       DEPTNO       ENAME        SAL         R
+       --------     --------    -------     -----
+          20         SCOTT        2000        1
+          20         FORD         2000        1
+          20         JONES        3000        3
+          20         ALLEN        4000        4
+          20         SMITH        5000        5
+          20         MILLER       5000        5
+          20         MARTIN       5000        5
+          20         ADAMS        6000        8
+
+
+DENSE_RANK():-
+=============
+ 
+         DEPTNO       ENAME        SAL         R
+       --------     --------    -------     -----
+          20         SCOTT        2000        1
+          20         FORD         2000        1
+          20         JONES        3000        2
+          20         ALLEN        4000        3
+          20         SMITH        5000        4
+          20         MILLER       5000        4
+          20         MARTIN       5000        4
+          20         ADAMS        6000        5
+
+
+-----------------------------------------------------------------------------------
+ *
+***Write a query to display 2nd highest salary employee 
+ *  from emp table by using analytical function
+
+SQL> select * from(select ename,sal,dense_rank()over(order by sal desc)r from emp)
+      where r=2;
+
+ENAME             SAL          R
+---------- ---------- ----------
+ALLEN            3600          2
+
+
+ 
+2.Write a query to display 2nd highest salary employee in each 
+  department from emp table by using analytical function
+
+
+3.Write a query to display 5th highest salary employee from emp 
+  table by using analytical function
+
+
+
+------------------------------------------------------------------------------------
+
+ *
+***ROWID:-
+ * ===== 
+
+ Rowid is a pseudo column.it behaves like a table column.rowid stores
+physical address of a row in a table.whenever we are inserting a 
+record into a table then oracle server internally automatically
+generates an unique identification number in hexadecimal format 
+for identifing a record uniquely.this is called rowid.
+
+  Generally in oracle by using rowid we are retriving data very fastly
+from oracle database.that's why rowid querys improve performance of
+the application.
+
+ in oracle by default rowids are in ascending order.that's why we can
+also use min(),max() functions in rowids.
+
+
+
+ *
+***Delete duplicate rows from a table
+ * ==================================
+
+ in all relational databases delete duplicate rows except one row in
+each group in a table is also called as delete duplicate rows in a
+table.if we want to delete duplicate rows from a table then we must
+use rowid.
+
+1.Write a query to delete duplicate rows from following TEST table
+
+SQL>create table test(sno number(10));
+SQL>insert into test values(.......);
+SQL>select * from test;
+          
+         deptno
+      ----------
+           10
+           10
+           10
+           20
+           20
+           20
+           30
+           30
+           40
+           50
+
+SQL>delete from test
+    where rowid not in(select min(rowid) from test group by deptno);
+   
+4 rows deleted
+
+SQL> select * from test2;
+
+    DEPTNO
+----------
+        10
+        20
+        30
+        40
+        50
+
+------------------------------------------------------------------------------------
