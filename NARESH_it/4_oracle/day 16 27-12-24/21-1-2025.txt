@@ -1,0 +1,150 @@
+
+SQL> DECLARE
+  2     cursor c1 is select ename,sal,from emp;
+  3     vename emp.ename%TYPE;
+  4     vsl    emp.sal%TYPE;
+  5  BEGIN
+  6    OPEN c1;
+  7  LOOP
+  8    FETCH c1 into  vename,vsl;
+  9  EXIT WHEN c1%NOTFOUND;
+ 10  DBMS_OUTPUT.put_LINE(vename ||'  ' ||vsl);
+ 11  END LOOP;
+ 12  CLOSE c1;
+ 13  END;
+ 14  /
+   cursor c1 is select ename,sal,from emp;
+                                 *
+ERROR at line 2:
+ORA-06550: line 2, column 34:
+PL/SQL: ORA-00936: missing expression
+ORA-06550: line 2, column 17:
+PL/SQL: SQL Statement ignored
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2     cursor c1 is select ename,sal from emp;
+  3     vename emp.ename%TYPE;
+  4     vsl    emp.sal%TYPE;
+  5  BEGIN
+  6    OPEN c1;
+  7  LOOP
+  8    FETCH c1 into  vename,vsl;
+  9  EXIT WHEN c1%NOTFOUND;
+ 10  DBMS_OUTPUT.put_LINE(vename ||'  ' ||vsl);
+ 11  END LOOP;
+ 12  CLOSE c1;
+ 13* END;
+SQL> /
+SMITH  800
+ALLEN  1600
+WARD  1250
+JONES  2975
+MARTIN  1250
+BLAKE  2850
+CLARK  2450
+SCOTT  3000
+KING  5000
+TURNER  1500
+ADAMS  1100
+JAMES  950
+FORD  3000
+MILLER  1300
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2     cursor c1 is select ename,sal from emp;
+  3     vename emp.ename%TYPE;
+  4     vsl    emp.sal%TYPE;
+  5  BEGIN
+  6    OPEN c1;
+  7    FETCH c1 INTO vename,vsl;
+  8  WHILE(c1%FOUND)
+  9  LOOP
+ 10    FETCH c1 into  vename,vsl;
+ 11  EXIT WHEN c1%NOTFOUND;
+ 12  DBMS_OUTPUT.put_LINE(vename ||'  ' ||vsl);
+ 13  END LOOP;
+ 14  CLOSE c1;
+ 15* END;
+SQL> /
+ALLEN  1600
+WARD  1250
+JONES  2975
+MARTIN  1250
+BLAKE  2850
+CLARK  2450
+SCOTT  3000
+KING  5000
+TURNER  1500
+ADAMS  1100
+JAMES  950
+FORD  3000
+MILLER  1300
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2     cursor c1 is select ename,sal from emp;
+  3     vename emp.ename%TYPE;
+  4     vsl    emp.sal%TYPE;
+  5  BEGIN
+  6    OPEN c1;
+  7   WHILE(c1%FOUND)
+  8  LOOP
+  9    FETCH c1 into  vename,vsl;
+ 10  EXIT WHEN c1%NOTFOUND;
+ 11  DBMS_OUTPUT.put_LINE(vename ||'  ' ||vsl);
+ 12  END LOOP;
+ 13  CLOSE c1;
+ 14* END;
+SQL> /
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2     cursor c1 is select ename,sal from emp;
+  3     vename emp.ename%TYPE;
+  4     vsl    emp.sal%TYPE;
+  5  BEGIN
+  6    OPEN c1;
+  7  FETCH c1 into vename,vsl;
+  8   WHILE(c1%FOUND)
+  9  LOOP
+ 10    FETCH c1 into  vename,vsl;
+ 11  EXIT WHEN c1%NOTFOUND;
+ 12  DBMS_OUTPUT.put_LINE(vename ||'  ' ||vsl);
+ 13  END LOOP;
+ 14  CLOSE c1;
+ 15* END;
+SQL> /
+ALLEN  1600
+WARD  1250
+JONES  2975
+MARTIN  1250
+BLAKE  2850
+CLARK  2450
+SCOTT  3000
+KING  5000
+TURNER  1500
+ADAMS  1100
+JAMES  950
+FORD  3000
+MILLER  1300
+
+PL/SQL procedure successfully completed.
+
+SQL>

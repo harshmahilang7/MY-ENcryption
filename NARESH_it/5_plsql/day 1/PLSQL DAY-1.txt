@@ -1,0 +1,196 @@
+                            PL/SQL
+                         ============
+
+
+1.declaring a variable
+======================
+  in declare section of pl/sql block by using following syntax
+
+syntax:-
+=======
+variablename datatype(size);
+
+2.storing a value into variable:-
+================================
+by using assignment operator(:=) we can also store a value into 
+variable
+
+syntax:-
+=======
+variablename:=value;
+
+.we can also use this assignment operator(:=) either in declare
+section or in executable section in pl/sql block.
+
+eg:-
+===
+declare
+a number(10);
+begin
+a:=80;
+end;
+/
+
+3.display a message or variable value:-
+======================================
+syntax:-
+=======
+dbms_output.put_line('message');
+
+dbms_output.put_line('variablename');
+    |          |
+package      procedure
+name         name
+
+.This package is used in either in executable section or in exception
+ section of pl/sql block.
+
+eg:-
+===
+begin
+dbms_output.put_line('welcome');
+end;
+/
+
+PL/SQL procedure successfully completed
+
+  whenever we are passing any data into dbms_output package then 
+that data not visible in sql plus tool.because whenever we are
+using dbms_output then oracle server internally automatically 
+creates a buffer.if we want to retrieve this buffer data into
+sqlplus tool then we must set server output envinornment variable
+at sql prompt by using following syntax.
+
+SQL<set serveroutput on;
+SQL>/
+welcome
+
+-----------------------------------------------------------------------------------
+
+1.Write a PL/SQL program to print a message 'WELCOME TO PL/SQL  
+  CLASSES FOR MY DEAR WONDERFULL BATACH39' on screen?
+
+Develop PL/SQL program:-
+======================
+.open any text editor like notepad,editplus,notepad++
+
+.write following code
+
+  begin
+dbms_output.put_line('HELLo');
+end;
+/
+
+.save the file in "D:" drive, "PLSQLprograms" folder with the 
+ name 'HelloDemo.sql'
+
+compiling and run the PL/SQL program
+
+.open SQLPLUS
+
+.login as user
+
+.write the following commands.
+
+SQL>set serveroutput on;
+SQL>@d:\PLSQLprograms\HelloDemo.sql
+output:
+HELLO
+
+NOTE:-To avoid of displaying old and new parametes setverify off as
+      following
+
+SQL>set verify off;
+
+
+-----------------------------------------------------------------------------------
+
+2.Write a PL/SQL program to add 2 numbers.and two numbers are 
+  enter from runtime ?
+
+
+-----------------------------------------------------------------------------------
+ *
+*** select.....into clause:- 
+ *  ======================
+
+   select into clause is used to retrive data from table then that 
+data is storing into pl/sql variable.
+
+  select into clause always returns single record or single value
+at a time from a table.
+
+syntax:-
+=======
+select col1,col2.......into variable1,variable2.....
+from tablename where condition
+
+this clause is used in executable section of the pl/sql block.
+
+
+3.Write a PL/SQL program for user entered empno then display name
+  of the employee and his salary from emp table?
+
+------------------------------------------------------------------------------------
+
+4.Write a PL/SQL program which is used to retrive maximum salary
+      from emp table and store it into PL/SQL variable
+              and display maximum salary?
+
+
+------------------------------------------------------------------------------------
+
+5.Write a PL/SQL program to find maximum number from 2 numbers
+  and store it into another variable?
+
+note:-in pl/sql expressions we are not allowed to use group functions,
+=====  decode conversion functions.but we are allowed to use number
+      functions,character functions,date functions in pl/sql 
+      expressions
+
+
+
+------------------------------------------------------------------------------------
+
+6.Write a PL/SQL program for user entered empno then display 
+      all details of employee from emp table by using 
+               row level attributes?
+
+ *
+***row level attributes:-in this method a single variable can represent
+ * ====================  all different data types in a row with in a
+table this variable also called as record type varibale.it is also
+same strucutures in c language.Row level attributes are represented
+by using %rowtype.
+
+synatax:-
+========
+variablename tablename%rowtype;
+
+eg:-
+declare                 perticular cell you want(.notation)
+i emp%rowtype;          /
+                    i.ename              i.hiredate  i.sal
+    i                /                        /       /
+  -----     empno  ename    job     mgr   hiredate   sal  comm  deptno
+  | . |---->7902   FORD   ANALYST   7566  03-DEC-81  4900        20
+  -----
+
+------------------------------------------------------------------------------------
+
+7.Write a PL/SQL program to calculate the experience of the user
+  enter empno
+
+enter empno:7902
+experience is:42years
+
+------------------------------------------------------------------------------------
+
+8.Write a PL/SQL program eligible for voting system 
+
+if age is>=18 then display a msg:u r eligible for voting
+if age is<18 then display a msg :u not eligible for voting or
+                                 better luck next time
+
+------------------------------------------------------------------------------------
+
