@@ -1,0 +1,89 @@
+                                                                CURSORS
+                                                             ------------
+
+
+1.Write a PL/SQL cursor program to calculate total,averege and result of all students.
+
+   STUDENT
+  SID      SNAME       M1     M2     M3
+  1001    GOWTHAM      80     60     80
+  1002    RAJU         50     30     60
+
+  RESULT
+  SID      TOTAL      AVG      RESULT
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+2.Write a PL/SQL cursor program to increase salary of all employees based on hike table percentage.
+
+employee                                     hike
+empno       ename          sal               empno      per
+1001       gowtham         5000              1001       10
+1002        raju           3000              1002       20
+1003        kiran          7000              1003       15
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Eliminating explicit cursor life cycle
+         (or)
+cursor for loop
+
+  in oracle we can also eliminate explicit cursor life cycle by using
+cursor for loop.This method also called as shortcut method of the 
+explicit cursor.whenever we are using cursor for loop then we are
+not required to use open,fetch,close statements in pl/sql block
+because when we are using cursor for loop then oracle server only
+internally automatically open the cursor and then fetch data from the
+cursor and also close the cursor automatically after processing.
+
+ cursor for loop syntax:-
+ =======================
+syntax:-
+======
+for indexvariablename in cursorname
+loop
+stmts;
+end lop;
+
+  This cursor for loop is used in executable section of
+the pl/sql.
+
+***NOTE:-In cursor for loop index variable internally behaves
+======== like a record type variable(%rowtype)
+
+NOTE:-in pl/sql we can also eliminate declare section of the 
+=====    cursor....for loop.in this case we must specify cursor
+         select statement in place of cursorname within cursor
+         for loop;
+
+syntax:-
+======
+for indexvariablename in(select statement)
+loop
+stmts;
+end loop;
+
+EG:-
+===
+begin
+for i in c1(select * from emp)
+loop
+dbms_output.put_line(i.ename||' '||i.sal);
+end loop;
+end;
+/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.Write a pl/sql explicit cursor program which is used to display
+  5th record from emp table by using cursor for loop
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Write a pl/sql explicit cursor program which is used to display
+   total salary from emp table without using sum() function
+            by using cursor for loop?
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+

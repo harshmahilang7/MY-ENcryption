@@ -1,0 +1,68 @@
+                        PROCEDURES
+                     ===============
+
+1.Write a pl/sql stored procedure for passing empno as a IN
+     parameter then display name of the employee and 
+             his salary from emp table?
+
+----------------------------------------------------------------------
+2.write a pl/sql stored procedure for passing deptno as a IN  
+     parameter then display employee details from emp table 
+           based on passed department number?
+
+
+----------------------------------------------------------------------
+3.write a pl/sql stored procedure which is used to insert a record
+  into dept table by using in parameter
+
+
+----------------------------------------------------------------------
+4.Write a PL/SQL stored procedure for passing ename as IN
+     parameter then return sal of the employee from
+          emp table by using out parameter?
+
+
+----------------------------------------------------------------------
+5.Write a pl/sql stored procedure which is used to converts
+   following group by clause report into in,out parameters
+                 from emp table?
+
+SQL>select deptno,count(*)
+    from emp
+    group by deptno;
+
+    DEPTNO        COUNT(*)
+   --------      ----------
+      30             6
+      10             3
+      20             5
+
+
+----------------------------------------------------------------------
+5.write a pl/sql stored procedure for passing deptno is in 
+   parameter then return dname,location from dept table
+          by using out parameter?
+
+
+----------------------------------------------------------------------
+6.write a pl/sql stored procedure for passing empno as parameter 
+  then return sal of employee from emp table by using in out 
+  parameter
+
+----------------------------------------------------------------------
+7.Write PL/SQL stored procedure for withdraw
+
+Accno          Name          Bal
+------        -------     ---------
+1001          subbarao       3000
+1002          gowtham        4000
+
+
+if user entered amount is more than avaliable
+ balance than---->insuffiencient founds
+
+if user entered amount is less than avaliable 
+ balance than ---->update his bal
+
+
+
