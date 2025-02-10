@@ -1,0 +1,171 @@
+<!-- 
+  @Author: Dastan Alam harsh mahilang
+  @Date:   2025-02-07 10:12:43 AM   10:02
+  @Last Modified by:   Dastan Alam harsh mahilang
+  @Last Modified time: 2025-02-07 10:12:45 AM   10:02
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap installtion of the CDN links  -->
+    <!-- These links must be used in the header only this will allow you to use the bootstrap css while connected to internet  -->
+    <!-- To use the basic css you have to add the bootstrap css CDN link -->
+    <!-- This link and all the classes that you are going to use are available in the bootstar docs -->
+
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    /> -->
+
+    <!-- To use the dynamic components of the bootstrap css you have to make sure that you added the bootstrap javascript file -->
+    <!-- this file allow to use some basic / predefined animation or effects applied to the components -->
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <!-- 
+        -> The bootstrap is a framework for the CSS which provides predefined classes to use with the HTML
+            these classes allows to design the elements as you want without writing the number of lines CSS.
+
+        -> Bootstrap provides predefined classes to design the webpage and it makes the developers task simple. 
+
+        -> You will find the bootstrap play CDN links and documentation on https://getbootstrap.com/
+    -->
+    <!-- 
+        ->  if you want to modify the bootstrap classes you cannot modify it directly while using the CDN links 
+            to modify the bootstrap classes you have to install bootstrap in your system using the Node.js
+
+        -> To install Node.js follow the steps given below
+            1) Download Node.js from https://nodejs.org .
+            2) Install Node js in your system by following the steps mentioned in the Node installer.
+            3) To confirm the Node.js installation follow the steps :
+                -> open command prompt 
+                -> type command : node -v // if it displays the node version means the node is installed 
+            4) once you installed the node you have to install the bootstrap from the npm repository.
+                (NPM (Node Package Manager) is a tool for managing all the packages required for Node.js)
+                -> To install the bootstrap follow the steps :
+                    1) open VS Code -> open the folder where you have to save your webpages.
+                    2) open the integrated terminal in the vs code and make sure that it uses the current folder path
+                    3) in the terminal type command : npm install bootstrap --save  to install the bootstrap in your current folder.
+                    4) once you run the above command it will add the folder node_modules in your current folder 
+                    5) inside the node modules you can see the bootstrap is installed in your folder and its ready to use
+                    6) once the bootstrap is installed you can now use the bootstrap offline by using the file path
+
+                        -> add the bootstrap css path as a link in your head section 
+                                ex: <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+                        -> add the bootstrap js file as well.
+                                ex: <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+                    once this done you will now able to use the bootstrap in your webpage.
+
+            5) if you want to modify the bootstrap predefined values like colors, fonts :
+                -> open the node modules folder 
+                    -> go to bootstrap/dist/css 
+                    open the bootstrap.css file to and thats it now you can modify anything here.
+        -->
+
+    <!-- 
+        
+            lets build a small login form with the bootstrap classes and compared with the core css.
+        -->
+    <div class="container">
+      <!-- container is predefined class in bootstrap to make the div flexible -->
+      <div class="container-fluid border vh-100 w-100">
+        <!-- here the container-fluid is used to make the div responsive and adds some extra margin and padding to the container -->
+        <!-- you can use the multiple classes for a single html element separated by spaces -->
+        <!-- The w class specifies the width for the element as it values are fixed like you can set only w-25 (25% of the viewport), w-50 (50% of the viewport), w-75 (75% of the viewport), w-100 (100% of the viewport), -->
+        <!-- vh class specifies the verticle height for the element and its values are also fixed as the width -->
+        <form
+          action=""
+          class="container-fluid h-100 w-100 d-flex flex-column justify-content-center align-items-center"
+        >
+          <div
+            class="w-50 border d-flex flex-column shadow rounded-3 p-2 justify-content-center align-items-center"
+          >
+            <!-- border class will apply some border to the container-->
+            <!-- the shadow class will apply the basic shadow to the cotainer and rounded will apply the border-radious to the element and p will apply the padding -->
+            <!-- 
+          
+            if we design the above form in core css it looks like :
+
+            form
+                {
+                    border: 1px solid;
+                    height: 100%;
+                    width: 100%;
+                    margin-top: 2%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+            div
+                {
+                    width: 50%;
+                    border:1px solid;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 1px 1px 3px gray;
+                    border-radious: 3px;
+                    padding:2%;
+                
+                }
+
+           -->
+            <h4>Login</h4>
+            <div class="mb-2 w-50">
+              <!-- mb sets the bottom margin for the element and it ranges from 1 to 6 -->
+              <label for="username" class="form-check-label mb-2"
+                >Username:</label
+              >
+              <!-- form-check-label class sets the label is used for labelling the form elements -->
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Username"
+                id="username"
+                name="username"
+              />
+              <!-- The form-control is used to design the input fields which adds some colors and effects to the text fields -->
+            </div>
+            <div class="mb-2 w-50">
+              <label for="username" class="form-check-label mb-2"
+                >password:</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                placeholder="password"
+                id="password"
+                name="password"
+              />
+            </div>
+            <div class="mb-2 w-50">
+              <button type="submit" class="btn btn-success w-25">Login</button>
+              <!-- here the btn is base class for the button which defines the button without border and color -->
+              <!-- btn-success is the class to display the button with the green backeround color and white text -->
+              <!-- you can also use btn-danger(red background), btn-primary(blue background), btn-outline-success ( to display the button with the green outline and no background color) -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

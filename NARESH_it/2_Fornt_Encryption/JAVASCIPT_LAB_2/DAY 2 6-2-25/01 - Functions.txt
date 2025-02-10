@@ -1,0 +1,103 @@
+JavaScript Functions :
+
+
+	-> Sometimes we need to perform the similar operations / logic in the scripts to perform these action without repetition we can use the functions.
+	-> Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition.
+
+Function Declaration :
+	-> To create a function we can use a function declaration using the function keyword followed by name and curly braces we can declare a function.
+
+		ex:
+		function WelcomeMessage() {
+		    alert( 'Hello everyone!' );
+		}
+	
+	-> The function keyword and then user given name of the function, then a list of parameters between the parentheses and finally the code of the function, also called “the 	   	   function body”, between curly braces.
+	-> Name of the function can be anything it depends on the developer.
+
+	-> The function can be parameterized so at the calling phase of the function user can pass some arguments to the function.
+		
+		ex:
+		function parameterFunction(parameter1, parameter2) {
+			 // body
+		}
+
+Function calling :
+	-> The function can be called by its name: WelcomeMessage().
+
+		ex:
+		function WelcomeMessage() {
+  			alert( 'Hello everyone!' );
+		}
+
+		showMessage();
+		showMessage();
+
+Function Parameters :
+	-> We can pass the data(arguments) to the function so based on that arguments the function will act.
+
+		ex.
+		function WelcomeMessage(from, message) { // parameters: from, text
+  			alert(from + ': ' + text);
+		}
+
+		WelcomeMessage('Ravi', 'Hello!'); // Ravu: Hello!
+		WelcomeMessage('Ram', "What's up?"); // Ram: What's up?
+
+	-> When we pass the arguments to the function the values gets copy in the functions parameter variables and while the function is executing it will use these values.
+	-> When a value is passed as a function parameter, it’s also called an argument.
+
+	Note :
+	-> A parameter is the variable listed inside the parentheses in the function declaration (it’s a declaration time term).
+	-> An argument is the value that is passed to the function when it is called (it’s a call time term).
+	-> when the function is called and the arguments are not provided the values of the parameters are undefined.
+
+Default Parameter: 
+	-> We can specify the so-called “default” value for a parameter in the function declaration, using = operator.
+	-> if the arguments are not passed to the function or the undefined is passed to the function as argument then instead of undefined it will show the default value.
+
+		ex:
+		function WelcomeMessage(from, message = "no message given") {
+ 			 alert( from + ": " + text );
+		}
+
+		WelcomeMessage("Ravi"); // Ravi: no message given
+
+	-> in the above example the second argument is not passed so the value of the second parameter remains undefined, instead of displaying the undefined value we are defining some
+	   default value for the parameter, so when the argument is not passed to the function it will display the default value.
+
+Return statement / directive for the Functions :
+	-> The return statement / directive is used to return some values from the functions.
+	-> The return is also called as control statement, so sometime using the return statement we can control the execution of the program.
+		
+		Ex:
+		function calculateSum(a, b) {
+  			return a + b;
+		}
+
+		let sum = calculateSum(10, 20);
+		alert( sum ); // 30
+
+	-> we can write the return keyword anywhere in the function and when the execution reaches the return statement the execution gets stopped and the function return some value that
+	   can be stored in variable at the time of calling the function (in the above example let sum = calculateSum(10, 20)).
+
+		ex.
+
+			function checkEven(num) {
+ 				if (num % 2 == 0) {
+    					return true;
+  				} else {
+   					return false;
+  				}
+			}
+
+			let num = prompt('Enter the Number', 2);
+
+			if (checkEven(num)) {
+ 				alert( 'Even Number' );
+			} else {
+  				alert( 'Odd Number' );
+			}
+
+	-> We can use the return statement without the value, so the function will automatically terminate when the execution reaches the return statement.
+

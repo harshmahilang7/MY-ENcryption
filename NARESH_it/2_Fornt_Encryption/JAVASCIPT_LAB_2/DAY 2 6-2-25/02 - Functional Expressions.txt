@@ -1,0 +1,85 @@
+Function Expression in JavaScript :
+	
+	-> In a JavaScript we can assign the function to the variable as value, it is called as function expression.
+	-> when we assign a function to the variable the variable acts as a function and performs the specified task.
+
+	ex : 
+		1) Named Function :
+				function welcomeMessage() {
+  					alert( "Hello JavaScript" );
+				}
+	-> here the above function declaration is also called as named functions in JavaScript where user can create the function in normal way.
+	-> but there is a another way or syntax to declare a function which is called as function expression that can be assigned to the variable.
+
+		2) Function Expression :
+				let welcomeMessage = function() {
+  					alert( "Hello JavaScript" );
+				};
+	
+	-> The function is always treated as a value no matter how it was created.
+	-> and it can be assigned to the variable.
+	-> in the above both examples the function name welcomeMessage in the first example and the variable welcomeMessage in the second example both are treated as the variables.
+	   and the function body is treated as the value.
+	-> We can also copy the one function to another using the function name.
+		ex: 
+			function welcomeMessage(){
+				alert("hello JavaScript");
+			}
+			
+			let func = welcomeMessage;
+
+		-> in this example the function named welcomeMessage() is copied into the variable named func.
+		-> now the func will act as the function.
+		Note: 	
+			-> make sure that while copying the function you should not use the parenthesis, if you used then the function will gets executed and stores its return value into 			   the func variable.
+	
+Callback Functions :
+
+		-> JavaScript allows us to pass the functions as arguments to the diffrent function prameter is called as the callback functions.
+
+		ex:
+			function findSum( a , b , function1, function2 ){
+
+				if(a < 0 || b < 0){
+					function1();
+				}else if ( a==0 || b == 0 ){
+					function2();
+				}else{
+					console.log(a+b);
+				}
+			}
+			
+			function negative(){
+
+				console.log("the number is negative");
+			}
+
+			function zero(){
+
+				console.log("the number is 0");
+			}
+
+			findSum(10,20, negative, zero);
+
+
+		-> In the above example the function negative() and zero() are passed as an argument to the function findSum() as the function1() and function2() respectively and the logic 		   written to check the number is negative or zero, if the number is zero then it will execute the function2() which is the copy of the function zero() and so on.
+		-> The main usecase of the callback functions are to call the functions later if neccessary.
+
+Arrow Function :
+
+		-> In a JavaScript there is one more way to create the function which is called as the arrow function.
+		-> Arrow functions are similar to the function expression but it has some difference in the syntax, like the function expression we can assign the arrow function to the 		   variable.
+		-> Arrow functions are declared without using the function keyword and only by using () parenthesis and the => arrow and then the function body.
+		
+			ex:
+
+			1)	let func = function(param1, param2) {
+  					return value;
+				};
+		 
+			2)	let arrowFunc = (param1, param2) => {
+  					return value;
+				};
+
+		-> The above two examples are works exact same but the first example is a function expression and the second one is the arrow function.
+		 
