@@ -1,0 +1,1 @@
+package own_functional_interface_with_Type_parameter;
