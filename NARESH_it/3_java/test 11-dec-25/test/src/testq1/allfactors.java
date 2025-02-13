@@ -1,0 +1,37 @@
+package testq1;
+
+import java.util.function.Consumer;
+
+//Que 1) : (5 MARKS)
+//=================
+//
+//Write a java program to print all factors of given number using Consumer functional interface.
+//
+//Sample Input : 
+//--------------
+//input number : 24 
+//
+//
+//Sample Output :
+//----------------
+//1 2 3 4 6 8 12 24
+
+public class allfactors {
+
+	public static void main(String[] args) {
+		Consumer<Integer> ob=(x)-> 
+		{
+			for(int i=1;i<=x;i++)
+			{
+				if(x%i==0)
+				{
+					System.out.print(i+" ");
+				}
+			}
+		};
+		
+		ob.accept(24);
+
+	}
+
+}

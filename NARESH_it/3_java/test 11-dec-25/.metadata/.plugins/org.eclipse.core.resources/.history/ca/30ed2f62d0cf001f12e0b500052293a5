@@ -1,0 +1,28 @@
+package testq2;
+
+import java.util.function.Predicate;
+
+//Que 2) : (10 MARKS)
+//===================
+//
+//Write a java to find and print all prime palindrome numbers between 100 and 1000.
+//
+//Uses the Predicate<T> interface to check if a number is prime.
+//Uses the UnaryOperator<T> interface to reverse the digits of a number.
+//Uses the Predicate<T> interface to check if a number is a palindrome.
+//Uses the BiConsumer<T, U> interface to display numbers that satisfy both conditions: prime and palindrome.
+//
+//Sample Input :
+//---------------
+//100
+public class palindrome {
+
+	public static void main(String[] args) {
+		Predicate<Interger> prime=(x) ->
+		{};
+		UnaryOperator<Interger> reverse =(x)
+				{};
+
+	}
+
+}

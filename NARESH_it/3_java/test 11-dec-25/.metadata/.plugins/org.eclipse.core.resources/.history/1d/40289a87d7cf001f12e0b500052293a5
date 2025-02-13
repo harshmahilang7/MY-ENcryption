@@ -1,0 +1,30 @@
+package q3;
+
+import java.util.function.BiFunction;
+import java.util.function.Supplier;
+
+public class VehicleNumberPlateService implements StateCodeValidator ,StateInputHandler ,NumberPlateGenerator
+{
+
+	@Override
+	public boolean isValid(String StateCode) {
+		if(getStateCodeInput().length()==2)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	
+	Supplier<Integer> four= () ->
+	{
+		
+	
+	};
+	
+	BiFunction<String,Integer,String> CN=(c,n)->
+	{
+		return c+n;
+	};
+	
+}

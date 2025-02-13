@@ -1,0 +1,98 @@
+package testq2;
+
+import java.util.function.BiConsumer;
+import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
+
+//Que 2) : (10 MARKS)
+//===================
+//
+//Write a java to find and print all prime palindrome numbers between 100 and 1000.
+//
+//Uses the Predicate<T> interface to check if a number is prime.
+//Uses the UnaryOperator<T> interface to reverse the digits of a number.
+//Uses the Predicate<T> interface to check if a number is a palindrome.
+//Uses the BiConsumer<T, U> interface to display numbers that satisfy both conditions: prime and palindrome.
+//
+//Sample Input :
+//---------------
+//100
+public class palindrome {
+
+	public static void main(String[] args) {
+		Predicate<Integer> prime=(x) ->
+		{
+			int count=0;
+			for(int i=2;i*i<x;i++)
+			{
+				if(x%i==0)
+				{
+					count++;
+				}
+			}
+			
+			if(count==0)
+			{
+				return true;
+			}
+			else 
+				return false;
+		};
+		UnaryOperator<Integer> reverse =(x) ->
+				{
+					Integer copy=x;
+					Integer sum=0;
+					while (copy!=0)
+					{
+						Integer rev=copy%10;
+						sum=sum*10+rev;
+						copy/=10;
+					}
+					return sum;
+				};
+
+		Predicate<Integer> palindrome = (x) ->
+		{
+			Integer copy=x;
+			Integer sum=0;
+			while (copy!=0)
+			{
+				Integer rev=x%10;
+				sum=sum*10+rev;
+				copy/=10;
+			}
+			if(x==sum)
+			{
+				return true;
+			}
+			else 
+				return false;
+		};
+		
+		
+		BiConsumer<Integer,Integer> pp = (x,y) ->
+		{
+			if(prime.test(x)&&palindrome.test(y))
+			{
+				System.out.println("Prime Palindrome "+x);
+			}
+		};
+
+//		System.out.println(prime.test(5));
+
+	    System.out.println("Prime Palindromes between 100 and 1000:");
+	    for(int q=100;q<=1000;q++)
+	    {
+
+	    	
+	    }
+    	pp.accept(5,5);
+		
+		
+		
+		
+		
+	}
+
+
+}

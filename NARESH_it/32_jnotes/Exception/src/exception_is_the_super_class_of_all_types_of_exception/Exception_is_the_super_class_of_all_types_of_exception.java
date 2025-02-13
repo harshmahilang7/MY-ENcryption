@@ -14,6 +14,8 @@ public class Exception_is_the_super_class_of_all_types_of_exception {
 		
 		Exception e2 = new InterruptedException();
 		System.out.println(e2.toString()); //java.lang.IE
+		
+//		Enumeration 
 
 	}
 

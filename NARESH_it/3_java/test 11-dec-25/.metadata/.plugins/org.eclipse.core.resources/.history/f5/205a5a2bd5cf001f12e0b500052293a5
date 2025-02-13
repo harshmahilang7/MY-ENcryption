@@ -1,0 +1,12 @@
+package q3;
+
+public class VehicleNumberPlateService implements StateCodeValidator 
+{
+
+	@Override
+	public boolean isValid(String StateCode) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

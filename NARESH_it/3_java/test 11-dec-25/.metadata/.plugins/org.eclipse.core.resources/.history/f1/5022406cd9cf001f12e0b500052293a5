@@ -1,0 +1,9 @@
+package q3;
+
+public interface StateInputHandler {
+	String getStateCodeInput()
+	{
+		String x="MP";
+		return x;	
+	}
+}
