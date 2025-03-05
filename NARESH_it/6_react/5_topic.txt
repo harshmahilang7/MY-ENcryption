@@ -1,0 +1,55 @@
+let, var , const 
+
+
+
+1. for Each -> itraration Each value of arry 
+         ->  no return
+
+2. map       ->  itraration Each value of arry  -> return allows
+
+3. module system  -> import export   -> jx6 module system 
+
+4. normal funtion vs expration 
+     hoseting vs hosting
+
+     what is call by funtion
+                        one funtion pass as parameter as anothor funtion
+
+                        arr.map(funtion)
+                            |     |
+                    high order  call back
+5. fetch   
+
+variable 
+funtion
+map,forEach
+modules
+async js
+fetch,promises
+
+async -> any action which is take time is async
+
+fetch -> fetch data from server
+
+promises -> state    
+               -> pending
+               -> fullfied
+               -> rejected
+
+promises -> start with pending goes to -> fullfied or rejected
+
+
+jsx -> html inside the javascript ( {} ) 
+    -> fagment  <>  </>  or <react.fagment> </react.fagment>
+
+component  -> component is a bulid block of react
+            -> reuseblity
+            -> modulurty
+            -> compility 
+
+how to set prop parent to  child 
+parent -> porp
+child  -> porp.object
+
+how to set prop child to parent
+

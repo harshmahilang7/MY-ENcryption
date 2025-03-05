@@ -7,8 +7,15 @@ public class DefaultMethod
 		
 		Vehicle v = null;
 		
-		v = new Car(); v.run(); v.horn(); v.digitalMeter();
-		v = new Bike(); v.run(); v.horn();v.digitalMeter();
+		v = new Car(); 
+		v.run(); 
+		v.horn(); 
+		v.digitalMeter();
+		
+		v = new Bike(); 
+		v.run(); 
+		v.horn();
+		v.digitalMeter();
 	}
 
 }

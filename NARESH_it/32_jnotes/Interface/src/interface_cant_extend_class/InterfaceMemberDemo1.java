@@ -11,23 +11,22 @@ interface Printable
 }
 class Print extends Object implements Printable
 {
-	/*public String toString()
-	 * {
-	 *     //Inherited from Object class
-	 * }
-	 * 
-	 * public int hashCode()
-	 * {
-	 * //Inherited from Object class
-	 * }
-	 * 
-	 * public boolean equals(Object obj)
-	 * {
-	 *    //Inherited from Object class
-	 * }
-	 * 
-	 * 
-	 */
+//	public String toString()
+//	  {
+//		return null;
+//	      //Inherited from Object class
+//	  }
+//	  
+//	  public int hashCode()
+//	  {
+//	  //Inherited from Object class
+//	  }
+//	  
+//	  public boolean equals(Object obj)
+//	  {
+//	     //Inherited from Object class
+//	  }
+	 
 }
 
 public class InterfaceMemberDemo1 

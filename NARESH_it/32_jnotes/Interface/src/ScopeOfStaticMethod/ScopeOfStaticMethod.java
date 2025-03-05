@@ -14,8 +14,8 @@ public class ScopeOfStaticMethod implements Printable
 	public static void main(String[] args) 
 	{
 		Printable.m1();
-		//ScopeOfStaticMethod.m1();		
-		//new ScopeOfStaticMethod().m1();
+//		ScopeOfStaticMethod.m1();		
+//		new ScopeOfStaticMethod().m1();
 	}
 
 }

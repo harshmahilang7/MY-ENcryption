@@ -3,17 +3,17 @@ package Lambda_Expression;
 //the following program explains that Lambda target must be 
 //functional interface only.
 @FunctionalInterface
-interface Drawable
+interface newDrawable
 {
 	void draw();
-	void drawing();   
+//	void drawing();   
 }
 
 
 public class LambdaDemo4 {
 	public static void main(String[] args) 
 	{
-	  Drawable d1 =	()-> System.out.println("Drawing"); 
+	  newDrawable d1 =	()-> System.out.println("Drawing"); 
 	  d1.draw();
 	}
 }
