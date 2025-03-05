@@ -1,0 +1,53 @@
+.left
+{
+     height: 30px;
+     width: 30%;
+}
+.left svg
+{
+     height: 30px;
+     /* width: 30%; */
+}
+
+.header
+{
+     background-color: black;
+     display: flex;
+     padding: 13px; 
+     padding-left: 20px;
+     padding-right: 20px;
+     justify-content: space-between;
+}
+.right
+{
+     display: flex;
+     color: white;
+     justify-content: space-between;
+     width: 39%;
+
+}
+.io
+{
+     text-align: center;
+     padding: 10px;
+
+}
+.joinNow
+{
+     background-color: red;
+     border: 2px ;
+     border-radius: 2px;
+     text-align: center;
+     padding: 10px;
+     padding-left: 30px;
+     padding-right: 30px;
+}
+.SignIn
+{
+     background-color: black;
+     border: 1px solid white;
+     border-radius: 2px;
+     text-align: center;
+     padding: 10px;
+
+}
