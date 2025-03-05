@@ -1,0 +1,144 @@
+Que 1) : (5 MARKS)
+=================
+
+Write a java program to print all factors of given number using Consumer functional interface.
+
+Sample Input : 
+--------------
+input number : 24 
+
+
+Sample Output :
+----------------
+1 2 3 4 6 8 12 24
+
+################################################
+
+Que 2) : (10 MARKS)
+===================
+
+Write a java to find and print all prime palindrome numbers between 100 and 1000.
+
+Uses the Predicate<T> interface to check if a number is prime.
+Uses the UnaryOperator<T> interface to reverse the digits of a number.
+Uses the Predicate<T> interface to check if a number is a palindrome.
+Uses the BiConsumer<T, U> interface to display numbers that satisfy both conditions: prime and palindrome.
+
+Sample Input :
+---------------
+100
+1000
+
+Sample Output :
+---------------
+Prime Palindromes between 100 and 1000:
+Prime Palindrome: 101
+Prime Palindrome: 131
+Prime Palindrome: 151
+Prime Palindrome: 181
+Prime Palindrome: 191
+Prime Palindrome: 313
+Prime Palindrome: 353
+Prime Palindrome: 373
+Prime Palindrome: 383
+Prime Palindrome: 727
+Prime Palindrome: 757
+Prime Palindrome: 787
+Prime Palindrome: 797
+
+
+################################################
+
+Que 3) : (15 MARKS)
+===================
+
+Generate State Vehicle Number Plate Using Functional Interfaces and Multiple Inheritance...
+
+Custom Functional Interface:
+----------------------------
+Create a interface StateCodeValidator :-
+
+ensures the StateCode is valid (exactly two uppercase letters).
+
+Method:-
+
+boolean isValid(String StateCode);
+----------------------------------
+Take one more interface to handle state code input from the user. Retrieves the state code from the user.
+Return The state code entered by the user. e.g :-Enter the state code (e.g., MH, KA):  like this pattern.
+
+Take another interface name :-StateInputHandler 
+
+it is having one default method :-
+
+default String getStateCodeInput(){}
+
+------------------------------------
+Take one more interface to handle the generation of the vehicle number plate.
+
+Interaface Name:-NumberPlateGenerator :
+
+Description :-
+
+[Generates the vehicle number plate by combining the state code and random number.]
+
+     stateCode             The validated state code.
+     randomNumber          The supplier for generating a random 4-digit number.
+     plateCombiner         The function to combine the state code and random number.
+
+    return   :-  The generated vehicle number plate.
+
+this interface is having one default method i.e :-
+
+default String generateNumberPlate(String stateCode, Supplier<Integer> randomNumber, BiFunction<String, String, String> plateCombiner) {}
+        
+------------------------------------------------------------------------------------------------
+
+Take a Main class VehicleNumberPlateService which implementing both the interface to generate the vehicle number plate.
+
+devlop the main method and inside this instantiate the implemented Class .
+
+step-1 :
+and use that reference invoke the method getStateCodeInput to  Get state code input.
+
+step:-2 :
+Validate the state code using a custom functional interface
+Check if the length is 2 and both characters are uppercase letters
+
+Step 3: Generate a random 4-digit number using a Supplier
+
+Step 4: Combine state code and random number using BiFunction
+
+Step 5: Generate the vehicle number plate
+
+Step 6: Display the generated vehicle number plate
+
+
+
+
+Sample Input :(case-1)
+-------------------
+FOR VALID INPUT 
+-----------------------
+Enter the state code (e.g., MH, KA,OD): OD
+
+Sample Output :
+----------------------
+Generated Vehicle Number Plate: OD-4444
+
+
+Sample Input :(case-2)
+-------------------
+FOR INVALID INPUT 
+-----------------------
+Enter the state code (e.g., MH, KA): Mh
+
+Sample Output :
+----------------------
+Invalid state code! Please enter exactly 2 uppercase letters.
+
+
+
+################################################
+
+

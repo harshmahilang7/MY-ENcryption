@@ -18,7 +18,7 @@ package No_default_method_override_public_method_of_Object_class;
 
 interface Moveable
 {
-	default String toString() //error becoz it is Object class {
+	default String toString() { //error becoz it is Object class {
 		return "NIT";
 	}
 }

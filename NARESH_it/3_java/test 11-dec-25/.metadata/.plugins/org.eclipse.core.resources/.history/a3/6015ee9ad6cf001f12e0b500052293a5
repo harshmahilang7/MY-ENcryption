@@ -1,0 +1,29 @@
+package q3;
+
+import java.util.function.Supplier;
+
+public class VehicleNumberPlateService implements StateCodeValidator ,StateInputHandler
+{
+
+	@Override
+	public boolean isValid(String StateCode) {
+		if(getStateCodeInput().length()==2)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	
+	Supplier<Integer> four= () ->
+	{
+		int rem=
+	
+	};
+	
+	BiFunction<String> CN=()
+	{
+		
+	};
+
+}

@@ -1,0 +1,15 @@
+package q3;
+
+public class VehicleNumberPlateService implements StateCodeValidator ,StateInputHandler
+{
+
+	@Override
+	public boolean isValid(String StateCode) {
+		if(getStateCodeInput().length==2)
+		{
+			return true;
+		}
+		return false;
+	}
+
+}

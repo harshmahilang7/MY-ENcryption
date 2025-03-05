@@ -1,0 +1,14 @@
+package q3;
+
+import java.util.function.BiFunction;
+import java.util.function.Supplier;
+
+public interface NumberPlateGenerator {
+	
+	static String generateNumberPlate(String stateCode, Supplier<Integer> randomNumber, BiFunction<String, String, String> plateCombiner) 
+	{
+		return stateCode+randomNumber.get()+plateCombiner.apply(stateCode, randomNumber);
+		
+	}
+
+}

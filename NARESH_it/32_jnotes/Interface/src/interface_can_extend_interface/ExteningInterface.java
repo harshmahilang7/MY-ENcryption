@@ -1,17 +1,40 @@
 package interface_can_extend_interface;
 
-abstract interface Alpha
+interface Alpha
 {
 	void m1();
+//	default void run()
+//	{
+//		System.out.println("hello");
+//	}
 }
 
-abstract interface Beta extends Alpha
+interface Beta extends Alpha
 {
 	void m2();
 }
 
 class Sub implements Beta
 {
+//	static interface newinterface  -> static interface 
+//	{
+//		void m2();
+//	}
+//	
+//	class mini implements newinterface
+//	{
+//
+//		@Override
+//		public void m2() {
+//			// TODO Auto-generated method stub
+//			
+//		}
+//
+//		
+//		
+//	}
+	
+
 	@Override
 	public void m1() 
 	{
@@ -31,7 +54,9 @@ public class ExteningInterface {
 	public static void main(String[] args)
 	{
 		Sub s1 = new Sub();
-		s1.m1();  s1.m2();
+		s1.m1();  
+		s1.m2();
+//		s1.run();
 
 	}
 

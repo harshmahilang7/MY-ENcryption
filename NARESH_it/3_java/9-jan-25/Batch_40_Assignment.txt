@@ -247,7 +247,8 @@ c) The exception is logged, but the program terminates.
 d) The exception is re-thrown automatically.
 
 
-a
+b) The catch block handles the exception, and the program continues.
+
 
 ----------------------------------------------------------------------
 Q19) 
@@ -258,6 +259,7 @@ b) No, it must always be followed by a catch block.
 c) Yes, but only if no exceptions are expected.
 d) No, it is syntactically invalid.
 
+a
 ----------------------------------------------------------------------
 Q20)
 
@@ -266,6 +268,9 @@ a) To detect and prevent compile-time errors.
 b) To allow a program to continue running after an exception occurs and handle the resourses.
 c) To terminate the program safely during an exception.
 d) To force garbage collection during exceptions.
+
+
+
 
 ======================================================================
 Sample coding Program :
