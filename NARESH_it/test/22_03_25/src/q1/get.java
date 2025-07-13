@@ -1,0 +1,29 @@
+package q1;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Types;
+
+public class get {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","123"); 
+		
+		
+		CallableStatement rs= conn.prepareCall("{call retrieveC(?,?,?,?,?)}");
+		rs.setInt(1,111);
+		rs.registerOutParameter(2, Types.VARCHAR);
+		rs.registerOutParameter(3, Types.VARCHAR);
+		rs.registerOutParameter(4, Types.VARCHAR);
+		rs.registerOutParameter(5, Types.BIGINT);
+		rs.execute();
+		System.out.println("eid:- 111");
+		System.out.println("ename"+rs.getString(2));
+		System.out.println("city"+rs.getString(3));
+		System.out.println("mid"+rs.getString(4));
+		System.out.println("phono "+rs.getLong(5));
+	}
+
+}

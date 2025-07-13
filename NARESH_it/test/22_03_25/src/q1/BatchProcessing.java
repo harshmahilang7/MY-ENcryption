@@ -1,0 +1,62 @@
+package q1;
+
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.*;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+//1)Batch Processing: Implement Data Insertion from CSV
+//•	Scenario: You have a CSV file containing employee data (id, name, salary).
+//•	Task: Write a Java program that reads the data from the CSV file and inserts it into an employees table in your database using JDBC batch processing.
+
+public class BatchProcessing 
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException, FileNotFoundException 
+	{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","123");
+		
+		Statement stm= conn.createStatement();
+//		SQL> create table edata7(id number(10),name varchar2(20),sal number(5,3));
+//
+//		Table created.
+//
+//		SQL>
+		File f= new File("C:\\Users\\harsh\\OneDrive\\Desktop\\empdata.csv");
+		if(f.exists())
+		{
+			FileInputStream da= new FileInputStream(f); 
+			Scanner sc=new Scanner(da);
+			sc.nextLine();
+			while (sc.hasNext()) {
+				String[] data = sc.nextLine().split(",");
+				
+				for (int i = 0; i < data.length; i++) 
+				{
+//					int id=data[0].replace("\"","");
+//					inset into edata7(111,adi,500)
+//					stm.("insert into edata7 values("+data[0].replace("\"","")+",'"+data[1]+"',"+data[2].replace("\"","")+")");
+				
+					boolean execute = stm.execute("insert into edata7 values("+data[0].replace("\"","")+",'"+data[1]+"',"+data[2].replace("\"","")+")");
+					
+					
+				}
+				
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+	}
+
+}

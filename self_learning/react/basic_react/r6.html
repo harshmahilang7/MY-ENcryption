@@ -1,0 +1,23 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  
+
+<div id="root"></div>
+
+<script type="text/babel">  
+
+function Name(params) 
+{
+    const {n,l}=params;
+    return <h1> my name is {n} {l} and {params.children}</h1>
+}
+
+     function App() 
+    {
+       return <div>
+               <Name n='harsh' l='mahilang'>20000</Name>
+              </div>         
+    }
+    var root=ReactDOM.createRoot(document.querySelector('#root'));
+    root.render(<App/>) 
+</script>

@@ -1,0 +1,27 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  
+
+
+<!-- containner -->
+<div id="root"></div>
+
+<script type="text/babel">  
+
+
+    // function App() 
+    // {
+    //    return<h1>hellow world1</h1> //<h1>hellow world2</h1>  // -> only render only tag of html 
+    // }
+     function App() 
+    {
+       return <div>
+                 <h1>hellow world1</h1> 
+                 <h1>hellow world2</h1>
+             </div>                          // -> only render only tag of html here div is one tag it will work 
+    }
+
+
+    var root=ReactDOM.createRoot(document.querySelector('#root'));
+    root.render(<App/>) //  ->  App A should be Capital it not not work  
+</script>

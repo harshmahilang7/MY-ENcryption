@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+<context-param>
+	<param-name>age</param-name>
+	<param-value>22</param-value>
+</context-param>
+
+<servlet>
+	<servlet-name>newServlet</servlet-name>
+	<servlet-class>test.newServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>newServlet</servlet-name>
+	<url-pattern>/showContextParams</url-pattern>
+</servlet-mapping>
+
+</web-app>

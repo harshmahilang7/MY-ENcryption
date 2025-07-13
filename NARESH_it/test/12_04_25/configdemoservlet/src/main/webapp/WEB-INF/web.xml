@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<context-param>
+<param-name>defaultuser</param-name>
+<param-value>Guest</param-value>
+</context-param>
+<context-param>
+<param-name>maxAttempts</param-name>
+<param-value>3</param-value>
+</context-param>
+
+<welcome-file-list>
+<welcome-file>
+home.html
+</welcome-file>
+</welcome-file-list>
+<servlet-mapping>
+
+</servlet-mapping>
+</web-app>

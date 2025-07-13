@@ -1,0 +1,27 @@
+<!--SQL> create table customer72
+(id varchar2(20) primary key,
+name varchar2(20),
+city varchar(20),
+phno number(20));
+
+Table created.
+
+SQL-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Customer</title>
+</head>
+<body>
+<h1>Add Customer</h1>
+<form action="add" method="POST">
+<input type="text" name='name' placeholder='enter the name'/><br>
+<input type="text" name='city' placeholder='enter the city'/><br>
+<input type="text" name='phono' placeholder='enter the phono' maxlength="10"/>
+<br>
+<input type="submit" value="submit"><br>
+</form>
+</body>
+</html>

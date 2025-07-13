@@ -1,0 +1,44 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">  
+
+    function App() 
+    {
+        // debugger;
+        const [data,setData]=React.useState({});
+        const [result,setresult]=React.useState(0);
+
+        const fnClick=()=>
+        {
+             event.preventDefault();
+            
+            const {n1,n2}=data;
+            const sum=parseInt(n1)+parseInt(n2);
+            setresult(sum);
+        }
+
+        const fnChange=(eve)=>{
+            const {id,value}=eve.target;
+            setData({...data,[id]:value})
+
+        }
+        
+       return <div>
+        <form onSubmit={fnClick}>
+        <input type="number" id='n1' onChange={fnChange} placeholder='enter the 1st number'/>    
+        <input type="number" id='n2'onChange={fnChange} placeholder='enter the 2nd number'/>    
+        <button type="submit" >Sum</button>
+        </form>
+        <p>Result:<span>{result}</span></p>
+        
+        
+        </div>
+    }
+
+    var root=ReactDOM.createRoot(document.querySelector('#root'));
+    root.render(<App/>) 
+</script>

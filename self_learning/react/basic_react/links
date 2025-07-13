@@ -1,0 +1,12 @@
+https://legacy.reactjs.org/docs/cdn-links.html
+
+Both React and ReactDOM are available over a CDN.
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+BABEL LINK --- 
+
+https://babeljs.io/docs/babel-standalone
+

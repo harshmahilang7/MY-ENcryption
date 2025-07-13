@@ -1,0 +1,38 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">  
+
+    function App() 
+    {
+        // debugger;
+        const n1ref=React.useRef();
+        const n2ref=React.useRef();
+
+        const [result,setresult]=React.useState(0);
+        const fnClick=()=>
+        {
+            const n1=parseInt(n1ref.current.value);
+            const n2=parseInt(n2ref.current.value);
+            const sum=n1+n2;
+            setresult(sum);
+        }
+        
+       return <div>
+        <form action="">
+        <input type="text" ref={n1ref} placeholder='enter the 1st number'/>    
+        <input type="text" ref={n2ref} placeholder='enter the 2nd number'/>    
+        <button type="submit" onClick={()=>fnClick()}>Sum</button>
+        </form>
+        <p>Result:<span>{result}</span></p>
+        
+        
+        </div>
+    }
+
+    var root=ReactDOM.createRoot(document.querySelector('#root'));
+    root.render(<App/>) 
+</script>

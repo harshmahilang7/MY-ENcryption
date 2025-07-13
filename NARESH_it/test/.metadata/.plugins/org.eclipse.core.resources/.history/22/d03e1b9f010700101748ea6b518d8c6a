@@ -1,0 +1,62 @@
+package q2;
+//2)2.Create table with name:
+//    Customer7(cid,cname,city,mid,phno)
+//Create and execute stored-Procedure to insert details
+//Create and execute Stored-function to retrieve phone number based on cid
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Types;
+
+//SQL> create table Customer7(cid number(10),cname varchar2(20),city varchar2(30),mid varchar2(40),phno number(20));
+//
+//Table created.
+//
+//SQL>
+//
+//SQL> create or replace procedure insertC(id number,name varchar2,c varchar2,m varchar2,p number) is
+//2  begin
+//3  insert into customer7 values(id,name,c,m,p);
+//4  end;
+//5  /
+
+//SQL> create or replace procedure retrieveC(id number,name out varchar2,c out varchar2,m out varchar2,p out number) is
+//2  begin
+//3  select cname,city,mid,phno into name,c,m,p from customer7 where cid=id;
+//4  end;
+//5  /
+//
+//Procedure created.
+
+
+public class Customer7 {
+  public static void main(String[] args) throws ClassNotFoundException, SQLException 
+  {
+	  Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","123"); 
+		
+		CallableStatement cs= conn.prepareCall("call insertC(?,?,?,?,?)");
+		cs.setInt(1, 111);
+		cs.setString(2, "raj");
+		cs.setString(3, "tyui");
+		cs.setString(4, "tyui@gmail.com");
+		cs.setInt(5, 23423);
+		cs.execute();
+		CallableStatement rs= conn.prepareCall("call retrieveC(?,?,?,?,?)");
+		rs.setInt(1,111);
+		rs.registerOutParameter(2, Types.VARCHAR);
+		rs.registerOutParameter(3, Types.VARCHAR);
+		rs.registerOutParameter(4, Types.VARCHAR);
+		rs.registerOutParameter(5, Types.BIGINT);
+		rs.execute();
+		System.out.println("eid:- 111");
+		System.out.println("ename"+rs.getString(2));
+		System.out.println("city"+rs.getString(3));
+		System.out.println("mid"+rs.getString(4));
+		System.out.println("phono "+rs.getLong(5));
+		
+//		
+  }
+}

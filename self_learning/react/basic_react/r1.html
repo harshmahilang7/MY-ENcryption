@@ -1,0 +1,36 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<!-- Recognise  the Jsx-->
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- babel libray -> it will compile the jsx -->
+
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  
+<!-- react-Dom libray load the content in side the containner  -->
+
+<!-- containner -->
+<div id="root"></div>
+
+<script type="text/babel">  
+
+
+//     type "text/javascript" -> is normal talken 
+    // prepare Content
+    function App() 
+    {
+       return<h1>hellow world</h1>//jsx -> java script and xml 
+    }
+    //JSX -> HTML+JS+XML one or three combination
+
+ //  container ref using javascript
+    // var root=document.querySelector('#root');
+
+
+    //container ref using ReactDOM
+    var root=ReactDOM.createRoot(document.querySelector('#root'));
+
+    // render content inside the container using javascript
+    // root.innerHTML=content;
+
+     // render content inside the container using reactDOM
+     root.render(<App/>)
+</script>

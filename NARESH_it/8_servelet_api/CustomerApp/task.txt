@@ -1,0 +1,25 @@
+Assignment-2:
+ProjectName : CustomerApp
+
+DBTable : Customer72(id,name,city,mid,phno)
+primary key : id
+
+
+
+SQL> create table customer72
+(id varchar2(20) primary key
+,name varchar2(20),
+city varchar(20),
+phno number(20));
+
+Table created.
+
+SQL>
+
+Generate Id : NIT+PhNo
+
+Operations:
+1.AddCustomer
+2.ViewCustomerById
+3.ViewAllCustomers
+---------------------------------------------------------------------------

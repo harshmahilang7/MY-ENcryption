@@ -1,0 +1,40 @@
+package q1;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Arrays;
+
+//1)Batch Processing: Implement Data Insertion from CSV
+//•	Scenario: You have a CSV file containing employee data (id, name, salary).
+//•	Task: Write a Java program that reads the data from the CSV file and inserts it into an employees table in your database using JDBC batch processing.
+
+public class BatchProcessing 
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException, FileNotFoundException 
+	{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","123");
+		
+		File f= new File("C:\\Users\\harsh\\OneDrive\\Desktop\\empdata.xlsx");
+		if(f.exists())
+		{
+			FileInputStream da= new FileInputStream(f); 
+			String[] data=da.toString().split(".");
+//			for (int i = 0; i < data.length; i++) {
+				System.out.println(Arrays.toString(data));
+//			}
+			
+		}
+		
+		
+		
+		
+		
+	}
+
+}
