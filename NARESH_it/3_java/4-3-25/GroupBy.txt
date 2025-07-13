@@ -1,0 +1,125 @@
+Ques - 1
+-----------------------
+Grouping and Counting:
+Given a list of strings, group them by their lengths and count the number of strings in each group. Print out the length and count for each group.
+Input:
+List<String> strings = ["apple", "banana", "orange", "grape", "pear"];
+Expected Output:
+Length -> Count:
+5 -> 2
+6 -> 2
+7 -> 1
+
+
+Ques - 2
+----------------
+Person Class(BLC): Represents a Person with name, age, and gender properties.
+Create a ELC class Tester :
+List of Persons: An ArrayList of Person objects is created with different genders(Male/Female).
+Group all the Male and Female separately into a Map where Gender is the key .
+Use forEach over the entries in the Map and prints each gender group along with the list of persons belonging to that gender.
+
+Male:
+Person{name= Bob, age=30, gender=Male}
+Person{name= Charlie , age=20, gender=Male}
+Person{name=David, age=35, gender=Male}
+Person{name=Frank, age=22, gender='Male}
+
+Female:
+Person{name=Alice, age=25, gender=Female}
+Person{name=Eve, age=28, gender=Female}
+Person{name=Grace, age=26, gender=Female}
+
+Ques - 3
+---------------
+Flattening Lists:
+Given a list of lists of integers, flatten it into a single list and then remove duplicates using Java 8 streams.
+
+Input:
+List<List<Integer>> = [[1,2,3],[2,3,4,5],[4,5,6]]
+Expected Output:
+Flattened List without Duplicates:
+1
+2
+3
+4
+5
+6
+
+Ques - 4
+---------------
+Given a list of Employee objects, where each employee has a name, salary, and years of experience, write a Java program to increase the salary of employees with more than 5 years of experience by 10%. Use the Stream API to perform this operation and then print all the employees.
+
+Test Input:
+Employee("John", 50000, 6));
+Employee("Jane", 45000, 4));
+Employee("Tom", 60000, 7));
+Employee("Lucy", 52000, 5));
+Employee("Anna", 48000, 8));
+
+Expected Output:
+Employee{name='John', salary=55000.0, yearsOfExperience=6}
+Employee{name='Jane', salary=45000.0, yearsOfExperience=4}
+Employee{name='Tom', salary=66000.0, yearsOfExperience=7}
+Employee{name='Lucy', salary=52000.0, yearsOfExperience=5}
+Employee{name='Anna', salary=52800.0, yearsOfExperience=8}
+
+
+Ques - 5
+---------------
+Write a Java program that finds and prints the maximum and minimum values from an array of integers using the Stream API. If the array is empty, throw a RuntimeException.
+
+Test Cases:
+
+Test case 1 : Basic Case - Standard Array:
+Input: {5, 12, 3, 8, 1, 9, 6}
+Expected Output:
+Maximum value: 12
+Minimum value: 1
+
+Test cases - 2 : with Negative Numbers:
+Input: {10, -5, 0, -8, 15}
+Expected Output:
+Maximum value: 15
+Minimum value: -8
+
+Test cases - 3 : with All Negative Numbers:
+Input: {-3, -10, -5, -8}
+Expected Output:
+Maximum value: -3
+Minimum value: -10
+
+Test cases - 4 : with One Element:
+Input: {7}
+Expected Output:
+Maximum value: 7
+Minimum value: 7
+
+Test cases - 5 :Empty Array Case:
+Input: {}
+Expected Output:
+RuntimeException: Array is empty
+
+
+Ques - 6
+---------------
+Write a Java program that combines two lists of integers into a single list and finds the sum of all elements in the combined list using the Stream API.
+
+Input as : 
+ List<Integer> list1 = [1, 2, 3, 4]
+ List<Integer> list2 = [5, 6, 7, 8]
+Expected Output:
+Sum of all elements in the combined list: 36
+
+Ques - 7
+---------------
+Write a Java program that takes a list of integers as input, uses the Stream API to find and print all duplicate elements along with their counts.
+Input as : 
+List<Integer> numbers = [1, 2, 3, 4, 2, 5, 1, 6, 7, 3];
+Expected Output:
+Duplicate elements:
+1 (count: 2)
+2 (count: 2)
+3 (count: 2)
+
+
