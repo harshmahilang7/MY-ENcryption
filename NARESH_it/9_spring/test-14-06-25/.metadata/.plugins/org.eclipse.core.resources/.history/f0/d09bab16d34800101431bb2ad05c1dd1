@@ -1,0 +1,10 @@
+package com.LayeredApplication.model;
+
+public class Student 
+{
+	int id;
+	String name;
+	String email
+	Date dob;
+
+}

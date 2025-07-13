@@ -1,0 +1,11 @@
+package com.nit.main;
+
+public class LocaleSelector 
+{
+	public static void main(String[] args) 
+	{
+		
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+spring.application.name=LayeredApplication
+
+spring.datasource.username=system
+
+spring.datasource.password=123
+

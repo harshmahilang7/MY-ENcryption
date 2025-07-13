@@ -1,0 +1,14 @@
+package com.LayeredApplication.DAO;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class StudentDAO 
+{
+	public List<Student> getAllStru() {
+		
+	}
+
+}

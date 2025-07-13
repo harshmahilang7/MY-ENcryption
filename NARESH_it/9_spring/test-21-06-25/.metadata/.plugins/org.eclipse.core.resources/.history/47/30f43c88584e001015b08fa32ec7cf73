@@ -1,0 +1,14 @@
+package com.nit.DAO;
+
+
+//SQL> create table users(userid varchar2(30),username varchar2(30),userphoneno varchar2(30));
+//
+//Table created.
+//
+//SQL>
+public interface UserDAO 
+{
+	
+	public void AllUser();
+
+}

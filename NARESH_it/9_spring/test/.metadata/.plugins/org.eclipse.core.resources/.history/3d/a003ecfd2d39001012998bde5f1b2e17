@@ -1,0 +1,30 @@
+package com.nit.sbean;
+
+public class OffRoadingCar implements ICar{
+
+	@Override
+	public void assemble() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void testDrive() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deliver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void drive() {
+		System.out.println("OffRoadingCar.drive()");
+		
+	}
+	
+
+}

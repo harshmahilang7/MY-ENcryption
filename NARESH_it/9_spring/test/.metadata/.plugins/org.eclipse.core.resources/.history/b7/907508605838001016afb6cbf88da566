@@ -1,0 +1,12 @@
+package com.nit.PaymentGatewayFactory;
+
+import org.springframework.context.annotation.Bean;
+
+public class PaymentGateway {
+   @Bean("pay")
+	public void executeTransaction() {
+		System.out.println("executeTransaction");
+		
+	}
+
+}

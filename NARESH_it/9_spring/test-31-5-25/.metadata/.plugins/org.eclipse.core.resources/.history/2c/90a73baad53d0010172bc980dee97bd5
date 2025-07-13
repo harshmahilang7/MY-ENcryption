@@ -1,0 +1,18 @@
+package com.nt.sbeans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class NotificationClient 
+{
+	@Autowired
+	@Qualifier("sS")
+	private MessageService m;
+	void getM() 
+	{
+		m.sendMessage(); 
+	}
+	
+	
+	
+}

@@ -1,0 +1,43 @@
+package com.nit.main.DAO;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nit.main.model.Product;
+
+public class ProductDao implements IProductDao 
+{
+	private static final String Insert_Product="";
+	
+	@Autowired
+	private DataSource ds;
+
+	@Override
+	public int insertProduct(Product product) throws SQLException {
+		try(
+				Connection con= ds.getConnection()
+			)
+		{
+			
+		}
+		return 0;
+	}
+
+	@Override
+	public Product getProductById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

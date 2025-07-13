@@ -1,0 +1,39 @@
+package main;
+
+import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
+import com.nit.sbeans.Vehicle;
+import com.nit.sbeans.bike;
+import com.nit.sbeans.car;
+
+
+public class VehicleFactoryBean implements FactoryBean<Vehicle> {
+
+    private String vehicleType="car";
+    @Bean("VehicleFactoryBean")
+    public Vehicle getObject() 
+    {
+    	Vehicle v;
+    	switch (vehicleType) {
+		case "bike":
+			v=new bike();
+			break;
+		case "Car":
+			v=new car();
+			break;
+
+		default:
+			throw new IllegalArgumentException();
+		}
+		return v;
+    
+    }
+	@Override
+	public Class<Vehicle> getObjectType() {
+		
+		return null;
+	}
+    
+}

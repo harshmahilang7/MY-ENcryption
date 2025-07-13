@@ -1,0 +1,23 @@
+package com.nit;
+
+import org.springframework.beans.factory.FactoryBean;
+
+import com.nit.sbeans.Vechicle;
+
+public class VehicleFactoryBean implements FactoryBean<Vechicle> {
+    private String vehicleType;
+    @Override
+    public Vechicle getObject() {
+        return switch(vehicleType) {
+            case "car" -> new Car();
+            case "bike" -> new Bike();
+            default -> throw new IllegalArgumentException();
+        };
+    
+	@Override
+	public Class<vehicle> getObjectType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+}

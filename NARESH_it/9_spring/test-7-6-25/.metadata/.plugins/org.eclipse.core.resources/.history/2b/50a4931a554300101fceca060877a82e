@@ -1,0 +1,13 @@
+package com.nit.main.DAO;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.nit.main.model.Product;
+
+public interface IProductDao 
+{
+	int insertProduct(Product product) throws SQLException;
+	Product getProductById(Long id) throws SQLException;
+	List<Product> getAllProducts();
+}

@@ -1,0 +1,12 @@
+package main;
+
+import com.nit.sbeans.Vehicle;
+
+public class test 
+{
+	public static void main(String[] args) {
+		VehicleFactoryBean vfb= new VehicleFactoryBean();
+		Vehicle vehicle = vfb.getObject( new bike());
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.nit.main.DAO;
+
+public interface IProductDao 
+{
+	insertProduct(Product product);
+	Product getProductById(Long id);
+	List<Product> getAllProducts();
+
+
+}

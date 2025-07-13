@@ -1,0 +1,5 @@
+package nit.example.i8n;
+
+public class AppConfig {
+
+}

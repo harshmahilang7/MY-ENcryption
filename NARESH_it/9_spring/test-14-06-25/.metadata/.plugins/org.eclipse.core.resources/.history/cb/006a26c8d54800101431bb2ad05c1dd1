@@ -1,0 +1,19 @@
+package com.LayeredApplication.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.LayeredApplication.serves.StudentServes;
+
+@Controller
+public class StudentController 
+{
+	@Autowired
+	private StudentServes ss;
+	
+	private  void getA()
+	{
+		ss.
+	}
+
+}

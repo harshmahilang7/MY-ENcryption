@@ -1,0 +1,10 @@
+package com.nit.PaymentGatewayFactory;
+
+public class PaymentGateway {
+
+	public void executeTransaction() {
+		System.out.println("executeTransaction");
+		
+	}
+
+}

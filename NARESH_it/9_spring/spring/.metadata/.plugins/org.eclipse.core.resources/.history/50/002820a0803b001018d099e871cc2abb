@@ -1,0 +1,10 @@
+package nit.example.i8n;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig 
+{
+	
+
+}

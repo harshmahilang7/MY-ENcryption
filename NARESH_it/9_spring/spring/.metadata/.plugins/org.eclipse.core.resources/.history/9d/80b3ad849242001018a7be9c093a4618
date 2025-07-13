@@ -1,0 +1,22 @@
+package com.nit.main;
+
+import java.util.Locale;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.nit.config.AppConfig;
+
+public class App {
+
+	public static void main(String[] args) 
+	{
+		AnnotationConfigApplicationContext ctx= new AnnotationConfigApplicationContext(AppConfig.class);
+		Locale setLocale = new LocaleSelector().getSetLocale();
+		String message = ctx.getMessage("greeting",new String() {"harsh"}, setLocale);
+		System.out.println(message);
+		
+		
+				
+		
+	}
+}

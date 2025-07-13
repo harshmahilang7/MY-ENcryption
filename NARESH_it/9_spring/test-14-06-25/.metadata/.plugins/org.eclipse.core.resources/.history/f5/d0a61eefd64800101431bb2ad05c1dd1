@@ -1,0 +1,5 @@
+package com.bulkConfiguration.model;
+
+public class NotificationConfig {
+
+}

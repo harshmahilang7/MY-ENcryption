@@ -1,0 +1,22 @@
+package com.example.demo.sbeans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component("nC")
+public class NotificationClient 
+{
+	@Autowired
+	@Qualifier("sS")
+	private MessageService m;
+	
+	void getM() 
+	{
+		m.sendMessage(); 
+	}
+	
+	
+	
+}

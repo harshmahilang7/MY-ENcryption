@@ -1,0 +1,24 @@
+package com.example.ParserFactory;
+
+public class ParserFactory 
+{
+	static ParserFactory v=null;
+	private ParserFactory() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static ParserFactory createParser()
+	{
+		
+		if(v==null)
+		{
+			v= new ParserFactory();
+			
+		}
+		else
+			return v;
+		
+		return v;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.LayeredApplication.model;
+
+public class Student {
+
+}

@@ -1,0 +1,11 @@
+package com.nt.sbeans;
+
+public class SMSService implements MessageService {
+
+	@Override
+	public void sendMessage() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

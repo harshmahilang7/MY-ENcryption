@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.nit.sbeans.Vehicle"/>
+    <fullyQualifiedTypeName name="com.nit.sbeans.bike"/>
+    <fullyQualifiedTypeName name="com.nit.sbeans.car"/>
+    <fullyQualifiedTypeName name="main.VehicleFactoryBean"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContextExtensionsKt"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.example.ParserFactory.ParserFactory"/>
+    <fullyQualifiedTypeName name="java.beans.JavaBean"/>
+    <fullyQualifiedTypeName name="java.beans.BeanProperty"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="com.nit.sbean.ICar"/>
+    <fullyQualifiedTypeName name="com.nit.sbean.LuxoryCar"/>
+    <fullyQualifiedTypeName name="com.nit.sbean.OffRoadingCar"/>
+    <fullyQualifiedTypeName name="com.nit.factory.CarFactory"/>
+</qualifiedTypeNameHistroy>

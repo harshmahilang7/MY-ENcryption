@@ -1,0 +1,17 @@
+package com.nit.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+@Configuration
+public class AppConfig 
+{
+	@Bean("messageSource")
+	ResourceBundleMessageSource getMessageSource()
+	{
+		ResourceBundleMessageSource r= new ResourceBundleMessageSource();
+		r.setBasename("i8n/messages");
+		return r;
+	}
+}

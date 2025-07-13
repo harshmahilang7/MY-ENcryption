@@ -1,0 +1,12 @@
+package com.bulkConfiguration.model;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component("nc")
+@ConfigurationProperties(prefix = "notifications")
+public class NotificationConfig 
+{
+	
+
+}

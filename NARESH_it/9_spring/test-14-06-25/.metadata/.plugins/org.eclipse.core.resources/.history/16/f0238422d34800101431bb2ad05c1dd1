@@ -1,0 +1,13 @@
+package com.LayeredApplication.model;
+
+import java.util.Date;
+
+@
+public class Student 
+{
+	int id;
+	String name;
+	String email;
+	Date dob;
+
+}

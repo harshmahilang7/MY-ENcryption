@@ -1,0 +1,326 @@
+package com.nit.PaymentGatewayFactory;
+
+import java.io.IOException;
+import java.lang.annotation.Annotation;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.MessageSourceResolvable;
+import org.springframework.context.NoSuchMessageException;
+import org.springframework.core.ResolvableType;
+import org.springframework.core.env.Environment;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PaymentProcessor {
+    @Autowired
+    private ApplicationContext context=new ApplicationContext() {
+		
+		@Override
+		public Resource getResource(String location) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public ClassLoader getClassLoader() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Resource[] getResources(String locationPattern) throws IOException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public void publishEvent(Object event) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public String getMessage(String arg0, Object[] arg1, String arg2, Locale arg3) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String getMessage(String arg0, Object[] arg1, Locale arg2) throws NoSuchMessageException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String getMessage(MessageSourceResolvable resolvable, Locale locale) throws NoSuchMessageException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public BeanFactory getParentBeanFactory() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public boolean containsLocalBean(String name) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public boolean isTypeMatch(String name, Class<?> typeToMatch) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public boolean isTypeMatch(String name, ResolvableType typeToMatch) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public boolean isSingleton(String name) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public boolean isPrototype(String name) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public Class<?> getType(String arg0, boolean arg1) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Class<?> getType(String arg0) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> ObjectProvider<T> getBeanProvider(ResolvableType requiredType) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> ObjectProvider<T> getBeanProvider(Class<T> requiredType) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> T getBean(Class<T> requiredType, Object... args) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Object getBean(String name, Object... args) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> T getBean(Class<T> requiredType) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Object getBean(String name) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getAliases(String name) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public boolean containsBean(String name) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public Map<String, Object> getBeansWithAnnotation(Class<? extends Annotation> annotationType)
+				throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> Map<String, T> getBeansOfType(Class<T> arg0, boolean arg1, boolean arg2) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> Map<String, T> getBeansOfType(Class<T> arg0) throws BeansException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> ObjectProvider<T> getBeanProvider(ResolvableType requiredType, boolean allowEagerInit) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <T> ObjectProvider<T> getBeanProvider(Class<T> requiredType, boolean allowEagerInit) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getBeanNamesForType(Class<?> arg0, boolean arg1, boolean arg2) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getBeanNamesForType(ResolvableType type, boolean includeNonSingletons, boolean allowEagerInit) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getBeanNamesForType(Class<?> arg0) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getBeanNamesForType(ResolvableType type) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getBeanNamesForAnnotation(Class<? extends Annotation> annotationType) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String[] getBeanDefinitionNames() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public int getBeanDefinitionCount() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public <A extends Annotation> A findAnnotationOnBean(String arg0, Class<A> arg1, boolean arg2)
+				throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <A extends Annotation> A findAnnotationOnBean(String arg0, Class<A> arg1)
+				throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public <A extends Annotation> Set<A> findAllAnnotationsOnBean(String beanName, Class<A> annotationType,
+				boolean allowFactoryBeanInit) throws NoSuchBeanDefinitionException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public boolean containsBeanDefinition(String beanName) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		@Override
+		public Environment getEnvironment() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public long getStartupDate() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public ApplicationContext getParent() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String getId() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String getDisplayName() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public AutowireCapableBeanFactory getAutowireCapableBeanFactory() throws IllegalStateException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public String getApplicationName() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	};
+    
+    public void processPayment() {
+        PaymentGateway gateway = context.getBean(PaymentGateway.class);
+        gateway.executeTransaction();
+    }
+    
+    public static void main(String[] args) 
+    {
+    	
+       	new PaymentProcessor().processPayment();
+	}
+}
+

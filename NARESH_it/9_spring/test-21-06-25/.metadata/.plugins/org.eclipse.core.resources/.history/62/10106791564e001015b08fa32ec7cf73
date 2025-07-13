@@ -1,0 +1,3 @@
+spring.application.name=Profile-BasedBean-2
+
+spring.profiles.active=prod

@@ -1,0 +1,27 @@
+package com.nit.main.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nit.main.DAO.ProductDao;
+import com.nit.main.model.Product;
+
+@Service
+public class ProductService 
+{
+	@Autowired
+	private ProductDao pd;
+	
+	int insertProduct(Product product)
+	{
+		
+	}
+	Product getProductById(Long id) throws SQLException;
+	List<Product> getAllProducts() throws SQLException;
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package com.nit.i8n.config;
+
+import java.beans.BeanProperty;
+import java.util.ResourceBundle;
+
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+public class AppConfig 
+{
+	@Bean("messageSource")
+	ResourceBundleMessageSource getrs()
+	{
+		
+	}
+
+}

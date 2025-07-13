@@ -1,0 +1,13 @@
+package com.nit.main;
+
+import java.util.Locale;
+
+public class LocaleSelector 
+{
+	public void getSetLocale() 
+	{
+		Locale l= new Locale("i8n\messages_en");
+		
+		
+	}
+}

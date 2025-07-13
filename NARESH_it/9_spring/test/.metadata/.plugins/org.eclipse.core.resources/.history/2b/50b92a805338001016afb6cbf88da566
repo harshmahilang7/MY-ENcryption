@@ -1,0 +1,27 @@
+package main;
+
+import org.springframework.beans.factory.FactoryBean;
+
+import com.nit.sbeans.Vechicle;
+import com.nit.sbeans.Vehicle;
+
+public class VehicleFactoryBean implements FactoryBean<Vehicle> {
+    private String vehicleType;
+    @Override
+    public Vehicle getObject() {
+        return switch(vehicleType) 
+        		{
+        case "bike":
+        	
+        
+        		}
+            
+        };
+    
+	@Override
+	public Class<Vehicle> getObjectType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+}

@@ -1,0 +1,27 @@
+package com.nit.main.DAO;
+
+import java.util.List;
+
+import com.nit.main.model.Product;
+
+public class ProductDao implements IProductDao {
+
+	@Override
+	public int insertProduct(Product product) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Product getProductById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

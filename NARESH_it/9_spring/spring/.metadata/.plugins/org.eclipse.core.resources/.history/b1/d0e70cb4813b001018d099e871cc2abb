@@ -1,0 +1,30 @@
+package nit.example.i8n;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.nit.main.JavaConfig;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+
+    	 AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+    	 Scanner scanner = new Scanner(System.in);
+         System.out.print("Enter language code (en, hi, fr, te, de): ");
+         String lang = scanner.nextLine();
+         String ccode = scanner.nextLine();
+
+         Locale locale = new Locale(lang);
+         String name = context.getMessage("name", null, locale);
+         System.out.println(name);
+    }
+}

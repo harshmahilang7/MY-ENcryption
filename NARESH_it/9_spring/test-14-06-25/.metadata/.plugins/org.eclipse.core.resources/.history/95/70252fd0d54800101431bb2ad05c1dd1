@@ -1,0 +1,21 @@
+package com.LayeredApplication.controller;
+
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.LayeredApplication.serves.StudentServes;
+
+@Controller
+public class StudentController 
+{
+	@Autowired
+	private StudentServes ss;
+	
+	public  void getA() throws SQLException
+	{
+		ss.getSudent();
+	}
+
+}

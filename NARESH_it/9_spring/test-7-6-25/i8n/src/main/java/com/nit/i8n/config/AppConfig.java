@@ -1,0 +1,22 @@
+package com.nit.i8n.config;
+
+import java.beans.BeanProperty;
+import java.util.ResourceBundle;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+@Configuration
+public class AppConfig 
+{
+	@Bean("messageSource")
+	ResourceBundleMessageSource getrs()
+	{
+		ResourceBundleMessageSource rs= new ResourceBundleMessageSource();
+		rs.setBasename("i8n/messages");
+		rs.setDefaultEncoding("UTF-8");
+		return rs;
+	}
+
+}

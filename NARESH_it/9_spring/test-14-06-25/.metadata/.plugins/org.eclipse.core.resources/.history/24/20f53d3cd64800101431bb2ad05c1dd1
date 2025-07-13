@@ -1,0 +1,19 @@
+package com.LayeredApplication;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.LayeredApplication.controller.StudentController;
+
+@SpringBootApplication
+public class LayeredApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(LayeredApplication.class, args);
+		StudentController bean = ctx.getBean("sc",StudentController.class);
+		bean.getA();
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+import com.example.demo.sbeans.CreditCardProcessor;
+import com.example.demo.sbeans.EmailService;
+import com.example.demo.sbeans.MessageService;
+import com.example.demo.sbeans.PaymentProcessor;
+
+@SpringBootApplication
+public class Q2Application {
+	
+	
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(Q2Application.class, args);
+		PaymentProcessor bean = ctx.getBean("p",PaymentProcessor.class);
+		bean.processPayment(0);
+		((ConfigurableApplicationContext) ctx).close();
+	}
+
+}

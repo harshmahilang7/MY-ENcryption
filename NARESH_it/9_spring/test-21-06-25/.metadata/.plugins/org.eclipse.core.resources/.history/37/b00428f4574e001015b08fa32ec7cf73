@@ -1,0 +1,33 @@
+package com.nit.DAO;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserDAOImp implements UserDAO
+{
+	private static final String ALL_USERS="Select * from USERS";
+	
+	@Autowired
+	private DataSource ds;
+	@Override
+	public void AllUser() 
+	{
+		try(
+				Connection con=ds.getConnection();
+				PreparedStatement ps =con.prepareStatement(ALL_USERS);
+			)
+		
+		{
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+
+}

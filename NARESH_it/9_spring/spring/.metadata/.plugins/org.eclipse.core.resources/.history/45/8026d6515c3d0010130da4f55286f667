@@ -1,0 +1,27 @@
+package com.nt.sbeans;
+
+import java.time.LocalDate;
+
+public class WishMessageGenerator 
+{
+	private LocalDate date;
+	private int age;
+	
+	
+	
+	public WishMessageGenerator()
+	{
+		super();
+	}
+
+
+	public WishMessageGenerator(LocalDate date, int age) {
+		super();
+		this.date = date;
+		this.age = age;
+	}
+	
+	
+	
+
+}

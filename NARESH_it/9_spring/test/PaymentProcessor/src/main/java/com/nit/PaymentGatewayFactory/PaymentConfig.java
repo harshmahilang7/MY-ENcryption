@@ -1,0 +1,15 @@
+package com.nit.PaymentGatewayFactory;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+//Factory configuration
+@Configuration
+public class PaymentConfig {
+ @Bean("pay")
+ @Scope("prototype")
+ public PaymentGateway paymentGateway() {
+     return new PaymentGateway();
+ }
+}

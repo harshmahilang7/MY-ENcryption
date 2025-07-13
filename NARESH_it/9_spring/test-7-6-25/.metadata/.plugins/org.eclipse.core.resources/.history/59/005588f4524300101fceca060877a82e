@@ -1,0 +1,12 @@
+package com.nit.main.model;
+
+
+@Data
+public class Product 
+{
+	long id ;
+	String name;
+	double price;
+
+
+}

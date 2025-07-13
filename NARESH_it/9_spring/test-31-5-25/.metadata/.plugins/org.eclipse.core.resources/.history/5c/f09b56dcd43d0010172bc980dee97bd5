@@ -1,0 +1,13 @@
+package com.nt.sbeans;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class NotificationClient 
+{
+	@Qualifier("sS")
+	private MessageService m;
+	
+	
+	
+	
+}

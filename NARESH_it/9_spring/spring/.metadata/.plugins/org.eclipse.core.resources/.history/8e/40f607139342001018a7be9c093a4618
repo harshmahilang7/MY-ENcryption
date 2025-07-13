@@ -1,0 +1,3 @@
+greeting=Hello, {0}!
+farewell=Goodbye !
+date.format=Today is {0,date,long}

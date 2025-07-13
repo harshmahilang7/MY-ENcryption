@@ -1,0 +1,23 @@
+package com.nit;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.nit.DAO.UserDAOImp;
+import com.nit.model.Users;
+
+@SpringBootApplication
+public class JdbcConnectionApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(JdbcConnectionApplication.class, args);
+		UserDAOImp bean = ctx.getBean(UserDAOImp.class);
+		for (int i = 0; i < bean.AllUser().size(); i++) {
+			Users users = bean.AllUser().get(i);
+			System.out.println(users);
+		}
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.example.demo.sbeans;
+
+import org.springframework.context.annotation.Scope;
+
+@Scope("prototype")
+public class pCount {
+
+}

@@ -1,0 +1,8 @@
+package com.example.demo.sbeans;
+
+public class Counter {
+
+	static int instancecount;
+	
+	
+}

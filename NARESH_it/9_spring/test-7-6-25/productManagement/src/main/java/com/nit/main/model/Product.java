@@ -1,0 +1,11 @@
+package com.nit.main.model;
+
+import lombok.Data;
+
+@Data
+public class Product 
+{
+	long id ;
+	String name;
+	double price;
+}

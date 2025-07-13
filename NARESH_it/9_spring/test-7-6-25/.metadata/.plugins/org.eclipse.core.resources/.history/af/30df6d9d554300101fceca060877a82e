@@ -1,0 +1,35 @@
+package com.nit.main.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nit.main.DAO.ProductDao;
+import com.nit.main.model.Product;
+
+@Service
+public class ProductService 
+{
+	@Autowired
+	private ProductDao pd;
+	
+	int insertProduct(Product product) 
+	{
+		int insertProduct =0;
+		try {
+			insertProduct = pd.insertProduct(product);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return insertProduct;
+		
+	}
+	Product getProductById(Long id) throws SQLException;
+	List<Product> getAllProducts() throws SQLException;
+	
+	
+
+}

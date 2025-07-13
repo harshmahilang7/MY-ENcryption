@@ -1,0 +1,31 @@
+package com.LayeredApplication.DAO;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.LayeredApplication.model.Student;
+
+@Repository
+public class StudentDAO 
+{
+	@Autowired
+	private DataSource ds;
+	public List<Student> getAllStru() 
+	{
+		List<Student> sl= new ArrayList<>();
+		try(Connection con=ds.getConnection())
+		{
+			
+		}
+		
+		return sl;
+		
+	}
+
+}

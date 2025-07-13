@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "notifications.email.body",
+  "type": "java.lang.String",
+  "description": "A description for 'notifications.email.body'"
+}]}

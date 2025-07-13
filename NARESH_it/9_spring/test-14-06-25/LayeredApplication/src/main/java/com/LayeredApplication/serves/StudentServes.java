@@ -1,0 +1,25 @@
+package com.LayeredApplication.serves;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.LayeredApplication.DAO.StudentDAO;
+import com.LayeredApplication.model.Student;
+
+@Service
+public class StudentServes 
+{
+	@Autowired
+	private StudentDAO sd;
+	
+	public void getSudent() throws SQLException 
+	{
+		List<Student> allStru = sd.getAllStru();
+		allStru.stream().forEach(s -> System.out.println(s));
+		
+	}
+
+}

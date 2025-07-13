@@ -1,0 +1,21 @@
+package com.nit.i8n;
+
+import java.lang.reflect.AnnotatedArrayType;
+import java.util.Locale;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.nit.i8n.config.AppConfig;
+
+public class test 
+{
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext ctx= new AnnotationConfigApplicationContext(AppConfig.class);
+		lang=en;
+		Locale l= new Locale(lang);
+		String message = ctx.getMessage("greeting.message",null, l);
+		System.out.println(message);
+		
+	}
+
+}

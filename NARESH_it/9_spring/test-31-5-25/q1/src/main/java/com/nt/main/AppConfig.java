@@ -1,0 +1,13 @@
+package com.nt.main;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.nt.sbeans.EmailService;
+import com.nt.sbeans.MessageService;
+
+@Configuration
+public class AppConfig 
+{
+	
+}

@@ -1,0 +1,28 @@
+package com.example.ParserFactory;
+
+import java.beans.BeanProperty;
+
+import org.springframework.context.annotation.Bean;
+
+public class ParserFactory 
+{
+	static ParserFactory v=null;
+	private ParserFactory() {
+		// TODO Auto-generated constructor stub
+	}
+	@BeanProperty("documentParser")
+	public static ParserFactory createParser()
+	{
+		
+		if(v==null)
+		{
+			v= new ParserFactory();
+			
+		}
+		else
+			return v;
+		
+		return v;
+	}
+
+}

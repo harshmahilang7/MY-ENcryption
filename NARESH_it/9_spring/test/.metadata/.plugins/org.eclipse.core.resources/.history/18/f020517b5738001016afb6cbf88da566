@@ -1,0 +1,13 @@
+package com.nit.PaymentGatewayFactory;
+
+@Service
+public class PaymentProcessor {
+    @Autowired
+    private ApplicationContext context;
+    
+    public void processPayment() {
+        PaymentGateway gateway = context.getBean(PaymentGateway.class);
+        gateway.executeTransaction();
+    }
+}
+

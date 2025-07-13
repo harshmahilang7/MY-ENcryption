@@ -1,0 +1,8 @@
+spring.application.name=BulkConfiguration
+notifications.email.subject: "Welcome!"
+    body: "Hello, thank you for registering."
+  sms:
+    body: "Thank you for signing up!"
+  push:
+    title: "Hi!"
+    body: "Check out the new features."

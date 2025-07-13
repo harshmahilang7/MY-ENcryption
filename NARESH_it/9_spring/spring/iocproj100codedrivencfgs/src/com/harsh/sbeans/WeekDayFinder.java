@@ -1,0 +1,36 @@
+package com.harsh.sbeans;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+@Component("w")
+public class WeekDayFinder 
+{
+	@Autowired
+	private LocalDate date;
+	
+	//0-param-Construction 
+	public WeekDayFinder() {
+		System.out.println("WeekDayFinder.WeekDayFinder() 0-param-constuction");
+		
+	}
+	
+	public String showMessageOnDayOfWeek(String user) 
+	{
+		
+		System.out.println("WeekDayFinder.showMessageOnDayOfWeek()");
+		int wno = date.getDayOfWeek().getValue();
+		
+		if (wno>=1 && wno<=5) 
+		{
+			return "work Hard "+user;
+		}
+		else
+		{
+			return "relex "+user;
+		}
+	}
+}

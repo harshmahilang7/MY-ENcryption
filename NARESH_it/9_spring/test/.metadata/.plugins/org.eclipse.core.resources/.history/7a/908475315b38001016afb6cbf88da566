@@ -1,0 +1,15 @@
+package om.nit.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class test 
+{
+	public static void main(String[] args)
+	{
+		ClassPathXmlApplicationContext ctx= new ClassPathXmlApplicationContext("src/main/java/com/nit/config/applicationCcontext.xml");
+
+		Object bean = ctx.getBean("documentParser");
+		bean.
+	}
+
+}

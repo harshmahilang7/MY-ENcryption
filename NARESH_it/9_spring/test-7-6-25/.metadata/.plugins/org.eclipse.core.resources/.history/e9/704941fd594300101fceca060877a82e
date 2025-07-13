@@ -1,0 +1,17 @@
+package com.nit.i8n.GreetingController;
+
+public class GreetingCont 
+
+{
+	String GreetingService(String name)
+	{
+		if(name.isBlank())
+		{
+			return null;
+		}
+		return name;
+		
+			
+	}
+
+}

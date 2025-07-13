@@ -1,0 +1,29 @@
+package com.nit.sbean;
+
+public class LuxoryCar implements ICar {
+
+	@Override
+	public void assemble() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void testDrive() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deliver() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void drive() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

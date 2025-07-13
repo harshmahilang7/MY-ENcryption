@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.example.demo.sbeans.Counter;
+
+@SpringBootApplication
+public class Q3Application {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(Q3Application.class, args);
+		Counter bean = ctx.getBean("sc",Counter.class);
+		
+		
+		
+		System.out.println(bean.getMethodcall());
+		
+
+	}
+
+}

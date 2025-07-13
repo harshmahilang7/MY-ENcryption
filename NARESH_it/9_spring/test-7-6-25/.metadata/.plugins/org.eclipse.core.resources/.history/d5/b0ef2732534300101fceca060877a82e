@@ -1,0 +1,14 @@
+package com.nit.main.DAO;
+
+import java.util.List;
+
+import com.nit.main.model.Product;
+
+public interface IProductDao 
+{
+	int insertProduct(Product product);
+	Product getProductById(Long id);
+	List<Product> getAllProducts();
+
+
+}

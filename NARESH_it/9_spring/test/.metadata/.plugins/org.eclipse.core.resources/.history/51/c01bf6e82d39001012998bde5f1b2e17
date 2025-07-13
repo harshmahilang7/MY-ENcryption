@@ -1,0 +1,6 @@
+package com.nit.sbean;
+
+public class OffRoadingCar implements ICar{
+	
+
+}

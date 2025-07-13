@@ -1,0 +1,5 @@
+package com.nt.sbeans;
+
+public interface MessageService {
+	void sendMessage();
+}

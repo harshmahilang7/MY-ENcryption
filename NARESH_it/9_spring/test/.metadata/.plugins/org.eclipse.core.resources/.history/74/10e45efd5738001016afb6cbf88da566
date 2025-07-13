@@ -1,0 +1,23 @@
+package com.nit.PaymentGatewayFactory;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PaymentProcessor {
+    @Autowired
+    private ApplicationContext context;
+    
+    public void processPayment() {
+        PaymentGateway gateway = context.getBean(PaymentGateway.class);
+        gateway.executeTransaction();
+    }
+    
+    public static void main(String[] args) 
+    {
+    	
+		
+	}
+}
+

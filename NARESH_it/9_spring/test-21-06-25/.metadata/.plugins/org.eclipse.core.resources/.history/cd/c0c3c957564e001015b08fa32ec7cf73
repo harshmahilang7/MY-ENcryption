@@ -1,0 +1,11 @@
+package com.nit.profilemodel;
+
+@org.springframework.context.annotation.Profile("dev")
+
+public class Profile 
+{
+	public void dev() 
+	{
+		System.out.println("Profile.dev()");
+	}
+}

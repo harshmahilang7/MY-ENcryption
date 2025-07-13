@@ -1,0 +1,28 @@
+package om.nit.main;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ParserFactory 
+{
+	static ParserFactory v=null;
+	private ParserFactory() {
+		// TODO Auto-generated constructor stub
+	}
+	@Bean()
+	public static ParserFactory createParser()
+	{
+		
+		if(v==null)
+		{
+			v= new ParserFactory();
+			
+		}
+		else
+			return v;
+		
+		return v;
+	}
+
+}

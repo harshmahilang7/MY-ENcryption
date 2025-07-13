@@ -1,0 +1,8 @@
+package com.nit.DAO;
+
+public interface UserDAO 
+{
+	private static final String ALL_USERS="Select * from USERS";
+	
+
+}

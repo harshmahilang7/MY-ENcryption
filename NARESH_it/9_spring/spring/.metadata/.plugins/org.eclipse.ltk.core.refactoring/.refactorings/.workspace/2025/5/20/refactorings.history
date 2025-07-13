@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;proj2_xml+anotation&apos; to &apos;proj2_xml+anotation-constructor_injection&apos;" description="Rename resource &apos;proj2_xml+anotation&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/proj2_xml+anotation" name="proj2_xml+anotation-constructor_injection" stamp="1747372708089" updateReferences="true"/>
+</session>

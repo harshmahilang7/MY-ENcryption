@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: BulkConfiguration
+notifications:
+  email: h@gmail.com
+  subject: Welcome!
+  body: Hello, thank you for registering.
+  sms: 9981554165
+  sbody: Thank you for signing up!
+  push: heash
+  title: Hi
+  pbody: Check out the new features.

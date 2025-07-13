@@ -1,0 +1,32 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import com.example.demo.sbeans.EmailService;
+import com.example.demo.sbeans.MessageService;
+import com.example.demo.sbeans.NotificationClient;
+
+@SpringBootApplication
+public class Q181Application {
+
+   
+
+	@Bean("m")
+	MessageService main()
+	{
+		return new EmailService();
+	}
+	
+	
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(Q181Application.class, args);
+		EmailService bean = ctx.getBean("m",EmailService.class);
+		bean.sendMessage();
+		
+		
+		
+	}
+
+}

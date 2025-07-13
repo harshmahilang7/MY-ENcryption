@@ -1,0 +1,10 @@
+package com.nt.sbeans;
+
+public class SMSService implements MessageService {
+
+	@Override
+	public void sendMessage() {
+		System.out.println("SMSService.sendMessage()");
+	}
+
+}

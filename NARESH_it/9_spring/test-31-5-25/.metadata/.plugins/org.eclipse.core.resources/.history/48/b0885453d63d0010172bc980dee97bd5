@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class Q181Application {
+	
+	@Bean
+	void getM() 
+	{
+		m.sendMessage(); 
+	}
+
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(Q181Application.class, args);
+		
+		
+	}
+
+}

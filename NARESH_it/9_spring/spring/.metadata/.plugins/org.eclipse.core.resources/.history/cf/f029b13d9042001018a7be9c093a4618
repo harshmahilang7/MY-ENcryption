@@ -1,0 +1,19 @@
+package com.nit.main;
+
+import java.lang.reflect.AnnotatedArrayType;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.nit.config.AppConfig;
+
+public class LocaleSelector 
+{
+	public static void main(String[] args) 
+	{
+		AnnotationConfigApplicationContext ctx= new AnnotationConfigApplicationContext(AppConfig.class);
+		ctx.getBean()
+				
+		
+	}
+
+}

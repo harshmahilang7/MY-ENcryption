@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\data\Spring Divakar\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

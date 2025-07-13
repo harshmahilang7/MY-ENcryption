@@ -1,0 +1,62 @@
+package com.LayeredApplication.DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.LayeredApplication.model.Student;
+
+@Repository
+public class StudentDAO 
+{
+//	
+//	SQL> CREATE TABLE STUDENT(ID NUMBER(20),NAME VARCHAR2(30),EMAIL VARCHAR2(30),DOB DATE);
+//
+//	Table created.
+//
+//	SQL>
+//	
+//	SQL> insert into student values(11,'harsh','h@gmail.com',to_date('1-Nov-2003'));
+//
+//	1 row created.
+//
+//	SQL>
+	@Autowired
+	private DataSource ds;
+	
+	private static final String GET_ALL_STUDENT="SELECT * FROM STUDENT";
+	
+	public List<Student> getAllStru() throws SQLException 
+	{
+		List<Student> sl= new ArrayList<>();
+		try(
+				Connection con=ds.getConnection();
+				PreparedStatement ps=con.prepareStatement(GET_ALL_STUDENT);
+			)
+		{
+		
+			ResultSet eq = ps.executeQuery();
+			while (eq.next()) 
+			{
+				Student s= new Student();
+				s.setId(eq.getInt(1));
+				s.setName(eq.getString(2));
+				s.setEmail(eq.getString(3));
+				s.setDob(eq.getDate(4));
+				sl.add(s);
+			}
+		}
+		
+		return sl;
+		
+	}
+
+}

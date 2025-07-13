@@ -1,0 +1,29 @@
+package com.example.demo.sbeans;
+
+public class Counter {
+
+	static int instancecount;
+	
+	int methodcall;
+	
+	
+
+	public Counter() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static int getInstancecount() {
+		return instancecount;
+	}
+
+	public int getMethodcall() 
+	{
+		methodcall+=1;
+		return methodcall;
+	}
+	
+	
+	
+	
+	
+}

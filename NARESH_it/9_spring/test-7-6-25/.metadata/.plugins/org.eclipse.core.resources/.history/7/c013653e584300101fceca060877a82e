@@ -1,0 +1,5 @@
+package com.nit.i8n.config;
+
+public class AppConfig {
+
+}

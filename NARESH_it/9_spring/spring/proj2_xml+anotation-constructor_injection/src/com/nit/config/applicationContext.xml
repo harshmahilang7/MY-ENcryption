@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           
+<bean id="c1" class="com.nit.beans.OrderCake">
+<constructor-arg name="shape" value="rounded"/>
+<constructor-arg name="flavour" value="mango"/>
+<constructor-arg name="qty" value="1"/>
+</bean>
+
+
+<bean id="c2" class="com.nit.beans.OrderCake">
+<constructor-arg name="shape" value="main"/>
+<constructor-arg name="flavor" value="cholo"/>
+<constructor-arg name="qty" value="2"/>
+
+<constructor-arg name="message" value="extra 50gm"/>
+
+
+</bean>
+
+
+
+</beans>
+
+
+

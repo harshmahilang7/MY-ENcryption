@@ -1,0 +1,11 @@
+package com.nit.i8n.GreetingController;
+
+public class GreetingCont 
+
+{
+	GreetingService(String name,locale l)
+	{
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.example.demo.sbeans;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("sc")
+@Scope("singleton")
+public class sCount extends Counter {
+
+	
+}

@@ -1,0 +1,19 @@
+package com.nit.i8n.GreetingController;
+
+import java.util.Locale;
+
+public class GreetingCont 
+
+{
+	public static String[] GreetingService(String name,Locale l)
+	{
+		
+		if(name.isEmpty())
+		{
+			return null;
+		}
+		String [] n= {name,l};
+		return name;
+	}
+
+}

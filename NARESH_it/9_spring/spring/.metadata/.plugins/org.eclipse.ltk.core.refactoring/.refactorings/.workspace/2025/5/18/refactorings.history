@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;icoprojclasspath&apos; to &apos;icoprojfileSystem&apos;" description="Rename resource &apos;icoprojclasspath&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/icoprojclasspath" name="icoprojfileSystem" stamp="1746261461698" updateReferences="true"/>
+</session>
